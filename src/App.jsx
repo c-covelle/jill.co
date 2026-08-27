@@ -1297,6 +1297,26 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
                   {currentQ.rationale}
                 </p>
 
+                {currentQ.choiceAnalysis && (
+                  <div className="mt-4 border-t border-white/10 pt-4">
+                    <div className="text-[#E5B842] font-bold text-[10px] uppercase tracking-wider mb-3">
+                      WHY EACH CHOICE
+                    </div>
+                    <div className="space-y-3">
+                      {currentQ.options?.map(option => (
+                        <div key={option.id} className="flex gap-2 text-xs leading-relaxed">
+                          <span className={`font-bold shrink-0 ${option.id === currentQ.correctAnswer ? 'text-emerald-400' : 'text-slate-400'}`}>
+                            {option.id}.
+                          </span>
+                          <p className="text-slate-300">
+                            {currentQ.choiceAnalysis[option.id] || 'No explanation provided for this choice.'}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <button
                   onClick={handleAskGemini}
                   disabled={aiLoading}

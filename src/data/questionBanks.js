@@ -106,6 +106,30 @@ function normalizeQuestions(rawData, defaultCategory, domain) {
         item.correctOption ??
         'A';
 
+      const rawChoiceAnalysis =
+        item.choiceAnalysis ||
+        item.choice_analysis ||
+        item.rationalization ||
+        item.whyEachChoice ||
+        item.why_each_choice ||
+        item.choiceExplanations ||
+        item.choice_explanations ||
+        item.explanations ||
+        item.explanationByChoice ||
+        item.explanation_by_choice ||
+        null;
+
+      const choiceAnalysis = rawChoiceAnalysis && typeof rawChoiceAnalysis === 'object'
+        ? Object.fromEntries(
+            Object.entries(rawChoiceAnalysis).map(([key, value]) => {
+              const optionId = key.match(/[A-D]$/i)?.[0]?.toUpperCase() || key.toUpperCase();
+              return [optionId, typeof value === 'object'
+                ? value.text || value.explanation || value.rationale || ''
+                : String(value)];
+            })
+          )
+        : null;
+
       return {
         id: String(item.id || `${domain}_${idx + 1}`),
         category: item.category || defaultCategory,
@@ -132,18 +156,7 @@ function normalizeQuestions(rawData, defaultCategory, domain) {
           item.tip ||
           item.memory_tip ||
           '',
-        choiceAnalysis:
-          item.choiceAnalysis ||
-          item.choice_analysis ||
-          item.rationalization ||
-          item.whyEachChoice ||
-          item.why_each_choice ||
-          item.choiceExplanations ||
-          item.choice_explanations ||
-          item.explanations ||
-          item.explanationByChoice ||
-          item.explanation_by_choice ||
-          null
+        choiceAnalysis
       };
     })
     .filter(item => item && item.question && item.options.length > 0);
