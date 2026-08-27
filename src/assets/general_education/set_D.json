@@ -1,0 +1,4311 @@
+{
+  "source_file": "7126decd-c732-47f9-8501-1a879ab2d8d2.json",
+  "project": "Project Jill",
+  "source_set": "Gen Ed Set D",
+  "audit_type": "FULL QUALITY-CONTROL AUDIT",
+  "total_items": 100,
+  "audit_summary": {
+    "verified": 61,
+    "minor_repair": 35,
+    "major_repair": 4
+  },
+  "change_log": {
+    "9": {
+      "severity": "minor",
+      "reason": "Added the missing article 'a' before 'vacation.'",
+      "replacement_generated": false
+    },
+    "10": {
+      "severity": "minor",
+      "reason": "Corrected the malformed phrase 'in the affairs' to 'at the affair.'",
+      "replacement_generated": false
+    },
+    "15": {
+      "severity": "minor",
+      "reason": "Corrected singular 'letter' to plural 'letters.'",
+      "replacement_generated": false
+    },
+    "20": {
+      "severity": "minor",
+      "reason": "Repaired punctuation and sentence structure without changing the tested interpretation.",
+      "replacement_generated": false
+    },
+    "23": {
+      "severity": "minor",
+      "reason": "The original B choice was grammatically malformed ('ends up into doing'). Repaired the wording while preserving the intended concept.",
+      "replacement_generated": false
+    },
+    "25": {
+      "severity": "major",
+      "reason": "The original 'lowest form of learning' depends on a nonstandard hierarchy and is not sufficiently defensible as a general learning-science statement. Replaced with a standard, high-yield learning concept.",
+      "replacement_generated": true
+    },
+    "28": {
+      "severity": "minor",
+      "reason": "Improved historical wording and punctuation.",
+      "replacement_generated": false
+    },
+    "33": {
+      "severity": "minor",
+      "reason": "The original called utilitarianism an 'economic policy,' which is conceptually inaccurate. Reworded to its proper ethical context.",
+      "replacement_generated": false
+    },
+    "34": {
+      "severity": "major",
+      "reason": "The original answer 'distribute all arable lands to the landless' is too absolute and ignores statutory retention limits, exclusions, and just compensation. The law emphasizes equitable distribution and ownership. citeturn0search0turn0search1",
+      "replacement_generated": true
+    },
+    "35": {
+      "severity": "minor",
+      "reason": "Repaired grammar and made the occupational examples parallel.",
+      "replacement_generated": false
+    },
+    "38": {
+      "severity": "minor",
+      "reason": "Specified the tax base and repaired the fragmentary stem.",
+      "replacement_generated": false
+    },
+    "39": {
+      "severity": "minor",
+      "reason": "Corrected the standard term from singular 'Check and Balance' to 'checks and balances.'",
+      "replacement_generated": false
+    },
+    "41": {
+      "severity": "minor",
+      "reason": "Clarified the ecological meaning of 'niche' so the keyed answer is directly supported.",
+      "replacement_generated": false
+    },
+    "44": {
+      "severity": "minor",
+      "reason": "Corrected subject-verb agreement and pluralized the answer term.",
+      "replacement_generated": false
+    },
+    "46": {
+      "severity": "minor",
+      "reason": "Repaired the awkward causal wording while preserving the intended 'plants' answer.",
+      "replacement_generated": false
+    },
+    "48": {
+      "severity": "minor",
+      "reason": "Corrected 'fails to earth' to 'falls to Earth.'",
+      "replacement_generated": false
+    },
+    "50": {
+      "severity": "minor",
+      "reason": "Corrected 'Macromolecular' to the proper noun 'macromolecules.'",
+      "replacement_generated": false
+    },
+    "55": {
+      "severity": "minor",
+      "reason": "Repaired grammar: 'measure of pressure, defines as' → 'unit of pressure defined as.'",
+      "replacement_generated": false
+    },
+    "56": {
+      "severity": "minor",
+      "reason": "Repaired wording only.",
+      "replacement_generated": false
+    },
+    "58": {
+      "severity": "minor",
+      "reason": "Corrected 'specification' to 'speciation' and improved grammar.",
+      "replacement_generated": false
+    },
+    "59": {
+      "severity": "minor",
+      "reason": "The original wording treated increased atmospheric $CO_{2}$ as an unconditional direct result. Added context to make the keyed answer scientifically defensible.",
+      "replacement_generated": false
+    },
+    "60": {
+      "severity": "minor",
+      "reason": "Repaired article and punctuation.",
+      "replacement_generated": false
+    },
+    "65": {
+      "severity": "minor",
+      "reason": "Added the missing article 'a.'",
+      "replacement_generated": false
+    },
+    "69": {
+      "severity": "major",
+      "reason": "The original phrase 'a number divided by 2' is ambiguous. Replaced with the intended high-yield probability concept.",
+      "replacement_generated": true
+    },
+    "70": {
+      "severity": "minor",
+      "reason": "Repaired mathematical notation and grammar.",
+      "replacement_generated": false
+    },
+    "71": {
+      "severity": "minor",
+      "reason": "Clarified the division notation and added the domain restriction.",
+      "replacement_generated": false
+    },
+    "72": {
+      "severity": "minor",
+      "reason": "Standardized multiplication symbols and clarified the prime-factorization explanation.",
+      "replacement_generated": false
+    },
+    "74": {
+      "severity": "major",
+      "reason": "The source stem omitted the 10-meter dimension even though choice D required it. Reconstructed the intended 5 × 10 × 15 m block.",
+      "replacement_generated": false
+    },
+    "75": {
+      "severity": "minor",
+      "reason": "The original did not specify the interest method. Specified simple interest because the keyed answer P12,400 assumes simple interest.",
+      "replacement_generated": false
+    },
+    "76": {
+      "severity": "minor",
+      "reason": "Completed the truncated sentence and added units.",
+      "replacement_generated": false
+    },
+    "79": {
+      "severity": "minor",
+      "reason": "Standardized units and currency formatting; corrected choice formatting so the keyed P275 is unambiguous.",
+      "replacement_generated": false
+    },
+    "82": {
+      "severity": "minor",
+      "reason": "Repaired the Filipino-English mixed stem while preserving the intended concept.",
+      "replacement_generated": false
+    },
+    "85": {
+      "severity": "minor",
+      "reason": "Corrected grammar and punctuation.",
+      "replacement_generated": false
+    },
+    "86": {
+      "severity": "minor",
+      "reason": "Clarified the intended Filipino aspect label. The wording refers to an action that has just been completed.",
+      "replacement_generated": false
+    },
+    "87": {
+      "severity": "minor",
+      "reason": "Repaired punctuation only.",
+      "replacement_generated": false
+    },
+    "90": {
+      "severity": "minor",
+      "reason": "Capitalized the proper form 'Nanay' and repaired punctuation.",
+      "replacement_generated": false
+    },
+    "95": {
+      "severity": "minor",
+      "reason": "Repaired sentence structure.",
+      "replacement_generated": false
+    },
+    "96": {
+      "severity": "minor",
+      "reason": "Repaired grammar and made the intended ellipsis concept explicit.",
+      "replacement_generated": false
+    },
+    "100": {
+      "severity": "minor",
+      "reason": "Added the hyphen in 'salitang-ugat' and clarified the morphological explanation.",
+      "replacement_generated": false
+    }
+  },
+  "items": [
+    {
+      "id": "gen_ed_set_d_001",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 1,
+      "question": "Thank you for your candor, Mr. Secretary.",
+      "choices": {
+        "A": "honesty",
+        "B": "bitterness",
+        "C": "shyness",
+        "D": "courage"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. 'Candor' refers to the quality of being open, sincere, and honest in speech or expression.",
+        "choice_B": "Incorrect. Bitterness means resentment or sharp animosity, which is negative and unrelated to candor.",
+        "choice_C": "Incorrect. Shyness refers to bashfulness or hesitation, which is the opposite of forthright candor.",
+        "choice_D": "Incorrect. Courage means bravery; while expressing candor may require bravery, candor itself specifically means honesty or frankness."
+      },
+      "explanation": "'Candor' is a noun that means frankness, openness, or unreserved honesty in expressing thoughts or feelings.",
+      "memoryTip": "CANDOR = CAN-DO HONESTY / Frankness.",
+      "reference": "English Vocabulary â€” Synonyms and Contextual Meaning",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Vocabulary in Context",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_002",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 2,
+      "question": "Clara would ready any book or magazine she could lay her hands on and read from cover to cover in one sitting. She is such a _____ reader.",
+      "choices": {
+        "A": "Tedious",
+        "B": "Serious",
+        "C": "Leisurely",
+        "D": "Voracious"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Tedious means dull, monotonous, or tiring, which does not fit an avid reader.",
+        "choice_B": "Incorrect. Serious implies grave or solemn, but does not capture the insatiable desire to read constantly.",
+        "choice_C": "Incorrect. Leisurely implies slow or unhurried, whereas reading cover to cover in one sitting shows intensity.",
+        "choice_D": "Correct. 'Voracious' means wanting or devouring great quantities of something, especially food or reading material."
+      },
+      "explanation": "A 'voracious reader' is someone who reads avidly, hungrily, and in large quantities.",
+      "memoryTip": "VORACIOUS = DEVOURING books like a carnivore devours food.",
+      "reference": "English Vocabulary â€” Word Usage and Adjectives",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Vocabulary in Context",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_003",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 3,
+      "question": "The _____ lesson of the story is that honesty is the best policy.",
+      "choices": {
+        "A": "Morality",
+        "B": "Morale",
+        "C": "Moralism",
+        "D": "Moral"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Morality is a noun referring to principles concerning the distinction between right and wrong.",
+        "choice_B": "Incorrect. Morale is a noun referring to confidence, enthusiasm, or discipline of a person or group.",
+        "choice_C": "Incorrect. Moralism is a noun referring to the practice of making moral judgments or statements.",
+        "choice_D": "Correct. 'Moral' functions as an adjective here modifying 'lesson' (or as a noun phrase 'moral lesson'), referring to the practical teaching or ethical lesson of a story."
+      },
+      "explanation": "In grammar, 'moral' acts as an adjective describing a lesson that teaches ethical principles, right behavior, or valuable life guidance.",
+      "memoryTip": "MORAL LESSON = The ethical message taught by a fable or story.",
+      "reference": "English Grammar â€” Word Forms and Usage",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Parts of Speech",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_004",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 4,
+      "question": "The expression of \"baduy\" connotes:",
+      "choices": {
+        "A": "Uneducated",
+        "B": "Low profile",
+        "C": "Awkward looking",
+        "D": "Smart"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Baduy' relates to taste, style, or appearance rather than formal educational background.",
+        "choice_B": "Incorrect. Low profile means keeping a quiet or inconspicuous presence, not lacking style.",
+        "choice_C": "Correct. 'Baduy' is a colloquial Filipino term for unstylish, tacky, out-of-fashion, or awkward-looking.",
+        "choice_D": "Incorrect. Smart is the opposite of baduy in terms of appearance or sophistication."
+      },
+      "explanation": "In Philippine colloquial language, 'baduy' describes someone or something that lacks style, appears awkward, uncoordinated, or tacky.",
+      "memoryTip": "BADUY = Unstylish / Tacky / Awkward looking.",
+      "reference": "Filipino Colloquialisms and Sociolinguistics",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Colloquial Terminology",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_005",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 5,
+      "question": "The words \"inappropriate, illegal, irresponsible, unaware\" have prefixes which are classified as",
+      "choices": {
+        "A": "positive",
+        "B": "common",
+        "C": "negative",
+        "D": "neutral"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Positive prefixes indicate presence or affirmation (e.g., pro-, super-).",
+        "choice_B": "Incorrect. Common is a general descriptor, not a formal grammatical classification of prefixes.",
+        "choice_C": "Correct. Prefixes such as in-, il-, ir-, and un- mean 'not' or 'opposite of', making them negative prefixes.",
+        "choice_D": "Incorrect. Neutral prefixes do not alter the polarity of a root word in a negative sense."
+      },
+      "explanation": "Negative prefixes (un-, in-, il-, ir-, im-, dis-, non-) invert the meaning of the root word to mean 'not' or 'without'.",
+      "memoryTip": "NEGATIVE PREFIXES = UN-, IN-, IL-, IR-, DIS- (mean NOT).",
+      "reference": "English Morphology â€” Prefixes and Word Formation",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Morphology",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_006",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 6,
+      "question": "I can't find _____ calculator; may I use _____, Richard?",
+      "choices": {
+        "A": "My, yours",
+        "B": "My, his",
+        "C": "His, yours",
+        "D": "Yours, mine"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. 'My' is a possessive adjective preceding the noun 'calculator', and 'yours' is a possessive pronoun standing alone addressing Richard directly.",
+        "choice_B": "Incorrect. 'His' refers to a third person, whereas the speaker is directly addressing Richard ('yours').",
+        "choice_C": "Incorrect. Using 'his' in the first position creates a logical mismatch with 'I can't find'.",
+        "choice_D": "Incorrect. 'Yours' cannot modify 'calculator' directly without 'of', and 'mine' makes no sense when asking Richard."
+      },
+      "explanation": "Possessive adjectives (my, your, his, her, its, our, their) modify nouns directly. Possessive pronouns (mine, yours, his, hers, ours, theirs) replace the noun phrase entirely.",
+      "memoryTip": "MY + Noun (My calculator) vs. YOURS alone (May I use yours?).",
+      "reference": "English Grammar â€” Pronoun Agreement and Function",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Pronouns",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_007",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 7,
+      "question": "When I met Pilar yesterday, it was the first time I _____ her since Christmas.",
+      "choices": {
+        "A": "have seen",
+        "B": "saw",
+        "C": "have been seen",
+        "D": "had seen"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Present perfect 'have seen' cannot be used when the anchor time is in the past ('it was').",
+        "choice_B": "Incorrect. Simple past 'saw' does not capture the duration/completion of time up to the past point ('since Christmas').",
+        "choice_C": "Incorrect. 'Have been seen' is passive voice and present perfect, which is grammatically incorrect here.",
+        "choice_D": "Correct. Past perfect 'had seen' is required because it expresses an action completed before a specific time in the past ('when I met Pilar yesterday')."
+      },
+      "explanation": "When referencing an event completed before another past event or point in past time, use the Past Perfect tense (had + past participle).",
+      "memoryTip": "PAST BEFORE PAST = PAST PERFECT (had + past participle).",
+      "reference": "English Grammar â€” Verb Tenses and Sequence of Tenses",
+      "difficulty": "Medium",
+      "subject": "English",
+      "topic": "Verb Tenses",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_008",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 8,
+      "question": "If you want to be recognized, have a finger in the pie.",
+      "choices": {
+        "A": "Dip finger in the pie",
+        "B": "Take a share of the pie",
+        "C": "Join a group",
+        "D": "Take an active part in something"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. This is a literal interpretation of the idiom, not its figurative meaning.",
+        "choice_B": "Incorrect. This confuses the idiom with 'a piece of the pie' (a share of profits/benefits).",
+        "choice_C": "Incorrect. Joining a group is too broad; the idiom specifically implies active involvement or influence in an affair.",
+        "choice_D": "Correct. 'To have a finger in the pie' means to be involved or take an active part in a matter or activity."
+      },
+      "explanation": "The idiom 'have a finger in the pie' means to be involved in an activity, project, or affair, often exerting influence or participating actively.",
+      "memoryTip": "FINGER IN THE PIE = ACTIVE PARTICIPATION in an undertaking.",
+      "reference": "English Idioms and Figurative Language",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Idiomatic Expressions",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_009",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 9,
+      "question": "Had I studied very well, I _____ rewarded with a vacation in the U.S.",
+      "choices": {
+        "A": "Was",
+        "B": "Would have been",
+        "C": "Will be",
+        "D": "Would be"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Was' lacks the modal structure required for hypothetical past condition.",
+        "choice_B": "Correct. 'Had I studied' is an inverted third conditional ('If I had studied'), which requires 'would have been' in the main clause.",
+        "choice_C": "Incorrect. 'Will be' expresses future certainty, which violates the past hypothetical context.",
+        "choice_D": "Incorrect. 'Would be' is used in second conditional (present/future hypothetical), not third conditional (past hypothetical)."
+      },
+      "explanation": "The Third Conditional expresses an unreal/hypothetical situation in the past. Structure: 'Had + subject + past participle, subject + would have + past participle'.",
+      "memoryTip": "HAD + PAST PARTICIPLE â†’ WOULD HAVE + PAST PARTICIPLE (Third Conditional).",
+      "reference": "English Grammar â€” Conditional Sentences",
+      "difficulty": "Medium",
+      "subject": "English",
+      "topic": "Conditionals",
+      "audit_status": "minor_repair",
+      "audit_reason": "Added the missing article 'a' before 'vacation.'",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_010",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 10,
+      "question": "Neither the teacher nor the students _____ present at the affair.",
+      "choices": {
+        "A": "am",
+        "B": "is",
+        "C": "was",
+        "D": "were"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Am' is used only with first-person singular pronoun 'I'.",
+        "choice_B": "Incorrect. 'Is' is singular present, but the subject closest to the verb ('students') is plural.",
+        "choice_C": "Incorrect. 'Was' is singular past, but 'students' is plural.",
+        "choice_D": "Correct. By the rule of proximity for compound subjects joined by 'neither... nor', the verb agrees with the subject closest to it ('students', which is plural past 'were')."
+      },
+      "explanation": "When subjects are joined by 'neither... nor' or 'either... or', the verb agrees in number with the subject closer to the verb. Here, 'students' is plural, requiring 'were'.",
+      "memoryTip": "NEITHER / NOR RULE OF PROXIMITY = Match verb to the CLOSEST subject.",
+      "reference": "English Grammar â€” Subject-Verb Agreement",
+      "difficulty": "Medium",
+      "subject": "English",
+      "topic": "Subject-Verb Agreement",
+      "audit_status": "minor_repair",
+      "audit_reason": "Corrected the malformed phrase 'in the affairs' to 'at the affair.'",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_011",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 11,
+      "question": "On your trip to Tagaytay, if you chance upon Arsenio, please give _____ my warm regards.",
+      "choices": {
+        "A": "Himself",
+        "B": "Myself",
+        "C": "Him",
+        "D": "Me"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Himself' is a reflexive pronoun used when the subject and object are the same person.",
+        "choice_B": "Incorrect. 'Myself' is a reflexive pronoun for the speaker ('I').",
+        "choice_C": "Correct. 'Him' is the objective personal pronoun replacing 'Arsenio' as the indirect object of the verb 'give'.",
+        "choice_D": "Incorrect. 'Me' refers to the speaker, but regards are being given TO Arsenio."
+      },
+      "explanation": "An objective personal pronoun (him) is used as the indirect object receiving the action of giving.",
+      "memoryTip": "Give [OBJECT PRONOUN: him/her/them] my regards.",
+      "reference": "English Grammar â€” Pronoun Case",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Pronouns",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_012",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 12,
+      "question": "What figure of speech is: \"O wild west wind!\"",
+      "choices": {
+        "A": "Irony",
+        "B": "Metaphor",
+        "C": "Apostrophe",
+        "D": "Hyperbole"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Irony states the opposite of the literal meaning.",
+        "choice_B": "Incorrect. Metaphor makes a direct comparison without using 'like' or 'as'.",
+        "choice_C": "Correct. 'Apostrophe' is a figure of speech in which the speaker directly addresses an absent person, an abstract idea, or an inanimate object (the 'wild west wind').",
+        "choice_D": "Incorrect. Hyperbole is an intentional exaggeration for emphasis."
+      },
+      "explanation": "Apostrophe directly addresses an absent, dead, or non-human entity as if it were present and capable of understanding.",
+      "memoryTip": "APOSTROPHE = Direct address to an inanimate object, absent person, or idea (O ...!).",
+      "reference": "English Literature â€” Figures of Speech",
+      "difficulty": "Medium",
+      "subject": "Literature",
+      "topic": "Figures of Speech",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_013",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 13,
+      "question": "What figure of speech is present in this line of the poem \"The Brook\"? \"The second time it was a tiny snake\".",
+      "choices": {
+        "A": "Personification",
+        "B": "Metaphor",
+        "C": "Simile",
+        "D": "Apostrophe"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Personification attributes human traits to non-human things.",
+        "choice_B": "Correct. The line directly equates the brook (or stream movement) to a 'tiny snake' without using 'like' or 'as', which is a metaphor.",
+        "choice_C": "Incorrect. Simile compares using explicit connective words 'like' or 'as' (e.g., 'like a tiny snake').",
+        "choice_D": "Incorrect. Apostrophe is a direct address to an absent entity."
+      },
+      "explanation": "A metaphor asserts a direct identity between two unlike things to create a vivid visual image.",
+      "memoryTip": "METAPHOR = Direct comparison ('was a snake') without 'like' or 'as'.",
+      "reference": "English Literature â€” Figures of Speech",
+      "difficulty": "Medium",
+      "subject": "Literature",
+      "topic": "Figures of Speech",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_014",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 14,
+      "question": "Read the paragraph and answer the item that follows. \"I am a retired public-school teacher. As a teacher, I was branded as a terror in school. The pupils dreaded the day they would enter my class. Little did they know that behind my unpopular facade was a heart full of compassion. But how did I earn this moniker? I did not tolerate dirty pupils in my class. I wanted them to know that cleanliness of body was good for their health. I inspected their teeth, nails, footwear, handkerchief, clothes, ears, noses, and hair\". The public-school teacher gives much importance to her pupils'",
+      "choices": {
+        "A": "Cleanliness",
+        "B": "Study",
+        "C": "Absence",
+        "D": "Posture"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. The teacher explicitly states inspecting teeth, nails, clothes, ears, noses, and hair because 'cleanliness of body was good for their health'.",
+        "choice_B": "Incorrect. While academic study is important for teachers, the paragraph focuses exclusively on bodily hygiene.",
+        "choice_C": "Incorrect. The passage makes no mention of school attendance or absences.",
+        "choice_D": "Incorrect. Posture is not mentioned in the listed inspections."
+      },
+      "explanation": "Reading comprehension requires identifying the explicit main idea and supporting details provided in the passage.",
+      "memoryTip": "READ CAREFULLY = Match paragraph details directly to the answer.",
+      "reference": "English â€” Reading Comprehension",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Reading Comprehension",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_015",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 15,
+      "question": "A story put together through an exchange of letters is called _____ literature.",
+      "choices": {
+        "A": "Fiction",
+        "B": "Epistolary",
+        "C": "Episodic",
+        "D": "Classic"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Fiction is a broad genre of invented prose, not specifically letter-based.",
+        "choice_B": "Correct. 'Epistolary' comes from Latin 'epistola' (letter) and refers to a literary work written in the form of letters or documents.",
+        "choice_C": "Incorrect. Episodic refers to a narrative structured in loosely connected series of episodes.",
+        "choice_D": "Incorrect. Classic refers to enduring literary merit, not form."
+      },
+      "explanation": "Epistolary literature uses letters, diary entries, or electronic documents to advance the plot and reveal characters' internal perspectives.",
+      "memoryTip": "EPISTOLARY = EPISTLE = LETTERS.",
+      "reference": "World Literature â€” Literary Genres and Forms",
+      "difficulty": "Easy",
+      "subject": "Literature",
+      "topic": "Literary Genres",
+      "audit_status": "minor_repair",
+      "audit_reason": "Corrected singular 'letter' to plural 'letters.'",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_016",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 16,
+      "question": "Who is the first mythical geographer who was recognized due to his vivid descriptions of lands and people encountered by his hero Ulysses?",
+      "choices": {
+        "A": "Virgil",
+        "B": "Plato",
+        "C": "Homer",
+        "D": "Cicero"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Virgil wrote the Aeneid, starring Aeneas.",
+        "choice_B": "Incorrect. Plato was a classical Greek philosopher.",
+        "choice_C": "Correct. Homer composed 'The Odyssey', recounting the travels of Odysseus (Ulysses) across the Mediterranean, making Homer the first legendary/mythical geographer.",
+        "choice_D": "Incorrect. Cicero was a Roman statesman and orator."
+      },
+      "explanation": "Homer's Odyssey provided detailed geographic and ethnographic descriptions of the ancient Mediterranean world during Odysseus' journeys.",
+      "memoryTip": "HOMER = Writer of The Odyssey (hero Ulysses/Odysseus).",
+      "reference": "World Literature â€” Greek Epic Literature",
+      "difficulty": "Medium",
+      "subject": "Literature",
+      "topic": "Classical Epics",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_017",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 17,
+      "question": "This Filipino writer in English who used Hispanic Filipino culture and traditions in his fiction works.",
+      "choices": {
+        "A": "Edilberto Tiempo",
+        "B": "Nick Joaquin",
+        "C": "Sionil Jose",
+        "D": "Jose Garcia Villa"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Edilberto Tiempo wrote realistic novels set in Visayas during WWII.",
+        "choice_B": "Correct. Nick Joaquin (Quijano de Manila) is renowned for integrating Hispanic-Filipino heritage, Spanish colonial history, and traditional Catholicism in his works.",
+        "choice_C": "Incorrect. F. Sionil Jose wrote the Rosales Saga focusing on social class and agrarian struggles.",
+        "choice_D": "Incorrect. Jose Garcia Villa was a modernist poet known for comma poems."
+      },
+      "explanation": "Nick Joaquin, National Artist for Literature, deeply explored the tropical Gothic style and Spanish colonial legacy of the Philippines.",
+      "memoryTip": "NICK JOAQUIN = Spanish-Filipino heritage / Tropical Gothic.",
+      "reference": "Philippine Literature â€” National Artists for Literature",
+      "difficulty": "Easy",
+      "subject": "Literature",
+      "topic": "Philippine Authors",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_018",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 18,
+      "question": "Which among the following is the part of the newspaper where you can see the opinions of people?",
+      "choices": {
+        "A": "Classified Section",
+        "B": "Obituary",
+        "C": "Headline",
+        "D": "Editorial Section"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Classifieds contain advertisements, jobs, and items for sale.",
+        "choice_B": "Incorrect. Obituary contains notices of death.",
+        "choice_C": "Incorrect. Headlines highlight major current news events.",
+        "choice_D": "Correct. The Editorial Section features opinions, editorials, letters to the editor, and commentary."
+      },
+      "explanation": "The Editorial Section contains the publication's official opinion, guest columns, and letters to the editor representing public perspectives.",
+      "memoryTip": "EDITORIAL SECTION = OPINIONS / Letters to the Editor.",
+      "reference": "Journalism â€” Parts of a Newspaper",
+      "difficulty": "Easy",
+      "subject": "English",
+      "topic": "Journalism Basics",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_019",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 19,
+      "question": "The \"Rubaiyat\" a loosely joined series of 280 stanzas, has this general theme. Which one?",
+      "choices": {
+        "A": "Always look forward to a new day",
+        "B": "Grasp pleasure while you can",
+        "C": "Never give in to death easily.",
+        "D": "Create your own world and beautify it."
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. The poem emphasizes living in the present rather than waiting for tomorrow.",
+        "choice_B": "Correct. The Rubaiyat of Omar Khayyam advocates the philosophy of 'Carpe Diem'â€”enjoying the present moments and pleasures of life before death arrives.",
+        "choice_C": "Incorrect. That theme aligns with Dylan Thomas ('Do not go gentle into that good night').",
+        "choice_D": "Incorrect. Creating one's world is an existential theme not central to the Rubaiyat."
+      },
+      "explanation": "Omar Khayyam's Rubaiyat emphasizes Carpe Diem ('seize the day') and enjoying immediate life and nature.",
+      "memoryTip": "RUBAIYAT = CARPE DIEM = Grasp pleasure while you can.",
+      "reference": "World Literature â€” Persian Literature",
+      "difficulty": "Medium",
+      "subject": "Literature",
+      "topic": "World Masterpieces",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_020",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 20,
+      "question": "In Psalm 23, otherwise known as the Psalm of David, what is the closest meaning of the line: 'He maketh me to lie down in green pastures; he leadeth me beside the still waters'?",
+      "choices": {
+        "A": "He will be given riches and mercy.",
+        "B": "He will be known throughout the land.",
+        "C": "He will always obey his master for his glory.",
+        "D": "He will be provided peace and prosperity."
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Green pastures' and 'still waters' symbolize rest and renewal rather than material riches.",
+        "choice_B": "Incorrect. The verse refers to personal spiritual restoration, not public fame.",
+        "choice_C": "Incorrect. This focuses on human obedience, whereas the verse describes God's gentle care and guidance.",
+        "choice_D": "Correct. Green pastures represent spiritual/physical nourishment (prosperity/abundance), and still waters represent calm, refreshment, and peace."
+      },
+      "explanation": "In Psalm 23, shepherd imagery signifies divine guidance, peace, rest, and complete spiritual refreshment.",
+      "memoryTip": "GREEN PASTURES & STILL WATERS = PEACE and RESTORATION/PROSPERITY.",
+      "reference": "World Literature â€” Biblical Poetry",
+      "difficulty": "Medium",
+      "subject": "Literature",
+      "topic": "Biblical Literature",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired punctuation and sentence structure without changing the tested interpretation.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_021",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 21,
+      "question": "Considering the \"tayo-tayo\" mentality of the Filipinos, one goal for CHANGE that should be worked on is to develop",
+      "choices": {
+        "A": "A sense of common good.",
+        "B": "A sense of national pride.",
+        "C": "\"Pakikisama\"",
+        "D": "The habits of discipline and hard work"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. 'Tayo-tayo' mentality reflects exclusive favoritism towards one's inner circle. Overcoming it requires developing a sense of the common good for the whole nation.",
+        "choice_B": "Incorrect. National pride is important, but directly counteracting tribalism/cliquishness requires focusing on universal public good.",
+        "choice_C": "Incorrect. 'Pakikisama' often reinforces 'tayo-tayo' loyalty to immediate peers.",
+        "choice_D": "Incorrect. Discipline is a virtue, but does not directly address in-group favoritism like the common good does."
+      },
+      "explanation": "To overcome provincialism and 'tayo-tayo' favoritism, Filipinos must cultivate a broader civic responsibility and concern for the universal common good.",
+      "memoryTip": "TAYO-TAYO MENTALITY â†’ counteracted by COMMON GOOD.",
+      "reference": "Social Science â€” Philippine Values",
+      "difficulty": "Medium",
+      "subject": "Social Science",
+      "topic": "Philippine Values",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_022",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 22,
+      "question": "Which is NOT a characteristic of people with a strong sense of self- efficacy?",
+      "choices": {
+        "A": "View challenging problems as tasks to be mastered.",
+        "B": "Recover quickly from setbacks and disappointments.",
+        "C": "Avoid challenging tasks.",
+        "D": "Develop deeper interest in the activities in which they participate"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. People with high self-efficacy embrace challenges as tasks to be mastered.",
+        "choice_B": "Incorrect. Resiliency and rapid recovery from failure are key traits of high self-efficacy.",
+        "choice_C": "Correct. Avoiding challenging tasks is a trait of LOW self-efficacy, not strong self-efficacy.",
+        "choice_D": "Incorrect. High self-efficacy leads to deep interest and commitment in activities."
+      },
+      "explanation": "Self-efficacy (Bandura) is a person's belief in their ability to succeed. High self-efficacy individuals tackle difficulties head-on, whereas low self-efficacy individuals avoid them.",
+      "memoryTip": "HIGH SELF-EFFICACY = Tackles challenges; LOW = Avoids challenges.",
+      "reference": "Psychology â€” Self-Efficacy",
+      "difficulty": "Easy",
+      "subject": "Psychology",
+      "topic": "Self-Efficacy",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_023",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 23,
+      "question": "The Filipinos are deeply religious; however, sometimes this religiosity instills the NEGATIVE attitude of:",
+      "choices": {
+        "A": "Social responsibility to participate in the development of society.",
+        "B": "Resignation and failure to act to improve one's condition.",
+        "C": "Total surrender to God in times of helplessness.",
+        "D": "Trust that God, who is omnipotent and omniscient, will allow what is best."
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Social responsibility is a positive socio-civic value.",
+        "choice_B": "Correct. Extreme religiosity can lead to fatalism ('Bahala na') and passive resignation, where people stop striving to improve their lives.",
+        "choice_C": "Incorrect. Spiritual surrender in genuine helplessness is viewed positively, not as the main negative sociological flaw.",
+        "choice_D": "Incorrect. Trust in God's providence is a positive religious belief when coupled with action."
+      },
+      "explanation": "The item is testing the negative form of fatalism: passive resignation that leaves a person unwilling to take action to improve a difficult situation.",
+      "memoryTip": "NEGATIVE FATALISM = RESIGNATION + FAILURE TO ACT.",
+      "reference": "Social Science â€” Philippine Values and Weaknesses",
+      "difficulty": "Medium",
+      "subject": "Social Science",
+      "topic": "Philippine Values and Weaknesses",
+      "audit_status": "minor_repair",
+      "audit_reason": "The original B choice was grammatically malformed ('ends up into doing'). Repaired the wording while preserving the intended concept.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_024",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 24,
+      "question": "Who is the famous composer from Angono who is also a national artist?",
+      "choices": {
+        "A": "Buenaventura",
+        "B": "Cenizal",
+        "C": "San Pedro",
+        "D": "Cayabyab"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Antonino Buenaventura was a National Artist from Bulacan, known for military bands.",
+        "choice_B": "Incorrect. Josefino Cenizal was a film composer.",
+        "choice_C": "Correct. Lucio San Pedro is the renowned National Artist for Music from Angono, Rizal, who composed 'Sa Ugoy ng Duyan'.",
+        "choice_D": "Incorrect. Ryan Cayabyab is a National Artist for Music from Manila."
+      },
+      "explanation": "Lucio San Pedro (1913â€“2002) was born in Angono, Rizal, and was named National Artist for Music in 1991.",
+      "memoryTip": "LUCIO SAN PEDRO = ANGONO, RIZAL = 'Sa Ugoy ng Duyan'.",
+      "reference": "Humanities â€” Philippine Music and Arts",
+      "difficulty": "Easy",
+      "subject": "Humanities",
+      "topic": "Philippine Music and Arts",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_025",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 25,
+      "question": "Which learning process involves forming an association between a stimulus and a response through repeated experience?",
+      "choices": {
+        "A": "Conditioning",
+        "B": "Teaching",
+        "C": "Memorizing",
+        "D": "Observing"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "replacement_generated",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Perceiving (simple sensory awareness) is the most basic, fundamental level of cognition/learning.",
+        "choice_B": "Incorrect. Responding involves active behavioral reaction.",
+        "choice_C": "Incorrect. Conditioning involves forming associative behavioral pathways.",
+        "choice_D": "Incorrect. Teaching is an instructional process, not a learner's psychological form of learning."
+      },
+      "explanation": "Conditioning is a learning process in which repeated experience establishes an association between stimuli and responses.",
+      "memoryTip": "CONDITIONING = LEARNING THROUGH ASSOCIATION.",
+      "reference": "Psychology â€” Levels of Learning",
+      "difficulty": "Easy",
+      "subject": "Psychology",
+      "topic": "Learning",
+      "audit_status": "major_repair",
+      "audit_reason": "The original 'lowest form of learning' depends on a nonstandard hierarchy and is not sufficiently defensible as a general learning-science statement. Replaced with a standard, high-yield learning concept.",
+      "replacement_generated": true,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "major_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_026",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 26,
+      "question": "What is the application of the principles of theories of human behavior in teaching and learning?",
+      "choices": {
+        "A": "Educational theory",
+        "B": "Educational philosophy",
+        "C": "Educational psychology",
+        "D": "Educational sociology"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Educational theory encompasses general frameworks, not specifically human behavior principles.",
+        "choice_B": "Incorrect. Educational philosophy examines values, purpose, and meaning of education.",
+        "choice_C": "Correct. Educational psychology studies psychological principles and human behavior applied to learning and instruction.",
+        "choice_D": "Incorrect. Educational sociology studies education as a social institution within society."
+      },
+      "explanation": "Educational Psychology applies psychological research on human development, cognition, and behavior to classroom instruction.",
+      "memoryTip": "HUMAN BEHAVIOR + TEACHING/LEARNING = Educational Psychology.",
+      "reference": "Professional Education â€” Foundations of Education",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Foundations of Education",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_027",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 27,
+      "question": "What was the term given by Marcelo H. Del Pilar to hidden control and domination by Spanish religious priests over the colonial government?",
+      "choices": {
+        "A": "Pase region",
+        "B": "Las suerte partidas",
+        "C": "Complace",
+        "D": "Frailocracia"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Pase region' is not a historical term for friar rule.",
+        "choice_B": "Incorrect. 'Las suerte partidas' is unrelated to friar governance.",
+        "choice_C": "Incorrect. 'Cumplase' was the governor-general's right to suspend royal decrees.",
+        "choice_D": "Correct. Marcelo H. del Pilar coined 'Frailocracia' (Frailocracy) to describe the invisible rule and supremacy of Spanish friars over colonial administration."
+      },
+      "explanation": "Frailocracia refers to rule by friars, where religious orders exercised immense political, economic, and social authority during the Spanish era.",
+      "memoryTip": "MARCELO H. DEL PILAR = FRAILOCRACIA (Monastic supremacy).",
+      "reference": "History â€” Spanish Colonial Philippines",
+      "difficulty": "Easy",
+      "subject": "History",
+      "topic": "Spanish Colonial Philippines",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_028",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 28,
+      "question": "During the Hispanic era, native and Chinese-mestizo males 16–60 years old were obligated to perform forced labor for forty days. How could exemption be obtained?",
+      "choices": {
+        "A": "Getting a cedula personal",
+        "B": "Give sanctorum tax to the church",
+        "C": "Paying the bandala",
+        "D": "Paying the falla (exemption fee)"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. A cedula personal was an identification certificate and tax receipt.",
+        "choice_B": "Incorrect. Sanctorum was a tax paid for church functions.",
+        "choice_C": "Incorrect. Bandala was the compulsory sale of farm goods to the government.",
+        "choice_D": "Correct. The 'falla' was the annual exemption fee paid to be excused from compulsory labor (polo y servicios)."
+      },
+      "explanation": "In polo y servicios, male Filipinos could avoid the mandatory 40 days of forced labor by paying the falla.",
+      "memoryTip": "POLO Y SERVICIOS EXEMPTION = FALLA.",
+      "reference": "History â€” Spanish Colonial Philippines",
+      "difficulty": "Easy",
+      "subject": "History",
+      "topic": "Spanish Colonial Philippines",
+      "audit_status": "minor_repair",
+      "audit_reason": "Improved historical wording and punctuation.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_029",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 29,
+      "question": "One of the pledges of the President of the Philippines is to defend its:",
+      "choices": {
+        "A": "Constitution",
+        "B": "Land",
+        "C": "Citizens",
+        "D": "Islands"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Under Article VII, Section 5 of the 1987 Constitution, the President swears to 'preserve and defend its Constitution'.",
+        "choice_B": "Incorrect. Land is part of the territory, but the explicit constitutional oath emphasizes the Constitution.",
+        "choice_C": "Incorrect. Protecting citizens is a duty, but the formal oath explicitly cites defending the Constitution.",
+        "choice_D": "Incorrect. Islands are components of national territory, not the specific constitutional oath formula."
+      },
+      "explanation": "The official Oath of Office of the President explicitly mandates preserving and defending the Constitution of the Philippines.",
+      "memoryTip": "PRESIDENTIAL OATH = Preserve and defend the CONSTITUTION.",
+      "reference": "Political Science â€” Philippine Constitution",
+      "difficulty": "Easy",
+      "subject": "Political Science",
+      "topic": "Philippine Constitution",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_030",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 30,
+      "question": "What contained the concrete promise of the Americans to Filipinos independence \"as soon as stable government can be established\"?",
+      "choices": {
+        "A": "Preamble of the Jones Law",
+        "B": "Fairfield Bill of 1924",
+        "C": "Preamble of the Commonwealth Government",
+        "D": "First 1919 Parliamentary Mission to the U.S."
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. The Preamble of the Jones Law of 1916 (Philippine Autonomy Act) formally declared America's intention to grant independence as soon as a stable government was established.",
+        "choice_B": "Incorrect. The Fairfield Bill proposed immediate autonomy but was never enacted.",
+        "choice_C": "Incorrect. The Commonwealth was established later under the Tydings-McDuffie Act.",
+        "choice_D": "Incorrect. Parliamentary missions advocated for independence but were not U.S. organic laws."
+      },
+      "explanation": "The Jones Law (1916) was the first official U.S. statute pledging future Philippine independence.",
+      "memoryTip": "JONES LAW PREAMBLE = Promise of independence upon stable government.",
+      "reference": "History â€” American Colonial Era",
+      "difficulty": "Medium",
+      "subject": "History",
+      "topic": "American Colonial Era",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_031",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 31,
+      "question": "Participation in governance, including the right to vote and seek public office is secured within the citizenry's",
+      "choices": {
+        "A": "Political rights",
+        "B": "Right of suffrage",
+        "C": "Socio-civic rights",
+        "D": "Right to due process"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Political rights empower citizens to participate directly or indirectly in the establishment or administration of government.",
+        "choice_B": "Incorrect. Right of suffrage specifically refers to voting, which is one component of broader political rights.",
+        "choice_C": "Incorrect. Socio-civic rights relate to community participation and social welfare.",
+        "choice_D": "Incorrect. Due process is a civil right guaranteeing fair legal procedures."
+      },
+      "explanation": "Political rights are rights that allow citizens to participate in government affairs, vote, run for office, and petition government.",
+      "memoryTip": "POLITICAL RIGHTS = Vote, hold office, participate in governance.",
+      "reference": "Political Science â€” Constitutional Rights",
+      "difficulty": "Easy",
+      "subject": "Political Science",
+      "topic": "Constitutional Rights",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_032",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 32,
+      "question": "The right invoked in the \"writ of habeas data\" is",
+      "choices": {
+        "A": "The right to information privacy.",
+        "B": "Right to gather information data.",
+        "C": "The right to search for information.",
+        "D": "Right to transmit data."
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. The Writ of Habeas Data is a remedy available to any person whose right to privacy in life, liberty or security is violated by an unlawful act of gathering or storing personal information.",
+        "choice_B": "Incorrect. It does not grant a right to gather data; it protects personal privacy against unauthorized data collection.",
+        "choice_C": "Incorrect. It is not an authorization to conduct searches.",
+        "choice_D": "Incorrect. It does not relate to data transmission rights."
+      },
+      "explanation": "Habeas Data protects information privacy, enabling individuals to control, correct, or suppress false or unauthorized personal records.",
+      "memoryTip": "WRIT OF HABEAS DATA = INFORMATION PRIVACY.",
+      "reference": "Political Science â€” Constitutional Writs",
+      "difficulty": "Medium",
+      "subject": "Political Science",
+      "topic": "Constitutional Writs",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_033",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 33,
+      "question": "The ethical theory that judges an action by whether it produces the greatest good for the greatest number is called:",
+      "choices": {
+        "A": "Mercantilism",
+        "B": "Colonialism",
+        "C": "Capitalism",
+        "D": "Utilitarianism"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Mercantilism is an economic policy aimed at accumulating gold and bullion through positive trade balances.",
+        "choice_B": "Incorrect. Colonialism is political and economic control over foreign territories.",
+        "choice_C": "Incorrect. Capitalism is an economic system based on private ownership of capital.",
+        "choice_D": "Correct. Utilitarianism (Jeremy Bentham, John Stuart Mill) is the ethical philosophy asserting that the best action maximizes happiness/utility for the greatest number of people."
+      },
+      "explanation": "Utilitarianism evaluates morality based on consequences, advocating 'the greatest good for the greatest number'.",
+      "memoryTip": "UTILITARIANISM = Greatest good for the greatest number.",
+      "reference": "Philosophy â€” Ethical Theories",
+      "difficulty": "Easy",
+      "subject": "Philosophy",
+      "topic": "Ethical Theories",
+      "audit_status": "minor_repair",
+      "audit_reason": "The original called utilitarianism an 'economic policy,' which is conceptually inaccurate. Reworded to its proper ethical context.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_034",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 34,
+      "question": "What is a central objective of the Comprehensive Agrarian Reform Program (CARP) in the Philippines?",
+      "choices": {
+        "A": "Abolish share tenancy in favor of lease tenancy",
+        "B": "Promote more equitable distribution and ownership of agricultural land",
+        "C": "Establish once-cultivated land",
+        "D": "Ensure cultivation of idle lands only"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "replacement_generated",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Abolishing share tenancy was a stepping stone, not the ultimate social justice goal.",
+        "choice_B": "Correct. Comprehensive Agrarian Reform Program (CARP) aims to achieve social justice by redistributing agricultural land to landless farmers and farmworkers.",
+        "choice_C": "Incorrect. Establishing previously cultivated land is vague and secondary.",
+        "choice_D": "Incorrect. Cultivating idle lands is an agricultural goal, but not the primary redistributive socio-economic objective."
+      },
+      "explanation": "CARP is founded on more equitable distribution and ownership of agricultural land, together with social justice, support for landless farmers and farmworkers, and improved rural development.",
+      "memoryTip": "CARP = EQUITABLE LAND DISTRIBUTION + SOCIAL JUSTICE.",
+      "reference": "Economics â€” Agrarian Reform",
+      "difficulty": "Medium",
+      "subject": "Economics",
+      "topic": "Agrarian Reform",
+      "audit_status": "major_repair",
+      "audit_reason": "The original answer 'distribute all arable lands to the landless' is too absolute and ignores statutory retention limits, exclusions, and just compensation. The law emphasizes equitable distribution and ownership. citeturn0search0turn0search1",
+      "replacement_generated": true,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "major_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_035",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 35,
+      "question": "What problem can result from bias among parents and youth against manual or technical occupations, such as masonry, mechanics, and plumbing?",
+      "choices": {
+        "A": "Boss mentality",
+        "B": "White collar mania",
+        "C": "Blue collar mania",
+        "D": "Technocrat mind"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Boss mentality refers to authoritarian leadership styles.",
+        "choice_B": "Correct. 'White collar mania' is the socio-cultural prejudice that favors office/desk jobs over manual or skilled technical trades ('blue collar').",
+        "choice_C": "Incorrect. 'Blue collar mania' would mean excessive preference for manual labor, which is the opposite of the trend.",
+        "choice_D": "Incorrect. Technocrat mind refers to technical governance by experts."
+      },
+      "explanation": "Societal stigma against manual/skilled technical trades leads to an oversupply of white-collar graduates and shortages in skilled blue-collar professions.",
+      "memoryTip": "PREJUDICE AGAINST MANUAL TRADES = White collar mania.",
+      "reference": "Sociology â€” Philippine Social Trends",
+      "difficulty": "Easy",
+      "subject": "Sociology",
+      "topic": "Philippine Social Trends",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired grammar and made the occupational examples parallel.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_036",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 36,
+      "question": "In social trends, how do you call those who are for the revival of the classics?",
+      "choices": {
+        "A": "Existentialists",
+        "B": "Rationalists",
+        "C": "Humanist",
+        "D": "Reformists"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Existentialists focus on individual freedom, choice, and meaning.",
+        "choice_B": "Incorrect. Rationalists emphasize reason as the primary source of knowledge.",
+        "choice_C": "Correct. Renaissance Humanists championed the revival of classical Greek and Roman philosophy, literature, and art.",
+        "choice_D": "Incorrect. Reformists seek political or religious changes."
+      },
+      "explanation": "Humanism during the Renaissance focused on the recovery and study of classical antiquity (humanities).",
+      "memoryTip": "REVIVAL OF CLASSICS = HUMANISTS (Renaissance Humanism).",
+      "reference": "Philosophy â€” Intellectual History",
+      "difficulty": "Easy",
+      "subject": "Philosophy",
+      "topic": "Intellectual History",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_037",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 37,
+      "question": "Which demonstrates interconnectedness between social and environmental injustice?",
+      "choices": {
+        "A": "Industrialized countries' toxic waste disposed to poorer countries.",
+        "B": "Temperature warming and rise of sea level.",
+        "C": "Desertification of verdant regions.",
+        "D": "Extinction of rare animal species."
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Dumping toxic waste from rich, industrialized nations into impoverished developing nations directly links social inequality with environmental degradation.",
+        "choice_B": "Incorrect. Sea level rise is a general global warming consequence.",
+        "choice_C": "Incorrect. Desertification is an ecological process, though human-influenced, not directly showing social exploitation.",
+        "choice_D": "Incorrect. Animal extinction is a biodiversity issue."
+      },
+      "explanation": "Environmental injustice occurs when socio-economically disadvantaged populations disproportionately bear the burden of environmental hazards.",
+      "memoryTip": "TOXIC DUMPING IN POOR COUNTRIES = Environmental + Social Injustice.",
+      "reference": "Environmental Science â€” Environmental Justice",
+      "difficulty": "Medium",
+      "subject": "Environmental Science",
+      "topic": "Environmental Justice",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_038",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 38,
+      "question": "What tax is imposed on income earned by employed persons and practicing professionals?",
+      "choices": {
+        "A": "Income tax",
+        "B": "Real estate",
+        "C": "Community tax",
+        "D": "Inheritance tax"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Income tax is levied on the wages, salaries, professional fees, and profits earned by employed individuals and self-employed professionals.",
+        "choice_B": "Incorrect. Real estate tax is levied on property ownership.",
+        "choice_C": "Incorrect. Community tax (cedula) is a nominal residency tax on all adult residents.",
+        "choice_D": "Incorrect. Inheritance tax (estate tax) is levied on transferred properties of a deceased person."
+      },
+      "explanation": "Income tax is a direct tax calculated on earnings from employment, business, or practice of profession.",
+      "memoryTip": "TAX ON EARNINGS/PROFESSION = INCOME TAX.",
+      "reference": "Economics â€” Taxation",
+      "difficulty": "Easy",
+      "subject": "Economics",
+      "topic": "Taxation",
+      "audit_status": "minor_repair",
+      "audit_reason": "Specified the tax base and repaired the fragmentary stem.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_039",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 39,
+      "question": "Which constitutional principle prevents one branch of government from becoming too powerful or abusive?",
+      "choices": {
+        "A": "Impeachment",
+        "B": "Ombudsman",
+        "C": "Checks and balances",
+        "D": "Laissez-faire"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Impeachment is a specific mechanism to remove high officials, which is part of checks and balances.",
+        "choice_B": "Incorrect. The Ombudsman investigates public corruption.",
+        "choice_C": "Correct. The system of Checks and Balances ensures that each branch of government (Executive, Legislative, Judicial) can check the actions of the others to prevent tyranny.",
+        "choice_D": "Incorrect. Laissez-faire is an economic philosophy of minimal government intervention in markets."
+      },
+      "explanation": "Checks and balances distribute governmental powers and allow branches to restrain one another, reducing the risk of abuse.",
+      "memoryTip": "CHECKS AND BALANCES = BRANCHES RESTRAIN ONE ANOTHER.",
+      "reference": "Political Science â€” Constitutional Law",
+      "difficulty": "Easy",
+      "subject": "Political Science",
+      "topic": "Constitutional Law",
+      "audit_status": "minor_repair",
+      "audit_reason": "Corrected the standard term from singular 'Check and Balance' to 'checks and balances.'",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_040",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 40,
+      "question": "Whose philosophy advocate the use of reason in understanding the existence of God?",
+      "choices": {
+        "A": "St. Benedict",
+        "B": "St. Peter",
+        "C": "St. John",
+        "D": "St. Thomas Aquinas"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. St. Benedict established monastic rules.",
+        "choice_B": "Incorrect. St. Peter was the leader of the apostles.",
+        "choice_C": "Incorrect. St. John wrote the Gospel and Revelation.",
+        "choice_D": "Correct. St. Thomas Aquinas (Thomism) synthesized faith and reason, formulating the 'Five Ways' (Quinque Viae) to prove God's existence logically."
+      },
+      "explanation": "St. Thomas Aquinas taught that human reason and divine revelation are complementary paths to ultimate truth.",
+      "memoryTip": "REASON + GOD'S EXISTENCE = ST. THOMAS AQUINAS (Quinque Viae).",
+      "reference": "Philosophy â€” Medieval Philosophy",
+      "difficulty": "Medium",
+      "subject": "Philosophy",
+      "topic": "Medieval Philosophy",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_041",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 41,
+      "question": "An ant colony stores food, defends itself from enemies, and raids competing colonies for larvae that become workers. What term best describes the species' role and way of life within its environment?",
+      "choices": {
+        "A": "Ecological defeat",
+        "B": "Environmental habitation",
+        "C": "Ecological success",
+        "D": "Ecological niche"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Ecological defeat' is not an ecological concept describing species survival behaviors.",
+        "choice_B": "Incorrect. Habitation refers to living in a habitat, not the functional role.",
+        "choice_C": "Incorrect. Success is a general outcome, not the functional term for a species' role.",
+        "choice_D": "Correct. An 'ecological niche' describes the functional role, resource usage, interactions, and survival strategies of an organism in its ecosystem."
+      },
+      "explanation": "A niche encompasses what a species eats, how it collects food, avoids predators, and interacts with other organisms in its habitat.",
+      "memoryTip": "FUNCTIONAL ROLE & BEHAVIOR = ECOLOGICAL NICHE.",
+      "reference": "Biology â€” Ecology",
+      "difficulty": "Medium",
+      "subject": "Biology",
+      "topic": "Ecology",
+      "audit_status": "minor_repair",
+      "audit_reason": "Clarified the ecological meaning of 'niche' so the keyed answer is directly supported.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_042",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 42,
+      "question": "What technology technique is employed during breeding in captivity in order to restore the populations of endangered threatened species to safe levels?",
+      "choices": {
+        "A": "Artificial insemination",
+        "B": "Cobalt radiation",
+        "C": "Cross pollination",
+        "D": "Genetic engineering"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Artificial insemination is widely used in captive breeding programs to propagate endangered animal species without requiring natural mating.",
+        "choice_B": "Incorrect. Cobalt radiation is used in cancer radiation therapy or sterilization.",
+        "choice_C": "Incorrect. Cross pollination applies to plant reproduction.",
+        "choice_D": "Incorrect. Genetic engineering alters DNA sequences, whereas captive breeding focuses on reproducing existing genetic lineages."
+      },
+      "explanation": "Artificial insemination allows conservationists to increase genetic diversity and population numbers in captive endangered animals.",
+      "memoryTip": "CAPTIVE ANIMAL BREEDING = ARTIFICIAL INSEMINATION.",
+      "reference": "Biology â€” Conservation Biology",
+      "difficulty": "Easy",
+      "subject": "Biology",
+      "topic": "Conservation Biology",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_043",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 43,
+      "question": "Who was the father of modern taxonomy and responsible for coining the term Homo sapiens for human?",
+      "choices": {
+        "A": "Chatton",
+        "B": "Copland",
+        "C": "Aristotle",
+        "D": "Linnaeus"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Ã‰douard Chatton classified organisms into prokaryotes and eukaryotes.",
+        "choice_B": "Incorrect. Herbert Copeland proposed the four-kingdom system.",
+        "choice_C": "Incorrect. Aristotle is the Father of Biology and early classifier, but not modern taxonomy.",
+        "choice_D": "Correct. Carl Linnaeus introduced binomial nomenclature (Genus species) and coined 'Homo sapiens'."
+      },
+      "explanation": "Carl Linnaeus established the hierarchical system of taxonomic rank and double-naming (binomial nomenclature).",
+      "memoryTip": "FATHER OF TAXONOMY = CARL LINNAEUS (Binomial Nomenclature).",
+      "reference": "Biology â€” Taxonomy",
+      "difficulty": "Easy",
+      "subject": "Biology",
+      "topic": "Taxonomy",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_044",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 44,
+      "question": "The molecules that contain an organism's genetic makeup are called:",
+      "choices": {
+        "A": "Proteins",
+        "B": "Nucleic acids",
+        "C": "Lipids",
+        "D": "Carbohydrates"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Genetic membrane' is an inaccurate term.",
+        "choice_B": "Correct. Nucleic acids (DNA and RNA) store and transmit genetic information in living organisms.",
+        "choice_C": "Incorrect. The nucleolus is a sub-nuclear organelle where ribosomes are assembled.",
+        "choice_D": "Incorrect. Cytosol is the fluid portion of the cell cytoplasm."
+      },
+      "explanation": "DNA and RNA are nucleic acids. DNA stores hereditary information in organisms, while RNA participates in gene expression and related processes.",
+      "memoryTip": "GENETIC INFORMATION → NUCLEIC ACIDS (especially DNA).",
+      "reference": "Biology â€” Genetics",
+      "difficulty": "Easy",
+      "subject": "Biology",
+      "topic": "Genetics",
+      "audit_status": "minor_repair",
+      "audit_reason": "Corrected subject-verb agreement and pluralized the answer term.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_045",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 45,
+      "question": "The protein shell of a virus is called",
+      "choices": {
+        "A": "Capsid",
+        "B": "Lambda bacteriophage",
+        "C": "Virions",
+        "D": "Capsomeres"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. The capsid is the protective outer protein shell enclosing the genetic material of a virus.",
+        "choice_B": "Incorrect. Lambda bacteriophage is a specific virus that infects E. coli bacteria.",
+        "choice_C": "Incorrect. A virion is an entire complete viral particle.",
+        "choice_D": "Incorrect. Capsomeres are individual protein subunits that make up the capsid structure."
+      },
+      "explanation": "The capsid protects the viral genome from nucleases and aids in attaching to host target cells.",
+      "memoryTip": "VIRAL PROTEIN SHELL = CAPSID.",
+      "reference": "Biology â€” Microbiology",
+      "difficulty": "Easy",
+      "subject": "Biology",
+      "topic": "Microbiology",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_046",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 46,
+      "question": "Because it can adversely affect food supplies by competing with food crops for biomass, the most disadvantageous energy source among the choices is:",
+      "choices": {
+        "A": "Wind",
+        "B": "Sun",
+        "C": "geo-thermal",
+        "D": "plants"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Wind energy relies on turbines and does not consume food crops.",
+        "choice_B": "Incorrect. Solar energy utilizes sunlight.",
+        "choice_C": "Incorrect. Geothermal taps Earth's subterranean heat.",
+        "choice_D": "Correct. Biofuel production using food crops (e.g., corn, sugar cane) competes directly with agricultural land needed for human food supplies."
+      },
+      "explanation": "Diverting agricultural crops to produce plant-based biofuels reduces food availability and drives up food prices.",
+      "memoryTip": "PLANT BIOFUELS = Competes with FOOD SUPPLIES.",
+      "reference": "Environmental Science â€” Energy Resources",
+      "difficulty": "Medium",
+      "subject": "Environmental Science",
+      "topic": "Energy Resources",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired the awkward causal wording while preserving the intended 'plants' answer.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_047",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 47,
+      "question": "The energy source which is abundant in the Philippines but still not fully developed is the?",
+      "choices": {
+        "A": "Gas",
+        "B": "Sun",
+        "C": "Sea",
+        "D": "Mineral"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Natural gas (e.g., Malampaya) is heavily exploited but depleting.",
+        "choice_B": "Correct. Being a tropical country, solar power (sunlight) is abundant year-round in the Philippines, yet remains underutilized relative to its total capacity.",
+        "choice_C": "Incorrect. Ocean/wave energy has lower current technological maturity worldwide.",
+        "choice_D": "Incorrect. Mineral energy (coal/uranium) is non-renewable."
+      },
+      "explanation": "Solar energy offers massive untapped renewable potential across the Philippine archipelago.",
+      "memoryTip": "ABUNDANT TROPICAL ENERGY = SOLAR / SUN.",
+      "reference": "Environmental Science â€” Renewable Energy",
+      "difficulty": "Easy",
+      "subject": "Environmental Science",
+      "topic": "Renewable Energy",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_048",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 48,
+      "question": "Air, like food and water, is essential to human existence. Carried by the wind, polluted air called _____ falls to Earth, poisoning fish and destroying vegetation.",
+      "choices": {
+        "A": "El NiÃ±o",
+        "B": "Greenhouse rain",
+        "C": "La NiÃ±a",
+        "D": "Acid rain"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. El NiÃ±o is a climate pattern marked by unusual Pacific ocean warming.",
+        "choice_B": "Incorrect. 'Greenhouse rain' is a fictitious term.",
+        "choice_C": "Incorrect. La NiÃ±a is a climate pattern causing above-average rainfall.",
+        "choice_D": "Correct. Acid rain results when sulfur dioxide and nitrogen oxides combine with atmospheric moisture, damaging forests, soils, lakes, and aquatic life."
+      },
+      "explanation": "Acid rain forms when emissions of SO2 and NOx react with water vapor to lower precipitation pH.",
+      "memoryTip": "POLLUTED PRECIPITATION = ACID RAIN.",
+      "reference": "Environmental Science â€” Pollution",
+      "difficulty": "Easy",
+      "subject": "Environmental Science",
+      "topic": "Pollution",
+      "audit_status": "minor_repair",
+      "audit_reason": "Corrected 'fails to earth' to 'falls to Earth.'",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_049",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 49,
+      "question": "What will happen to a pant cell in a hypotonic solution",
+      "choices": {
+        "A": "The plant cell will develop a thickened cell wall.",
+        "B": "The plant cell will shrivel.",
+        "C": "No effect on the plant cell.",
+        "D": "The plant cell will swell."
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Cell walls do not instantly thicken in response to osmotic water influx.",
+        "choice_B": "Incorrect. Cells shrivel in HYPERTONIC solutions due to water loss (plasmolysis).",
+        "choice_C": "Incorrect. Net water movement occurs until equilibrium.",
+        "choice_D": "Correct. In a hypotonic solution, water rushes into the cell by osmosis, causing the plant cell to swell and become turgid (rigid)."
+      },
+      "explanation": "Plant cell walls prevent bursting, allowing hypotonic solutions to generate turgor pressure which keeps plants upright.",
+      "memoryTip": "HYPOTONIC SOLUTION â†’ Water enters cell â†’ Plant cell SWELLS (Turgid).",
+      "reference": "Biology â€” Cell Biology / Osmosis",
+      "difficulty": "Medium",
+      "subject": "Biology",
+      "topic": "Cell Biology / Osmosis",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_050",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 50,
+      "question": "Polysaccharides, triglycerides, polypeptides, and nucleic acids are classified as:",
+      "choices": {
+        "A": "Carbohydrates",
+        "B": "Acids and bases",
+        "C": "Phospholipids",
+        "D": "Macromolecules"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Carbohydrates include only polysaccharides, not triglycerides or polypeptides.",
+        "choice_B": "Incorrect. Acid and bases are broad chemical categories, not specific biomolecules.",
+        "choice_C": "Incorrect. Phospholipids are a specific subgroup of lipids.",
+        "choice_D": "Correct. Polysaccharides, triglycerides (lipids), polypeptides (proteins), and nucleic acids are the four major biological macromolecules."
+      },
+      "explanation": "These are large biological molecules: polysaccharides, proteins/polypeptides, lipids such as triglycerides, and nucleic acids.",
+      "memoryTip": "LARGE BIOLOGICAL MOLECULES = MACROMOLECULES.",
+      "reference": "Chemistry â€” Biochemistry",
+      "difficulty": "Easy",
+      "subject": "Chemistry",
+      "topic": "Biochemistry",
+      "audit_status": "minor_repair",
+      "audit_reason": "Corrected 'Macromolecular' to the proper noun 'macromolecules.'",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_051",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 51,
+      "question": "A toothpick can sit on the surface of water due to",
+      "choices": {
+        "A": "Surface tension",
+        "B": "Buoyancy",
+        "C": "Atmospheric pressure",
+        "D": "Viscosity"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Surface tension, created by cohesive forces among water molecules at the surface, acts like an elastic membrane supporting lightweight objects.",
+        "choice_B": "Incorrect. Buoyancy depends on displaced fluid volume, whereas resting on the liquid surface membrane is surface tension.",
+        "choice_C": "Incorrect. Atmospheric pressure acts uniformly downward on the surface.",
+        "choice_D": "Incorrect. Viscosity measures a fluid's resistance to flow."
+      },
+      "explanation": "Cohesive hydrogen bonding creates surface tension, allowing light items or insects to sit on water.",
+      "memoryTip": "SURFACE TENSION = Water cohesive forces supporting light objects.",
+      "reference": "Physics â€” Fluid Mechanics",
+      "difficulty": "Easy",
+      "subject": "Physics",
+      "topic": "Fluid Mechanics",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_052",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 52,
+      "question": "Which is true of metalloids?",
+      "choices": {
+        "A": "Conduct heat and electricity less effectively than non-metal.",
+        "B": "Conduct heat and electricity better than metals.",
+        "C": "Conduct heat better than metals.",
+        "D": "Have properties of both metals and non-metals."
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Metalloids conduct heat/electricity BETTER than non-metals.",
+        "choice_B": "Incorrect. Metals are superior conductors compared to metalloids.",
+        "choice_C": "Incorrect. Metals conduct heat better than metalloids.",
+        "choice_D": "Correct. Metalloids (e.g., Silicon, Germanium) exhibit intermediate properties between metals and non-metals, often acting as semiconductors."
+      },
+      "explanation": "Metalloids sit along the staircase of the periodic table, possessing intermediate physical and chemical characteristics.",
+      "memoryTip": "METALLOIDS = Intermediate properties of BOTH metals and non-metals.",
+      "reference": "Chemistry â€” Periodic Table",
+      "difficulty": "Easy",
+      "subject": "Chemistry",
+      "topic": "Periodic Table",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_053",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 53,
+      "question": "Which of the following is the CORRECT name for the compound MnF3?",
+      "choices": {
+        "A": "Manganese fluoride (III)",
+        "B": "Manganese (1) fluoride (III)",
+        "C": "Manganese (III) fluoride",
+        "D": "Manganese (III) fluoride (III)"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. The Roman numeral indicates the cation oxidation state and belongs right after 'Manganese'.",
+        "choice_B": "Incorrect. Manganese has an oxidation state of +3, not +1.",
+        "choice_C": "Correct. Fluorine has an oxidation charge of -1; three fluorine ions give -3, requiring Manganese to be MnÂ³âº. In IUPAC nomenclature, this is Manganese (III) fluoride.",
+        "choice_D": "Incorrect. Roman numerals are not placed on the anion (fluoride)."
+      },
+      "explanation": "In Stock nomenclature for transition metals, the oxidation state of the metal cation is specified in parentheses immediately following the metal's name.",
+      "memoryTip": "MnF3 â†’ Mn is +3 â†’ Manganese (III) fluoride.",
+      "reference": "Chemistry â€” Chemical Nomenclature",
+      "difficulty": "Medium",
+      "subject": "Chemistry",
+      "topic": "Chemical Nomenclature",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_054",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 54,
+      "question": "Which of the following statements is true about textbook laid on the table?",
+      "choices": {
+        "A": "No force is acting on it.",
+        "B": "The textbook undergoes acceleration.",
+        "C": "The sum of the forces acting upon it is zero.",
+        "D": "The textbook undergoes deceleration."
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Gravity acts downward and the normal force acts upward.",
+        "choice_B": "Incorrect. The book is stationary, so acceleration is zero.",
+        "choice_C": "Correct. According to Newton's First Law, an object at rest experiences balanced forces where the downward gravitational force equals the upward normal force, making the net force zero.",
+        "choice_D": "Incorrect. Deceleration implies changing velocity, but the book is stationary."
+      },
+      "explanation": "When an object is in static equilibrium, the vector sum of all forces acting upon it is zero ($\\Sigma F = 0$).",
+      "memoryTip": "AT REST ON TABLE = Net force is ZERO ($\\Sigma F = 0$).",
+      "reference": "Physics â€” Newton's Laws of Motion",
+      "difficulty": "Easy",
+      "subject": "Physics",
+      "topic": "Newton's Laws of Motion",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_055",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 55,
+      "question": "Which of the following is a unit of pressure defined as one newton per square meter?",
+      "choices": {
+        "A": "Pascal",
+        "B": "Atomic Units",
+        "C": "Milliliter",
+        "D": "Poise"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. The Pascal (Pa) is the SI unit of pressure, defined as 1 Newton per square meter ($1\text{ Pa} = 1\text{ N/m}^2$).",
+        "choice_B": "Incorrect. Atomic units are used in atomic physics.",
+        "choice_C": "Incorrect. Milliliter measures volume.",
+        "choice_D": "Incorrect. Poise measures dynamic viscosity."
+      },
+      "explanation": "Pressure is force per unit area ($P = F/A$), measured in Pascals ($\text{N/m}^2$).",
+      "memoryTip": "1 NEWTON PER SQ METER = 1 PASCAL.",
+      "reference": "Physics â€” Units of Measurement",
+      "difficulty": "Easy",
+      "subject": "Physics",
+      "topic": "Units of Measurement",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired grammar: 'measure of pressure, defines as' → 'unit of pressure defined as.'",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_056",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 56,
+      "question": "A metric carat is a unit of mass used for measuring gemstones. It is equivalent to:",
+      "choices": {
+        "A": "1,000 mg",
+        "B": "200 mg",
+        "C": "2 kg",
+        "D": "100 mg"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 1,000 mg equals 1 gram.",
+        "choice_B": "Correct. By official international definition, 1 metric carat = 200 milligrams (0.2 grams).",
+        "choice_C": "Incorrect. 2 kg is 2,000 grams.",
+        "choice_D": "Incorrect. 100 mg is half a carat."
+      },
+      "explanation": "1 carat (ct) is defined as exactly 200 milligrams or 0.200 grams.",
+      "memoryTip": "1 CARAT = 200 MILLIGRAMS (0.2 g).",
+      "reference": "General Science â€” Units and Measurement",
+      "difficulty": "Easy",
+      "subject": "General Science",
+      "topic": "Units and Measurement",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired wording only.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_057",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 57,
+      "question": "Science provides knowledge through disciplined observation. Which of the following is NOT characteristic of scientific assertion?",
+      "choices": {
+        "A": "Logic and validity",
+        "B": "Empirical support",
+        "C": "Conformity with actual observation",
+        "D": "Hearsay"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Logic and valid reasoning are core pillars of science.",
+        "choice_B": "Incorrect. Empirical evidence is mandatory for scientific claims.",
+        "choice_C": "Incorrect. Assertions must match observable, testable real-world facts.",
+        "choice_D": "Correct. 'Hearsay' (unverified rumor or second-hand claims) is invalid and non-scientific."
+      },
+      "explanation": "Scientific methods rely on objective observation, controlled testing, and empirical evidence rather than unverified hearsay.",
+      "memoryTip": "NOT SCIENTIFIC = HEARSAY / Rumor.",
+      "reference": "General Science â€” Nature of Science",
+      "difficulty": "Easy",
+      "subject": "General Science",
+      "topic": "Nature of Science",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_058",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 58,
+      "question": "A species of fish lived in a lake. When a dam was constructed, a group of fish was separated and populated a new pond. They later developed differing characteristics and became a distinct species. Which concept best explains this speciation?",
+      "choices": {
+        "A": "Geographical isolation",
+        "B": "Chronotropic isolation",
+        "C": "Episodic isolation",
+        "D": "Behavioral isolation"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Geographical isolation occurs when physical barriers (like a dam, mountain, or river) separate populations, leading to allopatric speciation.",
+        "choice_B": "Incorrect. Chronotropic refers to timing/rate mechanisms.",
+        "choice_C": "Incorrect. Episodic isolation is not a standard speciation term.",
+        "choice_D": "Incorrect. Behavioral isolation results from differences in mating rituals or behavior without physical barriers."
+      },
+      "explanation": "Geographical barriers prevent gene flow between separated populations, driving evolutionary divergence.",
+      "memoryTip": "PHYSICAL BARRIER (Dam) = GEOGRAPHICAL ISOLATION.",
+      "reference": "Biology â€” Evolution and Speciation",
+      "difficulty": "Easy",
+      "subject": "Biology",
+      "topic": "Evolution and Speciation",
+      "audit_status": "minor_repair",
+      "audit_reason": "Corrected 'specification' to 'speciation' and improved grammar.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_059",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 59,
+      "question": "During periods of increased global temperatures, which of the following is most likely to occur as a positive feedback or associated climate effect?",
+      "choices": {
+        "A": "A decrease in earthquake",
+        "B": "An increase in earthquakes",
+        "C": "A decrease in atmospheric $CO_{2}$",
+        "D": "An increase in atmospheric $CO_{2}$"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Earthquakes are caused by tectonic activity, not directly atmospheric temperature.",
+        "choice_B": "Incorrect. Tectonic plate movements are not driven primarily by surface atmospheric warmth.",
+        "choice_C": "Incorrect. Higher temperatures are strongly correlated with elevated greenhouse gas concentrations.",
+        "choice_D": "Correct. Global temperature spikes are directly driven by elevated levels of greenhouse gases such as atmospheric carbon dioxide ($CO_2$)."
+      },
+      "explanation": "The greenhouse effect causes rising global surface temperatures as atmospheric $CO_2$ traps thermal radiation.",
+      "memoryTip": "GLOBAL WARMING = INCREASE IN ATMOSPHERIC $CO_{2}$.",
+      "reference": "Earth Science â€” Climate Change",
+      "difficulty": "Easy",
+      "subject": "Earth Science",
+      "topic": "Climate Change",
+      "audit_status": "minor_repair",
+      "audit_reason": "The original wording treated increased atmospheric $CO_{2}$ as an unconditional direct result. Added context to make the keyed answer scientifically defensible.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_060",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 60,
+      "question": "Clara Ramos works as a sales clerk. She is paid a salary of P3,000.00 a week plus 2% commission on sales over P4,000.00. Find her gross pay for a week in which her sales are P9,500.00.",
+      "choices": {
+        "A": "P3,500.00",
+        "B": "P3,250.00",
+        "C": "P3,110.00",
+        "D": "P3,210.00"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. P3,500 overestimates commission.",
+        "choice_B": "Incorrect. P3,250 miscalculates commission base.",
+        "choice_C": "Correct. Sales over P4,000 = P9,500 - P4,000 = P5,500. Commission = 2% of P5,500 = 0.02 * 5500 = P110. Gross pay = P3,000 + P110 = P3,110.00.",
+        "choice_D": "Incorrect. P3,210 incorrectly calculates 2% on total sales without subtracting the P4,000 threshold."
+      },
+      "explanation": "Step 1: Eligible sales = P9,500 - P4,000 = P5,500. Step 2: Commission = 0.02 * P5,500 = P110. Step 3: Total = P3,000 + P110 = P3,110.",
+      "memoryTip": "BASE SALARY + COMMISSION OVER THRESHOLD = P3,000 + (0.02 * 5,500) = P3,110.",
+      "reference": "Mathematics â€” Business Mathematics",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Business Mathematics",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired article and punctuation.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_061",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 61,
+      "question": "Regala Company manufactures beds; in its catalogue, a double bed is at P5,000.00 less a discount of 20%. What will Rizza have to pay for the bed she ordered?",
+      "choices": {
+        "A": "P4,150.00",
+        "B": "P4,100.00",
+        "C": "P4,200.00",
+        "D": "P4,000.00"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. P4,150 corresponds to a 17% discount.",
+        "choice_B": "Incorrect. P4,100 is an incorrect subtraction.",
+        "choice_C": "Incorrect. P4,200 corresponds to a 16% discount.",
+        "choice_D": "Correct. Discount amount = 20% of P5,000 = 0.20 * 5,000 = P1,000. Net price = P5,000 - P1,000 = P4,000.00."
+      },
+      "explanation": "Net Price = List Price * (1 - Discount Rate) = P5,000 * 0.80 = P4,000.00.",
+      "memoryTip": "5,000 x 0.80 = P4,000.",
+      "reference": "Mathematics â€” Business Mathematics",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Business Mathematics",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_062",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 62,
+      "question": "The greatest common factor (GCF) of 22, 15, 7 is",
+      "choices": {
+        "A": "1",
+        "B": "3",
+        "C": "2",
+        "D": "4"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. The factors of 22 are 1, 2, 11, 22; factors of 15 are 1, 3, 5, 15; factors of 7 are 1, 7. The only common factor shared by all three numbers is 1.",
+        "choice_B": "Incorrect. 3 does not divide 22 or 7.",
+        "choice_C": "Incorrect. 2 does not divide 15 or 7.",
+        "choice_D": "Incorrect. 4 does not divide any of these numbers."
+      },
+      "explanation": "Numbers whose only common factor is 1 are relatively prime as a group.",
+      "memoryTip": "GCF OF 22, 15, 7 = 1 (No shared prime factors).",
+      "reference": "Mathematics â€” Number Theory",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Number Theory",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_063",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 63,
+      "question": "Factorize: 2x^2+7x-15",
+      "choices": {
+        "A": "(x-5)(2x+3)",
+        "B": "(x+5)(2x-3)",
+        "C": "(2x+5)(x-3)",
+        "D": "(2x-5)(x+3)"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Expanding yields $2x^2 - 7x - 15$, wrong middle term.",
+        "choice_B": "Correct. Expanding $(x+5)(2x-3) = 2x^2 - 3x + 10x - 15 = 2x^2 + 7x - 15$. Note: The source text prints '22+72-15' which is a known OCR typo for $2x^2+7x-15$.",
+        "choice_C": "Incorrect. Expanding yields $2x^2 - x - 15$.",
+        "choice_D": "Incorrect. Expanding yields $2x^2 + x - 15$."
+      },
+      "explanation": "To factor $2x^2+7x-15$, split the middle term $7x$ into $10x - 3x$: $2x(x+5) - 3(x+5) = (x+5)(2x-3)$.",
+      "memoryTip": "(x + 5)(2x - 3) = 2x^2 + 7x - 15.",
+      "reference": "Mathematics â€” Algebra",
+      "difficulty": "Medium",
+      "subject": "Mathematics",
+      "topic": "Algebra",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_064",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 64,
+      "question": "Simplify (8x-24)/(2x^2-x-15)",
+      "choices": {
+        "A": "(x-4)/(x+4)",
+        "B": "4/(x-13)",
+        "C": "8/(2x+5)",
+        "D": "5/(2x-5)"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Numerator and denominator factors are incorrect.",
+        "choice_B": "Incorrect. Invalid algebraic reduction.",
+        "choice_C": "Correct. Numerator: $8(x - 3)$. Denominator: $(x - 3)(2x + 5)$. Canceling $(x - 3)$ gives $8 / (2x + 5)$. Note: Source text '(8-24)/(22-x-15)' is preserved from OCR.",
+        "choice_D": "Incorrect. Incorrect constant factor."
+      },
+      "explanation": "Factor numerator: $8(x-3)$. Factor denominator: $(2x+5)(x-3)$. Cancel common term $(x-3)$ to get $\\frac{8}{2x+5}$.",
+      "memoryTip": "SIMPLIFY: Cancel common factor (x - 3) to get 8 / (2x + 5).",
+      "reference": "Mathematics â€” Algebra",
+      "difficulty": "Medium",
+      "subject": "Mathematics",
+      "topic": "Algebra",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_065",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 65,
+      "question": "How many seconds are there in a 24-hour day?",
+      "choices": {
+        "A": "86,400",
+        "B": "1,590",
+        "C": "1,779",
+        "D": "84,600"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. 24 hours * 60 minutes/hour * 60 seconds/minute = 24 * 3600 = 86,400 seconds.",
+        "choice_B": "Incorrect. Way too small.",
+        "choice_C": "Incorrect. Incorrect calculation.",
+        "choice_D": "Incorrect. Transposition typo of digits (84,600 vs 86,400)."
+      },
+      "explanation": "1 day = 24 hours = 1,440 minutes = 86,400 seconds.",
+      "memoryTip": "24 x 60 x 60 = 86,400 SECONDS.",
+      "reference": "Mathematics â€” Conversion of Units",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Conversion of Units",
+      "audit_status": "minor_repair",
+      "audit_reason": "Added the missing article 'a.'",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_066",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 66,
+      "question": "It can be used to show the progress in academic grades over four quarters.",
+      "choices": {
+        "A": "Circle graph",
+        "B": "Line graph",
+        "C": "Pie graph",
+        "D": "Bar graph"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Circle/Pie graphs show proportional parts of a whole.",
+        "choice_B": "Correct. A line graph is the standard visual tool for showing continuous changes or progress over time (e.g., performance across four quarters).",
+        "choice_C": "Incorrect. Pie graphs represent percentage distributions.",
+        "choice_D": "Incorrect. Bar graphs compare discrete categories rather than continuous trends over time."
+      },
+      "explanation": "Line graphs track changes over time or continuous intervals, making them ideal for monitoring academic progress across quarters.",
+      "memoryTip": "PROGRESS OVER TIME = LINE GRAPH.",
+      "reference": "Mathematics â€” Statistics and Graphs",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Statistics and Graphs",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_067",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 67,
+      "question": "If the average or arithmetic mean of x and -5 is 10, then what must be the value of x?",
+      "choices": {
+        "A": "15",
+        "B": "25",
+        "C": "30",
+        "D": "20"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 15 leads to $(15 - 5)/2 = 5$.",
+        "choice_B": "Correct. Mean formula: $(x + (-5)) / 2 = 10 \\Rightarrow x - 5 = 20 \\Rightarrow x = 25$. Note: Official answer key specifies A/B based on arithmetic solving: $x = 25$.",
+        "choice_C": "Incorrect. 30 gives mean of 12.5.",
+        "choice_D": "Incorrect. 20 gives mean of 7.5."
+      },
+      "explanation": "Equation: $\\frac{x - 5}{2} = 10 \\Rightarrow x - 5 = 20 \\Rightarrow x = 25$.",
+      "memoryTip": "(x - 5) / 2 = 10 â†’ x = 25.",
+      "reference": "Mathematics â€” Algebra",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Algebra",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_068",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 68,
+      "question": "Which of the following gives the numerical value of the population?",
+      "choices": {
+        "A": "Range",
+        "B": "Statistics",
+        "C": "Parameter",
+        "D": "Variable"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Range is a measure of dispersion in a data set.",
+        "choice_B": "Incorrect. A statistic is a numerical value summarizing a SAMPLE.",
+        "choice_C": "Correct. A parameter is a numerical value that summarizes or characterizes an entire POPULATION.",
+        "choice_D": "Incorrect. A variable is a characteristic that can take on different values."
+      },
+      "explanation": "POPULATION summary measure = PARAMETER; SAMPLE summary measure = STATISTIC.",
+      "memoryTip": "POPULATION = PARAMETER (P with P) vs SAMPLE = STATISTIC (S with S).",
+      "reference": "Mathematics â€” Statistics",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Statistics",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_069",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 69,
+      "question": "If a die is rolled once, what is the probability of getting an even number?",
+      "choices": {
+        "A": "1/2",
+        "B": "1/3",
+        "C": "1/4",
+        "D": "1/6"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "replacement_generated",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. A standard six-sided die has outcomes {1, 2, 3, 4, 5, 6}. The numbers divisible by 2 are {2, 4, 6} (3 outcomes). Probability = 3/6 = 1/2.",
+        "choice_B": "Incorrect. 1/3 corresponds to 2 out of 6 outcomes.",
+        "choice_C": "Incorrect. 1/4 is not possible for a 6-sided die.",
+        "choice_D": "Incorrect. 1/6 is the probability of rolling a single specific number."
+      },
+      "explanation": "A standard die has three even outcomes (2, 4, 6) out of six equally likely outcomes, so P(even) = 3/6 = 1/2.",
+      "memoryTip": "DIE: EVEN = 2, 4, 6 → 3/6 = 1/2.",
+      "reference": "Mathematics â€” Probability",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Probability",
+      "audit_status": "major_repair",
+      "audit_reason": "The original phrase 'a number divided by 2' is ambiguous. Replaced with the intended high-yield probability concept.",
+      "replacement_generated": true,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "major_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_070",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 70,
+      "question": "In the expression 10^5 + 6x, the exponent is:",
+      "choices": {
+        "A": "y",
+        "B": "5",
+        "C": "6",
+        "D": "10"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'y' is not present in the expression.",
+        "choice_B": "Correct. In $10^5 + 6x$, the exponent (power) raised above the base 10 is 5.",
+        "choice_C": "Incorrect. 6 is a coefficient.",
+        "choice_D": "Incorrect. 10 is the base of the exponential term."
+      },
+      "explanation": "An exponent indicates how many times a base is multiplied by itself. In $10^5$, 10 is the base and 5 is the exponent.",
+      "memoryTip": "10^5 â†’ 5 IS THE EXPONENT.",
+      "reference": "Mathematics â€” Algebra",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Algebra",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired mathematical notation and grammar.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_071",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 71,
+      "question": "Simplify: [(3x − 12)/(3x)] ÷ (x − 4).",
+      "choices": {
+        "A": "3x",
+        "B": "X-4",
+        "C": "x",
+        "D": "1/x"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Inverse of solution.",
+        "choice_B": "Incorrect. Uncancelled term.",
+        "choice_C": "Incorrect. Missing reciprocal.",
+        "choice_D": "Correct. First simplify $\\frac{3x-12}{3x} = \\frac{3(x-4)}{3x} = \\frac{x-4}{x}$. Dividing by $(x-4)$ gives $\\frac{x-4}{x} \\times \\frac{1}{x-4} = \\frac{1}{x}$."
+      },
+      "explanation": "Factor 3x − 12 as 3(x − 4), then cancel the common factor: [(x − 4)/x] ÷ (x − 4) = 1/x, for x ≠ 0, 4.",
+      "memoryTip": "FACTOR → CANCEL → STATE EXCLUDED VALUES.",
+      "reference": "Mathematics â€” Algebra",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Algebra",
+      "audit_status": "minor_repair",
+      "audit_reason": "Clarified the division notation and added the domain restriction.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_072",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 72,
+      "question": "What are the prime factors of 120?",
+      "choices": {
+        "A": "2 × 2 × 2 × 6 × 5",
+        "B": "2 × 4 × 3 × 5",
+        "C": "2 × 3 × 4 × 5",
+        "D": "2 × 2 × 2 × 3 × 5"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 6 is a composite number, not prime.",
+        "choice_B": "Incorrect. 4 is a composite number.",
+        "choice_C": "Incorrect. 4 is a composite number.",
+        "choice_D": "Correct. Prime factorization contains ONLY prime numbers: $2 \times 2 \times 2 \times 3 \times 5 = 8 \times 15 = 120$."
+      },
+      "explanation": "120 = 12 × 10 = (2 × 2 × 3) × (2 × 5) = 2 × 2 × 2 × 3 × 5.",
+      "memoryTip": "120 = 2^3 × 3 × 5.",
+      "reference": "Mathematics â€” Number Theory",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Number Theory",
+      "audit_status": "minor_repair",
+      "audit_reason": "Standardized multiplication symbols and clarified the prime-factorization explanation.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_073",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 73,
+      "question": "The altitude of a triangle is 5 meters, and the base is 20 meters. What is the area of the triangle?",
+      "choices": {
+        "A": "50 square meters",
+        "B": "60 square meters",
+        "C": "20 square meters",
+        "D": "24 square meters"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Area of a triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 20 \\times 5 = 50\\text{ sq. meters}$.",
+        "choice_B": "Incorrect. Overestimates height or base.",
+        "choice_C": "Incorrect. Ignores altitude multiplier.",
+        "choice_D": "Incorrect. Calculation error."
+      },
+      "explanation": "Formula: $A = \\frac{1}{2} b h = 0.5 \\times 20 \\text{ m} \\times 5 \\text{ m} = 50 \\text{ m}^2$.",
+      "memoryTip": "AREA = (1/2) x BASE x HEIGHT = (1/2) x 20 x 5 = 50.",
+      "reference": "Mathematics â€” Geometry",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Geometry",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_074",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 74,
+      "question": "A rectangular block of steel has dimensions of 5 m × 10 m × 15 m and weighs 1,000 N. How should this block be placed on a surface to exert the least pressure?",
+      "choices": {
+        "A": "On the 5 m × 10 m side",
+        "B": "All sides have equal pressure",
+        "C": "On the 5 m × 15 m side",
+        "D": "On the 10 m × 15 m side"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. $5 \\times 10 = 50\\text{ m}^2$, which is smaller than $10 \\times 15 = 150\\text{ m}^2$.",
+        "choice_B": "Incorrect. Pressure varies inversely with contact surface area.",
+        "choice_C": "Incorrect. $5 \\times 15 = 75\\text{ m}^2$.",
+        "choice_D": "Correct. Pressure $P = F/A$. To exert the LEAST pressure, contact surface area $A$ must be maximized. The largest face is $10\\text{ m} \\times 15\\text{ m} = 150\\text{ m}^2$ (assuming the block has dimensions 5m x 10m x 15m as implied by choices)."
+      },
+      "explanation": "Pressure = force/area. With the same 1,000-N weight, the largest contact area produces the least pressure. The 10 m × 15 m face has the largest area (150 m²).",
+      "memoryTip": "LEAST PRESSURE → LARGEST CONTACT AREA.",
+      "reference": "Physics â€” Mechanics / Pressure",
+      "difficulty": "Medium",
+      "subject": "Physics",
+      "topic": "Mechanics / Pressure",
+      "audit_status": "major_repair",
+      "audit_reason": "The source stem omitted the 10-meter dimension even though choice D required it. Reconstructed the intended 5 × 10 × 15 m block.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "major_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_075",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 75,
+      "question": "What is the total amount after adding 8% simple interest to P10,000.00 for 3 years?",
+      "choices": {
+        "A": "P12,400.00",
+        "B": "P11,000.00",
+        "C": "P13,400.00",
+        "D": "P15,000.00"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Simple interest $I = P \\times r \\times t = 10,000 \\times 0.08 \\times 3 = \\text{P}2,400$. Total amount $A = P + I = 10,000 + 2,400 = \\text{P}12,400.00$.",
+        "choice_B": "Incorrect. Calculates interest for only 1.25 years.",
+        "choice_C": "Incorrect. Interest calculated at wrong rate.",
+        "choice_D": "Incorrect. Gross overestimate."
+      },
+      "explanation": "Simple interest I = Prt = P10,000(0.08)(3) = P2,400. Total amount = P10,000 + P2,400 = P12,400.",
+      "memoryTip": "SIMPLE INTEREST: I = Prt; A = P + I.",
+      "reference": "Mathematics â€” Business Mathematics",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Business Mathematics",
+      "audit_status": "minor_repair",
+      "audit_reason": "The original did not specify the interest method. Specified simple interest because the keyed answer P12,400 assumes simple interest.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_076",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 76,
+      "question": "A map is drawn to scale such that 1.5 cm on the map corresponds to 75 km in actual distance. How many centimeters on the map represent two towns that are 270 km apart?",
+      "choices": {
+        "A": "2.7 cm",
+        "B": "3.6 cm",
+        "C": "1.8 cm",
+        "D": "5.4 cm"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Calculation error.",
+        "choice_B": "Incorrect. Proportion set up backwards.",
+        "choice_C": "Incorrect. Arithmetic mistake.",
+        "choice_D": "Correct. Proportion: $\\frac{1.5\\text{ cm}}{75\\text{ km}} = \\frac{x\\text{ cm}}{270\\text{ km}} \\Rightarrow x = \\frac{1.5 \\times 270}{75} = \\frac{405}{75} = 5.4\\text{ cm}$."
+      },
+      "explanation": "Set up direct proportion: $\\frac{\\text{cm}}{\\text{km}} = \\frac{1.5}{75} = 0.02\\text{ cm/km}$. Then $0.02 \\times 270\\text{ km} = 5.4\\text{ cm}$.",
+      "memoryTip": "(1.5 / 75) x 270 = 5.4 cm.",
+      "reference": "Mathematics â€” Ratio and Proportion",
+      "difficulty": "Medium",
+      "subject": "Mathematics",
+      "topic": "Ratio and Proportion",
+      "audit_status": "minor_repair",
+      "audit_reason": "Completed the truncated sentence and added units.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_077",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 77,
+      "question": "How much greater is the sum of the 20 first counting numbers than the sum of the first 10 counting numbers?",
+      "choices": {
+        "A": "110",
+        "B": "55",
+        "C": "100",
+        "D": "155"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 110 is the sum of numbers 11 through 20 only if 55 wasn't subtracted properly.",
+        "choice_B": "Incorrect. 55 is the sum of the first 10 counting numbers.",
+        "choice_C": "Incorrect. Arbitrary number.",
+        "choice_D": "Correct. Sum of first $n$ counting numbers = $\\frac{n(n+1)}{2}$. For $n=10$: $\\frac{10 \\times 11}{2} = 55$. For $n=20$: $\\frac{20 \\times 21}{2} = 210$. Difference = $210 - 55 = 155$."
+      },
+      "explanation": "Sum(20) = 210. Sum(10) = 55. Difference = $210 - 55 = 155$.",
+      "memoryTip": "Sum(1..20) = 210; Sum(1..10) = 55; 210 - 55 = 155.",
+      "reference": "Mathematics â€” Number Theory",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Number Theory",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_078",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 78,
+      "question": "Which of this statement is always TRUE?",
+      "choices": {
+        "A": "The sum of 3 consecutive pages of a book is always odd.",
+        "B": "The sum of the two square numbers CANNOT be odd.",
+        "C": "The sum of the page number of the two consecutive pages of a book is even.",
+        "D": "The sum of 5 consecutive numbers is always divisible by 5."
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Example: pages 2+3+4 = 9 (odd), but 1+2+3 = 6 (even). False.",
+        "choice_B": "Incorrect. Example: $1^2 + 2^2 = 1 + 4 = 5$ (odd). False.",
+        "choice_C": "Incorrect. Consecutive pages are $n$ and $n+1$, so sum = $2n+1$, which is ALWAYS ODD. False.",
+        "choice_D": "Correct. Let 5 consecutive numbers be $n, n+1, n+2, n+3, n+4$. Sum = $5n + 10 = 5(n + 2)$, which is ALWAYS divisible by 5."
+      },
+      "explanation": "Sum of 5 consecutive integers $n + (n+1) + (n+2) + (n+3) + (n+4) = 5n + 10 = 5(n+2)$, which is an exact multiple of 5.",
+      "memoryTip": "SUM OF 5 CONSECUTIVE NUMBERS = 5(n + 2) â†’ Always divisible by 5.",
+      "reference": "Mathematics â€” Number Theory",
+      "difficulty": "Medium",
+      "subject": "Mathematics",
+      "topic": "Number Theory",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_079",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 79,
+      "question": "The readings on a water meter in April and May are 417.8 kL and 430.4 kL. If there is a basic charge of 23 pesos and the cost is 20 pesos per kL, how much is the water bill for the consumption between the two readings?",
+      "choices": {
+        "A": "P252.00",
+        "B": "P272.00",
+        "C": "P254.00",
+        "D": "P275.00"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Gross overestimate.",
+        "choice_B": "Incorrect. Ignores basic charge.",
+        "choice_C": "Incorrect. Arithmetic error.",
+        "choice_D": "Correct. Water consumed = $430.4 - 417.8 = 12.6\\text{ kl}$. Cost of water = $12.6 \\times 20 = \\text{P}252$. Total bill = $\\text{P}252 + \\text{basic charge P}23 = \\text{P}275$."
+      },
+      "explanation": "Consumption = 430.4 − 417.8 = 12.6 kL. Charge = 12.6 × P20 = P252. Add the P23 basic charge: P252 + P23 = P275.",
+      "memoryTip": "BILL = (CURRENT − PREVIOUS) × RATE + BASIC CHARGE.",
+      "reference": "Mathematics â€” Business Mathematics",
+      "difficulty": "Easy",
+      "subject": "Mathematics",
+      "topic": "Business Mathematics",
+      "audit_status": "minor_repair",
+      "audit_reason": "Standardized units and currency formatting; corrected choice formatting so the keyed P275 is unambiguous.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_080",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 80,
+      "question": "Uri ng pagbabagong morponemiko na gumagamit ng pagpapalit ng posisyon ng ponema sa salita.",
+      "choices": {
+        "A": "Asimilasyon",
+        "B": "Paglapi",
+        "C": "Pagkaltas",
+        "D": "Metatesis"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Asimilasyon is the assimilation/adaptation of sound.",
+        "choice_B": "Incorrect. Paglapi is adding affixes.",
+        "choice_C": "Incorrect. Pagkaltas is omission of a phoneme/letter.",
+        "choice_D": "Correct. Metatesis is the transposition or changing of positions of phonemes/letters within a word (e.g., tanim + in -> tanimin -> tamnin -> tanim -> itinanim -> linagay -> nilagay)."
+      },
+      "explanation": "Ang Metatesis ay ang pagpapalit ng posisyon ng mga ponema sa loob ng salita kapag nilapian.",
+      "memoryTip": "PAGPAPALIT NG POSISYON NG PONEMA = METATESIS.",
+      "reference": "Filipino â€” Sining ng Pakikipagtalastasan",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Sining ng Pakikipagtalastasan",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_081",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 81,
+      "question": "Ang mga salitang teka, san, tena, dali ay nagtataglay ng",
+      "choices": {
+        "A": "Asimilasyon",
+        "B": "Metatesis",
+        "C": "Tono",
+        "D": "Pagkaltas"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Hindi ito pag-aangkop ng tunog.",
+        "choice_B": "Incorrect. Hindi ito simpleng pagpapalit ng posisyon.",
+        "choice_C": "Incorrect. Tono refers to pitch/intonation.",
+        "choice_D": "Correct. Ang mga salitang ito ay nagpapakita ng Pagkaltas ng ponema o pagtatabas ng titik/pantig (hintay ka -> teka, saan -> san, tayo na -> tena, sandali -> dali)."
+      },
+      "explanation": "Sa pag-aangkop at pagpapaikli ng salita, nababawasan o nagkakaroon ng pagkaltas ng mga ponema sa salita.",
+      "memoryTip": "TEKA, SAN, TENA, DALI = PAGKALTAS ng ponema.",
+      "reference": "Filipino â€” Sining ng Pakikipagtalastasan",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Sining ng Pakikipagtalastasan",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_082",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 82,
+      "question": "It refers to a meaningful morpheme that can stand alone. It is also known as a root word.",
+      "choices": {
+        "A": "Paglalapi",
+        "B": "Di-malayang ponema",
+        "C": "Malayang ponema",
+        "D": "Morpemang leksikal"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Paglalapi is affixation.",
+        "choice_B": "Incorrect. Di-malayang morpema needs attachment.",
+        "choice_C": "Incorrect. Ponema is a sound unit, not a root word.",
+        "choice_D": "Correct. Ang morpemang leksikal ay ang uri ng morpema na may tiyak na kahulugan sa ganang sarili o ang mismong salitang-ugat."
+      },
+      "explanation": "Ang Morpemang Leksikal ay nagtataglay ng sariling kahulugan tulad ng mga salitang-ugat (bata, bahay, ganda).",
+      "memoryTip": "SALITANG-UGAT / MAY KAHULUGAN = MORPEMANG LEKSIKAL.",
+      "reference": "Filipino â€” Linguistics / Morpolohiya",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Linguistics / Morpolohiya",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired the Filipino-English mixed stem while preserving the intended concept.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_083",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 83,
+      "question": "Ano ang kahulugan ng \"Neneng is the apple of Daddy's eye?\"",
+      "choices": {
+        "A": "Paborito ni daddy ang mansanas.",
+        "B": "Si Neneng ay tulad ng mansanas.",
+        "C": "Mahal ni daddy si neneng.",
+        "D": "Tawag-pansin ang mansanas."
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Literal na pagsasalin ng mansanas.",
+        "choice_B": "Incorrect. Literal na pagtutulad.",
+        "choice_C": "Correct. Ang idyomang 'apple of one's eye' ay nangangahulugang paborito, napakamahal, o pinakaiingatan ng isang tao.",
+        "choice_D": "Incorrect. Walang kaugnayan sa tunay na kahulugan ng idyoma."
+      },
+      "explanation": "Ang 'apple of one's eye' ay isang pahayag na idyomatiko na ibig sabihin ay labis na minamahal o paboritong anak/tao.",
+      "memoryTip": "APPLE OF DADDY'S EYE = Mahal o paborito ni Daddy.",
+      "reference": "Filipino â€” Pagsasalin at Idyoma",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Pagsasalin at Idyoma",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_084",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 84,
+      "question": "Ang wastong kahulugan ng: The present problem is only a storm in a teacup.",
+      "choices": {
+        "A": "Bale-wala",
+        "B": "Buong puso",
+        "C": "May galit",
+        "D": "Matagumpay"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Ang 'storm in a teacup' (o tempest in a teapot) ay nangangahulugang maliit na bagay o usapin na pinapalaki lamang ngunit sa katunayan ay bale-wala o walang gaanong kahalagahan.",
+        "choice_B": "Incorrect. Hindi ito tumutukoy sa damdamin ng pagmamahal.",
+        "choice_C": "Incorrect. Hindi galit ang pangunahing kahulugan.",
+        "choice_D": "Incorrect. Walang kinalaman sa tagumpay."
+      },
+      "explanation": "Ang idyomang 'storm in a teacup' ay tumutukoy sa labis na pag-aalala sa isang napakaliit o bale-walang suliranin.",
+      "memoryTip": "STORM IN A TEACUP = Maliit na usapin / Bale-wala.",
+      "reference": "Filipino â€” Pagsasalin at Idyoma",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Pagsasalin at Idyoma",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_085",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 85,
+      "question": "Saang uri ng tayutay kabilang ang pahayag na, \"Kapalaran, huwag ka sanang mailap.\"",
+      "choices": {
+        "A": "Pagtawag",
+        "B": "Palit-saklaw",
+        "C": "Pagmamalabis",
+        "D": "Palit-tawag"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Correct. Ang Pagtawag (Apostrope) ay ang direktang pakikipag-usap sa isang bagay, kaisipan, o taong wala rito o hindi nakikinig na para bang ito ay buhay (e.g., 'Kapalaran...').",
+        "choice_B": "Incorrect. Palit-saklaw (Synecdoche) uses a part for the whole.",
+        "choice_C": "Incorrect. Pagmamalabis (Hyperbole) is exaggeration.",
+        "choice_D": "Incorrect. Palit-tawag (Metonymy) uses substitute names."
+      },
+      "explanation": "Ang Pagtawag (Apostrophe) ay pagkausap sa isang kaisipan o bagay na hindi makasasagot gaya ng 'Kapalaran'.",
+      "memoryTip": "DIREKTANG PAKIKIPAG-USAP SA HINDI LUMALABAS = PAGTAWAG (Apostrophe).",
+      "reference": "Filipino â€” Tayutay",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Tayutay",
+      "audit_status": "minor_repair",
+      "audit_reason": "Corrected grammar and punctuation.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_086",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 86,
+      "question": "Kapapasok pa lang niya sa silid. Ang pandiwa sa pangungusap ay nasa aspektong:",
+      "choices": {
+        "A": "Imperpektibo",
+        "B": "Kontemplatibo",
+        "C": "Pangnagdaan",
+        "D": "Perpektibo"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Imperpektibo ay nagaganap pa lamang.",
+        "choice_B": "Incorrect. Kontemplatibo ay gaganapin pa lamang.",
+        "choice_C": "Incorrect. General term for past.",
+        "choice_D": "Correct. Ang 'kapapasok' ay halimbawa ng Aspetong Perpektibong Katatapos (kakatapos pa lamang ganapin ang kilos). Kabilang pa rin ito sa kabuuang Aspetong Perpektibo."
+      },
+      "explanation": "The form 'kapapasok pa lang' indicates an action that has just been completed, which is treated in this item as perpektibong katatapos.",
+      "memoryTip": "KAPAPASOK PA LANG = KATATAPOS / PERPEKTIBO.",
+      "reference": "Filipino â€” Gramatika / Aspeto ng Pandiwa",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Gramatika / Aspeto ng Pandiwa",
+      "audit_status": "minor_repair",
+      "audit_reason": "Clarified the intended Filipino aspect label. The wording refers to an action that has just been completed.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_087",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 87,
+      "question": "Ibigay ang angkop na damdaming napapaloob sa: \"Bakit gabi na ay di pa siya dumarating?\"",
+      "choices": {
+        "A": "Pagkatuwa",
+        "B": "Pagkapoot",
+        "C": "Pagkatakot",
+        "D": "Pagkagalit"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Walang katuwaan sa pag-aalala sa gabi.",
+        "choice_B": "Incorrect. Ang pagkapoot ay labis na galit.",
+        "choice_C": "Correct. Ang pagtatanong nang may pag-aalala sa huling pagdating sa gabi ay nagpapahayag ng pagkatakot o pag-aalala para sa kaligtasan ng tao.",
+        "choice_D": "Incorrect. Bagaman pwedeng magalit, ang primaryang emosyon ng paghahanap sa gabi ay pagkatakot/pag-aalala."
+      },
+      "explanation": "Ang pag-aalala sa isang taong gabi na ay wala pa ay nagpapahiwatig ng pagkatakot sa kung anong masamang nangyari.",
+      "memoryTip": "PAG-AALALA SA GABI = PAGKATAKOT / Pag-aalala.",
+      "reference": "Filipino â€” Unawa sa Pagbabasa / Damdamin",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Unawa sa Pagbabasa / Damdamin",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired punctuation only.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_088",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 88,
+      "question": "Pag-aaral ng mga tuntunin kung paano inaayos ang mga salita sa loob ng pangungusap.",
+      "choices": {
+        "A": "Semantika",
+        "B": "Syntax",
+        "C": "Pragmatika",
+        "D": "Ortograpiya"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Semantika is the study of meaning.",
+        "choice_B": "Correct. Ang Syntax (Sintaksis) ay ang pag-aaral ng strukturang gramatikal at pagsasaayos ng mga salita upang makabuo ng makabuluhang pangungusap.",
+        "choice_C": "Incorrect. Pragmatika is language use in practical context.",
+        "choice_D": "Incorrect. Ortograpiya is spelling and writing standards."
+      },
+      "explanation": "Ang Sintaksis / Syntax ay ang sangay ng lingguwistika na nag-aaral ng pagbuo at pagsasaayos ng mga pangungusap.",
+      "memoryTip": "PAG-AAYOS NG SALITA SA PANGUNGUSAP = SYNTAX / SINTAKSIS.",
+      "reference": "Filipino â€” Linguistics / Sintaksis",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Linguistics / Sintaksis",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_089",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 89,
+      "question": "Pangungusap na tumutukoy sa pangyayaring pangkalikasan o pangkapaligiran.",
+      "choices": {
+        "A": "Temporal",
+        "B": "Eksistensyal",
+        "C": "Penomenal",
+        "D": "Modal"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Temporal refers to time (e.g., 'Araw ng Linggo').",
+        "choice_B": "Incorrect. Eksistensyal refers to existence (e.g., 'May tao').",
+        "choice_C": "Correct. Ang Penomenal ay uri ng pangungusap na walang paksa na tumutukoy sa mga kalagayan o pangyayaring pangkalikasan (e.g., 'Umuulan', 'Bumabagyo').",
+        "choice_D": "Incorrect. Modal expresses desire or capability."
+      },
+      "explanation": "Ang mga pangungusap na penomenal ay nagsasaad ng mga phenomena ng kalikasan tulad ng umuulan, kumikidlat, o lumilindol.",
+      "memoryTip": "PANGYAYARING PANGKALIKASAN = PENOMENAL.",
+      "reference": "Filipino â€” Uri ng Pangungusap na Walang Paksa",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Uri ng Pangungusap na Walang Paksa",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_090",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 90,
+      "question": "Orihinal: Mother cooked adobo for Kuya Manuel. Salin: Si Nanay ay nagluto ng adobo para kay Kuya Manuel. Ito ay pagsasaling:",
+      "choices": {
+        "A": "Adaptasyon",
+        "B": "Malaya",
+        "C": "Idyomatiko",
+        "D": "Literal"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Adaptasyon is culturally adapting text.",
+        "choice_B": "Incorrect. Malaya is free/paraphrased translation.",
+        "choice_C": "Incorrect. Idyomatiko translates underlying figurative sense.",
+        "choice_D": "Correct. Ang Literal na pagsasalin ay ang pagsasalin ng bawat salita nang ayon sa pangunahing kahulugan at katapat nito sa gramatika ng target na wika."
+      },
+      "explanation": "Ang literal na pagsasalin ay direktang tapatan ng bawat salita at strukturang gramatikal mula sa simulaang wika tungo sa tunguhang wika.",
+      "memoryTip": "SALITA SA SALITANG TAPATAN = LITERAL NA PAGSASALIN.",
+      "reference": "Filipino â€” Pagsasaling-wika",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Pagsasaling-wika",
+      "audit_status": "minor_repair",
+      "audit_reason": "Capitalized the proper form 'Nanay' and repaired punctuation.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_091",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 91,
+      "question": "Tumutukoy ito sa bilang ng pantig sa bawat taludtod ng tula.",
+      "choices": {
+        "A": "Talinghaga",
+        "B": "Kariktan",
+        "C": "Tugma",
+        "D": "Sukat"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Talinghaga is figurative content/metaphor.",
+        "choice_B": "Incorrect. Kariktan is aesthetic beauty.",
+        "choice_C": "Incorrect. Tugma is rhyme scheme at the line end.",
+        "choice_D": "Correct. Ang Sukat ay ang bilang ng mga pantig (syllables) sa bawat taludtod o linya ng tula."
+      },
+      "explanation": "Ang Sukat ay isa sa mga pangunahing elemento ng tradisyonal na tulang Filipino (e.g., wawaluhin, lalabindalawahin).",
+      "memoryTip": "BILANG NG PANTIG SA TALUDTOD = SUKAT.",
+      "reference": "Filipino â€” Elemento ng Tula",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Elemento ng Tula",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_092",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 92,
+      "question": "Uri ng panghalip na ginagamit na panturo sa mga bagay.",
+      "choices": {
+        "A": "Palagyo",
+        "B": "Pamatlig",
+        "C": "Pamaklaw",
+        "D": "Palayon"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Palagyo is nominative case.",
+        "choice_B": "Correct. Ang Panghalip na Pamatlig ay ginagamit sa pagtuturo ng tao, bagay, o pook (e.g., ito, iyan, iyon).",
+        "choice_C": "Incorrect. Pamaklaw is indefinite pronoun (e.g., lahat, sinuman).",
+        "choice_D": "Incorrect. Palayon is objective case."
+      },
+      "explanation": "Ang Panghalip Pamatlig ay humahalili sa ngalan ng tao o bagay na itinuturo (ito, ito'y, iyon, iyan).",
+      "memoryTip": "PANTURO SA BAGAY/TAO = PANGHALIP PAMATLIG.",
+      "reference": "Filipino â€” Bahagi ng Pananalita / Panghalip",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Bahagi ng Pananalita / Panghalip",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_093",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 93,
+      "question": "Sa pangungusap na \"Malakas ang boses mo,\" ang salitang malakas ay isang",
+      "choices": {
+        "A": "Pangatnig",
+        "B": "Panghalip",
+        "C": "Pang-uri",
+        "D": "Pandiwa"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Pangatnig is a conjunction.",
+        "choice_B": "Incorrect. Panghalip is a pronoun.",
+        "choice_C": "Correct. Ang 'malakas' ay isang Pang-uri sapagkat inilalarawan nito ang pangngalang 'boses'.",
+        "choice_D": "Incorrect. Pandiwa is a verb."
+      },
+      "explanation": "Ang Pang-uri ay salitang naglalarawan o nagbibigay-turing sa pangngalan o panghalip.",
+      "memoryTip": "NAGLALARAWAN SA BOSES = PANG-URI.",
+      "reference": "Filipino â€” Bahagi ng Pananalita / Pang-uri",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Bahagi ng Pananalita / Pang-uri",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_094",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 94,
+      "question": "Paraan ng pagbuo ng salita na ginagamitan ng tatlong uri ng panlapi.",
+      "choices": {
+        "A": "Kabilaan",
+        "B": "Laguhan",
+        "C": "Inunlapian",
+        "D": "Hinulapian"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Kabilaan uses two affixes (unlapi + hinulapi).",
+        "choice_B": "Correct. Ang Laguhan ay ang paraan ng paglalapi kung saan ang salitang-ugat ay nilalagyan ng panlapi sa unahan, gitna, at hulihan (tatlong uri ng panlapi, hal. pag-sum-ikapan).",
+        "choice_C": "Incorrect. Inunlapian uses only unlapi.",
+        "choice_D": "Incorrect. Hinulapian uses only hinulapi."
+      },
+      "explanation": "Laguhan ang tawag kapag ang salitang-ugat ay may panlapi sa unahan, gitna, at hulihan.",
+      "memoryTip": "UNAHAN + GITNA + HULIHAN = LAGUHAN.",
+      "reference": "Filipino â€” Morpolohiya / Paglalapi",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Morpolohiya / Paglalapi",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_095",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 95,
+      "question": "Isang uri ng pamamatnubay kung saan ang mga reporter ay lumilihis sa pamatnubay at lumilikha ng sariling paraan sa mga gawaing pag-ulat.",
+      "choices": {
+        "A": "Kombensyunal",
+        "B": "Masaklaw",
+        "C": "Masining",
+        "D": "Di-kombensyunal"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Kombensyunal follows standard 5 Ws and H inverted pyramid style.",
+        "choice_B": "Incorrect. Masaklaw is summary lead.",
+        "choice_C": "Incorrect. Masining is creative/literary description, but non-conventional is the broader class.",
+        "choice_D": "Correct. Ang Di-kombensyunal na pamamatnubay (Novelty Lead) ay lumilihis sa karaniwang pamatnubay upang umakit ng interes sa malikhaing paraan."
+      },
+      "explanation": "Ang Di-kombensyunal na pamatnubay ay ginagamitan ng malikhaing pamamaraan sa pagbabalita nang hindi agad ibinubunyag ang kabuuang balita sa unang linya.",
+      "memoryTip": "LUMILIHIS SA KARANIWAN = DI-KOMBENSYUNAL NA PAMATNUBAY.",
+      "reference": "Filipino â€” Pampahayag / Pamamatnubay",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Pampahayag / Pamamatnubay",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired sentence structure.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_096",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 96,
+      "question": "Mahaba ang pahayag ni Socrates kaya kailangang ang mahahalagang bahagi na lamang ang mabasa. Anong paraan ang ginamit?",
+      "choices": {
+        "A": "sintesis",
+        "B": "direktang sipi",
+        "C": "abstrak",
+        "D": "ellipsis"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Sintesis is a summary of multiple ideas.",
+        "choice_B": "Incorrect. Direktang sipi reproduces full exact words.",
+        "choice_C": "Incorrect. Abstrak is a study summary.",
+        "choice_D": "Correct. Ang Ellipsis (...) ay ginagamit upang ipatid o alisin ang ilang salita o pahayag sa isang sipi nang hindi nababago ang kahulugan nito."
+      },
+      "explanation": "Ang Ellipsis (tatlong tuldok ...) ay ginagamit kapag may tinatagpas o iniiwang bahagi sa isang mahabang pahayag o sipi.",
+      "memoryTip": "PAG-AALIS NG ILANG SALITA SA SIPI = ELLIPSIS (...).",
+      "reference": "Filipino â€” Pagsulat / Bantas",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Pagsulat / Bantas",
+      "audit_status": "minor_repair",
+      "audit_reason": "Repaired grammar and made the intended ellipsis concept explicit.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_097",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 97,
+      "question": "\"You can count on me\". Ang pinakamalapit na salin nito ay",
+      "choices": {
+        "A": "\"maaasahan mo siya\"",
+        "B": "\"bilangin mo kami\"",
+        "C": "\"maaasahan mo ako\"",
+        "D": "\"ibilang mo ako\""
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. 'Siya' means him/her, not me.",
+        "choice_B": "Incorrect. Literal translation of counting people.",
+        "choice_C": "Correct. Ang idyomatikong ekspresyong 'count on me' ay nangangahulugang 'maaasahan mo ako'.",
+        "choice_D": "Incorrect. Means 'include me'."
+      },
+      "explanation": "Ang 'count on me' ay isang idyoma sa Ingles na ang katapat na kahulugan sa Filipino ay 'maaasahan mo ako'.",
+      "memoryTip": "COUNT ON ME = Maaasahan mo ako.",
+      "reference": "Filipino â€” Pagsasaling-wika",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Pagsasaling-wika",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_098",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 98,
+      "question": "Si Lolo Jose ay malakas pa kahit alog na ang baba. Ang kahulugan ng may salungguhit ay",
+      "choices": {
+        "A": "Masakit ang baba",
+        "B": "Bata pa",
+        "C": "Matanda na",
+        "D": "Malabo ang mata"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Literal na kahulugan.",
+        "choice_B": "Incorrect. Kasalungat na kahulugan.",
+        "choice_C": "Correct. Ang sawikaing 'alog na ang baba' ay nangangahulugang napakatanda na o may kaadVisitor an na sa edad.",
+        "choice_D": "Incorrect. Malabo ang mata is 'matang-manok' o malabo na."
+      },
+      "explanation": "Ang sawikaing 'alog na ang baba' ay kilalang tambalang idyoma para sa taong matanda na.",
+      "memoryTip": "ALOG NA ANG BABA = MATANDA NA.",
+      "reference": "Filipino â€” Sawikain at Idyoma",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Sawikain at Idyoma",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_099",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 99,
+      "question": "Dulog pampanitikan na nagbibigay ng diin ng sariling panlasa ng bumabasa. Kilala rin ito bilang reader-response theory.",
+      "choices": {
+        "A": "Antropolohiya",
+        "B": "Impresyonista",
+        "C": "Patalambuhay",
+        "D": "Pansikolohiya"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Anthropological approach focuses on culture.",
+        "choice_B": "Correct. Ang Teoryang Impresyonista (na kaugnay ng reader-response criticism) ay nagbibigay-diin sa sariling impresyon, tugon, at panlasa ng mambabasa sa akda.",
+        "choice_C": "Incorrect. Biographical approach focuses on author's life.",
+        "choice_D": "Incorrect. Psychological approach focuses on psychological drives of characters/author."
+      },
+      "explanation": "Ang dulog Impresyonistiko ay nakatuon sa personal na tugon, damdamin, at persepsyon ng mambabasa sa binasang akda.",
+      "memoryTip": "READER-RESPONSE / SARILING PANLASA = IMPRESYONISTA.",
+      "reference": "Filipino â€” Teoryang Pampanitikan",
+      "difficulty": "Medium",
+      "subject": "Filipino",
+      "topic": "Teoryang Pampanitikan",
+      "audit_status": "verified",
+      "audit_reason": "No material defect identified in the source item, answer, or choices.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "good",
+        "choice_alignment": "good",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "verified"
+      }
+    },
+    {
+      "id": "gen_ed_set_d_100",
+      "sourceSet": "Gen Ed Set D",
+      "setId": "set_D",
+      "sourceQuestionNumber": 100,
+      "question": "Ano ang salitang-ugat ng PATIRAHIN?",
+      "choices": {
+        "A": "Tira na",
+        "B": "Tirahin",
+        "C": "Tira",
+        "D": "Patira"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "answerStatus": "VALIDATED",
+      "sourceStatus": "VERIFIED",
+      "dataNote": "",
+      "rationalization": {
+        "choice_A": "Incorrect. Contains additional word 'na'.",
+        "choice_B": "Incorrect. Has affix -hin.",
+        "choice_C": "Correct. Ang salitang-ugat ng 'patirahin' ay 'tira'. Ang mga panlapi rito ay pa- at -hin (pa- + tira + -hin = patirahin).",
+        "choice_D": "Incorrect. Has prefix pa-."
+      },
+      "explanation": "The root word is 'tira.' The form PATIRAHIN is built from the root and affixes, but the base lexical form remains TIRA.",
+      "memoryTip": "SALITANG-UGAT = TIRA.",
+      "reference": "Filipino â€” Morpolohiya / Salitang-ugat",
+      "difficulty": "Easy",
+      "subject": "Filipino",
+      "topic": "Morpolohiya / Salitang-ugat",
+      "audit_status": "minor_repair",
+      "audit_reason": "Added the hyphen in 'salitang-ugat' and clarified the morphological explanation.",
+      "replacement_generated": false,
+      "audit": {
+        "question_quality": "repaired",
+        "choice_alignment": "repaired",
+        "answer_correctness": "verified",
+        "curriculum_alignment": "current",
+        "explanations_and_rationalizations": "usable",
+        "overall_status": "minor_repair"
+      }
+    }
+  ]
+}

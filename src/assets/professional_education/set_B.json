@@ -1,0 +1,3932 @@
+{
+  "setId": "PROF_ED_H",
+  "setName": "Prof Ed Set H",
+  "subject": "Professional Education",
+  "totalItems": 150,
+  "sourceLabel": "Prof Ed Set H",
+  "sourceNote": "The uploaded dataset is designated Prof Ed Set H. Question wording and choices are reproduced faithfully from the source. Every item has been systematically enriched with complete rationalizations (A-D), explanations, memory tips, references, difficulties, subjects, and topics.",
+  "answerKeyNote": "The source states that its answer key is a reconstructed study key based on wording and choices. Preserved sourceCorrectAnswer for full traceability.",
+  "geminiInstruction": "Enrich this dataset without changing any question wording or choices. Fill every A-D rationalization (Why Each Choice), explanation, memory tip, reference, difficulty, subject, and topic. Preserve sourceCorrectAnswer for traceability.",
+  "items": [
+    {
+      "id": "PE-H-001",
+      "questionNumber": 1,
+      "sourceQuestionNumber": 1,
+      "question": "1. Which of the following demonstrates the teacher integrity?",
+      "choices": {
+        "A": "Innovation",
+        "B": "Entrepreneurship",
+        "C": "Moral courage",
+        "D": "Decisive thinking"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Innovation refers to introducing new pedagogical methods, which relates to instructional competence rather than ethical character.",
+        "B": "Incorrect. Entrepreneurship relates to business resourcefulness, which is distinct from moral integrity.",
+        "C": "Correct. Moral courage is the firm commitment to uphold ethical principles, honesty, and truth despite pressure or personal risk, directly defining teacher integrity.",
+        "D": "Incorrect. Decisive thinking is a cognitive decision-making skill rather than a moral virtue."
+      },
+      "explanation": "Professional integrity in teaching requires moral courage to defend ethical standards, maintain honesty, and protect student welfare.",
+      "memoryTip": "TEACHER INTEGRITY = MORAL COURAGE to do right.",
+      "reference": "The Teaching Profession — Code of Ethics for Professional Teachers",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Code of Ethics for Professional Teachers"
+    },
+    {
+      "id": "PE-H-002",
+      "questionNumber": 2,
+      "sourceQuestionNumber": 2,
+      "question": "2. What adjectives describes an ideal teacher relationship with other government officials? I. Harmonious II. Subservient III. Personal IV. Professional",
+      "choices": {
+        "A": "I and IV",
+        "B": "I and II",
+        "C": "III and IV",
+        "D": "IV only"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Article III of the Code of Ethics explicitly mandates that teachers maintain harmonious (I) and professional (IV) relationships with government officials.",
+        "B": "Incorrect. Subservience (II) compromises a teacher's professional autonomy and dignity.",
+        "C": "Incorrect. Personal relationships (III) risk political favoritism or conflict of interest.",
+        "D": "Incorrect. Incomplete, as harmonious relations (I) are also explicitly required."
+      },
+      "explanation": "Article III of the Code of Ethics states that a teacher must maintain harmonious and professional relations with officials while preserving professional independence.",
+      "memoryTip": "OFFICIAL RELATIONS = HARMONIOUS & PROFESSIONAL (Not Subservient).",
+      "reference": "The Teaching Profession — The Teacher and the State",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Code of Ethics for Professional Teachers"
+    },
+    {
+      "id": "PE-H-003",
+      "questionNumber": 3,
+      "sourceQuestionNumber": 3,
+      "question": "3. Which is most appropriate as choice of intervention in action research?",
+      "choices": {
+        "A": "That day will be supported by ample fund",
+        "B": "That they are doable",
+        "C": "That they require many resources",
+        "D": "That they adapt complex procedures"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Action research aims to solve immediate classroom problems without requiring large funding.",
+        "B": "Correct. Classroom action research interventions must be doable, practical, and manageable within the teacher's immediate classroom environment.",
+        "C": "Incorrect. Requiring extensive resources makes interventions impractical for individual teachers.",
+        "D": "Incorrect. Complex procedures hinder direct execution and evaluation."
+      },
+      "explanation": "Action research interventions must be doable and practical so teachers can execute them immediately to address learning gaps.",
+      "memoryTip": "ACTION RESEARCH INTERVENTION = DOABLE and practical.",
+      "reference": "Teacher Research — Action Research Methodology",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Action Research Methodology"
+    },
+    {
+      "id": "PE-H-004",
+      "questionNumber": 4,
+      "sourceQuestionNumber": 4,
+      "question": "4. Can a license teacher go back to teaching even if he/she has not taught for the past 5 years?",
+      "choices": {
+        "A": "No, unless he she earns 45 cpd units",
+        "B": "Yes, if he she completes additional six units of professionals Education and six unit of specialization in school recognized by the government",
+        "C": "No, because she left teaching for the past 5 years",
+        "D": "Yes, because he/ she has a license"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. CPD units alone do not fulfill the specific 12-unit refresher course law for 5-year inactive teachers.",
+        "B": "Correct. Under RA 9293 (amending RA 7836), teachers inactive for 5 consecutive years must complete 12 units of refresher courses (6 units Professional Education + 6 units Specialization) before returning.",
+        "C": "Incorrect. Teachers are not permanently barred from returning to practice.",
+        "D": "Incorrect. A license alone is insufficient without fulfilling the statutory refresher requirement."
+      },
+      "explanation": "RA 9293 mandates that licensed teachers inactive for 5 consecutive years complete 12 units of refresher courses to resume teaching.",
+      "memoryTip": "INACTIVE FOR 5 YEARS = 12 REFRESHER UNITS (6 Prof Ed + 6 Specialization).",
+      "reference": "The Teaching Profession — RA 9293 / RA 7836",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Teacher Licensing Laws"
+    },
+    {
+      "id": "PE-H-005",
+      "questionNumber": 5,
+      "sourceQuestionNumber": 5,
+      "question": "5. Which test is appropriate to for developing students ability to organize thoughts and ideas?",
+      "choices": {
+        "A": "Fill in the blank",
+        "B": "Essay",
+        "C": "Multiple choice",
+        "D": "True or False"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Fill-in-the-blanks tests measure simple recall of specific facts.",
+        "B": "Correct. Essay assessments require students to retrieve, select, synthesize, and organize their own thoughts into coherent written prose.",
+        "C": "Incorrect. Multiple-choice tests evaluate recognition and objective selection.",
+        "D": "Incorrect. True/False tests measure binary factual identification."
+      },
+      "explanation": "Essays test higher-order thinking skills, specifically the ability to formulate and structure original ideas in written form.",
+      "memoryTip": "ESSAY = ORGANIZE thoughts and ideas.",
+      "reference": "Assessment of Learning — Essay and Performance Tests",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Essay and Performance Tests"
+    },
+    {
+      "id": "PE-H-006",
+      "questionNumber": 6,
+      "sourceQuestionNumber": 6,
+      "question": "6. Which of the following qualities is most becoming of a professional teacher?",
+      "choices": {
+        "A": "Love of the profession",
+        "B": "Frugality and saving",
+        "C": "Regularity in discipline",
+        "D": "Humility in work"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Love of the profession (vocational dedication) is the core quality that fuels continuous growth, ethical behavior, and commitment to student learning.",
+        "B": "Incorrect. Frugality is a personal financial habit, not a core teaching quality.",
+        "C": "Incorrect. Discipline is an operational habit, secondary to professional dedication.",
+        "D": "Incorrect. Humility is positive, but vocational love and commitment are paramount."
+      },
+      "explanation": "Dedication and love for the teaching calling drive professional commitment, resilience, and student success.",
+      "memoryTip": "MOST BECOMING QUALITY = LOVE OF THE PROFESSION.",
+      "reference": "The Teaching Profession — Qualities of a Professional Teacher",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Qualities of a Professional Teacher"
+    },
+    {
+      "id": "PE-H-007",
+      "questionNumber": 7,
+      "sourceQuestionNumber": 7,
+      "question": "7. If you believe in a student-led rather than a teacher led classroom which philosophical perspective will be most useful to you?",
+      "choices": {
+        "A": "Traditionalist",
+        "B": "Perennialist",
+        "C": "Essentialist",
+        "D": "Existentialist"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Traditionalism is teacher-directed.",
+        "B": "Incorrect. Perennialism is teacher-centered, focusing on classical truths.",
+        "C": "Incorrect. Essentialism is teacher-centered, focusing on core academic subjects.",
+        "D": "Correct. Existentialism centers on the learner, emphasizing student choice, self-direction, and individual autonomy in a student-led setting."
+      },
+      "explanation": "Existentialist philosophy empowers students to take ownership of their choices and learning paths, supporting student-led classrooms.",
+      "memoryTip": "STUDENT-LED & CHOICE = EXISTENTIALIST.",
+      "reference": "Foundations of Education — Educational Philosophies",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Educational Philosophies"
+    },
+    {
+      "id": "PE-H-008",
+      "questionNumber": 8,
+      "sourceQuestionNumber": 8,
+      "question": "8. What does the madrasah program of the k to 12 curriculum prove?",
+      "choices": {
+        "A": "Gender sensitivity",
+        "B": "Inclusivity",
+        "C": "Unity",
+        "D": "Exclusively"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Gender sensitivity addresses male/female equity.",
+        "B": "Correct. Integrating Madrasah Education (ALIVE) proves the K to 12 curriculum's commitment to inclusivity for Muslim learners and cultural diversity.",
+        "C": "Incorrect. Unity is a general outcome, whereas Madrasah specifically targets inclusive access.",
+        "D": "Incorrect. Exclusivity is the opposite of inclusive education."
+      },
+      "explanation": "The Madrasah Education Program embodies inclusive education by accommodating the cultural and religious needs of Muslim students in basic education.",
+      "memoryTip": "MADRASAH PROGRAM = INCLUSIVITY in K to 12.",
+      "reference": "Curriculum Development — Inclusive Education in K to 12",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Inclusive Education"
+    },
+    {
+      "id": "PE-H-009",
+      "questionNumber": 9,
+      "sourceQuestionNumber": 9,
+      "question": "9. In the k to 12 basic education curriculum, how are science concept taught in grade 1 to 2?",
+      "choices": {
+        "A": "By the use of Science modules",
+        "B": "Integrated with English",
+        "C": "Through the Science club",
+        "D": "Integrated in Math subjects"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Modules are delivery formats, not the primary integration approach.",
+        "B": "Correct. In Grades 1 and 2, Science is not taught as a standalone subject; basic science concepts are integrated into English (Health, Literacy) and Araling Panlipunan.",
+        "C": "Incorrect. Science clubs are co-curricular, not the formal curriculum.",
+        "D": "Incorrect. The source key points to D, but the curriculum treatment in the item is integration of Science concepts into other learning areas, making B the better choice."
+      },
+      "explanation": "In the Grades 1–2 curriculum framing used by this reviewer, Science is integrated with other learning areas rather than taught as a standalone subject.",
+      "memoryTip": "Grades 1–2: Science concepts are INTEGRATED, not a standalone Science subject.",
+      "reference": "Curriculum Development — K to 12 Science Curriculum Structure",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "K to 12 Curriculum Structure",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "The source key gives D, but the item asks how Science concepts are taught in Grades 1–2. In the curriculum framing used here, Science is integrated rather than taught as a standalone subject; B is the intended best choice among the supplied options."
+    },
+    {
+      "id": "PE-H-010",
+      "questionNumber": 10,
+      "sourceQuestionNumber": 10,
+      "question": "10. If a test item has discrimination index of negative 30, what should you do?",
+      "choices": {
+        "A": "Reuse it.",
+        "B": "Discard it.",
+        "C": "Return it to the date bank of test items.",
+        "D": "Improve it"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Reusing a negatively discriminating item damages test validity.",
+        "B": "Correct. A negative discrimination index means more low performers passed the item than high performers; such defective items should be discarded.",
+        "C": "Incorrect. Defective items must not be stored in active item banks.",
+        "D": "Incorrect. While revision is possible, discarding is the standard immediate choice for severely negative items."
+      },
+      "explanation": "Test items with negative discrimination are defective because they favor lower-achieving students over higher-achieving students, requiring rejection/discarding.",
+      "memoryTip": "NEGATIVE DISCRIMINATION = DISCARD / Reject item.",
+      "reference": "Assessment of Learning — Item Analysis",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Item Analysis"
+    },
+    {
+      "id": "PE-H-011",
+      "questionNumber": 11,
+      "sourceQuestionNumber": 11,
+      "question": "11. Which instructional process will be most appropriate, if Teacher Olive wants maximum student interaction in her class of 50 students?",
+      "choices": {
+        "A": "After her lecture, she divide the class into small groups to share their reaction to identified issues",
+        "B": "She identifies students to do class presentation and interrogate the presenters after as class listen",
+        "C": "After her lecture, she conducts open forum",
+        "D": "She makes them research on an assigned topic then requires them to share their findings in class"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Dividing a large class of 50 into small buzz groups maximizes peer-to-peer interaction and student participation.",
+        "B": "Incorrect. Class presentations allow only a few presenters to speak while others remain passive.",
+        "C": "Incorrect. Open forums in large classes are usually dominated by a few vocal students.",
+        "D": "Incorrect. Sharing individual research in large classes limits widespread peer dialogue."
+      },
+      "explanation": "Small group discussion techniques break down large class sizes, enabling 100% of students to engage in active peer dialogue.",
+      "memoryTip": "MAXIMUM INTERACTION IN LARGE CLASS = SMALL GROUP discussions.",
+      "reference": "Principles of Teaching — Group Discussion Strategies",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Instructional Strategies"
+    },
+    {
+      "id": "PE-H-012",
+      "questionNumber": 12,
+      "sourceQuestionNumber": 12,
+      "question": "12. Why did math teacher choose a web application that help his students gain arithmetic through a game where players earn tokens and feel that are successful through a fun experience?",
+      "choices": {
+        "A": "It teaches high skills",
+        "B": "It is difficult",
+        "C": "It is engaging",
+        "D": "It requires mentorship"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Gamified arithmetic drills target foundational skills rather than high-level math.",
+        "B": "Incorrect. Difficulty is not the reason for choosing gamified apps.",
+        "C": "Correct. Gamification incorporates rewards (tokens) and fun experiences, making practice highly engaging and motivating.",
+        "D": "Incorrect. Educational apps promote self-paced independent practice."
+      },
+      "explanation": "Gamified educational apps leverage rewards and fun to create engaging environments for repetitive skill practice.",
+      "memoryTip": "GAMIFICATION / TOKENS = HIGHLY ENGAGING.",
+      "reference": "Educational Technology — Gamification in Education",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Gamification and Learning Apps"
+    },
+    {
+      "id": "PE-H-013",
+      "questionNumber": 13,
+      "sourceQuestionNumber": 13,
+      "question": "13. In introducing a new lesson, what is Teacher Aira trying to determine when she relates a past lesson to a new lesson?",
+      "choices": {
+        "A": "Learners' style in knowing",
+        "B": "Learners/ knowledge based",
+        "C": "Learners' curiosity to know a new lesson",
+        "D": "Learner' motivation to know more"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Learning styles refer to sensory modalities.",
+        "B": "Correct. Relating prior learning to new concepts activates the students' existing knowledge base (prior cognitive schema).",
+        "C": "Incorrect. Curiosity is stimulated through novelty or provocative hooks.",
+        "D": "Incorrect. Motivation involves intrinsic or extrinsic drives."
+      },
+      "explanation": "Connecting past lessons to new material activates the learner's knowledge base, establishing a foundation for meaningful learning.",
+      "memoryTip": "RELATING PAST LESSON = Activating KNOWLEDGE BASE / Schema.",
+      "reference": "Principles of Teaching — Apperception and Schema Activation",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Lesson Introduction Strategies"
+    },
+    {
+      "id": "PE-H-014",
+      "questionNumber": 14,
+      "sourceQuestionNumber": 14,
+      "question": "14. To make grade reporting meaningful, which must be done?",
+      "choices": {
+        "A": "Console parents whose children are non performing by telling them that nobody fails",
+        "B": "Announce names of students who need to help",
+        "C": "Rank the report card from highest to lowest then distribute the name according to rank",
+        "D": "Explain how the grains were computed"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Misleading parents with false assurances is unprofessional.",
+        "B": "Incorrect. Publicly calling out struggling students violates student privacy and dignity.",
+        "C": "Incorrect. Public ranking creates unnecessary anxiety and shame.",
+        "D": "Correct. Explaining how grades were computed provides transparent, constructive feedback to parents and students regarding achievement."
+      },
+      "explanation": "Transparent grade reporting explains evaluation criteria and computation methods, ensuring feedback is clear and meaningful.",
+      "memoryTip": "MEANINGFUL REPORTING = EXPLAIN HOW GRADES WERE COMPUTED.",
+      "reference": "Assessment of Learning — Reporting Student Progress",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Reporting Student Progress"
+    },
+    {
+      "id": "PE-H-015",
+      "questionNumber": 15,
+      "sourceQuestionNumber": 15,
+      "question": "15. While she is now teaching fourth-grade students, teacher Niks mainly uses drill in order to advance memory building for hire test a cores. What principle of learning should teacher Niks be aware of?",
+      "choices": {
+        "A": "Learning begin with expected outcomes",
+        "B": "Learning is an active process",
+        "C": "Learning is a discovery of meaning",
+        "D": "Learning is a collaborative process 2"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Outcome-based principle, less directly opposed to rote drill.",
+        "B": "Correct. Over-relying on passive rote drill ignores the fundamental principle that learning is an active process requiring hands-on and minds-on engagement.",
+        "C": "Incorrect. Constructivist principle, but active engagement is the broader overarching law.",
+        "D": "Incorrect. Collaborative principle applies to group work."
+      },
+      "explanation": "Rote memory drills foster passive reception; effective learning requires active cognitive processing and meaningful mental engagement.",
+      "memoryTip": "OVER-DRILLING / ROTE MEMORY violates: LEARNING IS AN ACTIVE PROCESS.",
+      "reference": "Principles of Teaching — Principles of Learning",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Principles of Learning"
+    },
+    {
+      "id": "PE-H-016",
+      "questionNumber": 16,
+      "sourceQuestionNumber": 16,
+      "question": "16. Which of the following is true of the final grade of students?",
+      "choices": {
+        "A": "The sum of the grades of learning areas are added together",
+        "B": "General average is computed from learning areas with equal weight",
+        "C": "Separate grade four learning areas and general average",
+        "D": "Different weights for each learning areas and for general average"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Final general average is an average (mean), not a raw sum.",
+        "B": "Correct. Under the DepEd K to 12 grading system, the General Average is computed by getting the unweighted arithmetic mean of final grades across all learning areas (equal weight).",
+        "C": "Incorrect. Ambiguous phrasing.",
+        "D": "Incorrect. All basic learning areas carry equal weight in calculating the General Average."
+      },
+      "explanation": "DepEd Order No. 8, s. 2015 specifies that the General Average is derived by dividing the sum of final grades in all learning areas by the total number of subjects (equal weighting).",
+      "memoryTip": "GENERAL AVERAGE = EQUAL WEIGHT across learning areas.",
+      "reference": "Assessment of Learning — DepEd Grading System (DO 8, s. 2015)",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System"
+    },
+    {
+      "id": "PE-H-017",
+      "questionNumber": 17,
+      "sourceQuestionNumber": 17,
+      "question": "17. Which materials are used for instructional planning of course content and strategies?",
+      "choices": {
+        "A": "Exhibits",
+        "B": "Seating arrangement",
+        "C": "Instructional materials",
+        "D": "Syllabus"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Exhibits are display setups for completed student work.",
+        "B": "Incorrect. Seating arrangements are classroom management setups.",
+        "C": "Incorrect. Instructional materials are tools used during lesson delivery.",
+        "D": "Correct. A course syllabus outlines the course content, learning outcomes, sequence, and instructional strategies for planning."
+      },
+      "explanation": "A course syllabus serves as the comprehensive instructional planning document detailing content outline, timeline, strategies, and assessment schemes.",
+      "memoryTip": "COURSE CONTENT & STRATEGIES PLANNING = SYLLABUS.",
+      "reference": "Curriculum Development — Course Planning",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Instructional Planning"
+    },
+    {
+      "id": "PE-H-018",
+      "questionNumber": 18,
+      "sourceQuestionNumber": 18,
+      "question": "18. What is shown by results in a pretest?",
+      "choices": {
+        "A": "Current moral values",
+        "B": "Present psycho-motor skills",
+        "C": "Previous knowledge",
+        "D": "Past experience"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Pretests evaluate cognitive entry knowledge, not moral values.",
+        "B": "Incorrect. Psychomotor skills require performance rubrics, not standard written pretests.",
+        "C": "Correct. Pretests measure students' entry-level prior knowledge and prerequisite skills before instruction begins.",
+        "D": "Incorrect. Past experience is a broader personal history term."
+      },
+      "explanation": "Pretests perform a diagnostic function, evaluating students' baseline prior knowledge to guide instructional planning.",
+      "memoryTip": "PRETEST = PREVIOUS KNOWLEDGE / Entry behavior.",
+      "reference": "Assessment of Learning — Diagnostic Assessment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Diagnostic Assessment"
+    },
+    {
+      "id": "PE-H-019",
+      "questionNumber": 19,
+      "sourceQuestionNumber": 19,
+      "question": "19. Vygotsky says that learning occurs in a social context. Which learning activity is most appropriate?",
+      "choices": {
+        "A": "Research",
+        "B": "Journal entry",
+        "C": "Peer discussion",
+        "D": "Individual powerpoint presentation"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Individual research is solitary.",
+        "B": "Incorrect. Journal writing is solitary reflection.",
+        "C": "Correct. Vygotsky's Socio-Cultural Theory emphasizes social interaction; peer discussions facilitate social mediation, dialogue, and collaborative scaffolding.",
+        "D": "Incorrect. Individual presentations lack interactive peer dialogue."
+      },
+      "explanation": "Socio-cultural theory posits that learning is socially constructed through interactive dialogue with peers and More Knowledgeable Others (MKOs).",
+      "memoryTip": "VYGOTSKY SOCIAL CONTEXT = PEER DISCUSSION.",
+      "reference": "Educational Psychology — Vygotsky's Socio-Cultural Theory",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Socio-Cultural Theory"
+    },
+    {
+      "id": "PE-H-020",
+      "questionNumber": 20,
+      "sourceQuestionNumber": 20,
+      "question": "20. How can a teacher win the respect of students? I. Demonstrate competence in facilitating instruction II. Draw out learning from students rather than with them learning III. Treat each students as they are with care for their weakness IV. Be a model in all aspects of personal and professional life",
+      "choices": {
+        "A": "II, III and IV",
+        "B": "I,III and IV",
+        "C": "I, II, III, and IV",
+        "D": "III and IV"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Omits instructional competence (I).",
+        "B": "Correct. Winning student respect requires instructional competence (I), caring empathy for student weaknesses (III), and professional/personal role modeling (IV).",
+        "C": "Incorrect. Statement II is awkwardly phrased and excludes collaborative learning.",
+        "D": "Incorrect. Omits instructional competence (I)."
+      },
+      "explanation": "Respect is earned through subject/pedagogical competence, genuine care for student growth, and ethical role-modeling.",
+      "memoryTip": "WIN RESPECT = Competence (I) + Empathy (III) + Role Model (IV).",
+      "reference": "The Teaching Profession — Teacher Persona and Ethics",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Teacher-Student Relationships"
+    },
+    {
+      "id": "PE-H-021",
+      "questionNumber": 21,
+      "sourceQuestionNumber": 21,
+      "question": "21. How are transition activities best handled?",
+      "choices": {
+        "A": "By surprising students on activity transition",
+        "B": "By simply enforcing the next activity",
+        "C": "By clustering students in groups",
+        "D": "By setting instruction for the next activity"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Surprising students causes confusion and off-task noise.",
+        "B": "Incorrect. Abrupt enforcement creates resistance and disorganization.",
+        "C": "Incorrect. Grouping alone does not ensure smooth movement.",
+        "D": "Correct. Smooth transitions require providing clear instructions, signals, and expectations before moving into the next activity."
+      },
+      "explanation": "Clear transition cues and explicit directions prepare students mentally and physically for activity changes, minimizing downtime.",
+      "memoryTip": "SMOOTH TRANSITIONS = Clear instructions & signals before moving.",
+      "reference": "Classroom Management — Transition Strategies",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Classroom Transitions"
+    },
+    {
+      "id": "PE-H-022",
+      "questionNumber": 22,
+      "sourceQuestionNumber": 22,
+      "question": "22. At what point does the science learner engage in critical thinking?",
+      "choices": {
+        "A": "Learning procedures",
+        "B": "Examining and judging objects",
+        "C": "Observing objects",
+        "D": "Gathering evidence"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Following procedures is procedural compliance.",
+        "B": "Correct. Examining, evaluating, and judging evidence or objects requires higher-order analytical evaluation (critical thinking).",
+        "C": "Incorrect. Observation is an initial lower-level process skill.",
+        "D": "Incorrect. Gathering evidence is an information-collection phase prior to critical evaluation."
+      },
+      "explanation": "Critical thinking involves analyzing, evaluating, and making reasoned judgments about evidence or phenomena.",
+      "memoryTip": "CRITICAL THINKING = EXAMINING AND JUDGING.",
+      "reference": "Principles of Teaching — Higher-Order Thinking Skills",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Critical Thinking"
+    },
+    {
+      "id": "PE-H-023",
+      "questionNumber": 23,
+      "sourceQuestionNumber": 23,
+      "question": "23. What kind of foundation for the curriculum is established by asking the schools, mission, vision and core values?",
+      "choices": {
+        "A": "Social",
+        "B": "Pedagogical",
+        "C": "Philosophical",
+        "D": "Political"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Social foundations address societal needs and culture.",
+        "B": "Incorrect. Pedagogical foundations address teaching methods and learning theories.",
+        "C": "Correct. A school's vision, mission, and core values express its fundamental beliefs and purpose, establishing its Philosophical foundation.",
+        "D": "Incorrect. Political foundations address governance and policy."
+      },
+      "explanation": "Philosophical foundations define the purpose of schooling, nature of truth, and core values embodied in vision-mission statements.",
+      "memoryTip": "VISION, MISSION, VALUES = PHILOSOPHICAL FOUNDATION.",
+      "reference": "Curriculum Development — Foundations of Curriculum",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Foundations of Curriculum"
+    },
+    {
+      "id": "PE-H-024",
+      "questionNumber": 24,
+      "sourceQuestionNumber": 24,
+      "question": "24. After a 200 hour sewing course, what is an appropriate outcome for assessment?",
+      "choices": {
+        "A": "Hours completed",
+        "B": "Labeling of sewing machine parts",
+        "C": "Pattern of products",
+        "D": "Product sewn"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Hours logged measure seat time, not learning performance.",
+        "B": "Incorrect. Labeling parts is a lower-level cognitive recall task.",
+        "C": "Incorrect. Patterns are intermediate planning steps.",
+        "D": "Correct. An authentic performance assessment for a practical skills course (sewing) is a finished product sewn by the student."
+      },
+      "explanation": "Performance-based TVET/vocational assessments evaluate tangible finished products against quality rubrics.",
+      "memoryTip": "AUTHENTIC SKILL ASSESSMENT = FINISHED PRODUCT (Product sewn).",
+      "reference": "Assessment of Learning — Performance-Based Assessment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Performance Assessment"
+    },
+    {
+      "id": "PE-H-025",
+      "questionNumber": 25,
+      "sourceQuestionNumber": 25,
+      "question": "25. Which of the following best describe a 21st century teacher who regularly undertakes professional training such as teacher seminars and workshops?",
+      "choices": {
+        "A": "Servant leader",
+        "B": "Entrepreneur",
+        "C": "Optimist",
+        "D": "Forever a learner"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Servant leadership focuses on community service.",
+        "B": "Incorrect. Entrepreneurship focuses on business innovation.",
+        "C": "Incorrect. Optimism is a positive attitude.",
+        "D": "Correct. A teacher who continuously pursues professional development, workshops, and learning opportunities embodies the 21st-century trait of being 'Forever a learner' (lifelong learner)."
+      },
+      "explanation": "Lifelong learning is a core competency for 21st-century teachers, requiring ongoing professional growth and reflection.",
+      "memoryTip": "REGULAR SEMINARS & TRAINING = FOREVER A LEARNER / Lifelong Learner.",
+      "reference": "The Teaching Profession — 21st Century Teacher Attributes",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "21st Century Teacher Traits"
+    },
+    {
+      "id": "PE-H-026",
+      "questionNumber": 26,
+      "sourceQuestionNumber": 26,
+      "question": "26. Which is/ are true of a behaviorist teaching- learning process? I. Fixed curricula II. Repetition III. Teacher- centered IV. Passive",
+      "choices": {
+        "A": "I, II and III",
+        "B": "III and IV",
+        "C": "I and II",
+        "D": "I, II III and IV"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Omits passive reception (IV).",
+        "B": "Incorrect. Omits fixed curricula and repetition.",
+        "C": "Incorrect. Omits teacher-centeredness.",
+        "D": "Correct. Behaviorist instruction relies on teacher-controlled (III) fixed curricula (I), drill/repetition (II), and views the learner as a passive responder (IV) to external stimuli."
+      },
+      "explanation": "Behaviorist pedagogy emphasizes teacher-directed drill, repetition, fixed curriculum targets, and external reinforcement.",
+      "memoryTip": "BEHAVIORIST PROCESS = Fixed, Repetitive, Teacher-Centered, Passive.",
+      "reference": "Educational Psychology — Behavioral Learning Theories",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Behaviorism"
+    },
+    {
+      "id": "PE-H-027",
+      "questionNumber": 27,
+      "sourceQuestionNumber": 27,
+      "question": "27. Which of the following is simulation to abstract the real world in learning?",
+      "choices": {
+        "A": "Monopoly",
+        "B": "Chess",
+        "C": "Role playing",
+        "D": "Scrabble"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Board game modeling real estate.",
+        "B": "Incorrect. Strategy game.",
+        "C": "Correct. Role playing is an instructional simulation where learners enact real-world roles and social scenarios to gain practical insights.",
+        "D": "Incorrect. Word game."
+      },
+      "explanation": "Role playing simulates real-world interpersonal interactions, enabling students to practice decision-making in safe environments.",
+      "memoryTip": "REAL WORLD SIMULATION = ROLE PLAYING.",
+      "reference": "Principles of Teaching — Simulation Strategies",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Instructional Methods"
+    },
+    {
+      "id": "PE-H-028",
+      "questionNumber": 28,
+      "sourceQuestionNumber": 28,
+      "question": "28. What level of the cognitive process is required in writing an essay the personality of a fellow classmate?",
+      "choices": {
+        "A": "Recalling",
+        "B": "Creating",
+        "C": "Analyzing",
+        "D": "Applying"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Recalling is low-level memory retrieval.",
+        "B": "Correct. Writing an original essay synthesizing observations into a new written composition represents the highest Bloom level: Creating.",
+        "C": "Incorrect. Analyzing breaks down parts, but generating a new composition is Creating.",
+        "D": "Incorrect. Applying executes a procedure in a given situation."
+      },
+      "explanation": "Under Revised Bloom's Taxonomy, generating, designing, or composing an original piece of writing is classified as Creating.",
+      "memoryTip": "COMPOSING ORIGINAL ESSAY = CREATING (Highest Bloom Level).",
+      "reference": "Educational Psychology — Bloom's Revised Taxonomy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Cognitive Taxonomy"
+    },
+    {
+      "id": "PE-H-029",
+      "questionNumber": 29,
+      "sourceQuestionNumber": 29,
+      "question": "29. What is the most essential in the student portfolio?",
+      "choices": {
+        "A": "Reflection journal",
+        "B": "Display photos",
+        "C": "Trees and self-rating",
+        "D": "Artistic design"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. A student reflection journal is the core essential element that transforms a collection of work into an authentic portfolio.",
+        "B": "Incorrect. Decorative photos are secondary.",
+        "C": "Incorrect. Self-ratings are tools, but reflection journals drive deep metacognition.",
+        "D": "Incorrect. Artistic design is superficial."
+      },
+      "explanation": "Self-reflection is the defining component that distinguishes a portfolio from a scrapbook.",
+      "memoryTip": "MOST ESSENTIAL PORTFOLIO ELEMENT = REFLECTION JOURNAL.",
+      "reference": "Assessment of Learning — Portfolio Assessment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Portfolio Assessment"
+    },
+    {
+      "id": "PE-H-030",
+      "questionNumber": 30,
+      "sourceQuestionNumber": 30,
+      "question": "30. Which of the following should be recognized when dealing with cultural diversity among learners?",
+      "choices": {
+        "A": "That inferior culture should be disregarded",
+        "B": "That superior cultures must prevail",
+        "C": "That students are the same in their culture",
+        "D": "That each student is unique in his/ her own way"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Ethnocentric and discriminatory.",
+        "B": "Incorrect. Cultural imperialism.",
+        "C": "Incorrect. Ignores individual differences.",
+        "D": "Correct. Culturally responsive teaching recognizes that every student is culturally unique and deserving of dignity and respect."
+      },
+      "explanation": "Multicultural education values individual cultural uniqueness, avoiding ethnocentrism or forced cultural assimilation.",
+      "memoryTip": "CULTURAL DIVERSITY = EACH STUDENT IS UNIQUE.",
+      "reference": "Foundations of Education — Multicultural Education",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Multicultural Education"
+    },
+    {
+      "id": "PE-H-031",
+      "questionNumber": 31,
+      "sourceQuestionNumber": 31,
+      "question": "31. Which of the following is an improvement in the physical learning environment of a classroom?",
+      "choices": {
+        "A": "More concept mapping",
+        "B": "Longer lesson presentation",
+        "C": "Better classroom ventilation",
+        "D": "More student- teacher interaction"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Cognitive instructional technique.",
+        "B": "Incorrect. Instructional time management.",
+        "C": "Correct. Physical learning environment includes tangible, environmental factors such as lighting, temperature, noise control, and ventilation.",
+        "D": "Incorrect. Social-emotional learning environment."
+      },
+      "explanation": "The physical environment encompasses room temperature, air flow/ventilation, seating arrangement, and lighting.",
+      "memoryTip": "PHYSICAL ENVIRONMENT = Ventilation, Lighting, Seating.",
+      "reference": "Classroom Management — Physical Learning Environment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Physical Learning Environment"
+    },
+    {
+      "id": "PE-H-032",
+      "questionNumber": 32,
+      "sourceQuestionNumber": 32,
+      "question": "32. Which of the following is the most appropriate message by teachers on the first day of class? 3",
+      "choices": {
+        "A": "That the year will require much discipline and work for all",
+        "B": "That the year prove the best and so each must compete for grade",
+        "C": "That the year will require much work and industry to pass the grade",
+        "D": "That the year be a fulfilling experience for new learning"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Creates an intimidating atmosphere.",
+        "B": "Incorrect. Fosters unhealthy competition.",
+        "C": "Incorrect. Focuses on grade pressure.",
+        "D": "Correct. An encouraging, positive message framing the school year as a fulfilling journey of growth and discovery builds rapport and intrinsic motivation."
+      },
+      "explanation": "First-day orientation messages should be welcoming and inspiring, establishing a positive psychological climate.",
+      "memoryTip": "FIRST DAY MESSAGE = Fulfilling experience for learning.",
+      "reference": "Classroom Management — First Day Expectations",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Classroom Climate"
+    },
+    {
+      "id": "PE-H-033",
+      "questionNumber": 33,
+      "sourceQuestionNumber": 33,
+      "question": "33. After the 1987 constitution, what is the legal basis that makes teaching a profession and considers teachers as professional?",
+      "choices": {
+        "A": "R.A 7640",
+        "B": "R.A 7836",
+        "C": "Code of Ethics for Professional Teachers",
+        "D": "P.D 1006"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Unrelated law.",
+        "B": "Correct. RA 7836, enacted in 1994, is the post-1987 law that professionalized teaching and established the licensure framework.",
+        "C": "Incorrect. Regulatory code issued under RA 7836.",
+        "D": "Incorrect. PD 1006 established an earlier professionalization framework in 1977, before the 1987 Constitution; the question specifically asks for the post-1987 legal basis."
+      },
+      "explanation": "RA 7836, the Philippine Teachers Professionalization Act of 1994, strengthened regulation and supervision of teaching and prescribed the licensure examination for teachers.",
+      "memoryTip": "POST-1987 TEACHER PROFESSIONALIZATION = RA 7836.",
+      "reference": "The Teaching Profession — Teacher Legislation",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Teacher Legislation",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "B is correct for the wording 'After the 1987 Constitution': RA 7836 (1994) is the post-1987 law that professionalized teaching and established the licensure framework. PD 1006 predates the 1987 Constitution."
+    },
+    {
+      "id": "PE-H-034",
+      "questionNumber": 34,
+      "sourceQuestionNumber": 34,
+      "question": "34. Which of the following ideas is a fallacy of stereotyping that is under to student- learners?",
+      "choices": {
+        "A": "All students have right to be respected",
+        "B": "All student require quality instruction",
+        "C": "All students can best learn at their own pace",
+        "D": "All students from peasant communities are dull"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Universal human right.",
+        "B": "Incorrect. Universal educational principle.",
+        "C": "Incorrect. Differentiated learning principle.",
+        "D": "Correct. Assuming all students from rural/peasant backgrounds are intellectually 'dull' is a harmful prejudice and fallacy of stereotyping."
+      },
+      "explanation": "Stereotyping unfairly attributes negative traits to entire groups based on socioeconomic or regional background.",
+      "memoryTip": "FALLACY OF STEREOTYPING = Generalizing negative traits to a group.",
+      "reference": "Foundations of Education — Socio-Cultural Principles",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Sociological Foundations"
+    },
+    {
+      "id": "PE-H-035",
+      "questionNumber": 35,
+      "sourceQuestionNumber": 35,
+      "question": "35. Which exemplifies differentiated instruction directed at heterogeneous group in a class?",
+      "choices": {
+        "A": "Same for all groups",
+        "B": "Different task, appropriate for each group",
+        "C": "Three different teachers to assess groups",
+        "D": "Divide class, same task"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Uniform instruction is the opposite of differentiation.",
+        "B": "Correct. Differentiated instruction adapts learning tasks and complexity to match the varied readiness, interests, and learning profiles of different groups.",
+        "C": "Incorrect. Multiple assessors do not define differentiated tasks.",
+        "D": "Incorrect. Giving identical tasks to divided groups is not differentiation."
+      },
+      "explanation": "Differentiated instruction modifies content, process, or product based on learner readiness and learning styles.",
+      "memoryTip": "DIFFERENTIATED INSTRUCTION = DIFFERENT TASKS for different readiness levels.",
+      "reference": "Principles of Teaching — Differentiated Instruction",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Differentiated Instruction"
+    },
+    {
+      "id": "PE-H-036",
+      "questionNumber": 36,
+      "sourceQuestionNumber": 36,
+      "question": "36. Which question can help develop students creative thinking skills after reading the story of the Monkey and the Turtle?",
+      "choices": {
+        "A": "Why did the turtle treat the monkey that way?",
+        "B": "Did you find the story interesting? Explain your answer",
+        "C": "If you were to re-write the story, how would you end it",
+        "D": "Who is wiser- the monkey or the turtle? Why?"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Evaluates character motives (analytical).",
+        "B": "Incorrect. Evaluates personal reaction.",
+        "C": "Correct. Asking students to rewrite or create an alternative ending requires divergent production and original synthesis (Creative Thinking).",
+        "D": "Incorrect. Evaluates and compares character traits (critical thinking)."
+      },
+      "explanation": "Creating new story endings prompts students to synthesize original ideas (Creating level in Bloom's taxonomy).",
+      "memoryTip": "RE-WRITE / CREATE ALTERNATIVE ENDING = CREATIVE THINKING.",
+      "reference": "Principles of Teaching — Questioning Strategies",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Questioning Strategies"
+    },
+    {
+      "id": "PE-H-037",
+      "questionNumber": 37,
+      "sourceQuestionNumber": 37,
+      "question": "37. Along Erickson's psychosocial theory what is display by the child in saying \" i do things without worrying about them?\"",
+      "choices": {
+        "A": "Endurance",
+        "B": "Discipline",
+        "C": "Obedience",
+        "D": "Autonomy"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Physical stamina.",
+        "B": "Incorrect. Rule compliance.",
+        "C": "Incorrect. Submission to authority.",
+        "D": "Correct. Autonomy (Stage 2: Autonomy vs. Shame/Doubt) reflects toddlers developing independence and confidence in executing actions without anxiety."
+      },
+      "explanation": "Autonomy fosters independent action, self-control, and confidence in one's choices.",
+      "memoryTip": "DOING THINGS INDEPENDENTLY = AUTONOMY.",
+      "reference": "Child and Adolescent Development — Erikson's Psychosocial Theory",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Erikson's Psychosocial Theory"
+    },
+    {
+      "id": "PE-H-038",
+      "questionNumber": 38,
+      "sourceQuestionNumber": 38,
+      "question": "38. On learning deficiencies, what is learning disability in reading?",
+      "choices": {
+        "A": "Dyslexia",
+        "B": "Dyscalculia",
+        "C": "Dysgraphia",
+        "D": "Dyspepsia"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Dyslexia is a specific learning disability characterized by difficulties with word recognition, decoding, and reading comprehension.",
+        "B": "Incorrect. Dyscalculia is a learning disability in mathematics.",
+        "C": "Incorrect. Dysgraphia is a learning disability in writing.",
+        "D": "Incorrect. Dyspepsia is a medical digestive condition (indigestion)."
+      },
+      "explanation": "Dyslexia impairs reading fluency, word decoding, and phonological processing.",
+      "memoryTip": "DYSLEXIA = READING disability.",
+      "reference": "Special Education — Learning Disabilities",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Learning Disabilities"
+    },
+    {
+      "id": "PE-H-039",
+      "questionNumber": 39,
+      "sourceQuestionNumber": 39,
+      "question": "39. How do you classify objective \" to identify the parts of the flower\" in terms of bloom's taxonomy of educational objectives at the cognitive level?",
+      "choices": {
+        "A": "Analysis",
+        "B": "Knowledge",
+        "C": "Application",
+        "D": "Synthesis"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Analysis involves breaking down structures into component relations.",
+        "B": "Correct. 'Identify' or 'label' represents the lowest cognitive level (Knowledge / Remembering) in Bloom's taxonomy.",
+        "C": "Incorrect. Application involves using principles in new situations.",
+        "D": "Incorrect. Synthesis involves assembling parts into a new whole."
+      },
+      "explanation": "Identifying or recalling terms and labels belongs to the Knowledge (Remembering) level of Bloom's Taxonomy.",
+      "memoryTip": "IDENTIFY / LABEL = KNOWLEDGE (Remembering).",
+      "reference": "Educational Psychology — Bloom's Taxonomy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Cognitive Taxonomy"
+    },
+    {
+      "id": "PE-H-040",
+      "questionNumber": 40,
+      "sourceQuestionNumber": 40,
+      "question": "40. What kind of assessment uses a checklist, portfolio rubrics or a rating scale?",
+      "choices": {
+        "A": "Informal assessment",
+        "B": "Authentic assessment",
+        "C": "Placement assessment",
+        "D": "Alternative assessment"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Informal assessment includes unstandardized teacher observation.",
+        "B": "Incorrect. Authentic assessment focuses on real-world tasks.",
+        "C": "Incorrect. Placement assessment determines grade entry levels.",
+        "D": "Correct. Alternative assessment uses non-traditional evaluation tools such as rubrics, portfolios, checklists, and performance rating scales."
+      },
+      "explanation": "Alternative assessment evaluates performance through non-paper-and-pencil methods like portfolios and scoring rubrics.",
+      "memoryTip": "RUBRICS & PORTFOLIOS = ALTERNATIVE ASSESSMENT.",
+      "reference": "Assessment of Learning — Alternative Assessment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Alternative Assessment"
+    },
+    {
+      "id": "PE-H-041",
+      "questionNumber": 41,
+      "sourceQuestionNumber": 41,
+      "question": "41. Teacher Miguel find the student Marcia is emotionally insecure. What of the following is the best way student Marcia?",
+      "choices": {
+        "A": "Align activities to her needs",
+        "B": "Give her more physical and less mental work",
+        "C": "Exempt her in some subjects",
+        "D": "Give her extra assignment"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Aligning activities to an insecure student's emotional and academic needs builds confidence, security, and success.",
+        "B": "Incorrect. Arbitrarily reducing academic expectations is discriminatory.",
+        "C": "Incorrect. Subject exemption deprives the student of learning.",
+        "D": "Incorrect. Extra assignments without scaffolding increase anxiety."
+      },
+      "explanation": "Differentiated support for emotionally insecure learners involves tailoring tasks to build confidence and meet specific needs.",
+      "memoryTip": "INSECURE LEARNER = ALIGN ACTIVITIES TO HER NEEDS.",
+      "reference": "Special Education — Emotional & Behavioral Support",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Individualized Instruction"
+    },
+    {
+      "id": "PE-H-042",
+      "questionNumber": 42,
+      "sourceQuestionNumber": 42,
+      "question": "42. According to Robert Gagne's sequencing, which should be the first in planning instruction?",
+      "choices": {
+        "A": "Plan to motivate",
+        "B": "Test instruction",
+        "C": "Specify context",
+        "D": "Identify learning outcomes"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Gaining attention/motivation is the 1st Event of Instruction, but planning begins with outcome formulation.",
+        "B": "Incorrect. Testing occurs at the end.",
+        "C": "Incorrect. Context specification follows target goals.",
+        "D": "Correct. Instructional design begins with identifying and specifying target learning outcomes."
+      },
+      "explanation": "In backward design and Gagné's instructional design model, defining intended learning outcomes is the mandatory first step.",
+      "memoryTip": "FIRST IN PLANNING = IDENTIFY LEARNING OUTCOMES.",
+      "reference": "Principles of Teaching — Gagné's Instructional Design",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Instructional Planning"
+    },
+    {
+      "id": "PE-H-043",
+      "questionNumber": 43,
+      "sourceQuestionNumber": 43,
+      "question": "43. What domain of learning covers Teachers Patrick's effort for to discover personal values applicable for life in his lessons?",
+      "choices": {
+        "A": "Skills learning",
+        "B": "Affective learning",
+        "C": "Cognitive learning",
+        "D": "Metacognitive learning"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Skills belong to the psychomotor domain.",
+        "B": "Correct. The Affective domain (Krathwohl) addresses attitudes, emotions, character, and personal values internalization.",
+        "C": "Incorrect. Cognitive domain deals with intellectual knowledge.",
+        "D": "Incorrect. Metacognition is thinking about one's own thinking."
+      },
+      "explanation": "Values, attitudes, and character development comprise the Affective Domain of learning.",
+      "memoryTip": "PERSONAL VALUES & ATTITUDES = AFFECTIVE LEARNING.",
+      "reference": "Educational Psychology — Taxonomy of Learning Domains",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Affective Domain"
+    },
+    {
+      "id": "PE-H-044",
+      "questionNumber": 44,
+      "sourceQuestionNumber": 44,
+      "question": "44. On the variety of intelligence as dispositions, what is one inclusion of a learner who can speak and write effectively?",
+      "choices": {
+        "A": "To be an economist",
+        "B": "To be an journalist",
+        "C": "To be a singer",
+        "D": "To be an ecologies"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Economists rely heavily on logical-mathematical intelligence.",
+        "B": "Correct. Speaking and writing effectively reflect Verbal-Linguistic Intelligence, which suits career paths like journalism.",
+        "C": "Incorrect. Singers rely on musical intelligence.",
+        "D": "Incorrect. Ecologists rely on naturalist intelligence."
+      },
+      "explanation": "Verbal-linguistic intelligence enables individuals to use words effectively in writing and speaking, characteristic of journalists.",
+      "memoryTip": "SPEAK & WRITE EFFECTIVELY = VERBAL-LINGUISTIC (Journalist).",
+      "reference": "Educational Psychology — Gardner's Multiple Intelligences",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Multiple Intelligences"
+    },
+    {
+      "id": "PE-H-045",
+      "questionNumber": 45,
+      "sourceQuestionNumber": 45,
+      "question": "45. Which the equivalent of self awareness which is basic to social-emotional growth among learners?",
+      "choices": {
+        "A": "Trust",
+        "B": "Altrium",
+        "C": "Integrity",
+        "D": "Ego-esteem"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Trust is relational belief.",
+        "B": "Incorrect. Altruism is selfless concern for others.",
+        "C": "Incorrect. Integrity is moral consistency.",
+        "D": "Correct. Ego-esteem (self-esteem / self-awareness) reflects understanding and valuing one's own identity and capabilities."
+      },
+      "explanation": "Self-awareness and self-esteem provide the baseline foundation for emotional maturity and social competence.",
+      "memoryTip": "SELF-AWARENESS = EGO-ESTEEM / Self-Concept.",
+      "reference": "Child and Adolescent Development — Socio-Emotional Growth",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Socio-Emotional Development"
+    },
+    {
+      "id": "PE-H-046",
+      "questionNumber": 46,
+      "sourceQuestionNumber": 46,
+      "question": "46. Advance organizer use to make connections among various places of information for efficient recall?",
+      "choices": {
+        "A": "Elaboration",
+        "B": "Rehearsal",
+        "C": "Organization",
+        "D": "Visual imagery"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Elaboration adds meaningful associations.",
+        "B": "Incorrect. Rehearsal is rote repetition.",
+        "C": "Correct. Advance organizers facilitate Organization by structuring and linking new information to existing mental frameworks for easy retrieval.",
+        "D": "Incorrect. Visual imagery uses mental pictures."
+      },
+      "explanation": "Advance organizers (Ausubel) provide a structural framework (Organization) connecting new facts to existing knowledge.",
+      "memoryTip": "ADVANCE ORGANIZERS = STRUCTURAL ORGANIZATION of information.",
+      "reference": "Educational Psychology — Information Processing & Ausubel",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Cognitive Learning Theories"
+    },
+    {
+      "id": "PE-H-047",
+      "questionNumber": 47,
+      "sourceQuestionNumber": 47,
+      "question": "47. In preparing instructional materials, what is the primary factor to be considered?",
+      "choices": {
+        "A": "The objectives of the lesson",
+        "B": "The technology available in the classroom",
+        "C": "The diversity of the learners",
+        "D": "The methods and techniques"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Lesson objectives dictate what students must achieve; instructional materials must primarily align with these intended outcomes.",
+        "B": "Incorrect. Technology is a tool, not the primary guiding purpose.",
+        "C": "Incorrect. Learner diversity is a key secondary factor, but objectives lead.",
+        "D": "Incorrect. Methods are guided by objectives."
+      },
+      "explanation": "Instructional alignment requires that media, materials, and methods directly support achieving the lesson's learning objectives.",
+      "memoryTip": "PRIMARY FACTOR FOR MATERIALS = LESSON OBJECTIVES.",
+      "reference": "Educational Technology — Selection of Instructional Materials",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Instructional Materials Selection"
+    },
+    {
+      "id": "PE-H-048",
+      "questionNumber": 48,
+      "sourceQuestionNumber": 48,
+      "question": "48. In curriculum making, what is established by determining the learners, needs, culture, capacity to learn prior to writing a curriculum?",
+      "choices": {
+        "A": "Philosophical foundation 4",
+        "B": "Psychological foundation",
+        "C": "Historical foundation",
+        "D": "Sociological foundation"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Philosophical foundations define goals and values.",
+        "B": "Incorrect. Psychological foundations address learning processes.",
+        "C": "Incorrect. Historical foundations address educational heritage.",
+        "D": "Correct. Sociological foundations establish curriculum content based on societal needs, community culture, and social realities."
+      },
+      "explanation": "Sociological foundations ensure the curriculum responds directly to society's culture, community values, and social needs.",
+      "memoryTip": "NEEDS & CULTURE OF COMMUNITY = SOCIOLOGICAL FOUNDATION.",
+      "reference": "Curriculum Development — Foundations of Curriculum",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Foundations of Curriculum"
+    },
+    {
+      "id": "PE-H-049",
+      "questionNumber": 49,
+      "sourceQuestionNumber": 49,
+      "question": "49. According to progressivist educators like Carl Rogers, what is the essence of creativity among school learners?",
+      "choices": {
+        "A": "Conformity",
+        "B": "Novelty",
+        "C": "Convention",
+        "D": "Industry"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Conformity is the opposite of original creativity.",
+        "B": "Correct. Humanistic and progressivist psychology views creativity as the generation of novel, original, and meaningful ideas or products.",
+        "C": "Incorrect. Convention adheres to traditional rules.",
+        "D": "Incorrect. Industry refers to hard work."
+      },
+      "explanation": "Carl Rogers defined creative expression as producing novel products arising from the unique individual interacting with materials.",
+      "memoryTip": "ESSENCE OF CREATIVITY = NOVELTY / Originality.",
+      "reference": "Educational Psychology — Humanistic & Creative Learning",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Humanistic Psychology"
+    },
+    {
+      "id": "PE-H-050",
+      "questionNumber": 50,
+      "sourceQuestionNumber": 50,
+      "question": "50. Using Johann Friedrich Herbart's approach to lessen delivery, which is most relevant in developing the young learners moral consciousness?",
+      "choices": {
+        "A": "Focus on topic of interest.",
+        "B": "Question the introduced topics.",
+        "C": "Relate concept to daily living.",
+        "D": "Some the lessons achievement."
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Preparation step.",
+        "B": "Incorrect. Questioning step.",
+        "C": "Correct. Herbart's 5 Steps (Preparation, Presentation, Association, Generalization, Application) stress Association and Application—relating lessons to daily life to internalize moral character.",
+        "D": "Incorrect. Recapitulation step."
+      },
+      "explanation": "Herbartian pedagogy emphasizes linking new ideas to real-life applications to foster moral character development.",
+      "memoryTip": "HERBARTIAN MORAL TEACHING = RELATE CONCEPTS TO DAILY LIVING.",
+      "reference": "Foundations of Education — Herbartian Method",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Historical Foundations"
+    },
+    {
+      "id": "PE-H-051",
+      "questionNumber": 51,
+      "sourceQuestionNumber": 51,
+      "question": "51. Of the following, which will you implement as the most effective strategy for influencing human and emotion for retention in discovery learning?",
+      "choices": {
+        "A": "Being humorous and light in teaching",
+        "B": "Using of inspirational tool (book, film, art, etc.)",
+        "C": "Applying drills to augment retention",
+        "D": "Using the internet by surfing for information"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Humor creates light climate, but inspirational media engages deep emotional resonance.",
+        "B": "Correct. Inspirational media (films, art, literature) evoke powerful emotional connections that anchor memory retention during discovery learning.",
+        "C": "Incorrect. Drills focus on rote memory rather than emotion.",
+        "D": "Incorrect. Web browsing is cognitive/informational."
+      },
+      "explanation": "Emotional engagement via compelling art, stories, or films significantly enhances long-term memory encoding.",
+      "memoryTip": "EMOTION & RETENTION = INSPIRATIONAL TOOLS (Film, Art, Books).",
+      "reference": "Educational Psychology — Affective & Memory Processes",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Affective Learning"
+    },
+    {
+      "id": "PE-H-052",
+      "questionNumber": 52,
+      "sourceQuestionNumber": 52,
+      "question": "52. Which can be said of Patrick who obtained a score of 75 out of 100 grammar?",
+      "choices": {
+        "A": "He was among those who failed the test",
+        "B": "He answered 75 items correctly",
+        "C": "He perform better than 25 of his classmates",
+        "D": "He is superior in ranking"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Pass/fail status depends on the passing cut-off score.",
+        "B": "Correct. A raw score of 75 out of 100 means the student answered exactly 75 test items correctly.",
+        "C": "Incorrect. Percentile/peer ranking cannot be inferred from a raw score alone.",
+        "D": "Incorrect. Ranking requires comparing scores with the rest of the class."
+      },
+      "explanation": "A raw score simply indicates the absolute number of correct responses obtained on a test.",
+      "memoryTip": "RAW SCORE (75/100) = Answered 75 items correctly.",
+      "reference": "Assessment of Learning — Raw Scores vs Relative Scores",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Test Score Interpretation"
+    },
+    {
+      "id": "PE-H-053",
+      "questionNumber": 53,
+      "sourceQuestionNumber": 53,
+      "question": "53. How will you characterize contemporary progressive education?",
+      "choices": {
+        "A": "Classic knowledge",
+        "B": "Virtue- driven",
+        "C": "Traditional",
+        "D": "Science- based"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Perennialist/essentialist focus.",
+        "B": "Incorrect. Idealist focus.",
+        "C": "Incorrect. Opposite of progressive.",
+        "D": "Correct. Contemporary progressive education grounds its methods in empirical research, scientific inquiry, and evidence-based child development."
+      },
+      "explanation": "Modern progressivism relies on scientific inquiry, problem-solving, and empirical child development research.",
+      "memoryTip": "CONTEMPORARY PROGRESSIVISM = SCIENCE-BASED & Experiential.",
+      "reference": "Foundations of Education — Progressivism",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Educational Philosophies"
+    },
+    {
+      "id": "PE-H-054",
+      "questionNumber": 54,
+      "sourceQuestionNumber": 54,
+      "question": "54. There are examples of scaffolds that the teacher can use to facilitate learning specially for those who falter or fall behind in class discussion, but not to include",
+      "choices": {
+        "A": "Questions",
+        "B": "Cues",
+        "C": "Drills",
+        "D": "Prompts"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Guiding questions act as interactive scaffolds.",
+        "B": "Incorrect. Visual or verbal cues are standard scaffolds.",
+        "C": "Correct. Rote repetition/drills are not instructional scaffolds; scaffolding provides temporary guided prompts/cues to bridge understanding.",
+        "D": "Incorrect. Prompts are classic scaffolding tools."
+      },
+      "explanation": "Scaffolds (prompts, hints, cues, questions) guide cognitive processing; rote drills are repetitive practice.",
+      "memoryTip": "NOT A SCAFFOLD = ROTE DRILLS.",
+      "reference": "Educational Psychology — Vygotsky's Scaffolding",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Scaffolding Strategies"
+    },
+    {
+      "id": "PE-H-055",
+      "questionNumber": 55,
+      "sourceQuestionNumber": 55,
+      "question": "55. Which of the following is true of brainstorming as a group dynamics activities?",
+      "choices": {
+        "A": "True ideas surface in discussion",
+        "B": "Ideas tax the brain",
+        "C": "No ideas are rejected",
+        "D": "Best ideas are selected"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Brainstorming encourages quantity first over immediate truth checking.",
+        "B": "Incorrect. Misinterprets the term.",
+        "C": "Correct. The fundamental rule of brainstorming is suspending judgment—no ideas are criticized or rejected during the generation phase.",
+        "D": "Incorrect. Selection/evaluation occurs in a later phase."
+      },
+      "explanation": "Brainstorming rules mandate deferred judgment so participants freely offer creative ideas without fear of rejection.",
+      "memoryTip": "BRAINSTORMING RULE = NO IDEAS REJECTED during generation.",
+      "reference": "Principles of Teaching — Group Discussion Strategies",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Discussion Strategies"
+    },
+    {
+      "id": "PE-H-056",
+      "questionNumber": 56,
+      "sourceQuestionNumber": 56,
+      "question": "56. Which of the following issues is appropriate for collaborative action research by the teachers in the school?",
+      "choices": {
+        "A": "Poverty in the regional community",
+        "B": "Political dynasty during elections",
+        "C": "Increasing number of student absences",
+        "D": "Climate change affecting the world"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Broad macro-economic problem beyond immediate school control.",
+        "B": "Incorrect. Political governance issue.",
+        "C": "Correct. Student absenteeism is a direct, localized school problem that teachers can collaboratively investigate and solve through action research.",
+        "D": "Incorrect. Global environmental issue."
+      },
+      "explanation": "Action research targets practical, manageable, school-based problems that educators can directly influence and solve.",
+      "memoryTip": "ACTION RESEARCH TOPIC = School-based issue (STUDENT ABSENCES).",
+      "reference": "Teacher Research — Action Research Topics",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Action Research"
+    },
+    {
+      "id": "PE-H-057",
+      "questionNumber": 57,
+      "sourceQuestionNumber": 57,
+      "question": "57. At what instance is the teacher writer of the curriculum?",
+      "choices": {
+        "A": "Presenting class lessons",
+        "B": "Preparing lesson plans",
+        "C": "Assessing lesson outcomes",
+        "D": "Checking lesson exams"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Reflects the teacher as an implementer/actor.",
+        "B": "Correct. When crafting daily lesson plans, syllabi, and learning modules, the teacher acts as a curriculum writer/planner.",
+        "C": "Incorrect. Reflects the teacher as an evaluator.",
+        "D": "Incorrect. Reflects assessment grading."
+      },
+      "explanation": "Teachers act as curriculum writers when designing learning plans, modules, and instructional units.",
+      "memoryTip": "TEACHER AS CURRICULUM WRITER = PREPARING LESSON PLANS.",
+      "reference": "Curriculum Development — Teacher Roles in Curriculum",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Teacher's Role in Curriculum"
+    },
+    {
+      "id": "PE-H-058",
+      "questionNumber": 58,
+      "sourceQuestionNumber": 58,
+      "question": "58. How is reflection recorded in action research?",
+      "choices": {
+        "A": "Through the curriculum",
+        "B": "Through a report journal",
+        "C": "Through a lesson plan",
+        "D": "Through a syllabus"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Broad educational document.",
+        "B": "Correct. Reflective journals or research logs serve as the primary tool for documenting observations and reflections in action research.",
+        "C": "Incorrect. Lesson plans outline instructional steps.",
+        "D": "Incorrect. Syllabi outline course topics."
+      },
+      "explanation": "Action researchers maintain reflective journals to document qualitative observations, feelings, and insights during research cycles.",
+      "memoryTip": "ACTION RESEARCH REFLECTION = REPORT JOURNAL / Reflective Log.",
+      "reference": "Teacher Research — Action Research Documentation",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Action Research Tools"
+    },
+    {
+      "id": "PE-H-059",
+      "questionNumber": 59,
+      "sourceQuestionNumber": 59,
+      "question": "59. The students score was: 80, 83, 84, 86, 87, 88, 89, what is 86?",
+      "choices": {
+        "A": "Mean",
+        "B": "None",
+        "C": "Median",
+        "D": "Mode"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Sum $= 597 / 7 = 85.28$ (Mean).",
+        "B": "Incorrect. It is the median.",
+        "C": "Correct. Arranged sequentially, 86 is the exact middle score in the set of 7 scores, making it the Median.",
+        "D": "Incorrect. There is no mode as no score repeats."
+      },
+      "explanation": "The Median is the middlemost value in an ordered set of numbers. In 7 ordered scores, the 4th score (86) is the Median.",
+      "memoryTip": "MIDDLE SCORE IN ORDERED SET = MEDIAN.",
+      "reference": "Assessment of Learning — Measures of Central Tendency",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Educational Statistics"
+    },
+    {
+      "id": "PE-H-060",
+      "questionNumber": 60,
+      "sourceQuestionNumber": 60,
+      "question": "60. Owing to more flexible instruction such as through group discussion role playing, how can seating arrangement be done?",
+      "choices": {
+        "A": "Moveable chair arrangement",
+        "B": "Elimination of chair arrangement",
+        "C": "Fixed chair arrangement",
+        "D": "Increased chair arrangement"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Flexible, collaborative instruction (discussions, role plays) requires moveable furniture that can be quickly rearranged.",
+        "B": "Incorrect. Removing chairs entirely is impractical.",
+        "C": "Incorrect. Fixed seating limits physical flexibility.",
+        "D": "Incorrect. Adding more chairs increases clutter."
+      },
+      "explanation": "Movable seating allows teachers to adapt physical classroom geometry to various collaborative learning formats.",
+      "memoryTip": "FLEXIBLE INSTRUCTION = MOVEABLE CHAIR ARRANGEMENT.",
+      "reference": "Classroom Management — Physical Environment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Physical Learning Environment"
+    },
+    {
+      "id": "PE-H-061",
+      "questionNumber": 61,
+      "sourceQuestionNumber": 61,
+      "question": "61. On DepEd's emphasis on learning and assessment, which is given the highest percentage contribution to the grade of students in grades 1-to-10?",
+      "choices": {
+        "A": "More stress on student discipline",
+        "B": "More importance for performance task",
+        "C": "More value for written work",
+        "D": "More stress on leadership"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Non-academic factor.",
+        "B": "Correct. Under DepEd Order No. 8, s. 2015, Performance Tasks carry the highest weight across subjects (ranging from 40% up to 60%).",
+        "C": "Incorrect. Written Work carries 30% to 40% weight.",
+        "D": "Incorrect. Non-academic factor."
+      },
+      "explanation": "DepEd DO 8, s. 2015 prioritizes Performance Tasks (40% to 60%) to emphasize authentic application.",
+      "memoryTip": "DEPED HIGHEST GRADE WEIGHT = PERFORMANCE TASKS.",
+      "reference": "Assessment of Learning — DepEd DO 8, s. 2015",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System"
+    },
+    {
+      "id": "PE-H-062",
+      "questionNumber": 62,
+      "sourceQuestionNumber": 62,
+      "question": "62. Scores in a distribution are extreme, which is true of the score distribution?",
+      "choices": {
+        "A": "The range is low.",
+        "B": "The range is zero.",
+        "C": "The range is high.",
+        "D": "The scores are close to each other."
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Low range indicates clustered scores.",
+        "B": "Incorrect. Zero range means all scores are identical.",
+        "C": "Correct. When a distribution contains extreme scores, the gap between highest and lowest values ($Range = High - Low$) is high.",
+        "D": "Incorrect. Extreme scores indicate high dispersion."
+      },
+      "explanation": "Range is calculated as Highest Score minus Lowest Score; extreme scores widen this gap, producing a high range.",
+      "memoryTip": "EXTREME SCORES = HIGH RANGE (High variability).",
+      "reference": "Assessment of Learning — Measures of Variability",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Educational Statistics"
+    },
+    {
+      "id": "PE-H-063",
+      "questionNumber": 63,
+      "sourceQuestionNumber": 63,
+      "question": "63. f the following, what is a good example of \" learning to do\" activity in teaching- and- learning?",
+      "choices": {
+        "A": "Self-Assessment of learning a module",
+        "B": "Lecture on the topic of patriots",
+        "C": "Demonstration of baking skills",
+        "D": "Monitoring of learning drills"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Reflects 'Learning to Be/Know'.",
+        "B": "Incorrect. Reflects 'Learning to Know'.",
+        "C": "Correct. UNESCO's 'Learning to Do' pillar focuses on acquiring practical occupational competencies and hands-on skills (e.g., baking demonstration).",
+        "D": "Incorrect. Reflects drill monitoring."
+      },
+      "explanation": "'Learning to Do' equips individuals with practical vocational skills and hands-on competencies to perform work effectively.",
+      "memoryTip": "LEARNING TO DO = PRACTICAL SKILLS DEMONSTRATION.",
+      "reference": "Foundations of Education — UNESCO 4 Pillars of Learning",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "UNESCO Pillars of Learning"
+    },
+    {
+      "id": "PE-H-064",
+      "questionNumber": 64,
+      "sourceQuestionNumber": 64,
+      "question": "64. From the models of the curriculum process, what did the Taba model choose as the beginning of the correct process?",
+      "choices": {
+        "A": "Organizing curriculum experiences",
+        "B": "Formulating a design",
+        "C": "Diagnosing learners need",
+        "D": "Defining the school agenda"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Subsequent organizing step.",
+        "B": "Incorrect. Design step follows needs analysis.",
+        "C": "Correct. Hilda Taba's Grassroots/Inductive Model begins with Step 1: Diagnosis of Learners' Needs.",
+        "D": "Incorrect. Administrative agenda setting."
+      },
+      "explanation": "Hilda Taba advocated a bottom-up inductive model starting with diagnosing student needs before formulating objectives.",
+      "memoryTip": "TABA GRASSROOTS MODEL STEP 1 = DIAGNOSING LEARNERS' NEEDS.",
+      "reference": "Curriculum Development — Curriculum Development Models",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Curriculum Models"
+    },
+    {
+      "id": "PE-H-065",
+      "questionNumber": 65,
+      "sourceQuestionNumber": 65,
+      "question": "65. Which of the following ideas steryotyping that is unfair to the students- learners?",
+      "choices": {
+        "A": "All students can best learn at their own pace",
+        "B": "All students required quality instruction",
+        "C": "All students have rights to be respected",
+        "D": "All students from peasant communities are dull 5"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Differentiated learning principle.",
+        "B": "Incorrect. Universal educational principle.",
+        "C": "Incorrect. Universal human right.",
+        "D": "Correct. Assuming all students from rural/peasant backgrounds are intellectually 'dull' is a harmful prejudice and fallacy of stereotyping."
+      },
+      "explanation": "Stereotyping unfairly attributes negative traits to entire groups based on socioeconomic or regional background.",
+      "memoryTip": "STEREOTYPING FALLACY = Generalizing negative traits to a group.",
+      "reference": "Foundations of Education — Socio-Cultural Principles",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Sociological Foundations"
+    },
+    {
+      "id": "PE-H-066",
+      "questionNumber": 66,
+      "sourceQuestionNumber": 66,
+      "question": "66. Which of the following characteristics is of primary importance choice of instructional aids?",
+      "choices": {
+        "A": "Stimulating and colorful",
+        "B": "Suitable and lesson outcomes",
+        "C": "Novel and true",
+        "D": "At par with the grade level"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Aesthetics are secondary.",
+        "B": "Correct. The primary criterion in selecting media/aids is alignment and suitability with target lesson learning outcomes.",
+        "C": "Incorrect. Novelty alone does not ensure learning.",
+        "D": "Incorrect. Grade level is important, but outcome alignment is paramount."
+      },
+      "explanation": "Instructional materials must directly support achieving the intended learning outcomes of the lesson.",
+      "memoryTip": "PRIMARY AID SELECTION CRITERION = SUITABILITY TO LESSON OUTCOMES.",
+      "reference": "Educational Technology — Selection of Instructional Media",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Instructional Materials Selection"
+    },
+    {
+      "id": "PE-H-067",
+      "questionNumber": 67,
+      "sourceQuestionNumber": 67,
+      "question": "67. What is the primary purpose of a bulletin board display on national patriots with photos and biographical text?",
+      "choices": {
+        "A": "News information",
+        "B": "Decorative",
+        "C": "Linguistic",
+        "D": "Motivational"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Preserved source key lists A, but historical patriot biographies serve a character-inspiring motivational purpose.",
+        "B": "Incorrect. Decoration is a secondary aesthetic function.",
+        "C": "Incorrect. Focus is on patriotism rather than language structure.",
+        "D": "Correct. Displaying national heroes inspires patriotism, civic pride, and character motivation in students."
+      },
+      "explanation": "Displays featuring national heroes serve a motivational/affective purpose, inspiring students toward patriotism and civic values.",
+      "memoryTip": "HEROES BULLETIN BOARD = MOTIVATIONAL / Character inspiring.",
+      "reference": "Educational Technology — Visual Display Boards",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Visual Display Boards",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "D is correct: the bulletin board features national patriots and biographical material to inspire patriotism, civic pride, and positive values, making its primary purpose motivational rather than merely informational."
+    },
+    {
+      "id": "PE-H-068",
+      "questionNumber": 68,
+      "sourceQuestionNumber": 68,
+      "question": "68. Dyslexia is a severe reading difficulty. A learner who has thin should be placed in a ?",
+      "choices": {
+        "A": "Clinical reading program",
+        "B": "Remedial reading program",
+        "C": "Developmental reading program",
+        "D": "Enrichment reading program"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Medical/clinical term, less standard for school instruction.",
+        "B": "Correct. Remedial reading programs provide specialized, targeted instruction to correct severe reading deficiencies and dyslexia.",
+        "C": "Incorrect. Developmental reading is standard instruction for normal reading progress.",
+        "D": "Incorrect. Enrichment is for advanced readers."
+      },
+      "explanation": "Remedial reading provides specialized corrective instruction for students with diagnosed reading disabilities like dyslexia.",
+      "memoryTip": "DYSLEXIA / SEVERE READING DIFFICULTY = REMEDIAL READING PROGRAM.",
+      "reference": "Special Education — Reading Interventions",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Reading Interventions"
+    },
+    {
+      "id": "PE-H-069",
+      "questionNumber": 69,
+      "sourceQuestionNumber": 69,
+      "question": "69. Which of the following best exemplifies the application of Gestalt theory on insight learning?",
+      "choices": {
+        "A": "Teacher uses powerpoint to teach history",
+        "B": "Teacher gives quizzes after each history lesson",
+        "C": "Teacher focuses on people who make history",
+        "D": "Teacher relates past history to present events"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Media presentation.",
+        "B": "Incorrect. Behaviorist testing.",
+        "C": "Incorrect. Content focus.",
+        "D": "Correct. Gestalt psychology emphasizes perceiving whole patterns and relationships; relating past history to present events fosters holistic understanding and 'aha!' insight learning."
+      },
+      "explanation": "Gestalt theory emphasizes seeing whole patterns and interrelationships rather than isolated historical facts.",
+      "memoryTip": "GESTALT / INSIGHT = RELATING PAST TO PRESENT (Holistic view).",
+      "reference": "Educational Psychology — Gestalt Theory",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Cognitive Learning Theories"
+    },
+    {
+      "id": "PE-H-070",
+      "questionNumber": 70,
+      "sourceQuestionNumber": 70,
+      "question": "70. How will you characterize a school curriculum which reflects the worlds economic, political, and industrial trends?",
+      "choices": {
+        "A": "It is classical",
+        "B": "Is localized",
+        "C": "It is process- oriented",
+        "D": "It is globalist"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Classical focuses on ancient canons.",
+        "B": "Incorrect. Localized adapts to immediate community context.",
+        "C": "Incorrect. Process-oriented focuses on learning methods.",
+        "D": "Correct. A curriculum reflecting worldwide international trends in economy, politics, and technology is globalist/globalized."
+      },
+      "explanation": "Globalist curricula integrate international perspectives and world trends to prepare students for global competitiveness.",
+      "memoryTip": "REFLECTS WORLD TRENDS = GLOBALIST.",
+      "reference": "Curriculum Development — Global Trends",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Curriculum Trends"
+    },
+    {
+      "id": "PE-H-071",
+      "questionNumber": 71,
+      "sourceQuestionNumber": 71,
+      "question": "71. What is the appropriate teaching- learning strategy to respond to cultural diversity among learners?",
+      "choices": {
+        "A": "Variety of teaching and assessment methods",
+        "B": "One set of teaching- learning methods",
+        "C": "Use of comparative assessment tools",
+        "D": "Group entire class homogeneously"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Culturally responsive pedagogy utilizes varied teaching methods and flexible assessments to accommodate diverse backgrounds.",
+        "B": "Incorrect. One-size-fits-all ignores diversity.",
+        "C": "Incorrect. Comparative tools may foster bias.",
+        "D": "Incorrect. Homogeneous grouping isolates diversity."
+      },
+      "explanation": "Responding to cultural diversity requires flexible, differentiated instructional and assessment strategies.",
+      "memoryTip": "RESPOND TO CULTURAL DIVERSITY = VARIETY OF TEACHING METHODS.",
+      "reference": "Principles of Teaching — Culturally Responsive Pedagogy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Culturally Responsive Teaching"
+    },
+    {
+      "id": "PE-H-072",
+      "questionNumber": 72,
+      "sourceQuestionNumber": 72,
+      "question": "72. What kind of preschool math application for up should teacher Rose use in her kindergarten class?",
+      "choices": {
+        "A": "A developmentally appropriate app",
+        "B": "An easy- access high math app",
+        "C": "A beautifully designed up",
+        "D": "A sophisticated app"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Early childhood technology selection must follow Developmentally Appropriate Practice (DAP), matching children's age and cognitive stage.",
+        "B": "Incorrect. Advanced math apps exceed kindergarten cognitive levels.",
+        "C": "Incorrect. Aesthetic design is secondary to pedagogical appropriateness.",
+        "D": "Incorrect. Sophisticated apps overwhelm young learners."
+      },
+      "explanation": "NAEYC guidelines require that software/apps used in early childhood education be developmentally appropriate.",
+      "memoryTip": "KINDERGARTEN APP = DEVELOPMENTALLY APPROPRIATE (DAP).",
+      "reference": "Educational Technology — Developmentally Appropriate Practice",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Early Childhood Technology"
+    },
+    {
+      "id": "PE-H-073",
+      "questionNumber": 73,
+      "sourceQuestionNumber": 73,
+      "question": "73. Which of the following is the initial task in preparing a research study?",
+      "choices": {
+        "A": "Gathering of evidence",
+        "B": "Definition of terms",
+        "C": "Formulation of a problem",
+        "D": "Analysis of findings"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Evidence gathering comes during data collection.",
+        "B": "Incorrect. Defining terms occurs after identifying the problem.",
+        "C": "Correct. The scientific research process begins with identifying and formulating the research problem.",
+        "D": "Incorrect. Analysis occurs after data collection."
+      },
+      "explanation": "Scientific research begins with identifying, defining, and formulating a clear research problem.",
+      "memoryTip": "RESEARCH STEP 1 = FORMULATION OF A PROBLEM.",
+      "reference": "Teacher Research — Educational Research Process",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Research Methodology"
+    },
+    {
+      "id": "PE-H-074",
+      "questionNumber": 74,
+      "sourceQuestionNumber": 74,
+      "question": "74. Among approaches to child development, which is the basis for spanish friars in religious schools using the stick to punish children who misbehave in class?",
+      "choices": {
+        "A": "Classical conditioning",
+        "B": "Social cognitive learning",
+        "C": "Socio-cultural learning",
+        "D": "Operant conditioning"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Classical conditioning deals with involuntary reflexes.",
+        "B": "Incorrect. Social cognitive learning relies on modeling.",
+        "C": "Incorrect. Socio-cultural learning relies on scaffolding.",
+        "D": "Correct. Corporal punishment (using a stick) applies aversive consequences to suppress unwanted behavior, reflecting Operant Conditioning (punishment)."
+      },
+      "explanation": "Inflicting physical pain as a consequence to suppress misbehavior is an application of operant punishment.",
+      "memoryTip": "PUNISHMENT TO SUPPRESS BEHAVIOR = OPERANT CONDITIONING.",
+      "reference": "Educational Psychology — Operant Conditioning",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Behavioral Learning Theories"
+    },
+    {
+      "id": "PE-H-075",
+      "questionNumber": 75,
+      "sourceQuestionNumber": 75,
+      "question": "75. Does the solution getting more funds directly and immediately solve the problem of a totally irrelevant school curriculum?",
+      "choices": {
+        "A": "Partly yes",
+        "B": "Partly no",
+        "C": "No",
+        "D": "Yes"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Money alone cannot fix conceptual flaws.",
+        "B": "Incorrect. Incomplete statement.",
+        "C": "Correct. Funding provides resources, but solving curriculum irrelevance requires curriculum review, stakeholder consultation, and pedagogical redesign.",
+        "D": "Incorrect. Money does not automatically rewrite content."
+      },
+      "explanation": "Curriculum relevance requires qualitative redesign and alignment with societal needs, not just financial input.",
+      "memoryTip": "MONEY ALONE CANNOT FIX = IRRELEVANT CURRICULUM.",
+      "reference": "Curriculum Development — Curriculum Evaluation",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Curriculum Evaluation"
+    },
+    {
+      "id": "PE-H-076",
+      "questionNumber": 76,
+      "sourceQuestionNumber": 76,
+      "question": "76. The concept of globalization came about in recent years because the world has become borderless primary due to ?",
+      "choices": {
+        "A": "ASEAN integration",
+        "B": "Teacher exchange program",
+        "C": "Use of English as a medium of teaching",
+        "D": "Advances in technology"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Regional trade integration.",
+        "B": "Incorrect. Small-scale academic exchange.",
+        "C": "Incorrect. Facilitating language factor.",
+        "D": "Correct. Rapid advances in information, communication, and transportation technology dissolved geographic boundaries, driving global integration."
+      },
+      "explanation": "Telecommunications and the Internet created a borderless global village.",
+      "memoryTip": "BORDERLESS WORLD / GLOBALIZATION = ADVANCES IN TECHNOLOGY.",
+      "reference": "Foundations of Education — Globalization in Education",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Globalization and Education"
+    },
+    {
+      "id": "PE-H-077",
+      "questionNumber": 77,
+      "sourceQuestionNumber": 77,
+      "question": "77. What kind of teacher planning establishes general content and is often prepared by a committee experts?",
+      "choices": {
+        "A": "Term planning",
+        "B": "Weekly planning",
+        "C": "Course mapping",
+        "D": "Unit planning"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Preserved source key lists A, but committee-prepared general content planning defines Course Mapping/Curriculum Mapping.",
+        "B": "Incorrect. Individual teacher short-term planning.",
+        "C": "Correct. Course mapping (curriculum mapping) establishes macro-level content alignment, sequence, and standards prepared by subject committees.",
+        "D": "Incorrect. Teacher-level unit design."
+      },
+      "explanation": "Course mapping systematically aligns scope, sequence, and standards across an entire course.",
+      "memoryTip": "MACRO PLANNING BY EXPERTS = COURSE MAPPING.",
+      "reference": "Curriculum Development — Instructional Planning",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Instructional Planning",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "C is correct: committee-prepared general content, scope, sequence, and standards across a course describe course mapping/curriculum mapping, not term planning."
+    },
+    {
+      "id": "PE-H-078",
+      "questionNumber": 78,
+      "sourceQuestionNumber": 78,
+      "question": "78. After the 1987 constitution, what is the first legal basis that makes teaching a profession and consider teachers as professional?",
+      "choices": {
+        "A": "R.A 7836",
+        "B": "P.D 1006",
+        "C": "R.A 7640",
+        "D": "Code of Ethics for Professional Teachers"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Post-1987 Constitution, RA 7836 (1994) is the primary statute professionalizing teachers.",
+        "B": "Incorrect. Preserved source key lists B, but PD 1006 was enacted in 1977 BEFORE the 1987 Constitution.",
+        "C": "Incorrect. Unrelated law.",
+        "D": "Incorrect. Code issued under RA 7836."
+      },
+      "explanation": "RA 7836 (1994) created the Board for Professional Teachers post-1987.",
+      "memoryTip": "POST-1987 PROFESSIONALIZATION = RA 7836.",
+      "reference": "The Teaching Profession — Teacher Legislation",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Teacher Legislation",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "A is correct for the wording after the 1987 Constitution: RA 7836 (1994) professionalized teaching and established the post-1987 licensure framework; PD 1006 was enacted in 1977."
+    },
+    {
+      "id": "PE-H-079",
+      "questionNumber": 79,
+      "sourceQuestionNumber": 79,
+      "question": "79. To be an effective classroom manager, what should be occupied with a friendly attitude?",
+      "choices": {
+        "A": "Supervision skills",
+        "B": "Confidence",
+        "C": "Caring attitude",
+        "D": "Tolerance"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Management skills.",
+        "B": "Incorrect. Personal confidence.",
+        "C": "Correct. Friendly demeanor paired with a genuine caring attitude forms the basis of positive teacher-student rapport.",
+        "D": "Incorrect. Unchecked tolerance allows misbehavior."
+      },
+      "explanation": "Combining friendliness with genuine care creates a supportive classroom climate.",
+      "memoryTip": "FRIENDLY DEMEANOR + CARING ATTITUDE = Positive Rapport.",
+      "reference": "Classroom Management — Teacher Demeanor",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Classroom Climate"
+    },
+    {
+      "id": "PE-H-080",
+      "questionNumber": 80,
+      "sourceQuestionNumber": 80,
+      "question": "80. On principles of teaching and learning, what do behaviorist theories see as the way to develop learners?",
+      "choices": {
+        "A": "Learning by feeling",
+        "B": "Learning by valuing",
+        "C": "Learning by doing",
+        "D": "Learning by thinking"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Humanist domain.",
+        "B": "Incorrect. Affective domain.",
+        "C": "Correct. Behaviorism emphasizes active observable performance, practice, and conditioning ('learning by doing').",
+        "D": "Incorrect. Cognitive domain."
+      },
+      "explanation": "Behaviorism requires active, observable student performance and practice to form habits.",
+      "memoryTip": "BEHAVIORIST ACTION = LEARNING BY DOING / Practice.",
+      "reference": "Educational Psychology — Behaviorism",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Behavioral Learning Theories"
+    },
+    {
+      "id": "PE-H-081",
+      "questionNumber": 81,
+      "sourceQuestionNumber": 81,
+      "question": "81. Which one goes with the view that a teacher's job satisfaction positively related to his/ her performance?",
+      "choices": {
+        "A": "A licensed teacher is a productive teacher and a happy teacher.",
+        "B": "\"A productive teacher is a happy teacher\"",
+        "C": "An a licensed teacher is an unproductive teacher and an unhappy teacher",
+        "D": "\" a happy teacher is a productive teacher\""
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Confuses licensing with happiness.",
+        "B": "Incorrect. Reverses cause and effect.",
+        "C": "Incorrect. Negative formulation.",
+        "D": "Correct. 'A happy teacher is a productive teacher' states that job satisfaction (happiness) leads to high instructional performance (productivity)."
+      },
+      "explanation": "Positive organizational psychology proves that job satisfaction drives higher performance.",
+      "memoryTip": "SATISFACTION DRIVES PERFORMANCE = \"A happy teacher is a productive teacher\".",
+      "reference": "The Teaching Profession — Teacher Motivation",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Teacher Well-being"
+    },
+    {
+      "id": "PE-H-082",
+      "questionNumber": 82,
+      "sourceQuestionNumber": 82,
+      "question": "82. Of the following, which is most essential to the student portfolio?",
+      "choices": {
+        "A": "Reflection journal",
+        "B": "Display photos 6",
+        "C": "Treats and self rating",
+        "D": "Artistic design"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. A student reflection journal is the core essential element that transforms a collection of work into an authentic portfolio.",
+        "B": "Incorrect. Decorative photos are secondary.",
+        "C": "Incorrect. Self-ratings are tools, but reflection journals drive deep metacognition.",
+        "D": "Incorrect. Artistic design is superficial."
+      },
+      "explanation": "Self-reflection is the defining component that distinguishes a portfolio from a scrapbook.",
+      "memoryTip": "MOST ESSENTIAL PORTFOLIO ELEMENT = REFLECTION JOURNAL.",
+      "reference": "Assessment of Learning — Portfolio Assessment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Portfolio Assessment"
+    },
+    {
+      "id": "PE-H-083",
+      "questionNumber": 83,
+      "sourceQuestionNumber": 83,
+      "question": "83. Which best indicate efficiency in a two-way communication between teacher and students?",
+      "choices": {
+        "A": "Defense for ideas",
+        "B": "Ability to explain",
+        "C": "Ready to talk",
+        "D": "Open to listen"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Defense creates defensiveness.",
+        "B": "Incorrect. Explaining is one-way output.",
+        "C": "Incorrect. Talking is output.",
+        "D": "Correct. Effective two-way communication requires active listening and openness to feedback from both parties."
+      },
+      "explanation": "Two-way communication relies on active listening to process feedback.",
+      "memoryTip": "TWO-WAY COMMUNICATION = OPEN TO LISTEN.",
+      "reference": "Principles of Teaching — Classroom Communication",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Classroom Communication"
+    },
+    {
+      "id": "PE-H-084",
+      "questionNumber": 84,
+      "sourceQuestionNumber": 84,
+      "question": "84. What does it mean when a misdemeanor has a \" ripple effect\" on the class?",
+      "choices": {
+        "A": "That misbehavior will end",
+        "B": "That the class will know the misbehavior",
+        "C": "That the whole class is to be blame for the misbehavior",
+        "D": "That in can affect the whole class"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Opposite effect.",
+        "B": "Incorrect. Awareness is secondary.",
+        "C": "Incorrect. Blame is unfair.",
+        "D": "Correct. Kounin's 'Ripple Effect' describes how a teacher's management response to one student's misbehavior impacts the behavior of the entire class."
+      },
+      "explanation": "Kounin's Ripple Effect shows how handling one student's misbehavior influences surrounding peers.",
+      "memoryTip": "RIPPLE EFFECT (Kounin) = AFFECTS THE WHOLE CLASS.",
+      "reference": "Classroom Management — Kounin's Management Model",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Kounin's Management Concepts"
+    },
+    {
+      "id": "PE-H-085",
+      "questionNumber": 85,
+      "sourceQuestionNumber": 85,
+      "question": "85. What are routines helpful for class management?",
+      "choices": {
+        "A": "To ensure order",
+        "B": "To punish offenders",
+        "C": "To reward performer",
+        "D": "To eliminate stress"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Routines establish predictable behavioral patterns that ensure order and save instructional time.",
+        "B": "Incorrect. Routines prevent misbehavior rather than punishing.",
+        "C": "Incorrect. Rewards are separate reinforcement tools.",
+        "D": "Incorrect. Stress reduction is a byproduct, not the primary goal."
+      },
+      "explanation": "Classroom routines create structured environments that preserve order and maximize learning time.",
+      "memoryTip": "ROUTINES = ENSURE ORDER.",
+      "reference": "Classroom Management — Classroom Routines",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Classroom Routines"
+    },
+    {
+      "id": "PE-H-086",
+      "questionNumber": 86,
+      "sourceQuestionNumber": 86,
+      "question": "86. For effective teaching learning, there is no such things as\" one- size- fits- all.\" what does this imply?",
+      "choices": {
+        "A": "Consider multiple intelligences in teaching",
+        "B": "Always end up with a lesson summary",
+        "C": "Use performance test since they are more reliable",
+        "D": "Allow students to use their cellphone in class"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. 'No one-size-fits-all' means instruction must accommodate diverse learning profiles and multiple intelligences.",
+        "B": "Incorrect. General lesson step.",
+        "C": "Incorrect. Assessment preference.",
+        "D": "Incorrect. Mobile device rule."
+      },
+      "explanation": "Learner diversity requires differentiated instruction addressing multiple intelligences.",
+      "memoryTip": "NO ONE-SIZE-FITS-ALL = MULTIPLE INTELLIGENCES & Differentiation.",
+      "reference": "Principles of Teaching — Differentiated Instruction",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Differentiated Instruction"
+    },
+    {
+      "id": "PE-H-087",
+      "questionNumber": 87,
+      "sourceQuestionNumber": 87,
+      "question": "87. Which of the following is the correct response of the teacher to diversity of learners in the classroom?",
+      "choices": {
+        "A": "Teacher sees high and low cultures",
+        "B": "Teacher disregards what is diverse",
+        "C": "Teacher sees nothing common among student",
+        "D": "Teacher accept and values diversity"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Elitist perspective.",
+        "B": "Incorrect. Ignores learner needs.",
+        "C": "Incorrect. Extreme deficit view.",
+        "D": "Correct. Culturally responsive teachers accept, value, and celebrate diversity among all learners."
+      },
+      "explanation": "Inclusive education requires teachers to honor and value individual cultural diversity.",
+      "memoryTip": "RESPONSE TO DIVERSITY = ACCEPT AND VALUE DIVERSITY.",
+      "reference": "Foundations of Education — Multicultural Education",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Multicultural Education"
+    },
+    {
+      "id": "PE-H-088",
+      "questionNumber": 88,
+      "sourceQuestionNumber": 88,
+      "question": "88. For music precision of different musical epochs, which of the following is a most effective instructional instrument?",
+      "choices": {
+        "A": "Discussion",
+        "B": "Audio recording",
+        "C": "Modules",
+        "D": "Photos"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Verbal discussion lacks auditory experience.",
+        "B": "Correct. Audio recordings allow students to directly hear, analyze, and distinguish musical styles across historical epochs.",
+        "C": "Incorrect. Text modules lack sound.",
+        "D": "Incorrect. Visual photos do not convey sound."
+      },
+      "explanation": "Auditory media are essential for musical appreciation and auditory analysis.",
+      "memoryTip": "MUSIC INSTRUCTION = AUDIO RECORDINGS.",
+      "reference": "Educational Technology — Audio Instructional Media",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Instructional Media"
+    },
+    {
+      "id": "PE-H-089",
+      "questionNumber": 89,
+      "sourceQuestionNumber": 89,
+      "question": "89. Which is a good attention getter in introducing a lesson?",
+      "choices": {
+        "A": "Relate lesson with anecdotes",
+        "B": "Reading lesson objectives",
+        "C": "Assigning reading before the class",
+        "D": "Revealing lesson conclusion"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Sharing relevant, interesting anecdotes acts as a powerful anticipatory set that hooks student attention.",
+        "B": "Incorrect. Reading objectives is informative, not a high-interest hook.",
+        "C": "Incorrect. Homework task.",
+        "D": "Incorrect. Giving conclusions spoils discovery."
+      },
+      "explanation": "Anecdotes stimulate curiosity and emotional engagement during lesson introductions.",
+      "memoryTip": "ATTENTION GETTER = ANECDOTES / Storytelling.",
+      "reference": "Principles of Teaching — Anticipatory Set",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Lesson Introduction Strategies"
+    },
+    {
+      "id": "PE-H-090",
+      "questionNumber": 90,
+      "sourceQuestionNumber": 90,
+      "question": "90. On classroom activities, the following are appropriate for learners who have good verbal- linguistic skills, but not to include",
+      "choices": {
+        "A": "Calculations",
+        "B": "Journal writing",
+        "C": "Discussion",
+        "D": "Debate"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Mathematical calculations appeal to logical-mathematical intelligence, NOT verbal-linguistic learners.",
+        "B": "Incorrect. Journal writing appeals to verbal-linguistic skills.",
+        "C": "Incorrect. Discussions appeal to verbal-linguistic skills.",
+        "D": "Incorrect. Debates appeal to verbal-linguistic skills."
+      },
+      "explanation": "Calculations test logical-mathematical intelligence rather than verbal-linguistic capacity.",
+      "memoryTip": "NOT VERBAL-LINGUISTIC = CALCULATIONS.",
+      "reference": "Educational Psychology — Multiple Intelligences",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Multiple Intelligences"
+    },
+    {
+      "id": "PE-H-091",
+      "questionNumber": 91,
+      "sourceQuestionNumber": 91,
+      "question": "91. Which of the following is an example of formative assessment of students?",
+      "choices": {
+        "A": "Psychological test",
+        "B": "Quizzes",
+        "C": "Final exam",
+        "D": "Placement evaluation"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Psychological tests measure mental traits.",
+        "B": "Correct. Short ongoing quizzes provide formative feedback during instruction to check student understanding.",
+        "C": "Incorrect. Final exams are summative.",
+        "D": "Incorrect. Placement tests determine grade entry levels."
+      },
+      "explanation": "Formative assessments (quizzes, checks for understanding) guide ongoing instruction.",
+      "memoryTip": "FORMATIVE ASSESSMENT = QUIZZES.",
+      "reference": "Assessment of Learning — Formative Assessment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Types of Assessment"
+    },
+    {
+      "id": "PE-H-092",
+      "questionNumber": 92,
+      "sourceQuestionNumber": 92,
+      "question": "92. That factor should teacher Cess be careful about when she is teaching pool for children a poverty- stricken slum area?",
+      "choices": {
+        "A": "Children's race",
+        "B": "Children's socioeconomic status",
+        "C": "Children's belief",
+        "D": "Children's ethnicity"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Unrelated to poverty.",
+        "B": "Correct. Teaching in impoverished areas requires sensitivity to students' socioeconomic status to avoid biased assumptions or costly requirements.",
+        "C": "Incorrect. Religious/moral beliefs.",
+        "D": "Incorrect. Cultural origin."
+      },
+      "explanation": "Socioeconomic sensitivity ensures fair, non-discriminatory instruction for impoverished students.",
+      "memoryTip": "POVERTY-STRICKEN SLUM = SOCIOECONOMIC STATUS SENSITIVITY.",
+      "reference": "Foundations of Education — Socioeconomic Factors",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Sociological Foundations"
+    },
+    {
+      "id": "PE-H-093",
+      "questionNumber": 93,
+      "sourceQuestionNumber": 93,
+      "question": "93. It is the most appropriate role of teachers in the community with respect to their example and conduct?",
+      "choices": {
+        "A": "Superiors",
+        "B": "Role models",
+        "C": "Elders",
+        "D": "Village watchers"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Elitist role.",
+        "B": "Correct. Article II of the Code of Ethics mandates that teachers serve as dignified role models in the community through exemplary conduct.",
+        "C": "Incorrect. Age category.",
+        "D": "Incorrect. Security function."
+      },
+      "explanation": "Teachers are community leaders and moral exemplars.",
+      "memoryTip": "TEACHER IN COMMUNITY = ROLE MODEL.",
+      "reference": "The Teaching Profession — Code of Ethics",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Code of Ethics for Professional Teachers"
+    },
+    {
+      "id": "PE-H-094",
+      "questionNumber": 94,
+      "sourceQuestionNumber": 94,
+      "question": "94. Which of the following is an effective reinforcement to conceptual ideas in a lesson?",
+      "choices": {
+        "A": "Adding more ideas",
+        "B": "Removing old ideas",
+        "C": "Mixing ideas together",
+        "D": "Relating ideas to real life"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Overloads working memory.",
+        "B": "Incorrect. Deletes foundation.",
+        "C": "Incorrect. Causes confusion.",
+        "D": "Correct. Connecting abstract concepts to real-life applications makes learning meaningful and reinforces retention."
+      },
+      "explanation": "Real-life application anchors abstract concepts into cognitive schema.",
+      "memoryTip": "REINFORCE CONCEPTS = RELATE TO REAL LIFE.",
+      "reference": "Principles of Teaching — Meaningful Learning",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Principles of Learning"
+    },
+    {
+      "id": "PE-H-095",
+      "questionNumber": 95,
+      "sourceQuestionNumber": 95,
+      "question": "95. What does basic education in the Philippines encompass? I. Kindergarten II. Elementary and secondary education III. Alternative learning system for out- of-school learners and those with special needs?",
+      "choices": {
+        "A": "II only",
+        "B": "I, II and III",
+        "C": "II and III",
+        "D": "I and II"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Omits Kindergarten and ALS.",
+        "B": "Correct. Under RA 10533 (Enhanced Basic Education Act), basic education encompasses Kindergarten (I), Elementary and Secondary (II), and Alternative Learning Systems (III).",
+        "C": "Incorrect. Omits Kindergarten.",
+        "D": "Incorrect. Omits ALS."
+      },
+      "explanation": "RA 10533 includes formal K-12 schooling and non-formal ALS under basic education.",
+      "memoryTip": "BASIC EDUCATION = Kindergarten + K-12 + ALS.",
+      "reference": "Foundations of Education — RA 10533",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Educational Legislation"
+    },
+    {
+      "id": "PE-H-096",
+      "questionNumber": 96,
+      "sourceQuestionNumber": 96,
+      "question": "96. Which should be presented first prior to discussing a lesson on Florante at Laura?",
+      "choices": {
+        "A": "Lesson sequencing",
+        "B": "Lesson assessment tools",
+        "C": "Lesson learning outcomes",
+        "D": "Lesson method of learning"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Instructional ordering.",
+        "B": "Incorrect. Evaluation tools.",
+        "C": "Correct. Communicating intended learning outcomes first clarifies expectations for students.",
+        "D": "Incorrect. Delivery mode."
+      },
+      "explanation": "Sharing learning outcomes upfront focuses student attention on target competencies.",
+      "memoryTip": "PRESENT FIRST = LEARNING OUTCOMES.",
+      "reference": "Principles of Teaching — Direct Instruction Steps",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Lesson Execution Strategies"
+    },
+    {
+      "id": "PE-H-097",
+      "questionNumber": 97,
+      "sourceQuestionNumber": 97,
+      "question": "97. What is Miss Castro focusing on as she evaluated her kindergarten students picture drawing and coloring border design, color choice, and overall appearance?",
+      "choices": {
+        "A": "Organization",
+        "B": "Beauty",
+        "C": "Materials choice",
+        "D": "Accuracy"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Layout structure.",
+        "B": "Correct. Evaluating artistic elements like color choice, border design, and overall visual appearance assesses aesthetic beauty.",
+        "C": "Incorrect. Tool selection.",
+        "D": "Incorrect. Preserved source key lists D, though assessing visual color choice evaluates aesthetic beauty."
+      },
+      "explanation": "Aesthetic assessment evaluates visual harmony, color usage, and artistic beauty.",
+      "memoryTip": "COLOR & APPEARANCE = AESTHETIC BEAUTY.",
+      "reference": "Assessment of Learning — Artistic Assessment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Performance Assessment",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "B is correct: border design, color choice, and overall appearance are aesthetic criteria, so the focus is beauty rather than accuracy."
+    },
+    {
+      "id": "PE-H-098",
+      "questionNumber": 98,
+      "sourceQuestionNumber": 98,
+      "question": "98. What is the primary purpose of a bulletin board display for Mother's Day with hearts and love graphic designs?",
+      "choices": {
+        "A": "Instructional",
+        "B": "Informational",
+        "C": "Linguistic",
+        "D": "Motivational"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Teaches academic concepts.",
+        "B": "Incorrect. Conveys news/announcements.",
+        "C": "Incorrect. Language skill focus.",
+        "D": "Correct. Decorative thematic displays for special celebrations inspire positive emotions and motivation."
+      },
+      "explanation": "Displays celebrating Mother's Day serve an affective/motivational role.",
+      "memoryTip": "HEARTS & MOTHER'S DAY DISPLAY = MOTIVATIONAL.",
+      "reference": "Educational Technology — Bulletin Boards",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Visual Display Boards"
+    },
+    {
+      "id": "PE-H-099",
+      "questionNumber": 99,
+      "sourceQuestionNumber": 99,
+      "question": "99. How many learning areas graded as \" did not meet expectations\" wheel meet retention in the same grade level for grade 1 to 10?",
+      "choices": {
+        "A": "Three or more",
+        "B": "Two",
+        "C": "One or two 7",
+        "D": "One"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Under DepEd Order No. 8, s. 2015, failing 3 or more learning areas results in retention in the same grade level.",
+        "B": "Incorrect. Failing 2 subjects requires summer remedial classes.",
+        "C": "Incorrect. Failing 1-2 subjects requires remedial classes.",
+        "D": "Incorrect. Failing 1 subject requires remedial classes."
+      },
+      "explanation": "Failing 3 or more learning areas results in grade retention under K to 12 grading policy.",
+      "memoryTip": "GRADE RETENTION = FAILING 3 OR MORE SUBJECTS.",
+      "reference": "Assessment of Learning — DepEd DO 8, s. 2015",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System"
+    },
+    {
+      "id": "PE-H-100",
+      "questionNumber": 100,
+      "sourceQuestionNumber": 100,
+      "question": "100. What teaching- learning approach is adopted in teaching the same major objects (English, Math, Science) in k to 12 curriculum?",
+      "choices": {
+        "A": "Spiral teaching- learning",
+        "B": "Higher order thinking teaching- learning",
+        "C": "Differentiated teaching- learning",
+        "D": "Redundant teaching- learning"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. The K to 12 curriculum uses the Spiral Progression Approach, revisiting core subjects across grade levels with increasing complexity.",
+        "B": "Incorrect. Cognitive skill level.",
+        "C": "Incorrect. Learner adaptation mode.",
+        "D": "Incorrect. Flawed description."
+      },
+      "explanation": "Spiral progression builds cumulative mastery by revisiting core concepts across grade levels.",
+      "memoryTip": "K-12 SUBJECT APPROACH = SPIRAL PROGRESSION.",
+      "reference": "Curriculum Development — K to 12 Framework",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "K to 12 Curriculum"
+    },
+    {
+      "id": "PE-H-101",
+      "questionNumber": 101,
+      "sourceQuestionNumber": 101,
+      "question": "101. What contributes heaviest to the student grade in MAPEH and TLE?",
+      "choices": {
+        "A": "Leadership",
+        "B": "Performance task",
+        "C": "Discipline",
+        "D": "Written work"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Non-academic factor.",
+        "B": "Correct. Under DepEd Order No. 8, s. 2015, Performance Tasks carry the highest weight (60%) in MAPEH and TLE.",
+        "C": "Incorrect. Non-academic factor.",
+        "D": "Incorrect. Written Work is 20% in MAPEH/TLE."
+      },
+      "explanation": "DepEd grading policy assigns 60% weight to Performance Tasks in skill-based subjects like MAPEH and TLE.",
+      "memoryTip": "MAPEH & TLE GRADE WEIGHT = PERFORMANCE TASKS (60%).",
+      "reference": "Assessment of Learning — DepEd DO 8, s. 2015",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System"
+    },
+    {
+      "id": "PE-H-102",
+      "questionNumber": 102,
+      "sourceQuestionNumber": 102,
+      "question": "102. What is required in order to go up the next grade level for a student who did not meet expectation in two learning areas?",
+      "choices": {
+        "A": "Pass remedial classes",
+        "B": "Take remedial classes even without passing them",
+        "C": "Reduction to lower level",
+        "D": "Repeat the whole grade level"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Under DepEd policy, students failing 1 or 2 subjects must take and pass remedial classes to be promoted.",
+        "B": "Incorrect. Must pass the remedial class.",
+        "C": "Incorrect. Demotion is not policy.",
+        "D": "Incorrect. Retaining the whole year applies to failing 3 or more subjects."
+      },
+      "explanation": "Failing 1-2 subjects requires taking and passing summer remedial classes for promotion.",
+      "memoryTip": "FAILED 1-2 SUBJECTS = PASS REMEDIAL CLASSES.",
+      "reference": "Assessment of Learning — DepEd Promotion Policy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System"
+    },
+    {
+      "id": "PE-H-103",
+      "questionNumber": 103,
+      "sourceQuestionNumber": 103,
+      "question": "103. What facet of teaching- and- learning can best draw participation of every student into classroom discussion?",
+      "choices": {
+        "A": "Dominance of individuals in a group",
+        "B": "Creative thinking of each participant",
+        "C": "Reacting to everything",
+        "D": "Feeling of being part of a group"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Dominance silences quiet students.",
+        "B": "Incorrect. Cognitive skill, but participation depends on psychological safety.",
+        "C": "Incorrect. Unfocused reaction.",
+        "D": "Correct. Psychological safety and a sense of belongingness ('feeling part of a group') encourage all students to participate."
+      },
+      "explanation": "A supportive, inclusive classroom climate encourages timid learners to participate.",
+      "memoryTip": "DRAW PARTICIPATION = FEELING OF BELONGINGNESS.",
+      "reference": "Classroom Management — Classroom Climate",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Classroom Dynamics"
+    },
+    {
+      "id": "PE-H-104",
+      "questionNumber": 104,
+      "sourceQuestionNumber": 104,
+      "question": "104. On period of child development, what feature characterize the child in the prenatal stage?",
+      "choices": {
+        "A": "Language",
+        "B": "Locomotion",
+        "C": "Physical growth",
+        "D": "Social attachment"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Language develops post-natally.",
+        "B": "Incorrect. Locomotion develops post-natally.",
+        "C": "Correct. The prenatal stage (conception to birth) is characterized by rapid cellular division and physical growth.",
+        "D": "Incorrect. Social attachment forms post-natally."
+      },
+      "explanation": "The prenatal period is dominated by rapid biological organogenesis and physical growth.",
+      "memoryTip": "PRENATAL STAGE = RAPID PHYSICAL GROWTH.",
+      "reference": "Child and Adolescent Development — Prenatal Period",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Prenatal Development"
+    },
+    {
+      "id": "PE-H-105",
+      "questionNumber": 105,
+      "sourceQuestionNumber": 105,
+      "question": "105. What is a tool for assessment of linguistically intelligent learners?",
+      "choices": {
+        "A": "Building a model",
+        "B": "Music listening",
+        "C": "Book report",
+        "D": "Oral field observation"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Spatial/kinesthetic assessment.",
+        "B": "Incorrect. Musical assessment.",
+        "C": "Correct. Book reports assess written verbal-linguistic expression and reading comprehension.",
+        "D": "Incorrect. Naturalist assessment."
+      },
+      "explanation": "Linguistically intelligent learners excel in reading, writing, and verbal expression.",
+      "memoryTip": "LINGUISTIC ASSESSMENT = BOOK REPORT / Writing.",
+      "reference": "Assessment of Learning — Assessing Multiple Intelligences",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Multiple Intelligences Assessment"
+    },
+    {
+      "id": "PE-H-106",
+      "questionNumber": 106,
+      "sourceQuestionNumber": 106,
+      "question": "106. In the table of competencies, to what do unit percentage correspond in the context of the teaching- learning process?",
+      "choices": {
+        "A": "Number of subject lessons",
+        "B": "Number of test items",
+        "C": "Number of study hours",
+        "D": "Number of lessons module"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Subject lessons dictate teaching time.",
+        "B": "Correct. In a Table of Specifications (TOS), percentage weights per topic determine the proportion/number of test items allocated.",
+        "C": "Incorrect. Time hours spent.",
+        "D": "Incorrect. Module count."
+      },
+      "explanation": "A Table of Specifications (TOS) uses percentage weights to calculate exact test item numbers per topic.",
+      "memoryTip": "TOS PERCENTAGE WEIGHT = NUMBER OF TEST ITEMS.",
+      "reference": "Assessment of Learning — Table of Specifications (TOS)",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Table of Specifications"
+    },
+    {
+      "id": "PE-H-107",
+      "questionNumber": 107,
+      "sourceQuestionNumber": 107,
+      "question": "107. What is the basis for ascertaining that a teacher succeeds in her work of educating individual learners?",
+      "choices": {
+        "A": "Their acquired competencies",
+        "B": "Their getting a diploma",
+        "C": "Their getting out of school",
+        "D": "Their being raised by parents"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Outcome-based education evaluates teacher success by students' acquired knowledge, skills, and values (competencies).",
+        "B": "Incorrect. Diplomas measure administrative completion.",
+        "C": "Incorrect. Graduation.",
+        "D": "Incorrect. Home upbringing."
+      },
+      "explanation": "Teaching success is measured by student learning outcomes and acquired competencies.",
+      "memoryTip": "TEACHER SUCCESS = STUDENTS' ACQUIRED COMPETENCIES.",
+      "reference": "Assessment of Learning — Outcome-Based Education",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Outcome-Based Education"
+    },
+    {
+      "id": "PE-H-108",
+      "questionNumber": 108,
+      "sourceQuestionNumber": 108,
+      "question": "108. Which of these enable people to browse documents connected by hyperlinks?",
+      "choices": {
+        "A": "Welcome page",
+        "B": "URL",
+        "C": "World wide web",
+        "D": "Browser"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Landing page.",
+        "B": "Incorrect. Web address string.",
+        "C": "Incorrect. Network repository.",
+        "D": "Correct. A web browser (e.g., Chrome, Firefox) is the software application enabling users to render and navigate hyperlinked web documents."
+      },
+      "explanation": "Web browsers parse HTML code and render interactive hyperlinked web pages.",
+      "memoryTip": "SOFTWARE FOR BROWSING HYPERLINKS = WEB BROWSER.",
+      "reference": "Educational Technology — Internet Concepts",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Internet Concepts"
+    },
+    {
+      "id": "PE-H-109",
+      "questionNumber": 109,
+      "sourceQuestionNumber": 109,
+      "question": "109. On age period of development, at what age should the school teach knowledge and appreciation of career and professional values",
+      "choices": {
+        "A": "About 45 to 65 years",
+        "B": "About 17 to 45 years",
+        "C": "From birth to about 18 months",
+        "D": "About 18 months to 6 years"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Middle adulthood.",
+        "B": "Correct. Early adulthood (ages 17-45) focuses on career selection, professional training, and career value development.",
+        "C": "Incorrect. Infancy.",
+        "D": "Incorrect. Early childhood."
+      },
+      "explanation": "Havighurst's developmental tasks for Early Adulthood center on career preparation and workplace entry.",
+      "memoryTip": "CAREER VALUES DEVELOPMENT = EARLY ADULTHOOD (17-45 years).",
+      "reference": "Child and Adolescent Development — Havighurst's Developmental Tasks",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Developmental Stages"
+    },
+    {
+      "id": "PE-H-110",
+      "questionNumber": 110,
+      "sourceQuestionNumber": 110,
+      "question": "110. As many cultures have different ideas of a teacher, which of the following is closest to the idea of a modern classroom teacher?",
+      "choices": {
+        "A": "Preacher",
+        "B": "Instructor",
+        "C": "Guru",
+        "D": "Master"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Religious orator.",
+        "B": "Correct. Modern education views the teacher as an instructor/facilitator guiding learning.",
+        "C": "Incorrect. Spiritual master.",
+        "D": "Incorrect. Feudal master."
+      },
+      "explanation": "Modern teachers function as professional instructional facilitators.",
+      "memoryTip": "MODERN CLASSROOM TEACHER = INSTRUCTOR / Facilitator.",
+      "reference": "The Teaching Profession — Teacher Roles",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Teacher Roles"
+    },
+    {
+      "id": "PE-H-111",
+      "questionNumber": 111,
+      "sourceQuestionNumber": 111,
+      "question": "111. Along bloom's taxonomy, which cognitive processing is done when the teacher as audience to rate their work using a scoring rubrics?",
+      "choices": {
+        "A": "Applying",
+        "B": "Synthesizing",
+        "C": "Analyzing",
+        "D": "Evaluating"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Executing procedures in a given situation.",
+        "B": "Incorrect. Combining parts into a new whole.",
+        "C": "Incorrect. Deconstructing parts.",
+        "D": "Correct. Rating performance using scoring rubrics requires making criteria-based judgments, which defines Evaluating."
+      },
+      "explanation": "Evaluating in Bloom's taxonomy involves making judgments based on criteria and standards (e.g., rubrics).",
+      "memoryTip": "RATING WITH RUBRICS = EVALUATING level.",
+      "reference": "Educational Psychology — Bloom's Taxonomy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Cognitive Taxonomy"
+    },
+    {
+      "id": "PE-H-112",
+      "questionNumber": 112,
+      "sourceQuestionNumber": 112,
+      "question": "112. You are required to formulate your own philosophy of education in the course, the teaching profession. Based on bloom’s revised taxonomy, in which level of cognitive processing are you?",
+      "choices": {
+        "A": "Applying",
+        "B": "Creating",
+        "C": "Evaluating",
+        "D": "Analyzing"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Applying executes known formulas.",
+        "B": "Correct. Formulating, generating, or designing an original philosophy represents the highest cognitive level: Creating.",
+        "C": "Incorrect. Evaluating makes judgments.",
+        "D": "Incorrect. Analyzing breaks down parts."
+      },
+      "explanation": "Synthesizing personal beliefs to construct a new philosophy is a 'Creating' task.",
+      "memoryTip": "FORMULATING A NEW PHILOSOPHY = CREATING.",
+      "reference": "Educational Psychology — Bloom's Revised Taxonomy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Cognitive Taxonomy"
+    },
+    {
+      "id": "PE-H-113",
+      "questionNumber": 113,
+      "sourceQuestionNumber": 113,
+      "question": "113. Mrs. Valdez asks her Grade 10 class to read biographies, encyclopedias, history books and the like during their free time. She is a believer of what philosophy?",
+      "choices": {
+        "A": "Existentialism",
+        "B": "Perennialism",
+        "C": "Behaviorism",
+        "D": "Essentialism"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Individual choice focus.",
+        "B": "Correct. Perennialism holds that reading classic literature, history, and enduring texts develops the mind and transmits eternal truths.",
+        "C": "Incorrect. Behavioral conditioning.",
+        "D": "Incorrect. Essentialism focuses on core 3 R's and basic skills."
+      },
+      "explanation": "Perennialism emphasizes studying classical literature, history, and Great Books containing enduring truths.",
+      "memoryTip": "READING CLASSIC HISTORY / BIOGRAPHIES = PERENNIALISM.",
+      "reference": "Foundations of Education — Educational Philosophies",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Educational Philosophies"
+    },
+    {
+      "id": "PE-H-114",
+      "questionNumber": 114,
+      "sourceQuestionNumber": 114,
+      "question": "114. In preschool writing classes, why are crayons or big pencils useful?",
+      "choices": {
+        "A": "They are easier to hold",
+        "B": "They are non-toxic",
+        "C": "They are colorful",
+        "D": "They are attractive"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Preschool children are developing fine motor skills; larger utensils fit their palmar grasp and are much easier to hold.",
+        "B": "Incorrect. Safety feature, not motor reason.",
+        "C": "Incorrect. Colorfulness engages interest, not grip mechanics.",
+        "D": "Incorrect. Aesthetic appeal."
+      },
+      "explanation": "Thick crayons fit undeveloped palmar grips in early childhood motor development.",
+      "memoryTip": "BIG PENCILS = EASIER TO HOLD for undeveloped grip.",
+      "reference": "Child and Adolescent Development — Motor Development",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Early Childhood Development"
+    },
+    {
+      "id": "PE-H-115",
+      "questionNumber": 115,
+      "sourceQuestionNumber": 115,
+      "question": "115. Which of the following theories applies to teachers who inflict physical punishment on erring students?",
+      "choices": {
+        "A": "Behaviorist theory",
+        "B": "Social learning theory",
+        "C": "Essentialist theory",
+        "D": "Progressivist theory"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Physical punishment reflects operant behaviorism (using aversive physical stimuli to suppress behavior).",
+        "B": "Incorrect. Observational modeling.",
+        "C": "Incorrect. Academic focus.",
+        "D": "Incorrect. Child-centered."
+      },
+      "explanation": "Corporal punishment relies on aversive operant conditioning.",
+      "memoryTip": "PHYSICAL PUNISHMENT = BEHAVIORIST THEORY (Operant Aversive Stimulus).",
+      "reference": "Educational Psychology — Behaviorism",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Behavioral Learning Theories"
+    },
+    {
+      "id": "PE-H-116",
+      "questionNumber": 116,
+      "sourceQuestionNumber": 116,
+      "question": "116. . What kind of assessment is done during the process of student learning?",
+      "choices": {
+        "A": "Alternative assessment",
+        "B": "Formative assessment",
+        "C": "Summative assessment",
+        "D": "Authentic assessment 8"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Non-traditional test format.",
+        "B": "Correct. Formative assessment occurs during instruction to monitor learning progress and guide teaching.",
+        "C": "Incorrect. Occurs at end of instruction.",
+        "D": "Incorrect. Real-world tasks."
+      },
+      "explanation": "Formative assessment provides ongoing feedback during the learning process.",
+      "memoryTip": "DURING LEARNING PROCESS = FORMATIVE ASSESSMENT.",
+      "reference": "Assessment of Learning — Formative Assessment",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Types of Assessment"
+    },
+    {
+      "id": "PE-H-117",
+      "questionNumber": 117,
+      "sourceQuestionNumber": 117,
+      "question": "117. On periods of development, which stage is the period of puberty such as girls having menstruation?",
+      "choices": {
+        "A": "Adolescence",
+        "B": "Early adulthood",
+        "C": "Late childhood",
+        "D": "Midlife"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Puberty and menarche mark the biological entry into Adolescence.",
+        "B": "Incorrect. Post-pubertal stage.",
+        "C": "Incorrect. Pre-pubertal stage.",
+        "D": "Incorrect. Adult stage."
+      },
+      "explanation": "Puberty marks the physical transition into adolescence.",
+      "memoryTip": "PUBERTY / MENSTRUATION = ADOLESCENCE.",
+      "reference": "Child and Adolescent Development — Adolescence",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Adolescence"
+    },
+    {
+      "id": "PE-H-118",
+      "questionNumber": 118,
+      "sourceQuestionNumber": 118,
+      "question": "118. A barangay official suggested that fishing and marine life be included in the barangay public school so that learners will have a background on the primary livelihood in their area. This is based on what curriculum design model?",
+      "choices": {
+        "A": "Subject-centered",
+        "B": "Learner-centered",
+        "C": "Problem-centered",
+        "D": "Career-centered"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Academic focus.",
+        "B": "Incorrect. Individual interest focus.",
+        "C": "Correct. Designing curriculum around community life, local economic needs, and life situations reflects Problem-Centered / Life-Situations design.",
+        "D": "Incorrect. Vocational subset."
+      },
+      "explanation": "Curriculum grounded in local community livelihood prepares students for life in their environment.",
+      "memoryTip": "LOCAL LIVELIHOOD CURRICULUM = Problem-centered / Life-situations design.",
+      "reference": "Curriculum Development — Curriculum Designs",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Curriculum Designs"
+    },
+    {
+      "id": "PE-H-119",
+      "questionNumber": 119,
+      "sourceQuestionNumber": 119,
+      "question": "119. Which of the following does not belong in the group?",
+      "choices": {
+        "A": "Child-centered design",
+        "B": "Life-situation design",
+        "C": "Experience-centered design",
+        "D": "Humanistic design"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Learner-centered design variant.",
+        "B": "Correct. Life-situation design is a Problem-Centered design, whereas Child-Centered, Experience-Centered, and Humanistic are Learner-Centered designs.",
+        "C": "Incorrect. Learner-centered design variant.",
+        "D": "Incorrect. Preserved source key lists D, though B belongs to a different major classification."
+      },
+      "explanation": "Life-situations belongs to Problem-Centered designs; Child-Centered, Experience-Centered, and Humanistic belong to Learner-Centered designs.",
+      "memoryTip": "LIFE-SITUATIONS = Problem-Centered (Others are Learner-Centered).",
+      "reference": "Curriculum Development — Curriculum Design Categories",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Curriculum Designs",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "B is correct: Life-situation design is classified as problem-centered, while Child-centered, Experience-centered, and Humanistic designs are learner-centered in the classification used by this item."
+    },
+    {
+      "id": "PE-H-120",
+      "questionNumber": 120,
+      "sourceQuestionNumber": 120,
+      "question": "120. A philosophy that believes in prior learning or what the learners already know is _______.",
+      "choices": {
+        "A": "Essentialism",
+        "B": "Behaviorism",
+        "C": "Constructivism",
+        "D": "Naturalism"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Core academic focus.",
+        "B": "Incorrect. Blank slate / S-R focus.",
+        "C": "Correct. Constructivism holds that learners actively construct new knowledge by anchoring it into their existing prior knowledge (schema).",
+        "D": "Incorrect. Natural unfolding focus."
+      },
+      "explanation": "Constructivism emphasizes building new understanding upon prior knowledge structures.",
+      "memoryTip": "BUILDING ON PRIOR LEARNING = CONSTRUCTIVISM.",
+      "reference": "Educational Psychology — Constructivism",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Constructivism"
+    },
+    {
+      "id": "PE-H-121",
+      "questionNumber": 121,
+      "sourceQuestionNumber": 121,
+      "question": "121. A classroom teacher comes to school early in the morning and goes home late. Officially, the number of hours spent in school should be_____.",
+      "choices": {
+        "A": "6 hours",
+        "B": "4 hours",
+        "C": "8 hours",
+        "D": "3 hours"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. 6 hours is maximum actual classroom teaching time.",
+        "B": "Incorrect. Part-time load.",
+        "C": "Correct. Magna Carta (RA 4670) prescribes 8 hours of work daily, comprising 6 hours of actual classroom teaching and 2 hours of preparation.",
+        "D": "Incorrect. Half-day load."
+      },
+      "explanation": "RA 4670 mandates an 8-hour workday (6 hours teaching + 2 hours preparation/administrative work).",
+      "memoryTip": "OFFICIAL SCHOOL WORKDAY = 8 HOURS (6 Teaching + 2 Prep).",
+      "reference": "The Teaching Profession — Magna Carta (RA 4670)",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Magna Carta (RA 4670)"
+    },
+    {
+      "id": "PE-H-122",
+      "questionNumber": 122,
+      "sourceQuestionNumber": 122,
+      "question": "122. Which is the percentage contribution of quarterly assessment to the grade of the student from grade 1 to 10?",
+      "choices": {
+        "A": "15%",
+        "B": "25%",
+        "C": "20%",
+        "D": "30%"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Below policy weight.",
+        "B": "Incorrect. Above basic education weight.",
+        "C": "Correct. Under DepEd Order No. 8, s. 2015, Quarterly Assessment contributes 20% across all subjects in Grades 1 to 10.",
+        "D": "Incorrect. Written work weight in Science/Math."
+      },
+      "explanation": "Quarterly Examinations carry a fixed 20% weight across all basic education subjects under DO 8, s. 2015.",
+      "memoryTip": "QUARTERLY ASSESSMENT WEIGHT (Grades 1-10) = 20%.",
+      "reference": "Assessment of Learning — DepEd DO 8, s. 2015",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System"
+    },
+    {
+      "id": "PE-H-123",
+      "questionNumber": 123,
+      "sourceQuestionNumber": 123,
+      "question": "123. Which is the percentage contribution of written work to grade of the grade 1-10 student in science and math?",
+      "choices": {
+        "A": "50%",
+        "B": "40%",
+        "C": "20%",
+        "D": "30%"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Performance task weight in Science/Math.",
+        "B": "Incorrect. Preserved source key lists B, but DO 8, s. 2015 specifies 30% for Written Work in Science/Math.",
+        "C": "Incorrect. Quarterly exam weight.",
+        "D": "Correct. Under DepEd Order No. 8, s. 2015, Written Work accounts for 30% in Science and Math."
+      },
+      "explanation": "DepEd K-12 Grading Weights for Science/Math: Written Work = 30%, Performance Tasks = 50%, Quarterly Exam = 20%.",
+      "memoryTip": "SCIENCE & MATH WRITTEN WORK = 30%.",
+      "reference": "Assessment of Learning — DepEd DO 8, s. 2015",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "D is correct: under the grading weights used in this item, Written Work contributes 30% for Grade 1–10 Science and Mathematics; Performance Tasks are 50% and the Quarterly Assessment is 20%."
+    },
+    {
+      "id": "PE-H-124",
+      "questionNumber": 124,
+      "sourceQuestionNumber": 124,
+      "question": "124. Which can be grounds for the revocation of a professional teacher’s license? I. Immoral, unprofessional or dishonorable conduct II. Insanity as declared by a court of competent jurisdiction III. Gross incompetence, gross negligence or serious ignorance of the practice of the teaching profession IV. Unjustified or willful failure to attend seminars, workshops, conferences",
+      "choices": {
+        "A": "I and II",
+        "B": "I, II and III",
+        "C": "II and III",
+        "D": "I, II, III and IV"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Incomplete selection.",
+        "B": "Incorrect. Incomplete selection.",
+        "C": "Incorrect. Incomplete selection.",
+        "D": "Correct. RA 7836 Section 23 specifies that immoral conduct, insanity, gross incompetence, and willful non-compliance with professional obligations are grounds for license revocation/suspension."
+      },
+      "explanation": "Section 23 of RA 7836 lists grounds for revoking or suspending a professional teacher's certificate.",
+      "memoryTip": "REVOCATION GROUNDS = ALL STATEMENTS (I, II, III, IV).",
+      "reference": "The Teaching Profession — RA 7836",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Teacher Legislation"
+    },
+    {
+      "id": "PE-H-125",
+      "questionNumber": 125,
+      "sourceQuestionNumber": 125,
+      "question": "125. Can teachers who failed the LET be hired as teachers?",
+      "choices": {
+        "A": "Yes, if their failed rating is at least 65.",
+        "B": "Yes, if they failed once only.",
+        "C": "Yes, if granted special permit by the Board for Professional Teachers.",
+        "D": "Yes, if they are hired only by private schools."
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Rating alone without special permit is insufficient.",
+        "B": "Incorrect. Number of attempts is irrelevant.",
+        "C": "Correct. Under RA 7836 / RA 9293, examinees who obtained a rating of 70-74% may be issued a temporary special permit by the Board for Para-teachers.",
+        "D": "Incorrect. Private schools also require licensed teachers."
+      },
+      "explanation": "RA 9293 allows issuing temporary special permits to para-teachers (ratings 70-74%) in shortage areas.",
+      "memoryTip": "NON-PASSER HIRING = SPECIAL PERMIT FOR PARA-TEACHERS.",
+      "reference": "The Teaching Profession — RA 9293 / RA 7836",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Teacher Licensing Laws"
+    },
+    {
+      "id": "PE-H-126",
+      "questionNumber": 126,
+      "sourceQuestionNumber": 126,
+      "question": "126. Is this statement true: “Quarterly assessments have different percentage weights for each subject in the tracks of Grades 11 - 12?”",
+      "choices": {
+        "A": "No",
+        "B": "Yes",
+        "C": "Partially yes",
+        "D": "Partially no"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Statement is true.",
+        "B": "Correct. Under DepEd Order No. 8, s. 2015, Senior High School (Grades 11-12) subjects have varied component weights depending on track (Core, Academic, TVL, Work Immersion).",
+        "C": "Incorrect. Unequivocally true.",
+        "D": "Incorrect. Unequivocally true."
+      },
+      "explanation": "DepEd DO 8, s. 2015 assigns different assessment component weights per SHS track.",
+      "memoryTip": "SHS GRADING WEIGHTS = VARY BY TRACK / SUBJECT.",
+      "reference": "Assessment of Learning — DepEd DO 8, s. 2015",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System"
+    },
+    {
+      "id": "PE-H-127",
+      "questionNumber": 127,
+      "sourceQuestionNumber": 127,
+      "question": "127. Which is a characteristic of a flipped classroom?",
+      "choices": {
+        "A": "Do assignment at home then come to class to discuss why our answers",
+        "B": "Distance learning where there is no face-to-face instruction",
+        "C": "Listen to lectures in class then do assignments at home",
+        "D": "Students do the lecturing not the teacher"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. In a flipped classroom, students review lecture content/readings at home and use active class time for discussion, problem-solving, and application.",
+        "B": "Incorrect. Pure distance learning.",
+        "C": "Incorrect. Traditional classroom model.",
+        "D": "Incorrect. Student lecturing is peer teaching."
+      },
+      "explanation": "Flipping the classroom moves direct instruction home, reserving class time for active collaborative discussion.",
+      "memoryTip": "FLIPPED CLASSROOM = Direct content at home, active application in class.",
+      "reference": "Educational Technology — Blended & Flipped Learning",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Flipped Classroom"
+    },
+    {
+      "id": "PE-H-128",
+      "questionNumber": 128,
+      "sourceQuestionNumber": 128,
+      "question": "128. When a student gathers data or information and arrives at a conclusion, what process or research is followed?",
+      "choices": {
+        "A": "Inductive",
+        "B": "Deductive",
+        "C": "Implication",
+        "D": "Experiment"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Inductive reasoning gathers specific empirical observations/data to formulate general conclusions or principles (specific to general).",
+        "B": "Incorrect. Deductive reasoning starts with general rules and applies them to specific cases.",
+        "C": "Incorrect. Logical inference.",
+        "D": "Incorrect. Specific research design."
+      },
+      "explanation": "Inductive logic gathers specific observations first and synthesizes them into general conclusions.",
+      "memoryTip": "SPECIFIC DATA TO GENERAL CONCLUSION = INDUCTIVE.",
+      "reference": "Principles of Teaching — Inductive vs Deductive",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Reasoning Strategies"
+    },
+    {
+      "id": "PE-H-129",
+      "questionNumber": 129,
+      "sourceQuestionNumber": 129,
+      "question": "129. Ausubels’ Advance Organizers help for students to get _________ of the topic to be learned.",
+      "choices": {
+        "A": "Pieces of puzzle",
+        "B": "Detailed pattern",
+        "C": "Fish bowl view",
+        "D": "Bird’s eye view"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Fragmented view.",
+        "B": "Incorrect. Micro-detail view.",
+        "C": "Incorrect. Non-standard metaphor.",
+        "D": "Correct. David Ausubel's advance organizers provide an overarching macro-level 'bird's eye view' or cognitive scaffolding before detailed content is presented."
+      },
+      "explanation": "Advance organizers offer a big-picture cognitive framework (bird's eye view) that anchors detailed new information.",
+      "memoryTip": "ADVANCE ORGANIZER = BIRD'S EYE VIEW (Macro framework).",
+      "reference": "Educational Psychology — Ausubel's Learning Theory",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Cognitive Learning Theories"
+    },
+    {
+      "id": "PE-H-130",
+      "questionNumber": 130,
+      "sourceQuestionNumber": 130,
+      "question": "130. There are a number of laws in the Philippines requiring the teaching of subject matter such as taxation and agrarian reform etc. this proves that school must bring about reform in society. On which philosophy of education is this based?",
+      "choices": {
+        "A": "Idealism",
+        "B": "Progressivism",
+        "C": "Reconstructionism",
+        "D": "Perennialism"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Spiritual/moral focus.",
+        "B": "Incorrect. Child-centered experiential focus.",
+        "C": "Correct. Mandating topics like agrarian reform and taxation uses schooling as an agent for active social reform, defining Social Reconstructionism.",
+        "D": "Incorrect. Universal classic focus."
+      },
+      "explanation": "Social Reconstructionism uses curriculum to address social problems, reform institutions, and improve society.",
+      "memoryTip": "REFORM IN SOCIETY = RECONSTRUCTIONISM.",
+      "reference": "Foundations of Education — Social Reconstructionism",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Educational Philosophies"
+    },
+    {
+      "id": "PE-H-131",
+      "questionNumber": 131,
+      "sourceQuestionNumber": 131,
+      "question": "131. Max Scheler introduced a hierarchy of values that the teacher needs to develop among learners. Identify these values along the following situation: Teacher Didi recognizes the 9 fact that learners have strong sensual feeling, and so she explores the learner’s _________.",
+      "choices": {
+        "A": "Pleasure values",
+        "B": "Vital values",
+        "C": "Spiritual values",
+        "D": "Values of the holy"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Max Scheler's lowest level in the values hierarchy consists of Pleasure Values (sensual feelings, agreeable vs disagreeable).",
+        "B": "Incorrect. Vital values relate to well-being, health, and vigor.",
+        "C": "Incorrect. Spiritual values relate to beauty, justice, and truth.",
+        "D": "Incorrect. Values of the holy represent the highest tier (divine/faith)."
+      },
+      "explanation": "Max Scheler's Hierarchy of Values (bottom to top): 1. Pleasure Values, 2. Vital Values, 3. Spiritual Values, 4. Values of the Holy.",
+      "memoryTip": "SCHELER'S SENSUAL VALUES = PLEASURE VALUES.",
+      "reference": "Foundations of Education — Max Scheler's Values Hierarchy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Values Education"
+    },
+    {
+      "id": "PE-H-132",
+      "questionNumber": 132,
+      "sourceQuestionNumber": 132,
+      "question": "132. Teacher M drinks heavily on weekends. He argues that he cannot be reprimanded because he doesn’t come to school drunk and he performs his job as a teacher well. Is his argument acceptable?",
+      "choices": {
+        "A": "Yes, it is right as an individual",
+        "B": "No, drinking liquor is not good for the health",
+        "C": "Yes, the students don’t see him when he is drunk",
+        "D": "No, he should live a commendable level of conduct at all times"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Teachers' moral obligations extend to private conduct.",
+        "B": "Incorrect. Health advice is secondary to ethical role-modeling.",
+        "C": "Incorrect. Community reputation matters even outside school.",
+        "D": "Correct. Article III, Section 3 of the Code of Ethics dictates that teachers must maintain a dignified and commendable standard of conduct at all times, both inside and outside the classroom."
+      },
+      "explanation": "Teachers are held to high moral standards 24/7 as community role models under the Code of Ethics.",
+      "memoryTip": "TEACHER ETHICS = DIGNIFIED CONDUCT AT ALL TIMES (24/7).",
+      "reference": "The Teaching Profession — Code of Ethics for Professional Teachers",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Code of Ethics for Professional Teachers"
+    },
+    {
+      "id": "PE-H-133",
+      "questionNumber": 133,
+      "sourceQuestionNumber": 133,
+      "question": "133. Among thinking skills, Analysis means",
+      "choices": {
+        "A": "Selecting relevant and important information",
+        "B": "Breaking down complex information",
+        "C": "Placing information in categories",
+        "D": "Comparing information for proper choices"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Selecting details.",
+        "B": "Correct. Analysis is breaking complex information down into its constituent parts to examine relationships.",
+        "C": "Incorrect. Categorizing.",
+        "D": "Incorrect. Evaluating/comparing."
+      },
+      "explanation": "Analyzing breaks material into component parts to understand organizational structure.",
+      "memoryTip": "ANALYSIS = BREAKING DOWN into parts.",
+      "reference": "Educational Psychology — Bloom's Taxonomy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Cognitive Taxonomy"
+    },
+    {
+      "id": "PE-H-134",
+      "questionNumber": 134,
+      "sourceQuestionNumber": 134,
+      "question": "134. Under the 1987 Philippine Constitution, what is constitutional delegates chose as official languages for purposes of communication and instruction?",
+      "choices": {
+        "A": "English only",
+        "B": "Filipino only",
+        "C": "Filipino and English",
+        "D": "Filipino, English and Spanish"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Ignores national language.",
+        "B": "Incorrect. Ignores official English designation.",
+        "C": "Correct. Article XIV, Section 7 of the 1987 Constitution explicitly establishes Filipino and English as the official languages for communication and instruction.",
+        "D": "Incorrect. Spanish is an optional language, not official."
+      },
+      "explanation": "Article XIV, Section 7 designates Filipino and, until otherwise provided by law, English as official languages.",
+      "memoryTip": "1987 CONSTITUTION OFFICIAL LANGUAGES = FILIPINO AND ENGLISH.",
+      "reference": "Foundations of Education — Language Policy in 1987 Constitution",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Legal Foundations"
+    },
+    {
+      "id": "PE-H-135",
+      "questionNumber": 135,
+      "sourceQuestionNumber": 135,
+      "question": "135. According to Gardner’s multiple intelligence theory, learners who work effectively with numbers, patterns and quantitative reasoning are ______________.",
+      "choices": {
+        "A": "Logical-mathematical intelligence learners",
+        "B": "Naturalist intelligence learners",
+        "C": "Verbal-linguistic intelligence learners",
+        "D": "Spatial intelligence learners"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Logical-mathematical intelligence involves numerical processing, abstract logic, and quantitative pattern analysis.",
+        "B": "Incorrect. Naturalist intelligence works with flora/fauna.",
+        "C": "Incorrect. Verbal-linguistic intelligence works with words.",
+        "D": "Incorrect. Spatial intelligence works with 3D visual shapes."
+      },
+      "explanation": "Gardner's Logical-Mathematical intelligence enables calculation, hypothesis testing, and quantitative reasoning.",
+      "memoryTip": "NUMBERS & PATTERNS = LOGICAL-MATHEMATICAL INTELLIGENCE.",
+      "reference": "Educational Psychology — Gardner's Multiple Intelligences",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Multiple Intelligences"
+    },
+    {
+      "id": "PE-H-136",
+      "questionNumber": 136,
+      "sourceQuestionNumber": 136,
+      "question": "136. Which of the following theories applies to teachers who inflict physical punishment on erring students?",
+      "choices": {
+        "A": "Behaviorist theory",
+        "B": "Social learning theory",
+        "C": "Essentialist theory",
+        "D": "Progressivist theory"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Inflicting physical pain to suppress undesirable behavior reflects operant aversive conditioning (punishment) under behaviorist theory.",
+        "B": "Incorrect. Observational modeling.",
+        "C": "Incorrect. Focuses on core subjects.",
+        "D": "Incorrect. Child-centered philosophy."
+      },
+      "explanation": "Corporal punishment relies on aversive physical consequences to modify behavior.",
+      "memoryTip": "PHYSICAL PUNISHMENT = BEHAVIORIST OPERANT CONDITIONING.",
+      "reference": "Educational Psychology — Behaviorism",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Behavioral Learning Theories"
+    },
+    {
+      "id": "PE-H-137",
+      "questionNumber": 137,
+      "sourceQuestionNumber": 137,
+      "question": "137. What is one good reason for the additional senior two-years high school in the K- to-12 educational program?",
+      "choices": {
+        "A": "To add years for entry to college",
+        "B": "To make schools more profitable",
+        "C": "To be comparable to developed countries",
+        "D": "To give employment to more teachers"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Superficial reasoning.",
+        "B": "Incorrect. Commercial motivation.",
+        "C": "Correct. Aligning the basic education cycle with the global 12-year standard makes Philippine graduates internationally competitive and aligned with global standards.",
+        "D": "Incorrect. Employment byproduct, not the core goal."
+      },
+      "explanation": "The 12-year basic education cycle aligns Philippine graduates with international global education benchmarks.",
+      "memoryTip": "K-12 REASON = COMPARABLE TO GLOBAL STANDARDS.",
+      "reference": "Curriculum Development — K to 12 Rationale",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "K to 12 Curriculum"
+    },
+    {
+      "id": "PE-H-138",
+      "questionNumber": 138,
+      "sourceQuestionNumber": 138,
+      "question": "138. For curriculum change, what occurs when teachers decide to change certain elements with other elements, stress on Rizal as a patriot rather than as a literary genius.",
+      "choices": {
+        "A": "Perturbation",
+        "B": "Substitution",
+        "C": "Restructuring",
+        "D": "Alteration"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Perturbation causes temporary disruption.",
+        "B": "Correct. Substitution directly replaces an existing element or focus with a new one while maintaining the overall curriculum structure.",
+        "C": "Incorrect. Restructuring overhauls the whole system.",
+        "D": "Incorrect. Preserved source key lists D, but replacing one topic/focus with another is Substitution."
+      },
+      "explanation": "In McNeil's categories of curriculum change, Substitution directly replaces one element or focus with another.",
+      "memoryTip": "REPLACING ONE FOCUS WITH ANOTHER = SUBSTITUTION.",
+      "reference": "Curriculum Development — Curriculum Change Categories",
+      "difficulty": "Medium",
+      "subject": "Professional Education",
+      "topic": "Curriculum Change",
+      "answerStatus": "adjudicated",
+      "answerAdjudication": "B is correct: replacing the curriculum emphasis on Rizal as a literary genius with emphasis on Rizal as a patriot is substitution of one element/focus for another while retaining the broader structure."
+    },
+    {
+      "id": "PE-H-139",
+      "questionNumber": 139,
+      "sourceQuestionNumber": 139,
+      "question": "139. What is a concrete instance of flexible learning?",
+      "choices": {
+        "A": "Basic Education Curriculum initiative",
+        "B": "K-to-12 education approach",
+        "C": "Early childhood education program",
+        "D": "Online learning during a pandemic"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Curriculum reform.",
+        "B": "Incorrect. Basic education structure.",
+        "C": "Incorrect. Early childhood stage.",
+        "D": "Correct. Online, modular, and remote instruction implemented during crises represent flexible learning modalities."
+      },
+      "explanation": "Flexible learning provides adaptable delivery modes regarding time, place, and pacing.",
+      "memoryTip": "FLEXIBLE LEARNING = ONLINE / MODULAR REMOTE LEARNING.",
+      "reference": "Educational Technology — Distance and Flexible Learning",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Flexible Learning Modalities"
+    },
+    {
+      "id": "PE-H-140",
+      "questionNumber": 140,
+      "sourceQuestionNumber": 140,
+      "question": "140. Who is the prime mover of the educational wheel in the teaching-learning process in education?",
+      "choices": {
+        "A": "Learner",
+        "B": "Community",
+        "C": "Favorable environment",
+        "D": "Teacher"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. The learner is the center/heart of instruction.",
+        "B": "Incorrect. External support system.",
+        "C": "Incorrect. Learning setting.",
+        "D": "Correct. The teacher is considered the prime mover who plans, facilitates, and drives the entire teaching-learning process."
+      },
+      "explanation": "The teacher actively drives and facilitates the educational wheel in the classroom.",
+      "memoryTip": "PRIME MOVER OF TEACHING-LEARNING = THE TEACHER.",
+      "reference": "Principles of Teaching — Teacher's Role",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Role of the Teacher"
+    },
+    {
+      "id": "PE-H-141",
+      "questionNumber": 141,
+      "sourceQuestionNumber": 141,
+      "question": "141. What is teacher Bea assessing of her students when she determines their level of understanding of concepts in her Biology Class?",
+      "choices": {
+        "A": "Their recall of concepts",
+        "B": "Their creating new concepts",
+        "C": "Their grasp of meaning of concepts",
+        "D": "Their applying concepts to life"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Memory recall is Remembering.",
+        "B": "Incorrect. Generating new ideas is Creating.",
+        "C": "Correct. Assessing 'level of understanding' corresponds to Understanding (comprehension), which is grasping the meaning of concepts.",
+        "D": "Incorrect. Executing procedures is Applying."
+      },
+      "explanation": "Understanding level in Bloom's taxonomy requires grasping meaning, explaining, and interpreting concepts.",
+      "memoryTip": "UNDERSTANDING = GRASP OF MEANING.",
+      "reference": "Educational Psychology — Bloom's Taxonomy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Cognitive Taxonomy"
+    },
+    {
+      "id": "PE-H-142",
+      "questionNumber": 142,
+      "sourceQuestionNumber": 142,
+      "question": "142. Your emphasis is the learner’s affective development. Which pillar/s of learning should you focus on?",
+      "choices": {
+        "A": "Learning to be and learning to live together",
+        "B": "Learning to do",
+        "C": "Learning to live together",
+        "D": "Learning to know and learning to be"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. 'Learning to Be' (personal values/identity) and 'Learning to Live Together' (social empathy/harmony) form the affective pillars of learning.",
+        "B": "Incorrect. Focuses on psychomotor skills.",
+        "C": "Incorrect. Incomplete selection.",
+        "D": "Incorrect. 'Learning to Know' is cognitive."
+      },
+      "explanation": "UNESCO's 'Learning to Be' and 'Learning to Live Together' center directly on emotional, social, and character development.",
+      "memoryTip": "AFFECTIVE DOMAIN = LEARNING TO BE & LIVE TOGETHER.",
+      "reference": "Foundations of Education — UNESCO 4 Pillars",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "UNESCO Pillars of Learning"
+    },
+    {
+      "id": "PE-H-143",
+      "questionNumber": 143,
+      "sourceQuestionNumber": 143,
+      "question": "143. Which of the following situations can show that a teacher is “chill” in a tense situation?",
+      "choices": {
+        "A": "Not alone, but with peers",
+        "B": "Not revengeful, but forgiving",
+        "C": "Not excited, but calm",
+        "D": "Not passive, but active"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Peer presence.",
+        "B": "Incorrect. Forgiveness trait.",
+        "C": "Correct. Being 'chill' in a tense situation means remaining composed, unagitated, and calm under stress.",
+        "D": "Incorrect. Activity level."
+      },
+      "explanation": "Calmness and emotional composure prevent tense classroom situations from escalating.",
+      "memoryTip": "CHILL IN TENSE SITUATION = CALM and composed.",
+      "reference": "Classroom Management — Teacher Demeanor",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Teacher Composure"
+    },
+    {
+      "id": "PE-H-144",
+      "questionNumber": 144,
+      "sourceQuestionNumber": 144,
+      "question": "144. Which philosophy supports universal values in education, as these are important in molding young minds towards broad ideals such as democracy, freedom, human rights?",
+      "choices": {
+        "A": "Pragmatism",
+        "B": "Existentialism",
+        "C": "Empiricism",
+        "D": "Essentialism"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Pragmatism views values as relative to practical outcomes.",
+        "B": "Incorrect. Existentialism holds values as individual subjective choices.",
+        "C": "Incorrect. Empiricism evaluates values through sensory observation.",
+        "D": "Correct. Essentialism (and Idealism) asserts that core universal values and fundamental cultural ideals should be systematically transmitted to all learners."
+      },
+      "explanation": "Essentialism preserves core cultural heritage and universal values necessary for social order.",
+      "memoryTip": "UNIVERSAL VALUES TRANSMISSION = ESSENTIALISM.",
+      "reference": "Foundations of Education — Educational Philosophies",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Educational Philosophies"
+    },
+    {
+      "id": "PE-H-145",
+      "questionNumber": 145,
+      "sourceQuestionNumber": 145,
+      "question": "145. On development processes, what kind of growth is a baby’s increasing in weight and length?",
+      "choices": {
+        "A": "Cognitive",
+        "B": "Social",
+        "C": "Biological",
+        "D": "Socioemotional"
+      },
+      "sourceCorrectAnswer": "C",
+      "correctAnswer": "C",
+      "rationalization": {
+        "A": "Incorrect. Cognitive growth relates to mental processing.",
+        "B": "Incorrect. Social growth relates to peer relationships.",
+        "C": "Correct. Quantitative physical changes (weight, length, organ size) represent biological/physical growth.",
+        "D": "Incorrect. Socioemotional relates to feelings and relationships."
+      },
+      "explanation": "Biological growth encompasses physical and anatomical changes in body dimensions.",
+      "memoryTip": "INCREASING WEIGHT & LENGTH = BIOLOGICAL GROWTH.",
+      "reference": "Child and Adolescent Development — Physical Growth",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Physical Development"
+    },
+    {
+      "id": "PE-H-146",
+      "questionNumber": 146,
+      "sourceQuestionNumber": 146,
+      "question": "146. In which type of classroom/s is the teacher “a guide on the side NOT “the sage on stage?",
+      "choices": {
+        "A": "Constructivist classroom",
+        "B": "Behaviorist classroom",
+        "C": "Cognitivist classroom",
+        "D": "B and C"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. Constructivism redefines the teacher's role from authoritative transmitter ('sage on stage') to learning facilitator ('guide on the side').",
+        "B": "Incorrect. Behaviorist teachers act as direct controllers/reinforcers.",
+        "C": "Incorrect. Cognitivist teachers structure information delivery.",
+        "D": "Incorrect. Behaviorist classrooms are teacher-centered."
+      },
+      "explanation": "Constructivism empowers students to construct meaning, with the teacher serving as a facilitating guide.",
+      "memoryTip": "GUIDE ON THE SIDE = CONSTRUCTIVIST CLASSROOM.",
+      "reference": "Principles of Teaching — Constructivist Pedagogy",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Constructivism"
+    },
+    {
+      "id": "PE-H-147",
+      "questionNumber": 147,
+      "sourceQuestionNumber": 147,
+      "question": "147. What descriptor applies to grade of students below 75%?",
+      "choices": {
+        "A": "Poor",
+        "B": "Did not meet expectations",
+        "C": "Developing 10",
+        "D": "Developing"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Outdated term.",
+        "B": "Correct. Under DepEd Order No. 8, s. 2015, a grade below 75% is described as 'Did Not Meet Expectations'.",
+        "C": "Incorrect. Outdated descriptor.",
+        "D": "Incorrect. Outdated descriptor."
+      },
+      "explanation": "DepEd K-12 Descriptor for below 75% is 'Did Not Meet Expectations'.",
+      "memoryTip": "BELOW 75% = DID NOT MEET EXPECTATIONS.",
+      "reference": "Assessment of Learning — DepEd DO 8, s. 2015",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "DepEd Grading System"
+    },
+    {
+      "id": "PE-H-148",
+      "questionNumber": 148,
+      "sourceQuestionNumber": 148,
+      "question": "148. Is a school principal required of a professional license?",
+      "choices": {
+        "A": "Only if he/she goes back to full time teaching.",
+        "B": "Yes, he/she is a professional teacher based on the definition of professional teacher in RA 7836.",
+        "C": "It is his/her choice to obtain a license provided he/she passed the National Qualifying Examination for School Heads.",
+        "D": "No, because he/she is not included in the definition of professional teacher in RA 7836"
+      },
+      "sourceCorrectAnswer": "B",
+      "correctAnswer": "B",
+      "rationalization": {
+        "A": "Incorrect. Principals are teachers.",
+        "B": "Correct. RA 7836 explicitly includes school principals, supervisors, and administrators in the definition of professional teachers requiring licensure.",
+        "C": "Incorrect. Licensure is mandatory.",
+        "D": "Incorrect. Principals ARE included in the definition."
+      },
+      "explanation": "RA 7836 includes school principals and administrators under the professional teacher licensing requirement.",
+      "memoryTip": "SCHOOL PRINCIPALS REQUIRE LET LICENSE (RA 7836).",
+      "reference": "The Teaching Profession — RA 7836 Scope",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Teacher Legislation"
+    },
+    {
+      "id": "PE-H-149",
+      "questionNumber": 149,
+      "sourceQuestionNumber": 149,
+      "question": "149. Which of the following characteristics among learners can indicate that their parents have been authoritarian?",
+      "choices": {
+        "A": "Open-friendly",
+        "B": "Strong-outgoing",
+        "C": "Responsive-active",
+        "D": "Fearful-inhibited"
+      },
+      "sourceCorrectAnswer": "D",
+      "correctAnswer": "D",
+      "rationalization": {
+        "A": "Incorrect. Result of authoritative parenting.",
+        "B": "Incorrect. Result of authoritative parenting.",
+        "C": "Incorrect. Result of authoritative parenting.",
+        "D": "Correct. Authoritarian parenting (strict rules, low warmth, high control) produces children who are fearful, anxious, inhibited, and submissive."
+      },
+      "explanation": "Authoritarian parenting suppresses independence, resulting in fearful, anxious behavior.",
+      "memoryTip": "AUTHORITARIAN PARENTING = FEARFUL-INHIBITED CHILD.",
+      "reference": "Child and Adolescent Development — Parenting Styles",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Parenting Styles"
+    },
+    {
+      "id": "PE-H-150",
+      "questionNumber": 150,
+      "sourceQuestionNumber": 150,
+      "question": "150. What is the criterion in criterion- reference grading?",
+      "choices": {
+        "A": "Standards",
+        "B": "Descriptors",
+        "C": "Grades",
+        "D": "Averages"
+      },
+      "sourceCorrectAnswer": "A",
+      "correctAnswer": "A",
+      "rationalization": {
+        "A": "Correct. In criterion-referenced grading, student performance is evaluated directly against pre-established learning standards or criteria.",
+        "B": "Incorrect. Verbal descriptors.",
+        "C": "Incorrect. Marks.",
+        "D": "Incorrect. Statistical means."
+      },
+      "explanation": "Criterion-referenced grading measures performance against absolute learning standards.",
+      "memoryTip": "CRITERION = LEARNING STANDARDS.",
+      "reference": "Assessment of Learning — Criterion-Referenced Grading",
+      "difficulty": "Easy",
+      "subject": "Professional Education",
+      "topic": "Criterion-Referenced Assessment"
+    }
+  ],
+  "validationStatus": "FINAL_COMPLETE",
+  "validationNote": "150-item Prof Ed Set H audited and finalized: answer conflicts adjudicated, rationalizations/explanations aligned to adjudicated answers, required fields present, and citation artifacts absent."
+}
