@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { 
   BarChart3, BookOpen, Home, GraduationCap, User, Bell, 
   Sparkles, Flame, Check, ChevronRight, ChevronLeft, ChevronDown, ChevronUp,
-  RotateCcw, Lock, Mail, ArrowRight, ShieldCheck, FileText, Search,
-  X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, RefreshCw
+  RotateCcw, Lock, Mail, ArrowRight, ShieldCheck, FileText, Search, Download,
+  X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserCheck, UserPlus
 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
 import { 
@@ -13,16 +13,18 @@ import {
   recordSession, 
   getSessionHistory 
 } from './utils/vaultStorage';
+import { 
+  exportErrorNotebookPDF, 
+  exportSessionTranscriptPDF 
+} from './utils/pdfGenerator';
+import {
+  authenticateUser,
+  registerUser,
+  getCurrentUser,
+  logoutUser
+} from './utils/authStorage';
 
-// ALLOWLIST: Approved reviewer emails
-const ALLOWED_EMAILS = [
-  'crissian@example.com',
-  'jill@example.com',
-  'reviewer@projectjill.com',
-  'admin@test.com'
-];
-
-// SAMPLE QUESTION BANK
+// DEFAULT QUESTION BANK
 const DEFAULT_QUESTIONS = [
   {
     id: "q1",
@@ -90,24 +92,25 @@ const DEFAULT_QUESTIONS = [
 ];
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [currentUser, setCurrentUser] = useState(() => getCurrentUser());
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const [activeDrill, setActiveDrill] = useState(null);
   const [vaultItems, setVaultItems] = useState([]);
   const [historyItems, setHistoryItems] = useState([]);
 
-  // Load vault & history on mount and state updates
-  const refreshVaultData = () => {
+  // Refresh user data & vault
+  const refreshAppData = () => {
     setVaultItems(getMistakesVault());
     setHistoryItems(getSessionHistory());
+    setCurrentUser(getCurrentUser());
   };
 
   useEffect(() => {
-    refreshVaultData();
+    refreshAppData();
   }, [activeTab, activeDrill]);
 
-  // Exam Countdown
+  // Exam Countdown for LET September 2026
   const [timeLeft, setTimeLeft] = useState({ days: 24, hours: 5, minutes: 42, seconds: 21 });
   useEffect(() => {
     const timer = setInterval(() => {
@@ -119,13 +122,16 @@ export default function App() {
     return () => clearInterval(timer);
   }, []);
 
-  if (!isAuthenticated) {
+  if (!currentUser) {
     return (
       <LandingPage 
         onOpenAuth={() => setShowAuthModal(true)} 
         showAuthModal={showAuthModal}
         onCloseAuth={() => setShowAuthModal(false)}
-        onSuccess={() => setIsAuthenticated(true)}
+        onSuccess={(user) => {
+          setCurrentUser(user);
+          setShowAuthModal(false);
+        }}
       />
     );
   }
@@ -138,7 +144,7 @@ export default function App() {
         questions={activeDrill.questions}
         onExit={() => {
           setActiveDrill(null);
-          refreshVaultData();
+          refreshAppData();
         }}
         onFinish={(results) => {
           recordSession({
@@ -149,7 +155,7 @@ export default function App() {
             durationSecs: results.seconds
           });
           setActiveDrill(null);
-          refreshVaultData();
+          refreshAppData();
           setActiveTab('learn');
         }}
       />
@@ -165,6 +171,7 @@ export default function App() {
           {activeTab === 'home' && (
             <HomeScreen 
               timeLeft={timeLeft} 
+              user={currentUser}
               vaultCount={vaultItems.length}
               onStartDrill={(title, qs) => setActiveDrill({ title, questions: qs || DEFAULT_QUESTIONS })}
               onStartBossMode={() => {
@@ -199,17 +206,16 @@ export default function App() {
             <MasteryScreen 
               vault={vaultItems}
               history={historyItems}
-              onStartFlashcards={() => {
-                if (vaultItems.length === 0) {
-                  alert("No active review cards! Answer questions in drills to build your deck.");
-                }
-              }}
             />
           )}
           {activeTab === 'profile' && (
             <ProfileScreen 
+              user={currentUser}
               vaultCount={vaultItems.length}
-              onSignOut={() => setIsAuthenticated(false)} 
+              onSignOut={() => {
+                logoutUser();
+                setCurrentUser(null);
+              }} 
             />
           )}
         </main>
@@ -271,8 +277,278 @@ export default function App() {
   );
 }
 
+// ---------------- LUXURY LANDING & AUTH GATE (WITH CREATE ACCOUNT) ---------------- //
+function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErrorMsg('');
+    setSuccessMsg('');
+
+    if (!email) {
+      setErrorMsg('Please provide a valid email.');
+      return;
+    }
+
+    if (isSignUp) {
+      const res = registerUser(email, password, name);
+      if (!res.success) {
+        setErrorMsg(res.message);
+      } else {
+        setSuccessMsg('Account created successfully! Entering portal...');
+        setTimeout(() => onSuccess(res.user), 600);
+      }
+    } else {
+      const res = authenticateUser(email, password);
+      if (!res.success) {
+        setErrorMsg(res.message);
+      } else {
+        onSuccess(res.user);
+      }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#070A12] text-white flex justify-center items-center relative overflow-hidden px-4 py-8">
+      <div className="ambient-glow-1" />
+      <div className="ambient-glow-2" />
+
+      <div className="w-full max-w-md min-h-screen flex flex-col justify-between relative z-10 space-y-6">
+        
+        {/* Header */}
+        <header className="flex items-center justify-between pt-2">
+          <div className="flex items-center gap-3">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#162038] to-[#0D1527] border border-[#E5B842]/40 flex items-center justify-center font-serif font-bold text-[#E5B842] shadow-lg text-base">
+              PJ
+            </div>
+            <div>
+              <h2 className="font-serif font-bold text-sm tracking-wider text-white uppercase">Project Jill</h2>
+              <span className="text-[9px] text-[#E5B842] font-semibold tracking-widest block uppercase opacity-90">
+                Engineered by C. Covelle
+              </span>
+            </div>
+          </div>
+
+          <button 
+            onClick={onOpenAuth}
+            className="border border-[#E5B842]/50 hover:border-[#E5B842] hover:bg-[#E5B842]/10 text-[#E5B842] text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase transition duration-200"
+          >
+            Trial Access
+          </button>
+        </header>
+
+        {/* Feature Cards */}
+        <section className="space-y-3.5 pt-2">
+          <FeatureCard 
+            icon="📑" 
+            title="CURATED DRILLS (SETS A-E)" 
+            desc="Over 750 targeted questions in GenEd, ProfEd, and Specialization." 
+          />
+          <FeatureCard 
+            icon="📖" 
+            title="ERROR NOTEBOOK & VAULT" 
+            desc="Sync and review missed questions across devices for mastery." 
+          />
+          <FeatureCard 
+            icon="📈" 
+            title="PERFORMANCE ANALYTICS" 
+            desc="Live accuracy tracking, streaks, and domain-specific insights." 
+          />
+          <FeatureCard 
+            icon="🔊" 
+            title="EXCLUSIVE B&O EXPERIENCE" 
+            desc="Unlock your potential with unparalleled study ambiance." 
+          />
+        </section>
+
+        {/* Hero Section */}
+        <section className="space-y-4 pt-4">
+          <div className="inline-flex items-center gap-2 bg-[#121B30] border border-[#E5B842]/30 text-[#E5B842] text-[10px] font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+            <Sparkles size={13} className="text-[#E5B842]" /> 
+            <span>Wave 1 Verified Candidate Access</span>
+          </div>
+
+          <h1 className="font-serif text-3xl font-bold text-white leading-tight tracking-tight">
+            Master Your Path to LPT: <span className="text-[#E5B842] italic">Project Jill</span>
+          </h1>
+
+          <p className="text-xs text-slate-400 leading-relaxed font-sans">
+            The definitive digital companion for PRC Licensure candidates.
+          </p>
+
+          <div className="luxury-glass-card rounded-2xl p-4.5 space-y-1.5 border border-white/5">
+            <h4 className="text-xs font-bold text-[#E5B842] tracking-wide">Our Mission:</h4>
+            <p className="text-xs text-slate-300 leading-relaxed font-sans">
+              To empower future Filipino educators with smart, resilient, and focused PRC exam preparation.
+            </p>
+          </div>
+
+          <button 
+            onClick={onOpenAuth}
+            className="w-full gold-glow-btn text-slate-950 font-bold py-4 rounded-2xl text-xs uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer mt-2"
+          >
+            Try Project Jill Now <ArrowRight size={16} />
+          </button>
+        </section>
+
+        {/* Footer */}
+        <footer className="text-center pt-6 pb-2 border-t border-slate-800/60 text-[10px] text-slate-500 space-y-1.5">
+          <p className="flex items-center justify-center gap-1.5 text-slate-400">
+            <ShieldCheck size={14} className="text-[#E5B842]" /> Verified Examinees Only • Wave 1 Trial Access
+          </p>
+          <p>Architected & Built by <span className="text-slate-300 font-semibold">C. Covelle</span> • © 2026 Project Jill</p>
+        </footer>
+
+        {/* AUTH / SIGN-IN / SIGN-UP MODAL */}
+        {showAuthModal && (
+          <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 z-50 transition-opacity">
+            <div className="luxury-glass-card border border-[#232F4D] w-full max-w-sm rounded-3xl p-6 shadow-2xl space-y-4 relative">
+              
+              <div className="text-center space-y-1">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#1A2645] to-[#0F172B] border border-[#E5B842]/40 text-[#E5B842] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md">
+                  PJ
+                </div>
+                <span className="text-[10px] font-bold text-[#E5B842] tracking-widest uppercase block pt-1">
+                  PRC LICENSURE COMPANION
+                </span>
+                <h3 className="font-serif text-2xl font-bold text-white">Project Jill</h3>
+                <p className="text-xs text-slate-400">
+                  {isSignUp ? "Create a candidate account to start reviewing." : "Sign in to access candidate drill sets."}
+                </p>
+              </div>
+
+              {errorMsg && (
+                <div className="bg-rose-950/60 border border-rose-500/40 text-rose-300 text-xs p-3 rounded-xl text-center">
+                  {errorMsg}
+                </div>
+              )}
+
+              {successMsg && (
+                <div className="bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs p-3 rounded-xl text-center">
+                  {successMsg}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-3">
+                {isSignUp && (
+                  <div className="space-y-1">
+                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Full Name</label>
+                    <div className="relative">
+                      <User size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+                      <input 
+                        type="text" 
+                        placeholder="e.g. Crissian Jill"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                <div className="space-y-1">
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Reviewer Email</label>
+                  <div className="relative">
+                    <Mail size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+                    <input 
+                      type="text" 
+                      placeholder="candidate@example.com (or 'demo')"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Passcode / Access Key</label>
+                  <div className="relative">
+                    <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+                    <input 
+                      type="password" 
+                      placeholder="••••••••"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
+                    />
+                  </div>
+                </div>
+
+                <button 
+                  type="submit"
+                  className="w-full gold-glow-btn text-slate-950 font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition mt-3"
+                >
+                  {isSignUp ? (
+                    <>Create Account & Enter <UserPlus size={16} /></>
+                  ) : (
+                    <>Authenticate & Enter <ArrowRight size={16} /></>
+                  )}
+                </button>
+              </form>
+
+              {/* TOGGLE: SIGN IN vs CREATE ACCOUNT */}
+              <div className="pt-2 text-center border-t border-slate-800/80">
+                {isSignUp ? (
+                  <button 
+                    type="button"
+                    onClick={() => { setIsSignUp(false); setErrorMsg(''); }}
+                    className="text-xs text-slate-300 hover:text-[#E5B842] font-semibold transition"
+                  >
+                    Already have an account? <span className="text-[#E5B842] underline">Sign In</span>
+                  </button>
+                ) : (
+                  <button 
+                    type="button"
+                    onClick={() => { setIsSignUp(true); setErrorMsg(''); }}
+                    className="text-xs text-slate-300 hover:text-[#E5B842] font-semibold transition"
+                  >
+                    First time reviewer? <span className="text-[#E5B842] underline">Create Account</span>
+                  </button>
+                )}
+              </div>
+
+              <div className="text-center">
+                <button 
+                  onClick={onCloseAuth}
+                  className="text-xs text-slate-500 hover:text-slate-300"
+                >
+                  Cancel and return
+                </button>
+              </div>
+
+            </div>
+          </div>
+        )}
+
+      </div>
+    </div>
+  );
+}
+
+function FeatureCard({ icon, title, desc }) {
+  return (
+    <div className="luxury-glass-card rounded-2xl p-4 flex items-start gap-4 cursor-default">
+      <div className="w-11 h-11 rounded-xl bg-[#141C30] border border-white/5 flex items-center justify-center text-xl shrink-0 shadow-inner">
+        {icon}
+      </div>
+      <div>
+        <h4 className="text-xs font-bold text-[#E5B842] tracking-wider uppercase">{title}</h4>
+        <p className="text-[11px] text-slate-300 mt-1 leading-relaxed">{desc}</p>
+      </div>
+    </div>
+  );
+}
+
 // ---------------- HOME SCREEN ---------------- //
-function HomeScreen({ timeLeft, vaultCount, onStartDrill, onStartBossMode }) {
+function HomeScreen({ timeLeft, user, vaultCount, onStartDrill, onStartBossMode }) {
+  const firstName = user?.name ? user.name.split(' ')[0] : 'Crissian';
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between pt-1">
@@ -292,14 +568,14 @@ function HomeScreen({ timeLeft, vaultCount, onStartDrill, onStartBossMode }) {
 
       <div className="pt-2">
         <h2 className="font-serif text-3xl font-bold text-white flex items-center gap-2">
-          Good Evening, <br />Crissian! 👋
+          Good Day, <br />{firstName}! 👋
         </h2>
         <p className="text-xs text-slate-400 mt-1 font-sans">
           Let's make today another step toward your license.
         </p>
       </div>
 
-      {/* Countdown */}
+      {/* Countdown Card */}
       <div className="luxury-glass-card rounded-3xl p-5 shadow-xl relative overflow-hidden">
         <div className="flex items-center gap-1.5 text-[#E5B842] text-[11px] font-bold tracking-wider mb-4 uppercase">
           <Sparkles size={14} /> LET SEPTEMBER 2026
@@ -348,7 +624,7 @@ function HomeScreen({ timeLeft, vaultCount, onStartDrill, onStartBossMode }) {
         </button>
       </div>
 
-      {/* Quote */}
+      {/* Daily Quote */}
       <div className="luxury-glass-card rounded-3xl p-5 relative shadow-lg">
         <span className="text-3xl text-[#E5B842] font-serif block leading-none mb-1">“</span>
         <p className="text-sm italic font-serif text-slate-200 leading-relaxed">
@@ -372,7 +648,6 @@ function ReviewHubScreen({ vaultCount, onStartDrill, onStartBossMode }) {
         <p className="text-xs text-slate-400 mt-1 font-sans">Choose your path to mastery.</p>
       </div>
 
-      {/* Quick Modes */}
       <div className="grid grid-cols-2 gap-3">
         <button 
           onClick={() => onStartDrill("Quick Review: Mixed", DEFAULT_QUESTIONS)}
@@ -448,8 +723,8 @@ function SubjectCard({ title, badge, items, onClick }) {
   );
 }
 
-// ---------------- MASTERY / LEARN SCREEN (NOTES, HISTORY, CARDS) ---------------- //
-function MasteryScreen({ vault, history, onStartFlashcards }) {
+// ---------------- MASTERY / LEARN SCREEN ---------------- //
+function MasteryScreen({ vault, history }) {
   const [subTab, setSubTab] = useState('history');
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -516,10 +791,9 @@ function MasteryScreen({ vault, history, onStartFlashcards }) {
         </div>
       )}
 
-      {/* 2. NOTES VIEW (MISTAKES ACCORDION) */}
+      {/* 2. NOTES VIEW */}
       {subTab === 'notes' && (
         <div className="space-y-3">
-          {/* Search bar */}
           <div className="relative">
             <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
             <input 
@@ -542,7 +816,6 @@ function MasteryScreen({ vault, history, onStartFlashcards }) {
               const isExpanded = expandedNoteId === note.id;
               return (
                 <div key={note.id} className="luxury-glass-card rounded-2xl overflow-hidden border border-[#1E2740] transition">
-                  {/* Note Header */}
                   <div 
                     onClick={() => setExpandedNoteId(isExpanded ? null : note.id)}
                     className="p-4 flex items-center justify-between cursor-pointer hover:bg-white/5"
@@ -559,7 +832,6 @@ function MasteryScreen({ vault, history, onStartFlashcards }) {
                     {isExpanded ? <ChevronUp size={16} className="text-slate-400" /> : <ChevronDown size={16} className="text-slate-400" />}
                   </div>
 
-                  {/* Accordion Body */}
                   {isExpanded && (
                     <div className="p-4 pt-0 border-t border-slate-800/60 space-y-3 bg-[#0D1222]/80 text-xs">
                       <div>
@@ -589,7 +861,7 @@ function MasteryScreen({ vault, history, onStartFlashcards }) {
         </div>
       )}
 
-      {/* 3. ACTIVE FLASHCARDS (CARDS TAB) */}
+      {/* 3. ACTIVE FLASHCARDS */}
       {subTab === 'cards' && (
         <div className="space-y-4">
           <div className="flex justify-between items-center text-xs text-slate-400 px-1">
@@ -631,7 +903,6 @@ function MasteryScreen({ vault, history, onStartFlashcards }) {
             </div>
           </div>
 
-          {/* Card Actions */}
           <div className="grid grid-cols-2 gap-3 pt-2">
             <button 
               onClick={() => {
@@ -684,8 +955,20 @@ function AnalyticsScreen({ history, vault }) {
   );
 }
 
-// ---------------- PROFILE SCREEN ---------------- //
-function ProfileScreen({ vaultCount, onSignOut }) {
+// ---------------- PROFILE SCREEN WITH PDF EXPORTS ---------------- //
+function ProfileScreen({ user, vaultCount, onSignOut }) {
+  const candidateName = user?.name || "Crissian Jill";
+
+  const handleDownloadErrorNotebook = () => {
+    const vault = getMistakesVault();
+    exportErrorNotebookPDF(vault, candidateName);
+  };
+
+  const handleDownloadTranscript = () => {
+    const history = getSessionHistory();
+    exportSessionTranscriptPDF(history, candidateName);
+  };
+
   return (
     <div className="space-y-4">
       <div>
@@ -703,7 +986,7 @@ function ProfileScreen({ vaultCount, onSignOut }) {
           </div>
           <div>
             <span className="text-[10px] font-bold text-[#E5B842] uppercase tracking-wider">LPT CANDIDATE</span>
-            <h2 className="text-xl font-bold text-white">Crissian Jill</h2>
+            <h2 className="text-xl font-bold text-white">{candidateName}</h2>
             <span className="inline-block bg-indigo-950/80 border border-indigo-800 text-indigo-300 text-[9px] font-bold px-2 py-0.5 rounded-md mt-1">
               STATUS: VERIFIED REVIEWER
             </span>
@@ -722,6 +1005,42 @@ function ProfileScreen({ vaultCount, onSignOut }) {
         </div>
       </div>
 
+      {/* Personal Library & PDF Exports */}
+      <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">PERSONAL LIBRARY & TOOLS</div>
+      <div className="space-y-2">
+        <button 
+          onClick={handleDownloadErrorNotebook}
+          className="w-full luxury-glass-card rounded-3xl p-4 flex items-center justify-between text-left shadow-md hover:border-[#E5B842]/40 transition group cursor-pointer"
+        >
+          <div className="flex items-center gap-3.5">
+            <div className="w-11 h-11 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center text-lg">
+              <Download size={20} />
+            </div>
+            <div>
+              <h4 className="font-bold text-white text-xs group-hover:text-[#E5B842] transition">Download Error Notebook (PDF)</h4>
+              <p className="text-[10px] text-slate-400 mt-0.5">Export formatted study guide with {vaultCount} recorded errors</p>
+            </div>
+          </div>
+          <ChevronRight size={16} className="text-slate-600 group-hover:text-[#E5B842] transition" />
+        </button>
+
+        <button 
+          onClick={handleDownloadTranscript}
+          className="w-full luxury-glass-card rounded-3xl p-4 flex items-center justify-between text-left shadow-md hover:border-[#E5B842]/40 transition group cursor-pointer"
+        >
+          <div className="flex items-center gap-3.5">
+            <div className="w-11 h-11 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg">
+              <FileText size={20} />
+            </div>
+            <div>
+              <h4 className="font-bold text-white text-xs group-hover:text-[#E5B842] transition">Export Performance Transcript</h4>
+              <p className="text-[10px] text-slate-400 mt-0.5">Generate official session & accuracy log table</p>
+            </div>
+          </div>
+          <ChevronRight size={16} className="text-slate-600 group-hover:text-[#E5B842] transition" />
+        </button>
+      </div>
+
       <button 
         onClick={onSignOut}
         className="w-full bg-[#121829] border border-rose-500/30 text-rose-400 hover:bg-rose-500/10 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition mt-4"
@@ -732,7 +1051,7 @@ function ProfileScreen({ vaultCount, onSignOut }) {
   );
 }
 
-// ---------------- QUIZ & QUESTIONS ENGINE (WITH VAULT AUTO-LOGGING) ---------------- //
+// ---------------- QUIZ SCREEN ---------------- //
 function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -764,7 +1083,6 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
     if (optionId === currentQ.correctAnswer) {
       setScore(s => s + 1);
     } else {
-      // Automatically record missed question to the Mistakes Vault!
       recordMistake(currentQ);
     }
   };
@@ -910,7 +1228,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
             })}
           </div>
 
-          {/* Explanations & Auto-Vault Feedback */}
+          {/* Explanations */}
           {isAnswered && (
             <div className="mt-5 space-y-4">
               {selectedOption !== currentQ.correctAnswer && (
@@ -983,203 +1301,6 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
           </button>
         </div>
 
-      </div>
-    </div>
-  );
-}
-
-// ---------------- LUXURY LANDING PAGE ---------------- //
-function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (!email) {
-      setErrorMsg('Please enter your reviewer email.');
-      return;
-    }
-    const isAllowed = ALLOWED_EMAILS.some(em => em.toLowerCase() === email.trim().toLowerCase());
-    if (isAllowed || email.trim() === 'demo') {
-      onSuccess();
-    } else {
-      setErrorMsg('Access Restricted. Email is not enrolled in Wave 1 Trial.');
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-[#070A12] text-white flex justify-center items-center relative overflow-hidden px-4 py-8">
-      <div className="w-full max-w-md min-h-screen flex flex-col justify-between relative z-10 space-y-6">
-        
-        {/* Header */}
-        <header className="flex items-center justify-between pt-2">
-          <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#162038] to-[#0D1527] border border-[#E5B842]/40 flex items-center justify-center font-serif font-bold text-[#E5B842] shadow-lg text-base">
-              PJ
-            </div>
-            <div>
-              <h2 className="font-serif font-bold text-sm tracking-wider text-white uppercase">Project Jill</h2>
-              <span className="text-[9px] text-[#E5B842] font-semibold tracking-widest block uppercase opacity-90">
-                Engineered by C. Covelle
-              </span>
-            </div>
-          </div>
-
-          <button 
-            onClick={onOpenAuth}
-            className="border border-[#E5B842]/50 hover:border-[#E5B842] hover:bg-[#E5B842]/10 text-[#E5B842] text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase transition duration-200"
-          >
-            Trial Access
-          </button>
-        </header>
-
-        {/* Feature Cards */}
-        <section className="space-y-3.5 pt-2">
-          <FeatureCard 
-            icon="📑" 
-            title="CURATED DRILLS (SETS A-E)" 
-            desc="Over 750 targeted questions in GenEd, ProfEd, and Specialization." 
-          />
-          <FeatureCard 
-            icon="📖" 
-            title="ERROR NOTEBOOK & VAULT" 
-            desc="Sync and review missed questions across devices for mastery." 
-          />
-          <FeatureCard 
-            icon="📈" 
-            title="PERFORMANCE ANALYTICS" 
-            desc="Live accuracy tracking, streaks, and domain-specific insights." 
-          />
-          <FeatureCard 
-            icon="🔊" 
-            title="EXCLUSIVE B&O EXPERIENCE" 
-            desc="Unlock your potential with unparalleled study ambiance." 
-          />
-        </section>
-
-        {/* Hero Section */}
-        <section className="space-y-4 pt-4">
-          <div className="inline-flex items-center gap-2 bg-[#121B30] border border-[#E5B842]/30 text-[#E5B842] text-[10px] font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-            <Sparkles size={13} className="text-[#E5B842]" /> 
-            <span>Wave 1 Verified Candidate Access</span>
-          </div>
-
-          <h1 className="font-serif text-3xl font-bold text-white leading-tight tracking-tight">
-            Master Your Path to LPT: <span className="text-[#E5B842] italic">Project Jill</span>
-          </h1>
-
-          <p className="text-xs text-slate-400 leading-relaxed font-sans">
-            The definitive digital companion for PRC Licensure candidates.
-          </p>
-
-          <div className="luxury-glass-card rounded-2xl p-4.5 space-y-1.5 border border-white/5">
-            <h4 className="text-xs font-bold text-[#E5B842] tracking-wide">Our Mission:</h4>
-            <p className="text-xs text-slate-300 leading-relaxed font-sans">
-              To empower future Filipino educators with smart, resilient, and focused PRC exam preparation.
-            </p>
-          </div>
-
-          <button 
-            onClick={onOpenAuth}
-            className="w-full gold-glow-btn text-slate-950 font-bold py-4 rounded-2xl text-xs uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer mt-2"
-          >
-            Try Project Jill Now <ArrowRight size={16} />
-          </button>
-        </section>
-
-        {/* Footer */}
-        <footer className="text-center pt-6 pb-2 border-t border-slate-800/60 text-[10px] text-slate-500 space-y-1.5">
-          <p className="flex items-center justify-center gap-1.5 text-slate-400">
-            <ShieldCheck size={14} className="text-[#E5B842]" /> Verified Examinees Only • Wave 1 Trial Access
-          </p>
-          <p>Architected & Built by <span className="text-slate-300 font-semibold">C. Covelle</span> • © 2026 Project Jill</p>
-        </footer>
-
-        {/* AUTH MODAL */}
-        {showAuthModal && (
-          <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 z-50 transition-opacity">
-            <div className="luxury-glass-card border border-[#232F4D] w-full max-w-sm rounded-3xl p-6 shadow-2xl space-y-5 relative">
-              <div className="text-center space-y-1.5">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#1A2645] to-[#0F172B] border border-[#E5B842]/40 text-[#E5B842] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md">
-                  PJ
-                </div>
-                <span className="text-[10px] font-bold text-[#E5B842] tracking-widest uppercase block pt-1">
-                  PRC LICENSURE COMPANION
-                </span>
-                <h3 className="font-serif text-2xl font-bold text-white">Project Jill</h3>
-                <p className="text-xs text-slate-400">Sign in to access candidate drill sets.</p>
-              </div>
-
-              {errorMsg && (
-                <div className="bg-rose-950/60 border border-rose-500/40 text-rose-300 text-xs p-3 rounded-xl text-center">
-                  {errorMsg}
-                </div>
-              )}
-
-              <form onSubmit={handleLogin} className="space-y-3.5">
-                <div className="space-y-1">
-                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Reviewer Email</label>
-                  <div className="relative">
-                    <Mail size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
-                    <input 
-                      type="text" 
-                      placeholder="candidate@example.com (or 'demo')"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Passcode / Access Key</label>
-                  <div className="relative">
-                    <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
-                    <input 
-                      type="password" 
-                      placeholder="••••••••"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
-                    />
-                  </div>
-                </div>
-
-                <button 
-                  type="submit"
-                  className="w-full gold-glow-btn text-slate-950 font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition mt-4"
-                >
-                  Authenticate & Enter <ArrowRight size={16} />
-                </button>
-              </form>
-
-              <div className="text-center pt-1">
-                <button 
-                  onClick={onCloseAuth}
-                  className="text-xs text-slate-500 hover:text-slate-300 underline"
-                >
-                  Cancel and return
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-
-      </div>
-    </div>
-  );
-}
-
-function FeatureCard({ icon, title, desc }) {
-  return (
-    <div className="luxury-glass-card rounded-2xl p-4 flex items-start gap-4 cursor-default">
-      <div className="w-11 h-11 rounded-xl bg-[#141C30] border border-white/5 flex items-center justify-center text-xl shrink-0 shadow-inner">
-        {icon}
-      </div>
-      <div>
-        <h4 className="text-xs font-bold text-[#E5B842] tracking-wider uppercase">{title}</h4>
-        <p className="text-[11px] text-slate-300 mt-1 leading-relaxed">{desc}</p>
       </div>
     </div>
   );
