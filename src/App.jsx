@@ -1418,6 +1418,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
         onSuccess(user);
       }
     } catch (error) {
+      logoutUser();
       setErrorMsg(error.message || 'Unable to sync your candidate profile. Please try again.');
     }
   };
