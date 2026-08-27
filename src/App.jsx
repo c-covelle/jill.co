@@ -3,7 +3,7 @@ import {
   BarChart3, BookOpen, Home, GraduationCap, User, Bell, 
   Sparkles, Flame, Check, ChevronRight, ChevronLeft, ChevronDown, ChevronUp,
   RotateCcw, Lock, Mail, ArrowRight, ShieldCheck, FileText, Search, Download,
-  X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserPlus, KeyRound
+  X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserPlus, KeyRound, Share2, Globe2
 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
 import { 
@@ -1038,6 +1038,37 @@ function ProfileScreen({ user, vaultCount, onSignOut }) {
         </button>
       </div>
 
+      <div className="luxury-glass-card rounded-3xl p-5 space-y-3">
+        <div>
+          <span className="text-[10px] font-bold tracking-wider text-[#E5B842] uppercase">CONTACT PROJECT JILL</span>
+          <p className="text-[11px] text-slate-400 mt-1">Official support and project channels.</p>
+        </div>
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+          <a
+            href="mailto:projectjill.support@gmail.com"
+            className="flex items-center gap-2 rounded-2xl border border-slate-800 bg-[#0D1322]/70 px-3 py-3 text-[10px] font-bold text-slate-300 transition hover:border-[#E5B842]/50 hover:text-[#E5B842]"
+          >
+            <Mail size={15} className="text-[#E5B842]" /> Email
+          </a>
+          <a
+            href="https://facebook.com/project.jill"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 rounded-2xl border border-slate-800 bg-[#0D1322]/70 px-3 py-3 text-[10px] font-bold text-slate-300 transition hover:border-[#E5B842]/50 hover:text-[#E5B842]"
+          >
+            <Share2 size={15} className="text-[#E5B842]" /> Facebook
+          </a>
+          <a
+            href="https://project-jill-web.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 rounded-2xl border border-slate-800 bg-[#0D1322]/70 px-3 py-3 text-[10px] font-bold text-slate-300 transition hover:border-[#E5B842]/50 hover:text-[#E5B842]"
+          >
+            <Globe2 size={15} className="text-[#E5B842]" /> Web
+          </a>
+        </div>
+      </div>
+
       <button 
         onClick={onSignOut}
         className="w-full bg-[#121829] border border-rose-500/30 text-rose-400 hover:bg-rose-500/10 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition mt-4 cursor-pointer"
@@ -1439,6 +1470,17 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
             <ShieldCheck size={14} className="text-[#E5B842]" /> Verified Examinees Only • Exclusive Access
           </p>
           <p>Architected & Built by <span className="text-slate-300 font-semibold">C. Covelle</span> • © 2026 Project Jill</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 pt-2 text-[10px]">
+            <a href="mailto:projectjill.support@gmail.com" className="inline-flex items-center gap-1.5 transition hover:text-[#E5B842]">
+              <Mail size={12} className="text-[#E5B842]" /> projectjill.support@gmail.com
+            </a>
+            <a href="https://facebook.com/project.jill" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 transition hover:text-[#E5B842]">
+              <Share2 size={12} className="text-[#E5B842]" /> Facebook
+            </a>
+            <a href="https://project-jill-web.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 transition hover:text-[#E5B842]">
+              <Globe2 size={12} className="text-[#E5B842]" /> project-jill-web.vercel.app
+            </a>
+          </div>
         </footer>
 
         {/* MODAL */}
