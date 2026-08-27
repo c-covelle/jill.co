@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  BarChart3, BookOpen, Home, GraduationCap, User, Bell, 
+  BarChart3, BookOpen, Home, GraduationCap, User, Trophy, Bell, 
   Sparkles, Flame, Check, ChevronRight, ChevronLeft, ChevronDown, ChevronUp,
   RotateCcw, Lock, Mail, ArrowRight, ShieldCheck, FileText, Search, Download,
   X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserPlus, KeyRound, Share2, Globe2
@@ -23,6 +23,8 @@ import {
   getCurrentUser,
   logoutUser
 } from './utils/authStorage';
+import { supabase, isEmailAllowed } from './lib/supabase.js';
+import LeaderboardScreen from './components/LeaderboardScreen';
 
 // MASTER ACCESS PASSCODE FOR YOUR COHORT
 const MASTER_ACCESS_PASSCODE = "Covelle";
@@ -343,6 +345,7 @@ export default function App() {
               history={historyItems}
             />
           )}
+          {activeTab === 'rankings' && <LeaderboardScreen currentUser={currentUser} />}
           {activeTab === 'profile' && (
             <ProfileScreen 
               user={currentUser}
@@ -393,6 +396,15 @@ export default function App() {
               <GraduationCap size={22} className={activeTab === 'learn' ? 'scale-110' : ''} />
               <span className="text-[10px] font-semibold tracking-wide">Learn</span>
               {activeTab === 'learn' && <div className="w-1 h-1 bg-[#E5B842] rounded-full" />}
+            </button>
+
+            <button 
+              onClick={() => setActiveTab('rankings')}
+              className={`flex flex-col items-center gap-1 transition-all ${activeTab === 'rankings' ? 'text-[#E5B842]' : 'text-slate-500 hover:text-slate-400'}`}
+            >
+              <Trophy size={22} className={activeTab === 'rankings' ? 'scale-110' : ''} />
+              <span className="text-[10px] font-semibold tracking-wide">Ranks</span>
+              {activeTab === 'rankings' && <div className="w-1 h-1 bg-[#E5B842] rounded-full" />}
             </button>
 
             <button 
@@ -1343,13 +1355,20 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMsg('');
     setSuccessMsg('');
 
-    if (!email) {
+    const trimmedEmail = email.trim().toLowerCase();
+
+    if (!trimmedEmail) {
       setErrorMsg('Please enter your email.');
+      return;
+    }
+
+    if (!isEmailAllowed(trimmedEmail)) {
+      setErrorMsg('Access Restricted: This email is not registered for trial access.');
       return;
     }
 
@@ -1359,25 +1378,36 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
       return;
     }
 
-    if (isSignUp) {
-      if (!name.trim()) {
+    try {
+      if (isSignUp && !name.trim()) {
         setErrorMsg('Please provide your full candidate name.');
         return;
       }
-      const res = registerUser(email, passcode, name);
+
+      const res = isSignUp
+        ? registerUser(trimmedEmail, passcode, name)
+        : authenticateUser(trimmedEmail, passcode);
+
       if (!res.success) {
         setErrorMsg(res.message);
-      } else {
+        return;
+      }
+
+      const { error } = await supabase.from('profiles').upsert({
+        email: trimmedEmail,
+        full_name: res.user.name || name.trim() || 'Candidate'
+      }, { onConflict: 'email' });
+
+      if (error) throw error;
+
+      if (isSignUp) {
         setSuccessMsg('Account authorized and created! Entering Project Jill...');
         setTimeout(() => onSuccess(res.user), 600);
-      }
-    } else {
-      const res = authenticateUser(email, passcode);
-      if (!res.success) {
-        setErrorMsg(res.message);
       } else {
         onSuccess(res.user);
       }
+    } catch (error) {
+      setErrorMsg(error.message || 'Unable to sync your candidate profile. Please try again.');
     }
   };
 

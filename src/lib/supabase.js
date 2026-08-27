@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Replace with your real URL and Anon/Publishable Key
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://fywmzhvlfsjvniqagaki.supabase.co';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_gg6sNv9KVbd_tOs44ghVZw_NkdUO5DG';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://vmilpiycomvgpikbpjns.supabase.co';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_qTpBCOotamk6hCxKNNj3gw_tWB9LzAt';
 
 console.log("Supabase URL loaded:", supabaseUrl ? "Connected" : "MISSING");
 
