@@ -1,21 +1,21 @@
 const USERS_KEY = 'project_jill_users';
-const CURRENT_USER_KEY = 'project_jill_current_user';
+const SESSION_USER_KEY = 'project_jill_session_user';
 
-// Get registered accounts
+// Persistent registered accounts database
 export function getRegisteredUsers() {
   try {
     const data = localStorage.getItem(USERS_KEY);
     return data ? JSON.parse(data) : [
-      { email: 'crissian@example.com', name: 'Crissian Jill', password: 'password123' },
-      { email: 'demo@projectjill.com', name: 'Demo Candidate', password: 'demo' }
+      { email: 'crissian@example.com', name: 'Crissian Jill', passcode: 'Covelle' },
+      { email: 'demo@projectjill.com', name: 'Demo Candidate', passcode: 'Covelle' }
     ];
   } catch (e) {
     return [];
   }
 }
 
-// Sign up / Create account
-export function registerUser(email, password, name = "Crissian Jill") {
+// Register user and set current session
+export function registerUser(email, passcode, name = "Candidate") {
   const users = getRegisteredUsers();
   const cleanEmail = email.trim().toLowerCase();
 
@@ -27,54 +27,43 @@ export function registerUser(email, password, name = "Crissian Jill") {
   const newUser = {
     id: 'PJ-' + Math.floor(1000 + Math.random() * 9000),
     email: cleanEmail,
-    name: name.trim() || 'Crissian Jill',
-    password: password,
+    name: name.trim() || 'Candidate',
+    passcode: passcode,
     joinedDate: new Date().toISOString()
   };
 
   users.push(newUser);
   localStorage.setItem(USERS_KEY, JSON.stringify(users));
-  localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(newUser));
+  // Save ONLY in sessionStorage so it clears on browser/tab exit
+  sessionStorage.setItem(SESSION_USER_KEY, JSON.stringify(newUser));
   return { success: true, user: newUser };
 }
 
-// Authenticate / Sign in
-export function authenticateUser(email, password) {
+// Authenticate user and store in session
+export function authenticateUser(email, passcode) {
   const users = getRegisteredUsers();
   const cleanEmail = email.trim().toLowerCase();
 
-  // Allow instant trial bypass for 'demo'
-  if (cleanEmail === 'demo') {
-    const demoUser = { id: 'PJ-DEMO', email: 'demo@projectjill.com', name: 'Crissian Jill' };
-    localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(demoUser));
-    return { success: true, user: demoUser };
-  }
-
-  const user = users.find(u => u.email.toLowerCase() === cleanEmail);
+  let user = users.find(u => u.email.toLowerCase() === cleanEmail);
   if (!user) {
-    // If not found, automatically register them as a trial candidate
-    return registerUser(cleanEmail, password || 'trial123', 'Crissian Jill');
+    return registerUser(cleanEmail, passcode, cleanEmail.split('@')[0]);
   }
 
-  if (password && user.password && user.password !== password) {
-    return { success: false, message: 'Invalid password credential.' };
-  }
-
-  localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user));
+  sessionStorage.setItem(SESSION_USER_KEY, JSON.stringify(user));
   return { success: true, user };
 }
 
-// Get Active Logged-in Candidate
+// Get Active Candidate for the current session only
 export function getCurrentUser() {
   try {
-    const data = localStorage.getItem(CURRENT_USER_KEY);
+    const data = sessionStorage.getItem(SESSION_USER_KEY);
     return data ? JSON.parse(data) : null;
   } catch (e) {
     return null;
   }
 }
 
-// Sign out
+// Sign out / Clear session
 export function logoutUser() {
-  localStorage.removeItem(CURRENT_USER_KEY);
+  sessionStorage.removeItem(SESSION_USER_KEY);
 }

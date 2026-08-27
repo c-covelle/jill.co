@@ -3,8 +3,7 @@ import {
   BarChart3, BookOpen, Home, GraduationCap, User, Bell, 
   Sparkles, Flame, Check, ChevronRight, ChevronLeft, ChevronDown, ChevronUp,
   RotateCcw, Lock, Mail, ArrowRight, ShieldCheck, FileText, Search, Download,
-  X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserCheck, UserPlus,
-  Play, BookMarked
+  X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserPlus, KeyRound
 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
 import { 
@@ -25,7 +24,20 @@ import {
   logoutUser
 } from './utils/authStorage';
 
-// COMPLETE QUESTION BANKS & SETS
+// MASTER ACCESS PASSCODE FOR YOUR COHORT
+const MASTER_ACCESS_PASSCODE = "Covelle";
+
+// ROTATING MOTIVATIONAL QUOTES
+const INSPIRATIONAL_QUOTES = [
+  { text: "The discipline of the mind is the first step toward the transformation of the classroom.", author: "Project Jill Team" },
+  { text: "Teaching is the greatest act of optimism. Your license is just one exam away.", author: "Colleen Wilcox" },
+  { text: "Success is the sum of small efforts, repeated day in and day out.", author: "Robert Collier" },
+  { text: "The expert in anything was once a beginner. Trust your preparation.", author: "Helen Hayes" },
+  { text: "Teachers plant seeds that grow forever. Keep pushing for your LPT license.", author: "PRC LET Board" },
+  { text: "Believe you can and you're halfway there. Claim that 2026 license!", author: "Theodore Roosevelt" }
+];
+
+// COMPLETE QUESTION BANKS
 const QUESTION_BANKS = {
   gened_a: [
     {
@@ -43,7 +55,7 @@ const QUESTION_BANKS = {
       rationale: "Domesticated animals are species adapted over generations to human custody and mutual service.",
       memoryTip: "Animals adapted for human use & service = DOMESTICATED.",
       choiceAnalysis: {
-        A: "Incorrect. Tamed is individual behavioral habituation, not multi-generational.",
+        A: "Incorrect. Tamed is individual behavioral habituation.",
         B: "Correct. Multi-generational adaptation for human benefit is domestication.",
         C: "Incorrect. Trained describes skill acquisition.",
         D: "Incorrect. Wild animals are non-domesticated."
@@ -68,6 +80,52 @@ const QUESTION_BANKS = {
         B: "Correct. CPU executes instructions.",
         C: "Incorrect. System software interface.",
         D: "Incorrect. Main printed circuit board."
+      }
+    }
+  ],
+  gened_b: [
+    {
+      id: "ge_b1",
+      category: "MATHEMATICS - BASIC ALGEBRA",
+      difficulty: "Medium",
+      question: "What is the value of x in the equation 3x - 7 = 14?",
+      options: [
+        { id: "A", text: "5" },
+        { id: "B", text: "7" },
+        { id: "C", text: "8" },
+        { id: "D", text: "6" }
+      ],
+      correctAnswer: "B",
+      rationale: "3x = 14 + 7 => 3x = 21 => x = 7.",
+      memoryTip: "Isolate variable: Add 7 to both sides, then divide by 3.",
+      choiceAnalysis: {
+        A: "Incorrect.",
+        B: "Correct. 3(7) - 7 = 21 - 7 = 14.",
+        C: "Incorrect.",
+        D: "Incorrect."
+      }
+    }
+  ],
+  gened_c: [
+    {
+      id: "ge_c1",
+      category: "ENGLISH - GRAMMAR & VOCABULARY",
+      difficulty: "Medium",
+      question: "Neither the teacher nor the students _____ present in the laboratory.",
+      options: [
+        { id: "A", text: "is" },
+        { id: "B", text: "were" },
+        { id: "C", text: "was" },
+        { id: "D", text: "are being" }
+      ],
+      correctAnswer: "B",
+      rationale: "Rule of proximity: In 'neither... nor' constructions, the verb agrees with the closer subject ('students' -> plural verb 'were').",
+      memoryTip: "Neither... Nor = Agree with the CLOSER subject.",
+      choiceAnalysis: {
+        A: "Incorrect. 'Students' is plural.",
+        B: "Correct. Plural past tense verb agreeing with 'students'.",
+        C: "Incorrect. Singular verb.",
+        D: "Incorrect. Progressive form."
       }
     }
   ],
@@ -107,7 +165,7 @@ const QUESTION_BANKS = {
         { id: "D", text: "Subduction Zone" }
       ],
       correctAnswer: "C",
-      rationale: "Transform boundaries (like the San Andreas Fault) feature plates sliding horizontally past each other.",
+      rationale: "Transform boundaries feature plates sliding horizontally past each other.",
       memoryTip: "Sliding horizontally = TRANSFORM Fault.",
       choiceAnalysis: {
         A: "Incorrect. Divergent plates move apart.",
@@ -122,8 +180,29 @@ const QUESTION_BANKS = {
 // All combined for quick drills
 const ALL_DRILL_ITEMS = [
   ...QUESTION_BANKS.gened_a,
+  ...QUESTION_BANKS.gened_b,
+  ...QUESTION_BANKS.gened_c,
   ...QUESTION_BANKS.profed_a,
   ...QUESTION_BANKS.science_a
+];
+
+// 15 Full Sets
+const ALL_15_SETS = [
+  { id: "gen_a", title: "General Education - SET A", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 1", count: "250 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_a },
+  { id: "gen_b", title: "General Education - SET B", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 2", count: "150 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_b },
+  { id: "gen_c", title: "General Education - SET C", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 3", count: "200 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_c },
+  { id: "gen_d", title: "General Education - SET D", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 4", count: "150 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_a },
+  { id: "gen_e", title: "General Education - SET E", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 5", count: "150 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_b },
+  { id: "prof_a", title: "Professional Education - SET A", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 1", count: "200 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
+  { id: "prof_b", title: "Professional Education - SET B", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 2", count: "180 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
+  { id: "prof_c", title: "Professional Education - SET C", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 3", count: "150 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
+  { id: "prof_d", title: "Professional Education - SET D", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 4", count: "150 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
+  { id: "prof_e", title: "Professional Education - SET E", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 5", count: "150 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
+  { id: "sci_a", title: "Science Major - SET A", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 1", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a },
+  { id: "sci_b", title: "Science Major - SET B", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 2", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a },
+  { id: "sci_c", title: "Science Major - SET C", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 3", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a },
+  { id: "sci_d", title: "Science Major - SET D", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 4", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a },
+  { id: "sci_e", title: "Science Major - SET E", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 5", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a }
 ];
 
 export default function App() {
@@ -133,6 +212,7 @@ export default function App() {
   const [activeDrill, setActiveDrill] = useState(null);
   const [vaultItems, setVaultItems] = useState([]);
   const [historyItems, setHistoryItems] = useState([]);
+  const [quoteIndex, setQuoteIndex] = useState(() => Math.floor(Math.random() * INSPIRATIONAL_QUOTES.length));
 
   const refreshAppData = () => {
     setVaultItems(getMistakesVault());
@@ -145,16 +225,32 @@ export default function App() {
     refreshAppData();
   }, [activeTab, activeDrill]);
 
-  // Exam Countdown: LET September 2026
-  const [timeLeft, setTimeLeft] = useState({ days: 31, hours: 0, minutes: 13, seconds: 1 });
+  // Exact Countdown to September 20, 2026 (07:00 AM PST)
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
-        return { ...prev, seconds: 59, minutes: prev.minutes > 0 ? prev.minutes - 1 : 59 };
-      });
-    }, 1000);
-    return () => clearInterval(timer);
+    const targetDate = new Date('2026-09-20T07:00:00');
+
+    const updateCountdown = () => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   if (!currentUser) {
@@ -165,6 +261,7 @@ export default function App() {
         onCloseAuth={() => setShowAuthModal(false)}
         onSuccess={(user) => {
           setCurrentUser(user);
+          setQuoteIndex(Math.floor(Math.random() * INSPIRATIONAL_QUOTES.length));
           setShowAuthModal(false);
         }}
       />
@@ -208,7 +305,8 @@ export default function App() {
               timeLeft={timeLeft} 
               user={currentUser}
               vaultCount={vaultItems.length}
-              historyCount={historyItems.length}
+              quote={INSPIRATIONAL_QUOTES[quoteIndex]}
+              onRotateQuote={() => setQuoteIndex((quoteIndex + 1) % INSPIRATIONAL_QUOTES.length)}
               onStartDrill={(title, qs) => setActiveDrill({ title, questions: qs || ALL_DRILL_ITEMS })}
               onStartBossMode={() => {
                 if (vaultItems.length === 0) {
@@ -314,12 +412,11 @@ export default function App() {
 }
 
 // ---------------- HOME SCREEN ---------------- //
-function HomeScreen({ timeLeft, user, vaultCount, onStartDrill, onStartBossMode }) {
+function HomeScreen({ timeLeft, user, vaultCount, quote, onRotateQuote, onStartBossMode }) {
   const displayName = user?.name || "Candidate";
 
   return (
     <div className="space-y-4">
-      {/* Header Greeting */}
       <div className="pt-2">
         <h2 className="font-serif text-3xl font-bold text-white leading-tight">
           Good Day, <br /><span className="text-[#E5B842]">{displayName}!</span> 👋
@@ -332,7 +429,7 @@ function HomeScreen({ timeLeft, user, vaultCount, onStartDrill, onStartBossMode 
       {/* Countdown Card */}
       <div className="luxury-glass-card rounded-3xl p-5 shadow-xl relative overflow-hidden">
         <div className="flex items-center gap-1.5 text-[#E5B842] text-[11px] font-bold tracking-wider mb-4 uppercase">
-          <Sparkles size={14} /> LET SEPTEMBER 2026
+          <Sparkles size={14} /> LET SEPTEMBER 20, 2026
         </div>
         <div className="grid grid-cols-4 gap-2 text-center">
           <div>
@@ -354,15 +451,21 @@ function HomeScreen({ timeLeft, user, vaultCount, onStartDrill, onStartBossMode 
         </div>
       </div>
 
-      {/* Quote */}
+      {/* Rotating Daily Quote Card */}
       <div className="luxury-glass-card rounded-3xl p-5 relative shadow-lg">
         <span className="text-3xl text-[#E5B842] font-serif block leading-none mb-1">“</span>
-        <p className="text-sm italic font-serif text-slate-200 leading-relaxed">
-          "The discipline of the mind is the first step toward the transformation of the classroom."
+        <p className="text-sm italic font-serif text-slate-200 leading-relaxed min-h-[48px] flex items-center">
+          "{quote.text}"
         </p>
         <div className="flex justify-between items-center mt-3 text-xs font-semibold text-[#E5B842]">
-          <span>— Project Jill Team</span>
-          <RotateCcw size={14} className="text-slate-500 hover:text-[#E5B842] cursor-pointer" />
+          <span>— {quote.author}</span>
+          <button 
+            onClick={onRotateQuote} 
+            title="Next Quote"
+            className="text-slate-500 hover:text-[#E5B842] p-1 transition cursor-pointer"
+          >
+            <RotateCcw size={14} />
+          </button>
         </div>
       </div>
 
@@ -384,7 +487,7 @@ function HomeScreen({ timeLeft, user, vaultCount, onStartDrill, onStartBossMode 
         </div>
         <button
           onClick={onStartBossMode}
-          className="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 rounded-2xl text-xs uppercase tracking-wider shadow-lg transition"
+          className="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 rounded-2xl text-xs uppercase tracking-wider shadow-lg transition cursor-pointer"
         >
           Drill Weak Spots ({vaultCount})
         </button>
@@ -393,76 +496,13 @@ function HomeScreen({ timeLeft, user, vaultCount, onStartDrill, onStartBossMode 
   );
 }
 
-// ---------------- REVIEW HUB WITH FULL FILTERABLE SETS ---------------- //
+// ---------------- REVIEW HUB SCREEN ---------------- //
 function ReviewHubScreen({ vaultCount, onStartDrill, onStartBossMode }) {
   const [filterCategory, setFilterCategory] = useState('All');
 
-  const setsList = [
-    {
-      id: "gen_a",
-      title: "General Education - SET A",
-      tag: "Gen Ed",
-      tagColor: "text-blue-300 bg-blue-950/80 border-blue-800",
-      setNum: "SET - 1",
-      count: "250 Items Available",
-      category: "General Education",
-      questions: QUESTION_BANKS.gened_a
-    },
-    {
-      id: "gen_b",
-      title: "General Education - SET B",
-      tag: "Gen Ed",
-      tagColor: "text-blue-300 bg-blue-950/80 border-blue-800",
-      setNum: "SET - 2",
-      count: "150 Items Available",
-      category: "General Education",
-      questions: QUESTION_BANKS.gened_a
-    },
-    {
-      id: "gen_c",
-      title: "General Education - SET C",
-      tag: "Gen Ed",
-      tagColor: "text-blue-300 bg-blue-950/80 border-blue-800",
-      setNum: "SET - 3",
-      count: "200 Items Available",
-      category: "General Education",
-      questions: QUESTION_BANKS.gened_a
-    },
-    {
-      id: "prof_a",
-      title: "Professional Education - SET A",
-      tag: "Prof Ed",
-      tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800",
-      setNum: "SET - 1",
-      count: "200 Items Available",
-      category: "Professional Education",
-      questions: QUESTION_BANKS.profed_a
-    },
-    {
-      id: "prof_b",
-      title: "Professional Education - SET B",
-      tag: "Prof Ed",
-      tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800",
-      setNum: "SET - 2",
-      count: "180 Items Available",
-      category: "Professional Education",
-      questions: QUESTION_BANKS.profed_a
-    },
-    {
-      id: "sci_a",
-      title: "Science Major - SET A",
-      tag: "Major",
-      tagColor: "text-amber-300 bg-amber-950/80 border-amber-800",
-      setNum: "SET - 1",
-      count: "150 Items Available",
-      category: "Specialization",
-      questions: QUESTION_BANKS.science_a
-    }
-  ];
-
   const filteredSets = filterCategory === 'All' 
-    ? setsList 
-    : setsList.filter(s => s.category === filterCategory);
+    ? ALL_15_SETS 
+    : ALL_15_SETS.filter(s => s.category === filterCategory);
 
   return (
     <div className="space-y-4">
@@ -471,42 +511,40 @@ function ReviewHubScreen({ vaultCount, onStartDrill, onStartBossMode }) {
         <p className="text-xs text-slate-400 mt-1 font-sans">15 Complete Question Banks Available (Sets A to E)</p>
       </div>
 
-      {/* Top Quick Action Cards */}
       <div className="grid grid-cols-2 gap-3">
         <button 
           onClick={() => onStartDrill("Quick Drill: 50 Mixed", ALL_DRILL_ITEMS)}
-          className="luxury-glass-card rounded-3xl p-4 text-left space-y-3 shadow-lg hover:border-[#E5B842]/40 transition"
+          className="luxury-glass-card rounded-3xl p-4 text-left space-y-3 shadow-lg hover:border-[#E5B842]/40 transition cursor-pointer"
         >
           <div className="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-lg">
             ⚡
           </div>
           <div>
             <h4 className="font-bold text-white text-base">Quick Drill</h4>
-            <p className="text-[11px] text-slate-400">50 Random Mixed Items</p>
+            <p className="text-[11px] text-slate-400">50 Random Mixed</p>
           </div>
         </button>
 
         <button 
           onClick={onStartBossMode}
-          className="luxury-glass-card rounded-3xl p-4 text-left space-y-3 shadow-lg border border-rose-500/20 hover:border-rose-500/40 transition"
+          className="luxury-glass-card rounded-3xl p-4 text-left space-y-3 shadow-lg border border-rose-500/20 hover:border-rose-500/40 transition cursor-pointer"
         >
           <div className="w-10 h-10 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 text-lg">
             🔥
           </div>
           <div>
             <h4 className="font-bold text-white text-base">Boss Mode</h4>
-            <p className="text-[11px] text-slate-400">{vaultCount} Recorded Weak Spots</p>
+            <p className="text-[11px] text-slate-400">{vaultCount} Recorded</p>
           </div>
         </button>
       </div>
 
-      {/* Category Pill Filters */}
       <div className="flex items-center gap-2 pt-2 overflow-x-auto pb-1 scrollbar-none">
-        {['All', 'General Education', 'Professional Education'].map(cat => (
+        {['All', 'General Education', 'Professional Education', 'Science (Major)'].map(cat => (
           <button
             key={cat}
             onClick={() => setFilterCategory(cat)}
-            className={`px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition ${
+            className={`px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition cursor-pointer ${
               filterCategory === cat 
                 ? 'bg-[#E5B842] text-slate-950 shadow-md' 
                 : 'bg-[#121829] text-slate-400 border border-[#1C253D] hover:text-white'
@@ -517,13 +555,12 @@ function ReviewHubScreen({ vaultCount, onStartDrill, onStartBossMode }) {
         ))}
       </div>
 
-      {/* Question Set Items */}
       <div className="space-y-3 pt-1">
         {filteredSets.map(set => (
           <button 
             key={set.id}
             onClick={() => onStartDrill(set.title, set.questions)}
-            className="w-full luxury-glass-card rounded-3xl p-4 flex items-center justify-between text-left shadow-md transition hover:border-[#E5B842]/40"
+            className="w-full luxury-glass-card rounded-3xl p-4 flex items-center justify-between text-left shadow-md transition hover:border-[#E5B842]/40 cursor-pointer"
           >
             <div className="flex items-center gap-3.5">
               <div className="w-11 h-11 rounded-2xl bg-[#1A2238] flex items-center justify-center text-xl">
@@ -548,17 +585,18 @@ function ReviewHubScreen({ vaultCount, onStartDrill, onStartBossMode }) {
   );
 }
 
-// ---------------- COMPLETE ANALYTICS DASHBOARD ---------------- //
+// ---------------- USER-SPECIFIC REAL-TIME ANALYTICS ---------------- //
 function AnalyticsScreen({ history, vault }) {
   const totalItemsAttempted = history.reduce((acc, curr) => acc + (curr.total || 0), 0);
   const totalCorrect = history.reduce((acc, curr) => acc + (curr.score || 0), 0);
-  const overallAccuracy = totalItemsAttempted > 0 ? Math.round((totalCorrect / totalItemsAttempted) * 100) : 87;
+  const overallAccuracy = totalItemsAttempted > 0 ? Math.round((totalCorrect / totalItemsAttempted) * 100) : 0;
+  const totalStudyMinutes = history.reduce((acc, curr) => acc + Math.round((curr.durationSecs || 0) / 60), 0);
 
   return (
     <div className="space-y-4">
       <div>
         <h1 className="font-serif text-3xl font-bold text-white">Analytics</h1>
-        <p className="text-xs text-slate-400 mt-1 font-sans">Real-time mastery and weak spots assessment.</p>
+        <p className="text-xs text-slate-400 mt-1 font-sans">Real-time personalized mastery assessment.</p>
       </div>
 
       {/* 4 Main Metrics Grid */}
@@ -568,8 +606,8 @@ function AnalyticsScreen({ history, vault }) {
             📖
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-white">15 Banks</h3>
-            <p className="text-[9px] font-bold text-slate-400 tracking-wider uppercase">ACTIVE SETS</p>
+            <h3 className="text-2xl font-bold text-white">{totalItemsAttempted}</h3>
+            <p className="text-[9px] font-bold text-slate-400 tracking-wider uppercase">ITEMS ANSWERED</p>
           </div>
         </div>
 
@@ -578,7 +616,7 @@ function AnalyticsScreen({ history, vault }) {
             ⚠️
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-rose-400">{vault.length} Items</h3>
+            <h3 className="text-2xl font-bold text-rose-400">{vault.length}</h3>
             <p className="text-[9px] font-bold text-slate-400 tracking-wider uppercase">WEAK SPOTS</p>
           </div>
         </div>
@@ -588,80 +626,60 @@ function AnalyticsScreen({ history, vault }) {
             ⏱
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-white">{history.length} Sessions</h3>
+            <h3 className="text-2xl font-bold text-white">{history.length}</h3>
             <p className="text-[9px] font-bold text-slate-400 tracking-wider uppercase">DRILLS DONE</p>
           </div>
         </div>
 
         <div className="luxury-glass-card rounded-3xl p-4 space-y-2">
           <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-sm">
-            🔥
+            🎯
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-white">1 Day</h3>
-            <p className="text-[9px] font-bold text-slate-400 tracking-wider uppercase">DAILY STREAK</p>
+            <h3 className="text-2xl font-bold text-white">{overallAccuracy}%</h3>
+            <p className="text-[9px] font-bold text-slate-400 tracking-wider uppercase">ACCURACY</p>
           </div>
         </div>
       </div>
 
       {/* Session Breakdown */}
-      <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">SESSION BREAKDOWN</div>
+      <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">SESSION LOGS</div>
       <div className="grid grid-cols-3 gap-3 text-center">
         <div className="luxury-glass-card rounded-2xl p-3">
           <span className="text-lg font-bold text-blue-400 block">{history.length}</span>
-          <span className="text-[9px] font-bold text-slate-400 uppercase">STUDY</span>
+          <span className="text-[9px] font-bold text-slate-400 uppercase">SESSIONS</span>
         </div>
         <div className="luxury-glass-card rounded-2xl p-3">
-          <span className="text-lg font-bold text-amber-400 block">18</span>
-          <span className="text-[9px] font-bold text-slate-400 uppercase">QUICK</span>
+          <span className="text-lg font-bold text-amber-400 block">{totalStudyMinutes}m</span>
+          <span className="text-[9px] font-bold text-slate-400 uppercase">STUDY TIME</span>
         </div>
         <div className="luxury-glass-card rounded-2xl p-3">
-          <span className="text-lg font-bold text-fuchsia-400 block">3</span>
-          <span className="text-[9px] font-bold text-slate-400 uppercase">MOCK</span>
+          <span className="text-lg font-bold text-fuchsia-400 block">{vault.length}</span>
+          <span className="text-[9px] font-bold text-slate-400 uppercase">VAULT ITEMS</span>
         </div>
       </div>
 
-      {/* Domain Performance */}
-      <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">SUBJECT PERFORMANCE</div>
+      {/* Domain Mastery Bar */}
+      <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">YOUR DOMAIN MASTERY</div>
       <div className="space-y-2">
         <div className="luxury-glass-card rounded-2xl p-3.5 space-y-2">
           <div className="flex justify-between items-center text-xs font-bold">
-            <span className="text-white">General Education</span>
-            <span className="text-blue-400">{overallAccuracy}%</span>
+            <span className="text-white">Overall Drill Performance</span>
+            <span className="text-[#E5B842]">{overallAccuracy}%</span>
           </div>
           <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-            <div className="h-full bg-blue-500" style={{ width: `${overallAccuracy}%` }} />
-          </div>
-        </div>
-
-        <div className="luxury-glass-card rounded-2xl p-3.5 space-y-2">
-          <div className="flex justify-between items-center text-xs font-bold">
-            <span className="text-white">Professional Education</span>
-            <span className="text-fuchsia-400">88%</span>
-          </div>
-          <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-            <div className="h-full bg-fuchsia-500 w-[88%]" />
-          </div>
-        </div>
-
-        <div className="luxury-glass-card rounded-2xl p-3.5 space-y-2">
-          <div className="flex justify-between items-center text-xs font-bold">
-            <span className="text-white">Science (Major)</span>
-            <span className="text-amber-400">87%</span>
-          </div>
-          <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-            <div className="h-full bg-amber-500 w-[87%]" />
+            <div className="h-full bg-[#E5B842]" style={{ width: `${overallAccuracy}%` }} />
           </div>
         </div>
       </div>
 
-      {/* Critical Focus Topics */}
-      <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">CRITICAL FOCUS TOPICS</div>
+      {/* Recorded Missed Topics */}
+      <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">YOUR CRITICAL WEAK SPOTS</div>
       <div className="luxury-glass-card rounded-3xl p-4 divide-y divide-slate-800/60 shadow-lg">
         {vault.length === 0 ? (
-          <p className="text-xs text-slate-400 text-center py-2">No mistakes recorded yet! Clean slate.</p>
+          <p className="text-xs text-slate-400 text-center py-3">No mistakes recorded yet! Clean slate for this candidate.</p>
         ) : (
-          vault.slice(0, 4).map((v, i) => (
+          vault.slice(0, 5).map((v, i) => (
             <div key={i} className="py-2.5 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <span className="text-rose-400 text-xs">⚠️</span>
@@ -679,7 +697,7 @@ function AnalyticsScreen({ history, vault }) {
   );
 }
 
-// ---------------- MASTERY / LEARN SCREEN ---------------- //
+// ---------------- MASTERY SCREEN (WITH FULL OPTION TEXT IN 3D FLASHCARDS) ---------------- //
 function MasteryScreen({ vault, history }) {
   const [subTab, setSubTab] = useState('cards');
   const [activeCardIndex, setActiveCardIndex] = useState(0);
@@ -688,6 +706,14 @@ function MasteryScreen({ vault, history }) {
   const [expandedNoteId, setExpandedNoteId] = useState(null);
 
   const displayCards = vault.length > 0 ? vault : ALL_DRILL_ITEMS;
+  const currentCard = displayCards[activeCardIndex] || displayCards[0];
+  
+  // Extract full option text
+  const correctOptionObject = currentCard.options?.find(o => o.id === currentCard.correctAnswer);
+  const correctOptionFullText = correctOptionObject 
+    ? `${correctOptionObject.id}. ${correctOptionObject.text}` 
+    : currentCard.correctAnswer;
+
   const filteredNotes = vault.filter(n => 
     n.question.toLowerCase().includes(searchQuery.toLowerCase()) || 
     n.category.toLowerCase().includes(searchQuery.toLowerCase())
@@ -700,18 +726,18 @@ function MasteryScreen({ vault, history }) {
         <p className="text-xs text-slate-400 mt-1 font-sans">Mastery flashcards, personal study notes, error tracking, and drill history.</p>
       </div>
 
-      {/* Sub Tabs */}
+      {/* 4 Tabs */}
       <div className="grid grid-cols-4 gap-1.5 luxury-glass-card p-1.5 rounded-2xl shadow-md text-center">
         {[
-          { id: 'cards', label: 'Flashcards', icon: '🗂' },
-          { id: 'notes', label: `Notes (${vault.length})`, icon: '📄' },
-          { id: 'mistakes', label: `Mistakes (${vault.length})`, icon: '⚠️' },
-          { id: 'history', label: 'History', icon: '⏱' }
+          { id: 'cards', label: 'Flashcards' },
+          { id: 'mistakes', label: `Mistakes (${vault.length})` },
+          { id: 'notes', label: `Notes (${vault.length})` },
+          { id: 'history', label: 'History' }
         ].map(tab => (
           <button
             key={tab.id}
             onClick={() => setSubTab(tab.id)}
-            className={`py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition ${
+            className={`py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition cursor-pointer ${
               subTab === tab.id 
                 ? 'bg-[#E5B842] text-slate-950 shadow-md' 
                 : 'text-slate-400 hover:text-white'
@@ -722,7 +748,7 @@ function MasteryScreen({ vault, history }) {
         ))}
       </div>
 
-      {/* FLASHCARDS TAB */}
+      {/* FLASHCARDS (FULL OPTION TEXT + FLIP FIX) */}
       {subTab === 'cards' && (
         <div className="space-y-4">
           <div className="flex justify-between items-center text-xs text-slate-400 px-1">
@@ -732,34 +758,63 @@ function MasteryScreen({ vault, history }) {
 
           <div 
             onClick={() => setIsFlipped(!isFlipped)}
-            className="w-full h-[360px] cursor-pointer perspective-1000"
+            style={{ perspective: '1000px' }}
+            className="w-full h-[370px] cursor-pointer select-none"
           >
-            <div className={`relative w-full h-full duration-500 transform-style-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}`}>
-              {/* FRONT */}
-              <div className="absolute inset-0 w-full h-full bg-white rounded-3xl p-6 flex flex-col justify-between items-center text-slate-900 backface-hidden shadow-2xl">
-                <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase">
-                  {displayCards[activeCardIndex].category}
+            <div 
+              style={{
+                transformStyle: 'preserve-3d',
+                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+                transition: 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
+              }}
+              className="relative w-full h-full"
+            >
+              {/* FRONT FACE (QUESTION) */}
+              <div 
+                style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                className="absolute inset-0 w-full h-full bg-white rounded-3xl p-6 flex flex-col justify-between items-center text-slate-900 shadow-2xl"
+              >
+                <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase text-center">
+                  {currentCard.category}
                 </span>
-                <p className="text-base font-bold text-center leading-relaxed font-sans">
-                  {displayCards[activeCardIndex].question}
+                <p className="text-base font-bold text-center leading-relaxed text-slate-900 px-2 font-sans">
+                  {currentCard.question}
                 </p>
-                <span className="text-xs text-slate-400 font-medium">Tap card to reveal answer ↺</span>
+                <span className="text-xs text-slate-400 font-medium">Tap card to reveal full answer ↺</span>
               </div>
 
-              {/* BACK */}
-              <div className="absolute inset-0 w-full h-full bg-[#162B68] rounded-3xl p-6 flex flex-col justify-between items-center text-white rotate-y-180 backface-hidden shadow-2xl">
-                <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">CORRECT ANSWER</span>
-                <div className="text-center space-y-3">
-                  <h3 className="text-xl font-bold text-white">
-                    {displayCards[activeCardIndex].options?.find(o => o.id === displayCards[activeCardIndex].correctAnswer)?.text || displayCards[activeCardIndex].correctAnswer}
-                  </h3>
-                  {displayCards[activeCardIndex].memoryTip && (
-                    <p className="text-xs bg-white/10 p-3 rounded-xl text-slate-200 border border-white/10 leading-relaxed font-sans">
-                      {displayCards[activeCardIndex].memoryTip}
-                    </p>
+              {/* BACK FACE (FULL CORRECT ANSWER + MEMORY TIP) */}
+              <div 
+                style={{ 
+                  backfaceVisibility: 'hidden', 
+                  WebkitBackfaceVisibility: 'hidden',
+                  transform: 'rotateY(180deg)'
+                }}
+                className="absolute inset-0 w-full h-full bg-[#162B68] rounded-3xl p-6 flex flex-col justify-between items-center text-white shadow-2xl"
+              >
+                <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">
+                  CORRECT ANSWER
+                </span>
+                
+                <div className="text-center space-y-3 px-2 w-full">
+                  <div className="bg-emerald-950/80 border border-emerald-500/40 p-4 rounded-2xl">
+                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block mb-1">
+                      VERIFIED CHOICE
+                    </span>
+                    <h3 className="text-sm font-bold text-white leading-snug">
+                      {correctOptionFullText}
+                    </h3>
+                  </div>
+
+                  {currentCard.memoryTip && (
+                    <div className="bg-white/10 p-3 rounded-xl text-slate-200 border border-white/10 text-xs leading-relaxed text-left">
+                      <span className="font-bold text-[#E5B842] block mb-0.5">💡 MEMORY TIP</span>
+                      {currentCard.memoryTip}
+                    </div>
                   )}
                 </div>
-                <span className="text-xs text-slate-300/70 font-medium">Tap to flip back ↺</span>
+
+                <span className="text-xs text-slate-300/70 font-medium">Tap to view question ↺</span>
               </div>
             </div>
           </div>
@@ -770,17 +825,17 @@ function MasteryScreen({ vault, history }) {
                 setIsFlipped(false);
                 setActiveCardIndex((i) => (i + 1) % displayCards.length);
               }}
-              className="border border-amber-500/30 bg-amber-500/10 text-amber-400 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider"
+              className="border border-amber-500/30 bg-amber-500/10 text-amber-400 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider cursor-pointer hover:bg-amber-500/20 transition"
             >
               Hard (Review Later)
             </button>
             <button 
               onClick={() => {
-                markAsMastered(displayCards[activeCardIndex].id);
+                markAsMastered(currentCard.id);
                 setIsFlipped(false);
                 setActiveCardIndex((i) => (i + 1) % displayCards.length);
               }}
-              className="border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider"
+              className="border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider cursor-pointer hover:bg-emerald-500/20 transition"
             >
               Got it! (Mastered)
             </button>
@@ -788,7 +843,7 @@ function MasteryScreen({ vault, history }) {
         </div>
       )}
 
-      {/* NOTES TAB */}
+      {/* NOTES */}
       {subTab === 'notes' && (
         <div className="space-y-3">
           <div className="relative">
@@ -811,6 +866,8 @@ function MasteryScreen({ vault, history }) {
           ) : (
             filteredNotes.map((note) => {
               const isExpanded = expandedNoteId === note.id;
+              const noteCorrectText = note.options?.find(o => o.id === note.correctAnswer)?.text || note.correctAnswer;
+
               return (
                 <div key={note.id} className="luxury-glass-card rounded-2xl overflow-hidden border border-[#1E2740] transition">
                   <div 
@@ -837,7 +894,7 @@ function MasteryScreen({ vault, history }) {
                       </div>
                       <div>
                         <span className="text-[9px] font-bold text-slate-400 uppercase block mb-1">CORRECT ANSWER</span>
-                        <p className="text-emerald-400 font-bold">{note.options?.find(o => o.id === note.correctAnswer)?.text || note.correctAnswer}</p>
+                        <p className="text-emerald-400 font-bold">Choice {note.correctAnswer}: {noteCorrectText}</p>
                       </div>
                       {note.memoryTip && (
                         <div className="bg-[#17223D] border border-[#E5B842]/30 p-3 rounded-xl">
@@ -858,7 +915,7 @@ function MasteryScreen({ vault, history }) {
         </div>
       )}
 
-      {/* HISTORY / MISTAKES TAB */}
+      {/* MISTAKES & HISTORY */}
       {(subTab === 'history' || subTab === 'mistakes') && (
         <div className="space-y-3">
           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
@@ -893,7 +950,7 @@ function MasteryScreen({ vault, history }) {
   );
 }
 
-// ---------------- PROFILE SCREEN (DYNAMIC CANDIDATE NAME & ID) ---------------- //
+// ---------------- PROFILE SCREEN ---------------- //
 function ProfileScreen({ user, vaultCount, onSignOut }) {
   const candidateName = user?.name || "Candidate";
   const userInitials = candidateName.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() || 'LPT';
@@ -935,7 +992,7 @@ function ProfileScreen({ user, vaultCount, onSignOut }) {
         <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-left">
           <div>
             <span className="text-[9px] font-bold text-slate-400 uppercase block">EXAM DATE</span>
-            <span className="text-xs font-bold text-white">SEPT 2026</span>
+            <span className="text-xs font-bold text-white">SEPT 20, 2026</span>
           </div>
           <div>
             <span className="text-[9px] font-bold text-slate-400 uppercase block">VAULT WEAK SPOTS</span>
@@ -982,7 +1039,7 @@ function ProfileScreen({ user, vaultCount, onSignOut }) {
 
       <button 
         onClick={onSignOut}
-        className="w-full bg-[#121829] border border-rose-500/30 text-rose-400 hover:bg-rose-500/10 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition mt-4"
+        className="w-full bg-[#121829] border border-rose-500/30 text-rose-400 hover:bg-rose-500/10 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition mt-4 cursor-pointer"
       >
         Sign Out Session
       </button>
@@ -990,7 +1047,7 @@ function ProfileScreen({ user, vaultCount, onSignOut }) {
   );
 }
 
-// ---------------- QUIZ & QUESTIONS ENGINE ---------------- //
+// ---------------- QUIZ ENGINE ---------------- //
 function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -1079,7 +1136,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
         {/* Header */}
         <div>
           <div className="flex items-center justify-between py-2 border-b border-white/5">
-            <button onClick={onExit} className="p-2 text-slate-400 hover:text-white">
+            <button onClick={onExit} className="p-2 text-slate-400 hover:text-white cursor-pointer">
               <X size={22} />
             </button>
             <div className="text-center">
@@ -1091,7 +1148,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
               </span>
             </div>
             <div className="flex items-center space-x-1">
-              <button onClick={() => setBookmarked(!bookmarked)} className="p-2 text-slate-400 hover:text-[#E5B842]">
+              <button onClick={() => setBookmarked(!bookmarked)} className="p-2 text-slate-400 hover:text-[#E5B842] cursor-pointer">
                 <Bookmark size={20} fill={bookmarked ? "#E5B842" : "none"} color={bookmarked ? "#E5B842" : "currentColor"} />
               </button>
             </div>
@@ -1142,7 +1199,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
                   key={opt.id}
                   onClick={() => handleSelect(opt.id)}
                   disabled={isAnswered}
-                  className={`w-full flex items-center justify-between p-4 rounded-2xl border text-left transition-all duration-200 ${btnStyle}`}
+                  className={`w-full flex items-center justify-between p-4 rounded-2xl border text-left transition-all duration-200 cursor-pointer ${btnStyle}`}
                 >
                   <div className="flex items-center space-x-3.5">
                     <span className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
@@ -1192,7 +1249,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
                 <button
                   onClick={handleAskGemini}
                   disabled={aiLoading}
-                  className="mt-4 w-full bg-[#171E31] hover:bg-[#1E2638] border border-[#E5B842]/30 text-[#E5B842] py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition"
+                  className="mt-4 w-full bg-[#171E31] hover:bg-[#1E2638] border border-[#E5B842]/30 text-[#E5B842] py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition cursor-pointer"
                 >
                   {aiLoading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
                   ASK AI FOR DEEPER ANALYSIS
@@ -1228,13 +1285,13 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
           <button
             onClick={handlePrev}
             disabled={currentIndex === 0}
-            className="col-span-1 luxury-glass-card text-slate-300 disabled:opacity-40 py-3.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-1"
+            className="col-span-1 luxury-glass-card text-slate-300 disabled:opacity-40 py-3.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-1 cursor-pointer"
           >
             <ChevronLeft size={16} /> PREV
           </button>
           <button
             onClick={handleNext}
-            className="col-span-2 gold-glow-btn text-slate-950 font-bold py-3.5 rounded-2xl text-xs flex items-center justify-center gap-1 shadow-lg"
+            className="col-span-2 gold-glow-btn text-slate-950 font-bold py-3.5 rounded-2xl text-xs flex items-center justify-center gap-1 shadow-lg cursor-pointer"
           >
             {currentIndex === questions.length - 1 ? "FINISH DRILL" : "NEXT"} <ChevronRight size={16} />
           </button>
@@ -1245,12 +1302,12 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
   );
 }
 
-// ---------------- LANDING & AUTH GATE ---------------- //
+// ---------------- LANDING & AUTH GATEWAY (COVELLE PASSCODE RESTRICTION) ---------------- //
 function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
   const [isSignUp, setIsSignUp] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [passcode, setPasscode] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
 
@@ -1260,20 +1317,30 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
     setSuccessMsg('');
 
     if (!email) {
-      setErrorMsg('Please provide a valid email.');
+      setErrorMsg('Please enter your email.');
+      return;
+    }
+
+    // Cohort Passcode Validation ("Covelle")
+    if (passcode.trim().toLowerCase() !== MASTER_ACCESS_PASSCODE.toLowerCase()) {
+      setErrorMsg(`Invalid Access Passcode. Only authorized candidates with the cohort key may enter.`);
       return;
     }
 
     if (isSignUp) {
-      const res = registerUser(email, password, name);
+      if (!name.trim()) {
+        setErrorMsg('Please provide your full candidate name.');
+        return;
+      }
+      const res = registerUser(email, passcode, name);
       if (!res.success) {
         setErrorMsg(res.message);
       } else {
-        setSuccessMsg('Account created successfully! Entering portal...');
-        setTimeout(() => onSuccess(res.user), 500);
+        setSuccessMsg('Account authorized and created! Entering Project Jill...');
+        setTimeout(() => onSuccess(res.user), 600);
       }
     } else {
-      const res = authenticateUser(email, password);
+      const res = authenticateUser(email, passcode);
       if (!res.success) {
         setErrorMsg(res.message);
       } else {
@@ -1305,13 +1372,13 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
 
           <button 
             onClick={onOpenAuth}
-            className="border border-[#E5B842]/50 hover:border-[#E5B842] hover:bg-[#E5B842]/10 text-[#E5B842] text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase transition duration-200"
+            className="border border-[#E5B842]/50 hover:border-[#E5B842] hover:bg-[#E5B842]/10 text-[#E5B842] text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase transition duration-200 cursor-pointer"
           >
             Trial Access
           </button>
         </header>
 
-        {/* Features */}
+        {/* Feature Cards */}
         <section className="space-y-3.5 pt-2">
           <FeatureCard 
             icon="📑" 
@@ -1335,7 +1402,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
           />
         </section>
 
-        {/* Hero */}
+        {/* Hero Section */}
         <section className="space-y-4 pt-4">
           <div className="inline-flex items-center gap-2 bg-[#121B30] border border-[#E5B842]/30 text-[#E5B842] text-[10px] font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
             <Sparkles size={13} className="text-[#E5B842]" /> 
@@ -1373,7 +1440,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
           <p>Architected & Built by <span className="text-slate-300 font-semibold">C. Covelle</span> • © 2026 Project Jill</p>
         </footer>
 
-        {/* AUTH MODAL */}
+        {/* MODAL */}
         {showAuthModal && (
           <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 z-50 transition-opacity">
             <div className="luxury-glass-card border border-[#232F4D] w-full max-w-sm rounded-3xl p-6 shadow-2xl space-y-4 relative">
@@ -1387,7 +1454,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white">Project Jill</h3>
                 <p className="text-xs text-slate-400">
-                  {isSignUp ? "Register your candidate account." : "Sign in to access candidate drill sets."}
+                  {isSignUp ? "Register with your name and access key." : "Sign in to access candidate drill sets."}
                 </p>
               </div>
 
@@ -1406,7 +1473,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
               <form onSubmit={handleSubmit} className="space-y-3">
                 {isSignUp && (
                   <div className="space-y-1">
-                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Your Full Name</label>
+                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Candidate Full Name</label>
                     <div className="relative">
                       <User size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
                       <input 
@@ -1426,8 +1493,8 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                   <div className="relative">
                     <Mail size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
                     <input 
-                      type="text" 
-                      placeholder="candidate@example.com (or 'demo')"
+                      type="email" 
+                      placeholder="candidate@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -1437,14 +1504,14 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Passcode / Key</label>
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Cohort Passcode</label>
                   <div className="relative">
-                    <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+                    <KeyRound size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
                     <input 
                       type="password" 
-                      placeholder="••••••••"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Enter 'Covelle'"
+                      value={passcode}
+                      onChange={(e) => setPasscode(e.target.value)}
                       required
                       className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
                     />
@@ -1463,21 +1530,20 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                 </button>
               </form>
 
-              {/* Account Switcher */}
               <div className="pt-2 text-center border-t border-slate-800/80">
                 {isSignUp ? (
                   <button 
                     type="button"
                     onClick={() => { setIsSignUp(false); setErrorMsg(''); }}
-                    className="text-xs text-slate-300 hover:text-[#E5B842] font-semibold transition"
+                    className="text-xs text-slate-300 hover:text-[#E5B842] font-semibold transition cursor-pointer"
                   >
-                    Already have an account? <span className="text-[#E5B842] underline">Sign In</span>
+                    Already registered? <span className="text-[#E5B842] underline">Sign In</span>
                   </button>
                 ) : (
                   <button 
                     type="button"
                     onClick={() => { setIsSignUp(true); setErrorMsg(''); }}
-                    className="text-xs text-slate-300 hover:text-[#E5B842] font-semibold transition"
+                    className="text-xs text-slate-300 hover:text-[#E5B842] font-semibold transition cursor-pointer"
                   >
                     First time reviewer? <span className="text-[#E5B842] underline">Create Account</span>
                   </button>
@@ -1487,7 +1553,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
               <div className="text-center">
                 <button 
                   onClick={onCloseAuth}
-                  className="text-xs text-slate-500 hover:text-slate-300"
+                  className="text-xs text-slate-500 hover:text-slate-300 cursor-pointer"
                 >
                   Cancel and return
                 </button>
