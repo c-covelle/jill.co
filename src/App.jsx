@@ -25,6 +25,7 @@ import {
 } from './utils/authStorage';
 import { supabase } from './lib/supabase.js';
 import LeaderboardScreen from './components/LeaderboardScreen';
+import { getSetQuestions } from './data/questionBanks';
 
 // MASTER ACCESS PASSCODE FOR YOUR COHORT
 const MASTER_ACCESS_PASSCODE = "Covelle";
@@ -190,22 +191,28 @@ const ALL_DRILL_ITEMS = [
 
 // 15 Full Sets
 const ALL_15_SETS = [
-  { id: "gen_a", title: "General Education - SET A", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 1", count: "250 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_a },
-  { id: "gen_b", title: "General Education - SET B", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 2", count: "150 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_b },
-  { id: "gen_c", title: "General Education - SET C", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 3", count: "200 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_c },
-  { id: "gen_d", title: "General Education - SET D", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 4", count: "150 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_a },
-  { id: "gen_e", title: "General Education - SET E", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 5", count: "150 Items Available", category: "General Education", questions: QUESTION_BANKS.gened_b },
-  { id: "prof_a", title: "Professional Education - SET A", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 1", count: "200 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
-  { id: "prof_b", title: "Professional Education - SET B", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 2", count: "180 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
-  { id: "prof_c", title: "Professional Education - SET C", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 3", count: "150 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
-  { id: "prof_d", title: "Professional Education - SET D", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 4", count: "150 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
-  { id: "prof_e", title: "Professional Education - SET E", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 5", count: "150 Items Available", category: "Professional Education", questions: QUESTION_BANKS.profed_a },
-  { id: "sci_a", title: "Science Major - SET A", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 1", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a },
-  { id: "sci_b", title: "Science Major - SET B", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 2", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a },
-  { id: "sci_c", title: "Science Major - SET C", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 3", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a },
-  { id: "sci_d", title: "Science Major - SET D", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 4", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a },
-  { id: "sci_e", title: "Science Major - SET E", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 5", count: "150 Items Available", category: "Science (Major)", questions: QUESTION_BANKS.science_a }
-];
+  { id: "gen_a", title: "General Education - SET A", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 1", category: "General Education", folderKey: "general_education", setKey: "Set_A" },
+  { id: "gen_b", title: "General Education - SET B", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 2", category: "General Education", folderKey: "general_education", setKey: "Set_B" },
+  { id: "gen_c", title: "General Education - SET C", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 3", category: "General Education", folderKey: "general_education", setKey: "Set_C" },
+  { id: "gen_d", title: "General Education - SET D", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 4", category: "General Education", folderKey: "general_education", setKey: "Set_D" },
+  { id: "gen_e", title: "General Education - SET E", tag: "Gen Ed", tagColor: "text-blue-300 bg-blue-950/80 border-blue-800", setNum: "SET - 5", category: "General Education", folderKey: "general_education", setKey: "Set_E" },
+  { id: "prof_a", title: "Professional Education - SET A", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 1", category: "Professional Education", folderKey: "professional_education", setKey: "Set_A" },
+  { id: "prof_b", title: "Professional Education - SET B", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 2", category: "Professional Education", folderKey: "professional_education", setKey: "Set_B" },
+  { id: "prof_c", title: "Professional Education - SET C", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 3", category: "Professional Education", folderKey: "professional_education", setKey: "Set_C" },
+  { id: "prof_d", title: "Professional Education - SET D", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 4", category: "Professional Education", folderKey: "professional_education", setKey: "Set_D" },
+  { id: "prof_e", title: "Professional Education - SET E", tag: "Prof Ed", tagColor: "text-emerald-300 bg-emerald-950/80 border-emerald-800", setNum: "SET - 5", category: "Professional Education", folderKey: "professional_education", setKey: "Set_E" },
+  { id: "sci_a", title: "Science Major - SET A", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 1", category: "Science (Major)", folderKey: "science", setKey: "Set_A" },
+  { id: "sci_b", title: "Science Major - SET B", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 2", category: "Science (Major)", folderKey: "science", setKey: "Set_B" },
+  { id: "sci_c", title: "Science Major - SET C", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 3", category: "Science (Major)", folderKey: "science", setKey: "Set_C" },
+  { id: "sci_d", title: "Science Major - SET D", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 4", category: "Science (Major)", folderKey: "science", setKey: "Set_D" },
+  { id: "sci_e", title: "Science Major - SET E", tag: "Major", tagColor: "text-amber-300 bg-amber-950/80 border-amber-800", setNum: "SET - 5", category: "Science (Major)", folderKey: "science", setKey: "Set_E" }
+].map(set => ({
+  ...set,
+  questions: getSetQuestions(set.folderKey, set.setKey)
+})).map(set => ({
+  ...set,
+  count: `${set.questions.length} Items Available`
+}));
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(() => getCurrentUser());

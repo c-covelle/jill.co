@@ -1,23 +1,23 @@
 ﻿// --- General Education Imports ---
-import genEdA from '../assets/general_education/Set_A.json';
-import genEdB from '../assets/general_education/Set_B.json';
-import genEdC from '../assets/general_education/Set_C.json';
-import genEdD from '../assets/general_education/Set_D.json';
-import genEdE from '../assets/general_education/Set_E.json';
+import genEdA from '../assets/general_education/set_A.json';
+import genEdB from '../assets/general_education/set_B.json';
+import genEdC from '../assets/general_education/set_C.json';
+import genEdD from '../assets/general_education/set_D.json';
+import genEdE from '../assets/general_education/set_E.json';
 
 // --- Professional Education Imports ---
-import profEdA from '../assets/professional_education/Set_A.json';
-import profEdB from '../assets/professional_education/Set_B.json';
-import profEdC from '../assets/professional_education/Set_C.json';
-import profEdD from '../assets/professional_education/Set_D.json';
-import profEdE from '../assets/professional_education/Set_E.json';
+import profEdA from '../assets/professional_education/set_A.json';
+import profEdB from '../assets/professional_education/set_B.json';
+import profEdC from '../assets/professional_education/set_C.json';
+import profEdD from '../assets/professional_education/set_D.json';
+import profEdE from '../assets/professional_education/set_E.json';
 
 // --- Science Major Imports ---
-import scienceA from '../assets/science/Set_A.json';
-import scienceB from '../assets/science/Set_B.json';
-import scienceC from '../assets/science/Set_C.json';
-import scienceD from '../assets/science/Set_D.json';
-import scienceE from '../assets/science/Set_E.json';
+import scienceA from '../assets/science/set_A.json';
+import scienceB from '../assets/science/set_B.json';
+import scienceC from '../assets/science/set_C.json';
+import scienceD from '../assets/science/set_D.json';
+import scienceE from '../assets/science/set_E.json';
 
 function extractQuestionList(rawData) {
   if (Array.isArray(rawData)) return rawData;
