@@ -225,11 +225,12 @@ export default function App() {
     refreshAppData();
   }, [activeTab, activeDrill]);
 
-  // Exact Countdown to September 20, 2026 (07:00 AM PST)
+  // Exact Countdown to 12:00 AM (Midnight) of September 20, 2026 PST
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const targetDate = new Date('2026-09-20T07:00:00');
+    // 12:00 AM on September 20, 2026 Philippine Standard Time (UTC+8)
+    const targetDate = new Date('2026-09-20T00:00:00+08:00');
 
     const updateCountdown = () => {
       const now = new Date();
@@ -1374,7 +1375,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
             onClick={onOpenAuth}
             className="border border-[#E5B842]/50 hover:border-[#E5B842] hover:bg-[#E5B842]/10 text-[#E5B842] text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase transition duration-200 cursor-pointer"
           >
-            Trial Access
+            Exclusive Access
           </button>
         </header>
 
@@ -1382,7 +1383,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
         <section className="space-y-3.5 pt-2">
           <FeatureCard 
             icon="📑" 
-            title="CURATED DRILLS (SETS A-E)" 
+            title="CURATED DRILLS SETS" 
             desc="Over 750 targeted questions in GenEd, ProfEd, and Specialization." 
           />
           <FeatureCard 
@@ -1397,8 +1398,8 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
           />
           <FeatureCard 
             icon="🔊" 
-            title="EXCLUSIVE B&O EXPERIENCE" 
-            desc="Unlock your potential with unparalleled study ambiance." 
+            title="COMPLETE WITH MEMORY TIPS AND RATIONALIZATIONS" 
+            desc="Unlock mnemonics and detailed explanations for each question." 
           />
         </section>
 
@@ -1406,7 +1407,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
         <section className="space-y-4 pt-4">
           <div className="inline-flex items-center gap-2 bg-[#121B30] border border-[#E5B842]/30 text-[#E5B842] text-[10px] font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
             <Sparkles size={13} className="text-[#E5B842]" /> 
-            <span>Wave 1 Verified Candidate Access</span>
+            <span>Exclusive Access to members only</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold text-white leading-tight tracking-tight">
@@ -1414,13 +1415,13 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
           </h1>
 
           <p className="text-xs text-slate-400 leading-relaxed font-sans">
-            The definitive digital companion for PRC Licensure candidates.
+            Your ultimate LET review companion
           </p>
 
           <div className="luxury-glass-card rounded-2xl p-4.5 space-y-1.5 border border-white/5">
             <h4 className="text-xs font-bold text-[#E5B842] tracking-wide">Our Mission:</h4>
             <p className="text-xs text-slate-300 leading-relaxed font-sans">
-              To empower future Filipino educators with smart, resilient, and focused PRC exam preparation.
+              Project Jill exists to make LET preparation more intelligent, personal, and purposeful—giving every learner the tools to practice, understand their mistakes, strengthen their weaknesses, and build the confidence to face the board examination. Because passing the LET isn't just about knowing more. It's about becoming ready.
             </p>
           </div>
 
@@ -1435,7 +1436,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
         {/* Footer */}
         <footer className="text-center pt-6 pb-2 border-t border-slate-800/60 text-[10px] text-slate-500 space-y-1.5">
           <p className="flex items-center justify-center gap-1.5 text-slate-400">
-            <ShieldCheck size={14} className="text-[#E5B842]" /> Verified Examinees Only • Wave 1 Trial Access
+            <ShieldCheck size={14} className="text-[#E5B842]" /> Verified Examinees Only • Exclusive Access
           </p>
           <p>Architected & Built by <span className="text-slate-300 font-semibold">C. Covelle</span> • © 2026 Project Jill</p>
         </footer>
@@ -1450,7 +1451,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                   PJ
                 </div>
                 <span className="text-[10px] font-bold text-[#E5B842] tracking-widest uppercase block pt-1">
-                  PRC LICENSURE COMPANION
+                  YOUR LET REVIEW COMPANION
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white">Project Jill</h3>
                 <p className="text-xs text-slate-400">
@@ -1509,7 +1510,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                     <KeyRound size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
                     <input 
                       type="password" 
-                      placeholder="Enter 'Covelle'"
+                      placeholder="Enter 'Password'"
                       value={passcode}
                       onChange={(e) => setPasscode(e.target.value)}
                       required
