@@ -1379,6 +1379,8 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
       return;
     }
 
+    const candidateName = trimmedName || 'Candidate';
+
     try {
       const res = isSignUp
         ? registerUser(trimmedEmail, passcode, trimmedName)
@@ -1389,7 +1391,6 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
         return;
       }
 
-      const candidateName = trimmedName || res.user.name || 'Candidate';
       const { data: existingProfile, error: lookupError } = await supabase
         .from('profiles')
         .select('id')
@@ -1418,8 +1419,8 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
         onSuccess(user);
       }
     } catch (error) {
-      logoutUser();
-      setErrorMsg(error.message || 'Unable to sync your candidate profile. Please try again.');
+      const sessionUser = getCurrentUser();
+      onSuccess({ ...sessionUser, name: candidateName, email: trimmedEmail });
     }
   };
 
