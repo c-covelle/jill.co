@@ -1390,12 +1390,6 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
       }
 
       const candidateName = trimmedName || res.user.name || 'Candidate';
-      const avatarInitials = candidateName
-        .split(/\s+/)
-        .map((part) => part[0])
-        .join('')
-        .slice(0, 2)
-        .toUpperCase();
       const { data: existingProfile, error: lookupError } = await supabase
         .from('profiles')
         .select('id')
@@ -1408,7 +1402,6 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
         const { error: insertError } = await supabase.from('profiles').insert({
           email: trimmedEmail,
           full_name: candidateName,
-          avatar_initials: avatarInitials,
           xp: 0,
           accuracy: 0
         });
