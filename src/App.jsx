@@ -1401,7 +1401,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
       if (!existingProfile) {
         const { error: insertError } = await supabase.from('profiles').insert({
           email: trimmedEmail,
-          full_name: candidateName,
+          name: candidateName,
           xp: 0,
           accuracy: 0
         });
