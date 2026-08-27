@@ -23,7 +23,7 @@ import {
   getCurrentUser,
   logoutUser
 } from './utils/authStorage';
-import { supabase, isEmailAllowed } from './lib/supabase.js';
+import { supabase } from './lib/supabase.js';
 import LeaderboardScreen from './components/LeaderboardScreen';
 
 // MASTER ACCESS PASSCODE FOR YOUR COHORT
@@ -1367,8 +1367,9 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
       return;
     }
 
-    if (!isEmailAllowed(trimmedEmail)) {
-      setErrorMsg('Access Restricted: This email is not registered for trial access.');
+    const trimmedName = name.trim();
+    if (!trimmedName) {
+      setErrorMsg('Please provide your full candidate name.');
       return;
     }
 
@@ -1379,13 +1380,8 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
     }
 
     try {
-      if (isSignUp && !name.trim()) {
-        setErrorMsg('Please provide your full candidate name.');
-        return;
-      }
-
       const res = isSignUp
-        ? registerUser(trimmedEmail, passcode, name)
+        ? registerUser(trimmedEmail, passcode, trimmedName)
         : authenticateUser(trimmedEmail, passcode);
 
       if (!res.success) {
@@ -1393,18 +1389,40 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
         return;
       }
 
-      const { error } = await supabase.from('profiles').upsert({
-        email: trimmedEmail,
-        full_name: res.user.name || name.trim() || 'Candidate'
-      }, { onConflict: 'email' });
+      const candidateName = trimmedName || res.user.name || 'Candidate';
+      const avatarInitials = candidateName
+        .split(/\s+/)
+        .map((part) => part[0])
+        .join('')
+        .slice(0, 2)
+        .toUpperCase();
+      const { data: existingProfile, error: lookupError } = await supabase
+        .from('profiles')
+        .select('id')
+        .eq('email', trimmedEmail)
+        .maybeSingle();
 
-      if (error) throw error;
+      if (lookupError) throw lookupError;
+
+      if (!existingProfile) {
+        const { error: insertError } = await supabase.from('profiles').insert({
+          email: trimmedEmail,
+          full_name: candidateName,
+          avatar_initials: avatarInitials,
+          xp: 0,
+          accuracy: 0
+        });
+
+        if (insertError) throw insertError;
+      }
+
+      const user = { ...res.user, name: candidateName, email: trimmedEmail };
 
       if (isSignUp) {
         setSuccessMsg('Account authorized and created! Entering Project Jill...');
-        setTimeout(() => onSuccess(res.user), 600);
+        setTimeout(() => onSuccess(user), 600);
       } else {
-        onSuccess(res.user);
+        onSuccess(user);
       }
     } catch (error) {
       setErrorMsg(error.message || 'Unable to sync your candidate profile. Please try again.');
@@ -1544,22 +1562,20 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-3">
-                {isSignUp && (
-                  <div className="space-y-1">
-                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Candidate Full Name</label>
-                    <div className="relative">
-                      <User size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
-                      <input 
-                        type="text" 
-                        placeholder="e.g. Maria Santos"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                        className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
-                      />
-                    </div>
+                <div className="space-y-1">
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Candidate Full Name</label>
+                  <div className="relative">
+                    <User size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+                    <input 
+                      type="text" 
+                      placeholder="e.g. Maria Santos"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
+                    />
                   </div>
-                )}
+                </div>
 
                 <div className="space-y-1">
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Reviewer Email</label>
