@@ -259,12 +259,12 @@ export default function App() {
     };
   }, []);
 
-  // Exact Countdown to 12:00 AM (Midnight) of September 20, 2026 PST
+  // Exact countdown to midnight on March 14, 2027 Philippine Standard Time.
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    // 12:00 AM on September 20, 2026 Philippine Standard Time (UTC+8)
-    const targetDate = new Date('2026-09-20T00:00:00+08:00');
+    // 12:00 AM on March 14, 2027 Philippine Standard Time (UTC+8)
+    const targetDate = new Date('2027-03-14T00:00:00+08:00');
 
     const updateCountdown = () => {
       const now = new Date();
@@ -496,7 +496,7 @@ function HomeScreen({ timeLeft, user, vaultCount, quote, onRotateQuote, onStartB
       {/* Countdown Card */}
       <div className="luxury-glass-card rounded-3xl p-5 shadow-xl relative overflow-hidden">
         <div className="flex items-center gap-1.5 text-[#E5B842] text-[11px] font-bold tracking-wider mb-4 uppercase">
-          <Sparkles size={14} /> LET SEPTEMBER 20, 2026
+          <Sparkles size={14} /> LET MARCH 14, 2027
         </div>
         <div className="grid grid-cols-4 gap-2 text-center">
           <div>
@@ -1059,7 +1059,7 @@ function ProfileScreen({ user, vaultCount, onSignOut }) {
         <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-left">
           <div>
             <span className="text-[9px] font-bold text-slate-400 uppercase block">EXAM DATE</span>
-            <span className="text-xs font-bold text-white">SEPT 20, 2026</span>
+            <span className="text-xs font-bold text-white">MAR 14, 2027</span>
           </div>
           <div>
             <span className="text-[9px] font-bold text-slate-400 uppercase block">VAULT WEAK SPOTS</span>
