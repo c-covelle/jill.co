@@ -1,6 +1,64 @@
 import { supabase } from './supabase';
 
 /**
+ * Adds a completed quiz score to the profile fields used by the leaderboard.
+ * One XP is awarded for each correct answer; accuracy reflects the latest quiz.
+ */
+export async function recordLeaderboardResult({ score, totalQuestions }) {
+  const correct = Number(score);
+  const total = Number(totalQuestions);
+
+  if (!Number.isFinite(correct) || !Number.isFinite(total) || total <= 0 || correct < 0 || correct > total) {
+    throw new Error('The quiz score is invalid; the score could not be ranked.');
+  }
+
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+  if (authError) throw authError;
+  const normalizedEmail = user?.email?.trim().toLowerCase();
+  if (!user || !normalizedEmail) throw new Error('Please sign in again; no authenticated candidate was found.');
+  const name = user.user_metadata?.full_name || user.user_metadata?.name || normalizedEmail;
+
+  const { data: profile, error: lookupError } = await supabase
+    .from('profiles')
+    .select('id, xp')
+    .eq('email', normalizedEmail)
+    .maybeSingle();
+
+  if (lookupError) throw lookupError;
+
+  const accuracy = Number(((correct / total) * 100).toFixed(2));
+  if (!profile) {
+    const { error: insertError } = await supabase.from('profiles').insert({
+      id: user.id,
+      email: normalizedEmail,
+      name: name.trim(),
+      avatar: name.split(/\s+/).map((part) => part[0]).join('').slice(0, 2).toUpperCase(),
+      xp: correct,
+      accuracy
+    });
+    if (insertError) throw insertError;
+    return { xpEarned: correct, accuracy };
+  }
+
+  const { data: updatedProfile, error: updateError } = await supabase
+    .from('profiles')
+    .update({
+      xp: (Number(profile.xp) || 0) + correct,
+      accuracy
+    })
+    .eq('id', profile.id)
+    .select('id')
+    .maybeSingle();
+
+  if (updateError) throw updateError;
+  if (!updatedProfile) {
+    throw new Error('Supabase did not update your profile. Check the profiles table update policy.');
+  }
+
+  return { xpEarned: correct, accuracy };
+}
+
+/**
  * Records a completed drill session to Supabase
  */
 export async function recordDrillSession({ category, setName, score, totalQuestions }) {

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   BarChart3, BookOpen, Home, GraduationCap, User, Trophy, Bell, 
   Sparkles, Flame, Check, ChevronRight, ChevronLeft, ChevronDown, ChevronUp,
   RotateCcw, Lock, Mail, ArrowRight, ShieldCheck, FileText, Search, Download,
-  X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserPlus, KeyRound, Share2, Globe2
+  X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserPlus, Share2, Globe2
 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
 import { 
@@ -17,18 +17,10 @@ import {
   exportErrorNotebookPDF, 
   exportSessionTranscriptPDF 
 } from './utils/pdfGenerator';
-import {
-  authenticateUser,
-  registerUser,
-  getCurrentUser,
-  logoutUser
-} from './utils/authStorage';
 import { supabase } from './lib/supabase.js';
+import { recordLeaderboardResult } from './lib/syncService.js';
 import LeaderboardScreen from './components/LeaderboardScreen';
 import { getSetQuestions } from './data/questionBanks';
-
-// MASTER ACCESS PASSCODE FOR YOUR COHORT
-const MASTER_ACCESS_PASSCODE = "Covelle";
 
 // ROTATING MOTIVATIONAL QUOTES
 const INSPIRATIONAL_QUOTES = [
@@ -215,24 +207,57 @@ const ALL_15_SETS = [
 }));
 
 export default function App() {
-  const [currentUser, setCurrentUser] = useState(() => getCurrentUser());
+  const [currentUser, setCurrentUser] = useState(null);
+  const [authLoading, setAuthLoading] = useState(true);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const [activeDrill, setActiveDrill] = useState(null);
   const [vaultItems, setVaultItems] = useState([]);
   const [historyItems, setHistoryItems] = useState([]);
+  const authActionInProgress = useRef(false);
   const [quoteIndex, setQuoteIndex] = useState(() => Math.floor(Math.random() * INSPIRATIONAL_QUOTES.length));
 
   const refreshAppData = () => {
     setVaultItems(getMistakesVault());
     setHistoryItems(getSessionHistory());
-    const user = getCurrentUser();
-    if (user) setCurrentUser(user);
   };
 
   useEffect(() => {
     refreshAppData();
   }, [activeTab, activeDrill]);
+
+  useEffect(() => {
+    let isMounted = true;
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!isMounted || authActionInProgress.current) return;
+      const authUser = session?.user;
+      setCurrentUser(authUser ? {
+        ...authUser,
+        name: authUser.user_metadata?.full_name || authUser.user_metadata?.name || authUser.email?.split('@')[0] || 'Candidate'
+      } : null);
+      setAuthLoading(false);
+    });
+
+    supabase.auth.getSession().then(({ data: { session }, error }) => {
+      if (!isMounted || authActionInProgress.current) return;
+      if (error) console.error('Unable to restore Supabase session:', error.message);
+      const authUser = session?.user;
+      setCurrentUser(authUser ? {
+        ...authUser,
+        name: authUser.user_metadata?.full_name || authUser.user_metadata?.name || authUser.email?.split('@')[0] || 'Candidate'
+      } : null);
+      setAuthLoading(false);
+    }).catch((error) => {
+      if (!isMounted) return;
+      console.error('Unable to restore Supabase session:', error);
+      setAuthLoading(false);
+    });
+
+    return () => {
+      isMounted = false;
+      subscription.unsubscribe();
+    };
+  }, []);
 
   // Exact Countdown to 12:00 AM (Midnight) of September 20, 2026 PST
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -263,12 +288,17 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
+  if (authLoading) {
+    return <div className="min-h-screen bg-[#070A12] text-slate-300 flex items-center justify-center text-sm">Restoring your session...</div>;
+  }
+
   if (!currentUser) {
     return (
       <LandingPage 
         onOpenAuth={() => setShowAuthModal(true)} 
         showAuthModal={showAuthModal}
         onCloseAuth={() => setShowAuthModal(false)}
+        onAuthProcessing={(processing) => { authActionInProgress.current = processing; }}
         onSuccess={(user) => {
           setCurrentUser(user);
           setQuoteIndex(Math.floor(Math.random() * INSPIRATIONAL_QUOTES.length));
@@ -288,7 +318,7 @@ export default function App() {
           setActiveDrill(null);
           refreshAppData();
         }}
-        onFinish={(results) => {
+        onFinish={async (results) => {
           recordSession({
             title: activeDrill.title,
             score: results.score,
@@ -296,6 +326,17 @@ export default function App() {
             percentage: Math.round((results.score / results.total) * 100),
             durationSecs: results.seconds
           });
+
+          try {
+            await recordLeaderboardResult({
+              score: results.score,
+              totalQuestions: results.total
+            });
+          } catch (error) {
+            console.error('Failed to record leaderboard score:', error);
+            alert(`Your quiz was saved on this device, but your ranking could not be updated. ${error.message || 'Please try again later.'}`);
+          }
+
           setActiveDrill(null);
           refreshAppData();
           setActiveTab('stats');
@@ -357,10 +398,14 @@ export default function App() {
             <ProfileScreen 
               user={currentUser}
               vaultCount={vaultItems.length}
-              onSignOut={() => {
-                logoutUser();
-                setCurrentUser(null);
-              }} 
+              onSignOut={async () => {
+                const { error } = await supabase.auth.signOut();
+                if (error) alert(`Unable to log out: ${error.message}`);
+                else {
+                  setActiveTab('home');
+                  setShowAuthModal(false);
+                }
+              }}
             />
           )}
         </main>
@@ -1092,7 +1137,7 @@ function ProfileScreen({ user, vaultCount, onSignOut }) {
         onClick={onSignOut}
         className="w-full bg-[#121829] border border-rose-500/30 text-rose-400 hover:bg-rose-500/10 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition mt-4 cursor-pointer"
       >
-        Sign Out Session
+        Log Out
       </button>
     </div>
   );
@@ -1373,14 +1418,40 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
   );
 }
 
-// ---------------- LANDING & AUTH GATEWAY (COVELLE PASSCODE RESTRICTION) ---------------- //
-function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
+// ---------------- LANDING & SUPABASE AUTH GATEWAY ---------------- //
+function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onAuthProcessing, onSuccess }) {
   const [isSignUp, setIsSignUp] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [passcode, setPasscode] = useState('');
+  const [password, setPassword] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+
+  const ensureCandidateProfile = async (authUser, profileName) => {
+    const normalizedEmail = authUser.email?.trim().toLowerCase();
+    if (!normalizedEmail) throw new Error('Supabase did not return an account email.');
+
+    const { data: profile, error: lookupError } = await supabase
+      .from('profiles')
+      .select('id')
+      .eq('email', normalizedEmail)
+      .maybeSingle();
+    if (lookupError) throw lookupError;
+    if (profile) return;
+
+    const nameForProfile = profileName || authUser.user_metadata?.full_name || normalizedEmail.split('@')[0];
+    const avatar = nameForProfile.split(/\s+/).map((part) => part[0]).join('').slice(0, 2).toUpperCase();
+    const { error: insertError } = await supabase.from('profiles').insert({
+      id: authUser.id,
+      email: normalizedEmail,
+      name: nameForProfile,
+      avatar,
+      xp: 0,
+      accuracy: 0
+    });
+    if (insertError) throw insertError;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -1388,66 +1459,79 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
     setSuccessMsg('');
 
     const trimmedEmail = email.trim().toLowerCase();
-
-    if (!trimmedEmail) {
-      setErrorMsg('Please enter your email.');
-      return;
-    }
-
     const trimmedName = name.trim();
-    if (!trimmedName) {
-      setErrorMsg('Please provide your full candidate name.');
+    if (isSignUp && !trimmedName) {
+      setErrorMsg('Please provide your full name.');
+      return;
+    }
+    if (password.length < 6) {
+      setErrorMsg('Password must be at least 6 characters long.');
       return;
     }
 
-    // Cohort Passcode Validation ("Covelle")
-    if (passcode.trim().toLowerCase() !== MASTER_ACCESS_PASSCODE.toLowerCase()) {
-      setErrorMsg(`Invalid Access Passcode. Only authorized candidates with the cohort key may enter.`);
-      return;
-    }
-
-    const candidateName = trimmedName || 'Candidate';
-
+    setIsSubmitting(true);
+    onAuthProcessing(true);
     try {
-      const res = isSignUp
-        ? registerUser(trimmedEmail, passcode, trimmedName)
-        : authenticateUser(trimmedEmail, passcode);
-
-      if (!res.success) {
-        setErrorMsg(res.message);
-        return;
-      }
-
-      const { data: existingProfile, error: lookupError } = await supabase
-        .from('profiles')
-        .select('id')
-        .eq('email', trimmedEmail)
-        .maybeSingle();
-
-      if (lookupError) throw lookupError;
-
-      if (!existingProfile) {
-        const { error: insertError } = await supabase.from('profiles').insert({
+      if (isSignUp) {
+        const { data, error } = await supabase.auth.signUp({
           email: trimmedEmail,
-          name: candidateName,
+          password,
+          options: { data: { full_name: trimmedName } }
+        });
+        if (error) throw error;
+        if (!data.user) throw new Error('Supabase did not return a user for this account.');
+
+        const profileName = trimmedName;
+        const avatar = profileName.split(/\s+/).map((part) => part[0]).join('').slice(0, 2).toUpperCase();
+        const { error: profileError } = await supabase.from('profiles').insert({
+          id: data.user.id,
+          email: trimmedEmail,
+          name: profileName,
+          avatar,
           xp: 0,
           accuracy: 0
         });
 
-        if (insertError) throw insertError;
-      }
+        if (profileError) {
+          console.error('Account created but profile setup failed:', profileError);
+          if (data.session) await supabase.auth.signOut();
+          if (!data.session) {
+            setSuccessMsg('Account created. Confirm your email, then sign in; your candidate profile will be created at sign-in.');
+            setIsSignUp(false);
+            setPassword('');
+            return;
+          }
+          throw new Error(`Your account was created, but the candidate profile could not be saved. ${profileError.message}`);
+        }
 
-      const user = { ...res.user, name: candidateName, email: trimmedEmail };
-
-      if (isSignUp) {
-        setSuccessMsg('Account authorized and created! Entering Project Jill...');
-        setTimeout(() => onSuccess(user), 600);
+        if (data.session) {
+          onSuccess({
+            ...data.user,
+            name: profileName
+          });
+        } else {
+          setSuccessMsg('Account created. Check your email to confirm it, then sign in.');
+          setIsSignUp(false);
+          setPassword('');
+        }
       } else {
-        onSuccess(user);
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email: trimmedEmail,
+          password
+        });
+        if (error) throw error;
+        if (!data.user) throw new Error('Supabase did not return a user for this account.');
+        await ensureCandidateProfile(data.user);
+        onSuccess({
+          ...data.user,
+          name: data.user.user_metadata?.full_name || data.user.user_metadata?.name || data.user.email?.split('@')[0] || 'Candidate'
+        });
       }
     } catch (error) {
-      const sessionUser = getCurrentUser();
-      onSuccess({ ...sessionUser, name: candidateName, email: trimmedEmail });
+      setErrorMsg(error.message || 'Authentication failed. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+      onAuthProcessing(false);
     }
   };
 
@@ -1567,7 +1651,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white">Project Jill</h3>
                 <p className="text-xs text-slate-400">
-                  {isSignUp ? "Register with your name and access key." : "Sign in to access candidate drill sets."}
+                  {isSignUp ? "Create your candidate account." : "Sign in to access your candidate drill sets."}
                 </p>
               </div>
 
@@ -1584,8 +1668,8 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="space-y-1">
-                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Candidate Full Name</label>
+                {isSignUp && <div className="space-y-1">
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Full Name</label>
                   <div className="relative">
                     <User size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
                     <input 
@@ -1594,10 +1678,11 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
+                      autoComplete="name"
                       className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
                     />
                   </div>
-                </div>
+                </div>}
 
                 <div className="space-y-1">
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Reviewer Email</label>
@@ -1609,21 +1694,24 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
+                      autoComplete="email"
                       className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Cohort Passcode</label>
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Password</label>
                   <div className="relative">
-                    <KeyRound size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+                    <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
                     <input 
                       type="password" 
-                      placeholder="Enter 'Password'"
-                      value={passcode}
-                      onChange={(e) => setPasscode(e.target.value)}
+                      placeholder="At least 6 characters"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       required
+                      minLength={6}
+                      autoComplete={isSignUp ? 'new-password' : 'current-password'}
                       className="w-full bg-[#090E1B] border border-[#1E2B4A] rounded-xl py-3 pl-10 pr-4 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-[#E5B842] transition"
                     />
                   </div>
@@ -1631,12 +1719,13 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onSuccess }) {
 
                 <button 
                   type="submit"
-                  className="w-full gold-glow-btn text-slate-950 font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition mt-3"
+                  disabled={isSubmitting}
+                  className="w-full gold-glow-btn text-slate-950 font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition mt-3 disabled:opacity-60"
                 >
-                  {isSignUp ? (
-                    <>Create Account & Enter <UserPlus size={16} /></>
+                  {isSubmitting ? <Loader2 size={16} className="animate-spin" /> : isSignUp ? (
+                    <>Create Account <UserPlus size={16} /></>
                   ) : (
-                    <>Authenticate & Enter <ArrowRight size={16} /></>
+                    <>Sign In <ArrowRight size={16} /></>
                   )}
                 </button>
               </form>
