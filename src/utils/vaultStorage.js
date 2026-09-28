@@ -11,6 +11,14 @@ export function getMistakesVault() {
   }
 }
 
+  export function replaceMistakesVault(vault) {
+    try {
+      localStorage.setItem(VAULT_KEY, JSON.stringify(Array.isArray(vault) ? vault : []));
+    } catch (e) {
+      console.error('Failed to replace mistakes vault', e);
+    }
+  }
+
 // 2. Add a missed question to the vault
 export function recordMistake(question) {
   try {
@@ -64,6 +72,7 @@ export function recordSession(session) {
       total: session.total,
       percentage: Math.round((session.score / session.total) * 100),
       durationSecs: session.durationSecs || 0,
+        breakdown: session.breakdown || null,
       date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
       rating: session.percentage >= 85 ? 'Very Good' : session.percentage >= 75 ? 'Good' : 'Needs Review'
     });
@@ -82,3 +91,11 @@ export function getSessionHistory() {
     return [];
   }
 }
+
+  export function replaceSessionHistory(history) {
+    try {
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(Array.isArray(history) ? history.slice(0, 100) : []));
+    } catch (e) {
+      console.error('Failed to replace session history', e);
+    }
+  }

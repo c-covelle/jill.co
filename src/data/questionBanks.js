@@ -133,6 +133,7 @@ function normalizeQuestions(rawData, defaultCategory, domain) {
       return {
         id: String(item.id || `${domain}_${idx + 1}`),
         category: item.category || defaultCategory,
+           topic: item.topic || item.subtopic || item.skill || item.category || defaultCategory,
         difficulty: item.difficulty || 'Medium',
         domain,
         question:

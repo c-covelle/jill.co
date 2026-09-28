@@ -11,14 +11,16 @@ import {
   recordMistake, 
   markAsMastered, 
   recordSession, 
-  getSessionHistory 
+  getSessionHistory,
+  replaceMistakesVault,
+  replaceSessionHistory
 } from './utils/vaultStorage';
 import { 
   exportErrorNotebookPDF, 
   exportSessionTranscriptPDF 
 } from './utils/pdfGenerator';
 import { supabase } from './lib/supabase.js';
-import { recordLeaderboardResult } from './lib/syncService.js';
+import { recordLeaderboardResult, syncCandidateProgress, submitQuestionFeedback } from './lib/syncService.js';
 import LeaderboardScreen from './components/LeaderboardScreen';
 import { getSetQuestions } from './data/questionBanks';
 
@@ -29,7 +31,7 @@ const INSPIRATIONAL_QUOTES = [
   { text: "Success is the sum of small efforts, repeated day in and day out.", author: "Robert Collier" },
   { text: "The expert in anything was once a beginner. Trust your preparation.", author: "Helen Hayes" },
   { text: "Teachers plant seeds that grow forever. Keep pushing for your LPT license.", author: "PRC LET Board" },
-  { text: "Believe you can and you're halfway there. Claim that 2026 license!", author: "Theodore Roosevelt" }
+  { text: "Believe you can and you're halfway there. Keep moving toward your March 2027 LET license.", author: "Theodore Roosevelt" }
 ];
 
 // COMPLETE QUESTION BANKS
@@ -206,6 +208,62 @@ const ALL_15_SETS = [
   count: `${set.questions.length} Items Available`
 }));
 
+function shuffleQuestions(questions) {
+  const shuffled = [...questions];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
+function createSimulationQuestions() {
+  const categories = ['General Education', 'Professional Education', 'Science (Major)'];
+  const allQuestions = ALL_15_SETS.flatMap(set => set.questions);
+  const selected = categories.flatMap(category => shuffleQuestions(
+    ALL_15_SETS.filter(set => set.category === category).flatMap(set => set.questions)
+  ).slice(0, 50));
+  const selectedText = new Set(selected.map(question => question.question));
+  const remaining = shuffleQuestions(allQuestions.filter(question => !selectedText.has(question.question)));
+  return shuffleQuestions([...selected, ...remaining]).slice(0, 150);
+}
+
+function getTopicPerformance(history = []) {
+  const topicTotals = new Map();
+  history.forEach(session => {
+    (session.breakdown || []).forEach(result => {
+      if (result.selectedAnswer === null) return;
+      const topic = result.topic || result.category || 'Uncategorized';
+      const totals = topicTotals.get(topic) || { topic, attempts: 0, correct: 0 };
+      totals.attempts += 1;
+      if (result.isCorrect) totals.correct += 1;
+      topicTotals.set(topic, totals);
+    });
+  });
+  return [...topicTotals.values()]
+    .map(item => ({ ...item, accuracy: Math.round((item.correct / item.attempts) * 100) }))
+    .sort((left, right) => left.accuracy - right.accuracy || right.attempts - left.attempts);
+}
+
+function getStudyRecommendations(history = [], vault = []) {
+  const performance = new Map(getTopicPerformance(history).map(item => [item.topic, item]));
+  const missedTopics = new Map();
+  vault.forEach(item => {
+    const topic = item.topic || item.category || 'Review missed questions';
+    missedTopics.set(topic, (missedTopics.get(topic) || 0) + (item.missCount || 1));
+  });
+  const topics = new Set([...performance.keys(), ...missedTopics.keys()]);
+  return [...topics].map(topic => ({
+    topic,
+    ...(performance.get(topic) || { accuracy: null, attempts: 0 }),
+    misses: missedTopics.get(topic) || 0
+  })).sort((left, right) => {
+    const leftPriority = (left.accuracy === null ? 50 : 100 - left.accuracy) + left.misses * 3;
+    const rightPriority = (right.accuracy === null ? 50 : 100 - right.accuracy) + right.misses * 3;
+    return rightPriority - leftPriority;
+  }).slice(0, 3);
+}
+
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
@@ -214,6 +272,7 @@ export default function App() {
   const [activeDrill, setActiveDrill] = useState(null);
   const [vaultItems, setVaultItems] = useState([]);
   const [historyItems, setHistoryItems] = useState([]);
+  const [progressSyncStatus, setProgressSyncStatus] = useState('Not synced yet');
   const authActionInProgress = useRef(false);
   const [quoteIndex, setQuoteIndex] = useState(() => Math.floor(Math.random() * INSPIRATIONAL_QUOTES.length));
 
@@ -222,9 +281,46 @@ export default function App() {
     setHistoryItems(getSessionHistory());
   };
 
+  const handleProgressSync = async () => {
+    setProgressSyncStatus('Syncing progress…');
+    try {
+      const progress = await syncCandidateProgress({
+        vault: getMistakesVault(),
+        history: getSessionHistory()
+      });
+      replaceMistakesVault(progress.vault);
+      replaceSessionHistory(progress.history);
+      setVaultItems(progress.vault);
+      setHistoryItems(progress.history);
+      setProgressSyncStatus(`Synced ${new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`);
+      return true;
+    } catch (error) {
+      setProgressSyncStatus(error.message || 'Progress sync failed');
+      return false;
+    }
+  };
+
   useEffect(() => {
     refreshAppData();
   }, [activeTab, activeDrill]);
+
+  useEffect(() => {
+    if (!currentUser) return undefined;
+    let isActive = true;
+    syncCandidateProgress({ vault: getMistakesVault(), history: getSessionHistory() })
+      .then(progress => {
+        if (!isActive) return;
+        replaceMistakesVault(progress.vault);
+        replaceSessionHistory(progress.history);
+        setVaultItems(progress.vault);
+        setHistoryItems(progress.history);
+        setProgressSyncStatus(`Synced ${new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`);
+      })
+      .catch(error => {
+        if (isActive) setProgressSyncStatus(error.message || 'Progress sync failed');
+      });
+    return () => { isActive = false; };
+  }, [currentUser]);
 
   useEffect(() => {
     let isMounted = true;
@@ -288,6 +384,24 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const sendReminderIfDue = () => {
+      if (localStorage.getItem('project_jill_reminder_enabled') !== 'true') return;
+      if (!('Notification' in window) || Notification.permission !== 'granted') return;
+      if (document.visibilityState !== 'visible') return;
+      const now = new Date();
+      const dateKey = now.toLocaleDateString('en-CA');
+      const reminderHour = Number(localStorage.getItem('project_jill_reminder_hour') || 19);
+      if (now.getHours() !== reminderHour || now.getMinutes() !== 0) return;
+      if (localStorage.getItem('project_jill_reminder_last_date') === dateKey) return;
+      new Notification('Project Jill study reminder', { body: 'A short review session can keep your LET preparation moving.' });
+      localStorage.setItem('project_jill_reminder_last_date', dateKey);
+    };
+    sendReminderIfDue();
+    const interval = setInterval(sendReminderIfDue, 30_000);
+    return () => clearInterval(interval);
+  }, []);
+
   if (authLoading) {
     return <div className="min-h-screen bg-[#090A0F] text-slate-300 flex items-center justify-center text-sm">Restoring your session...</div>;
   }
@@ -311,12 +425,15 @@ export default function App() {
   // Active Drill Mode
   if (activeDrill) {
     return (
-      <QuizScreen 
+      <QuizScreen
         drillTitle={activeDrill.title}
         questions={activeDrill.questions}
+        mode={activeDrill.mode}
+        durationSecs={activeDrill.durationSecs}
         onExit={() => {
           setActiveDrill(null);
           refreshAppData();
+          void handleProgressSync();
         }}
         onFinish={async (results) => {
           recordSession({
@@ -324,7 +441,8 @@ export default function App() {
             score: results.score,
             total: results.total,
             percentage: Math.round((results.score / results.total) * 100),
-            durationSecs: results.seconds
+            durationSecs: results.seconds,
+            breakdown: results.breakdown
           });
 
           try {
@@ -336,6 +454,8 @@ export default function App() {
             console.error('Failed to record leaderboard score:', error);
             alert(`Your quiz was saved on this device, but your ranking could not be updated. ${error.message || 'Please try again later.'}`);
           }
+
+          await handleProgressSync();
 
           setActiveDrill(null);
           refreshAppData();
@@ -350,6 +470,13 @@ export default function App() {
       <div className="w-full max-w-md min-h-screen flex flex-col justify-between pb-24 relative overflow-x-hidden border-x border-white/5 bg-[#090A0F]/80">
         <div className="ambient-glow-1" />
         <div className="ambient-glow-2" />
+
+        <header className="relative z-10 flex items-center gap-3 border-b border-white/5 px-5 py-3">
+          <img src="/project-jill-logo.svg" alt="Project Jill" className="h-10 w-10 shrink-0 object-contain drop-shadow-[0_0_14px_rgba(6,182,212,0.25)]" />
+          <div>
+            <h1 className="font-mono text-sm font-bold tracking-wider text-white uppercase">Project Jill</h1>
+          </div>
+        </header>
         
         {/* VIEW BODY */}
         <main className="flex-1 p-5 overflow-y-auto">
@@ -358,9 +485,27 @@ export default function App() {
               timeLeft={timeLeft} 
               user={currentUser}
               vaultCount={vaultItems.length}
+              history={historyItems}
+              vault={vaultItems}
               quote={INSPIRATIONAL_QUOTES[quoteIndex]}
               onRotateQuote={() => setQuoteIndex((quoteIndex + 1) % INSPIRATIONAL_QUOTES.length)}
               onStartDrill={(title, qs) => setActiveDrill({ title, questions: qs || ALL_DRILL_ITEMS })}
+              onStartSimulation={() => setActiveDrill({
+                title: 'LET Full Simulation',
+                questions: createSimulationQuestions(),
+                mode: 'simulation',
+                durationSecs: 3 * 60 * 60
+              })}
+              onStartTopicDrill={(topic) => {
+                const topicQuestions = ALL_15_SETS.flatMap(set => set.questions)
+                  .filter(question => (question.topic || question.category) === topic);
+                const missedQuestions = vaultItems.filter(question => (question.topic || question.category) === topic);
+                const focusedQuestions = topicQuestions.length ? topicQuestions : missedQuestions;
+                setActiveDrill({
+                  title: `Targeted Review: ${topic}`,
+                  questions: shuffleQuestions(focusedQuestions.length ? focusedQuestions : ALL_DRILL_ITEMS).slice(0, 25)
+                });
+              }}
               onStartBossMode={() => {
                 if (vaultItems.length === 0) {
                   alert("Your Mistakes Vault is clean! Complete a drill to log any weak spots.");
@@ -400,6 +545,8 @@ export default function App() {
             <ProfileScreen 
               user={currentUser}
               vaultCount={vaultItems.length}
+              syncStatus={progressSyncStatus}
+              onSyncProgress={handleProgressSync}
               onSignOut={async () => {
                 const { error } = await supabase.auth.signOut();
                 if (error) alert(`Unable to log out: ${error.message}`);
@@ -479,8 +626,11 @@ export default function App() {
 }
 
 // ---------------- HOME SCREEN ---------------- //
-function HomeScreen({ timeLeft, user, vaultCount, quote, onRotateQuote, onStartBossMode }) {
+function HomeScreen({ timeLeft, user, vaultCount, history, vault, quote, onRotateQuote, onStartBossMode, onStartSimulation, onStartTopicDrill }) {
   const displayName = user?.name || "Candidate";
+  const studyRecommendations = getStudyRecommendations(history, vault);
+  const weeklyGoal = Number(localStorage.getItem('project_jill_weekly_goal') || 5);
+  const weeklySessions = history.filter(session => Number(session.id) >= Date.now() - 7 * 24 * 60 * 60 * 1000).length;
 
   return (
     <div className="space-y-4">
@@ -517,6 +667,20 @@ function HomeScreen({ timeLeft, user, vaultCount, quote, onRotateQuote, onStartB
           </div>
         </div>
       </div>
+
+      <button
+        onClick={onStartSimulation}
+        className="w-full luxury-glass-card rounded-2xl border border-cyan-400/25 p-4 text-left transition hover:border-cyan-300/50"
+      >
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <span className="font-mono text-[9px] font-bold tracking-wider text-cyan-300">FULL PRACTICE EXAM</span>
+            <h3 className="mt-1 text-sm font-bold text-white">150-item LET simulation</h3>
+            <p className="mt-1 text-[10px] text-slate-400">50 items per subject · 3-hour timer</p>
+          </div>
+          <FileText size={20} className="shrink-0 text-cyan-300" />
+        </div>
+      </button>
 
       {/* Rotating Daily Quote Card */}
       <div className="luxury-glass-card rounded-3xl p-5 relative shadow-lg">
@@ -559,6 +723,43 @@ function HomeScreen({ timeLeft, user, vaultCount, quote, onRotateQuote, onStartB
           Drill Weak Spots ({vaultCount})
         </button>
       </div>
+
+      <section className="space-y-2 pt-1">
+        <div>
+          <h3 className="font-mono text-[10px] font-bold tracking-wider text-cyan-300">YOUR NEXT STUDY BLOCK</h3>
+          <p className="mt-1 text-[10px] text-slate-500">Prioritized from your accuracy and Mistakes Vault.</p>
+        </div>
+        {studyRecommendations.length > 0 ? studyRecommendations.map(item => (
+          <button
+            key={item.topic}
+            onClick={() => onStartTopicDrill(item.topic)}
+            className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2.5 text-left transition hover:border-cyan-300/35"
+          >
+            <span className="block truncate text-xs font-semibold text-slate-200">{item.topic}</span>
+            <span className="mt-1 block text-[10px] text-slate-500">
+              {item.accuracy === null ? `${item.misses} logged misses` : `${item.accuracy}% accuracy · ${item.attempts} attempts`}
+            </span>
+          </button>
+        )) : (
+          <p className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-3 text-[11px] text-slate-400">
+            Complete a drill to get your first personalized topic recommendation.
+          </p>
+        )}
+      </section>
+
+      <section className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+        <div className="flex items-center justify-between text-[10px]">
+          <span className="font-mono font-bold tracking-wider text-slate-300">WEEKLY STUDY GOAL</span>
+          <span className="text-cyan-200">{Math.min(weeklySessions, weeklyGoal)} / {weeklyGoal} sessions</span>
+        </div>
+        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-800">
+          <div className="h-full bg-cyan-400" style={{ width: `${Math.min((weeklySessions / weeklyGoal) * 100, 100)}%` }} />
+        </div>
+      </section>
+
+      <p className="pt-2 text-center font-mono text-[10px] tracking-wider text-cyan-400 uppercase">
+        Engineered by C. Covelle
+      </p>
     </div>
   );
 }
@@ -654,10 +855,44 @@ function ReviewHubScreen({ vaultCount, onStartDrill, onStartBossMode }) {
 
 // ---------------- USER-SPECIFIC REAL-TIME ANALYTICS ---------------- //
 function AnalyticsScreen({ history, vault }) {
-  const totalItemsAttempted = history.reduce((acc, curr) => acc + (curr.total || 0), 0);
-  const totalCorrect = history.reduce((acc, curr) => acc + (curr.score || 0), 0);
+  const totalItemsAttempted = history.reduce((acc, curr) => acc + (
+    curr.breakdown ? curr.breakdown.filter(result => result.selectedAnswer !== null).length : curr.total || 0
+  ), 0);
+  const totalCorrect = history.reduce((acc, curr) => acc + (
+    curr.breakdown ? curr.breakdown.filter(result => result.isCorrect).length : curr.score || 0
+  ), 0);
   const overallAccuracy = totalItemsAttempted > 0 ? Math.round((totalCorrect / totalItemsAttempted) * 100) : 0;
   const totalStudyMinutes = history.reduce((acc, curr) => acc + Math.round((curr.durationSecs || 0) / 60), 0);
+  const subjectTotals = new Map();
+  history.forEach(session => (session.breakdown || []).forEach(result => {
+    if (result.selectedAnswer === null) return;
+    const domain = result.domain || 'other';
+    const subject = domain === 'gened' ? 'General Education'
+      : domain === 'profed' ? 'Professional Education'
+        : domain === 'science' ? 'Science Major'
+          : result.category || 'Other';
+    const totals = subjectTotals.get(subject) || { subject, attempts: 0, correct: 0 };
+    totals.attempts += 1;
+    if (result.isCorrect) totals.correct += 1;
+    subjectTotals.set(subject, totals);
+  }));
+  const topicPerformance = getTopicPerformance(history).slice(0, 6);
+  const recentSessions = [...history].slice(0, 7).reverse();
+  const latestSimulation = history.find(session => session.title?.includes('LET Full Simulation') && session.breakdown);
+  const simulationSubjects = new Map();
+  (latestSimulation?.breakdown || []).forEach(result => {
+    const subject = result.domain === 'gened' ? 'General Education'
+      : result.domain === 'profed' ? 'Professional Education'
+        : result.domain === 'science' ? 'Science Major'
+          : result.category || 'Other';
+    const totals = simulationSubjects.get(subject) || { subject, total: 0, attempted: 0, correct: 0 };
+    totals.total += 1;
+    if (result.selectedAnswer !== null) {
+      totals.attempted += 1;
+      if (result.isCorrect) totals.correct += 1;
+    }
+    simulationSubjects.set(subject, totals);
+  });
 
   return (
     <div className="space-y-4">
@@ -739,6 +974,67 @@ function AnalyticsScreen({ history, vault }) {
           </div>
         </div>
       </div>
+
+      {latestSimulation && (
+        <section className="rounded-2xl border border-cyan-400/20 bg-cyan-400/[0.03] p-4 space-y-3">
+          <div>
+            <h2 className="font-mono text-[10px] font-bold tracking-wider text-cyan-300">LATEST FULL SIMULATION</h2>
+            <p className="mt-1 text-[10px] text-slate-500">{latestSimulation.score}/{latestSimulation.total} correct · {latestSimulation.percentage}% overall</p>
+          </div>
+          {[...simulationSubjects.values()].map(item => (
+            <div key={item.subject} className="flex items-center justify-between gap-2 border-t border-white/5 pt-2 text-[10px]">
+              <span className="text-slate-300">{item.subject}</span>
+              <span className="text-slate-400">{item.correct}/{item.attempted} correct · {item.attempted}/{item.total} answered</span>
+            </div>
+          ))}
+        </section>
+      )}
+
+      <section className="space-y-2 pt-2">
+        <div>
+          <h2 className="font-mono text-[10px] font-bold tracking-wider text-cyan-300">ACCURACY BY SUBJECT</h2>
+          <p className="mt-1 text-[10px] text-slate-500">Each percentage includes the attempt count behind it.</p>
+        </div>
+        {subjectTotals.size ? [...subjectTotals.values()].map(item => {
+          const accuracy = Math.round((item.correct / item.attempts) * 100);
+          return (
+            <div key={item.subject} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+              <div className="flex items-center justify-between gap-3 text-xs">
+                <span className="truncate font-semibold text-slate-200">{item.subject}</span>
+                <span className="shrink-0 text-cyan-200">{accuracy}% <span className="text-slate-500">· {item.attempts} attempts</span></span>
+              </div>
+              <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-800"><div className="h-full bg-cyan-400" style={{ width: `${accuracy}%` }} /></div>
+            </div>
+          );
+        }) : <p className="rounded-xl border border-white/10 p-3 text-[11px] text-slate-500">Complete a drill to see subject accuracy.</p>}
+      </section>
+
+      <section className="space-y-2 pt-1">
+        <h2 className="font-mono text-[10px] font-bold tracking-wider text-cyan-300">TOPIC MASTERY</h2>
+        {topicPerformance.length ? topicPerformance.map(item => (
+          <div key={item.topic} className="flex items-center justify-between gap-3 border-b border-white/5 py-2 text-xs">
+            <span className="truncate text-slate-300">{item.topic}</span>
+            <span className="shrink-0 text-slate-400">{item.accuracy}% · {item.attempts} attempts</span>
+          </div>
+        )) : <p className="text-[11px] text-slate-500">Topic trends appear after you complete a drill.</p>}
+      </section>
+
+      <section className="space-y-2 pt-1">
+        <div>
+          <h2 className="font-mono text-[10px] font-bold tracking-wider text-cyan-300">RECENT ACCURACY</h2>
+          <p className="mt-1 text-[10px] text-slate-500">Last {recentSessions.length} completed sessions.</p>
+        </div>
+        {recentSessions.length ? (
+          <div className="flex h-24 items-end gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3 pb-2 pt-3" role="img" aria-label="Accuracy trend for recent sessions">
+            {recentSessions.map(session => (
+              <div key={session.id} className="flex h-full min-w-0 flex-1 flex-col items-center justify-end gap-1" title={`${session.title}: ${session.percentage}%`}>
+                <div className="w-full rounded-t-sm bg-cyan-400/80" style={{ height: `${Math.max(session.percentage || 0, 4)}%` }} />
+                <span className="text-[8px] text-slate-500">{session.percentage}%</span>
+              </div>
+            ))}
+          </div>
+        ) : <p className="text-[11px] text-slate-500">Session trend will appear after your first completed drill.</p>}
+      </section>
 
       {/* Recorded Missed Topics */}
       <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">YOUR CRITICAL WEAK SPOTS</div>
@@ -1018,9 +1314,12 @@ function MasteryScreen({ vault, history }) {
 }
 
 // ---------------- PROFILE SCREEN ---------------- //
-function ProfileScreen({ user, vaultCount, onSignOut }) {
+function ProfileScreen({ user, vaultCount, onSignOut, syncStatus, onSyncProgress }) {
   const candidateName = user?.name || "Candidate";
   const userInitials = candidateName.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() || 'LPT';
+  const [reminderHour, setReminderHour] = useState(() => localStorage.getItem('project_jill_reminder_hour') || '19');
+  const [reminderEnabled, setReminderEnabled] = useState(() => localStorage.getItem('project_jill_reminder_enabled') === 'true');
+  const [weeklyGoal, setWeeklyGoal] = useState(() => localStorage.getItem('project_jill_weekly_goal') || '5');
 
   const handleDownloadErrorNotebook = () => {
     const vault = getMistakesVault();
@@ -1067,6 +1366,75 @@ function ProfileScreen({ user, vaultCount, onSignOut }) {
           </div>
         </div>
       </div>
+
+      <section className="luxury-glass-card rounded-2xl p-4 space-y-3">
+        <div className="flex items-center gap-2">
+          <Globe2 size={15} className="text-cyan-300" />
+          <h2 className="text-xs font-bold text-white">Cross-device progress</h2>
+        </div>
+        <p className="text-[10px] leading-relaxed text-slate-400">{syncStatus}. Your study history and Mistakes Vault are merged when you sync.</p>
+        <button
+          onClick={onSyncProgress}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-cyan-400/25 bg-cyan-400/5 px-3 py-2.5 text-xs font-bold text-cyan-200 transition hover:border-cyan-300/50"
+        >
+          <RotateCcw size={14} /> Sync now
+        </button>
+      </section>
+
+      <section className="luxury-glass-card rounded-2xl p-4 space-y-3">
+        <div className="flex items-center gap-2">
+          <Bell size={15} className="text-amber-300" />
+          <h2 className="text-xs font-bold text-white">Study reminder</h2>
+        </div>
+        <p className="text-[10px] leading-relaxed text-slate-400">Optional daily browser notification. It can notify only while Project Jill is open.</p>
+        <div className="flex items-center gap-3">
+          <label htmlFor="study-reminder-time" className="text-[10px] text-slate-400">Daily at</label>
+          <select
+            id="study-reminder-time"
+            value={reminderHour}
+            onChange={event => {
+              setReminderHour(event.target.value);
+              localStorage.setItem('project_jill_reminder_hour', event.target.value);
+            }}
+            className="rounded-lg border border-white/10 bg-[#0D1322] px-2 py-1.5 text-xs text-white"
+          >
+            {Array.from({ length: 24 }, (_, hour) => <option key={hour} value={String(hour)}>{String(hour).padStart(2, '0')}:00</option>)}
+          </select>
+          <button
+            onClick={async () => {
+              if (!reminderEnabled) {
+                if (!('Notification' in window)) return;
+                const permission = await Notification.requestPermission();
+                if (permission !== 'granted') return;
+              }
+              const nextEnabled = !reminderEnabled;
+              setReminderEnabled(nextEnabled);
+              localStorage.setItem('project_jill_reminder_enabled', String(nextEnabled));
+            }}
+            className={`ml-auto rounded-lg border px-3 py-1.5 text-[10px] font-bold ${reminderEnabled ? 'border-cyan-300/40 text-cyan-200' : 'border-white/10 text-slate-300'}`}
+          >
+            {reminderEnabled ? 'On' : 'Enable'}
+          </button>
+        </div>
+        {typeof Notification !== 'undefined' && Notification.permission === 'denied' && <p className="text-[10px] text-rose-300">Notifications are blocked by your browser settings.</p>}
+        {typeof Notification === 'undefined' && <p className="text-[10px] text-amber-300">This browser does not support notifications.</p>}
+      </section>
+
+      <section className="luxury-glass-card rounded-2xl p-4 space-y-2">
+        <label htmlFor="weekly-study-goal" className="block text-xs font-bold text-white">Weekly study goal</label>
+        <p className="text-[10px] leading-relaxed text-slate-400">Set a realistic number of completed study sessions for each week.</p>
+        <select
+          id="weekly-study-goal"
+          value={weeklyGoal}
+          onChange={event => {
+            setWeeklyGoal(event.target.value);
+            localStorage.setItem('project_jill_weekly_goal', event.target.value);
+          }}
+          className="w-full rounded-lg border border-white/10 bg-[#0D1322] px-3 py-2 text-xs text-white"
+        >
+          {[3, 5, 7, 10].map(goal => <option key={goal} value={goal}>{goal} sessions per week</option>)}
+        </select>
+      </section>
 
       {/* PDF Downloads */}
       <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase pt-2">PERSONAL LIBRARY & TOOLS</div>
@@ -1141,27 +1509,41 @@ function ProfileScreen({ user, vaultCount, onSignOut }) {
       >
         Log Out
       </button>
+      <p className="border-t border-cyan-400/15 pt-3 text-center font-mono text-[10px] tracking-wider text-cyan-400 uppercase">
+        Engineered by C. Covelle
+      </p>
     </div>
   );
 }
 
 // ---------------- QUIZ ENGINE ---------------- //
-function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
+function QuizScreen({ drillTitle, questions, onExit, onFinish, mode, durationSecs = 0 }) {
+  const isSimulation = mode === 'simulation';
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [isAnswered, setIsAnswered] = useState(false);
+  const [selectedOptionState, setSelectedOptionState] = useState(null);
+  const [answers, setAnswers] = useState({});
   const [seconds, setSeconds] = useState(0);
-  const [score, setScore] = useState(0);
+  const [remainingSecs, setRemainingSecs] = useState(durationSecs);
   const [bookmarked, setBookmarked] = useState(false);
   const [aiLoading, setAiLoading] = useState(false);
   const [aiInsight, setAiInsight] = useState(null);
+  const [reportOpen, setReportOpen] = useState(false);
+  const [reportType, setReportType] = useState('Incorrect answer');
+  const [reportDetails, setReportDetails] = useState('');
+  const [reportStatus, setReportStatus] = useState('');
+  const submittedRef = useRef(false);
 
   const currentQ = questions[currentIndex] || ALL_DRILL_ITEMS[0];
+  const selectedOption = isSimulation ? answers[currentIndex] : selectedOptionState;
+  const isAnswered = !isSimulation && selectedOptionState !== null;
 
   useEffect(() => {
-    const timer = setInterval(() => setSeconds(s => s + 1), 1000);
+    const timer = setInterval(() => {
+      if (isSimulation) setRemainingSecs(value => Math.max(0, value - 1));
+      else setSeconds(value => value + 1);
+    }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isSimulation]);
 
   const formatTime = (secs) => {
     const m = String(Math.floor(secs / 60)).padStart(2, '0');
@@ -1169,38 +1551,85 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
     return `${m}:${s}`;
   };
 
+  const finishQuiz = (timedOut = false) => {
+    if (submittedRef.current) return;
+    const unanswered = questions.length - Object.keys(answers).length;
+    if (isSimulation && !timedOut && unanswered > 0 && !window.confirm(`${unanswered} question${unanswered === 1 ? '' : 's'} unanswered. Submit the simulation?`)) return;
+    submittedRef.current = true;
+
+    const breakdown = questions.map((question, index) => {
+      const selectedAnswer = answers[index] || null;
+      return {
+        questionId: question.id,
+        question: question.question,
+        category: question.category || 'Uncategorized',
+        topic: question.topic || question.category || 'Uncategorized',
+        domain: question.domain || 'other',
+        selectedAnswer,
+        correctAnswer: question.correctAnswer,
+        isCorrect: selectedAnswer === question.correctAnswer
+      };
+    });
+    const score = breakdown.filter(item => item.isCorrect).length;
+
+    if (isSimulation) {
+      breakdown.filter(item => item.selectedAnswer !== null && !item.isCorrect).forEach(item => {
+        const question = questions.find(candidate => candidate.id === item.questionId && candidate.question === item.question);
+        if (question) recordMistake({ ...question, selectedAnswer: item.selectedAnswer, category: item.category });
+      });
+    }
+
+    onFinish?.({
+      score,
+      total: questions.length,
+      seconds: isSimulation ? durationSecs - remainingSecs : seconds,
+      breakdown,
+      timedOut
+    });
+  };
+
+  useEffect(() => {
+    if (isSimulation && remainingSecs === 0) finishQuiz(true);
+  }, [isSimulation, remainingSecs]);
+
   const handleSelect = (optionId) => {
     if (isAnswered) return;
-    setSelectedOption(optionId);
-    setIsAnswered(true);
+    setAnswers(previous => ({ ...previous, [currentIndex]: optionId }));
+
+    if (isSimulation) return;
+
+    setSelectedOptionState(optionId);
 
     if (optionId === currentQ.correctAnswer) {
-      setScore(s => s + 1);
     } else {
       recordMistake(currentQ);
     }
   };
 
+  useEffect(() => {
+    setReportOpen(false);
+    setReportType('Incorrect answer');
+    setReportDetails('');
+    setReportStatus('');
+  }, [currentIndex]);
+
   const handleNext = () => {
+    if (isSimulation) {
+      if (currentIndex < questions.length - 1) setCurrentIndex(index => index + 1);
+      else finishQuiz();
+      return;
+    }
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(i => i + 1);
-      setSelectedOption(null);
-      setIsAnswered(false);
+      setSelectedOptionState(null);
       setAiInsight(null);
-    } else if (onFinish) {
-      onFinish({
-        score: selectedOption === currentQ.correctAnswer ? score + 1 : score,
-        total: questions.length,
-        seconds
-      });
-    }
+    } else finishQuiz();
   };
 
   const handlePrev = () => {
     if (currentIndex > 0) {
       setCurrentIndex(i => i - 1);
-      setSelectedOption(null);
-      setIsAnswered(false);
+      if (!isSimulation) setSelectedOptionState(null);
       setAiInsight(null);
     }
   };
@@ -1227,6 +1656,24 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
     }
   };
 
+  const handleSubmitFeedback = async (event) => {
+    event.preventDefault();
+    setReportStatus('Submitting…');
+    try {
+      await submitQuestionFeedback({
+        questionId: currentQ.id,
+        question: currentQ.question,
+        category: currentQ.category,
+        issueType: reportType,
+        details: reportDetails
+      });
+      setReportStatus('Report submitted. Thank you for helping improve this question.');
+      setReportDetails('');
+    } catch (error) {
+      setReportStatus(error.message || 'Unable to submit the report.');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#070A12] text-white flex justify-center">
       <div className="w-full max-w-md min-h-screen flex flex-col justify-between p-4 pb-8 relative">
@@ -1239,7 +1686,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
             </button>
             <div className="text-center">
               <span className="text-[10px] font-bold tracking-widest text-[#E5B842] uppercase block">
-                DRILL SESSION
+                {isSimulation ? 'TIMED SIMULATION' : 'DRILL SESSION'}
               </span>
               <span className="text-sm font-semibold text-slate-200">
                 {drillTitle}
@@ -1255,7 +1702,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
           {/* Progress & Timer */}
           <div className="flex items-center justify-between mt-4 text-xs font-semibold text-slate-400">
             <span>Q{currentIndex + 1} OF {questions.length}</span>
-            <span>⏱ {formatTime(seconds)}</span>
+            <span>{isSimulation ? `TIME LEFT ${formatTime(remainingSecs)}` : `⏱ ${formatTime(seconds)}`}</span>
           </div>
           <div className="w-full bg-slate-800 h-1.5 rounded-full mt-2 overflow-hidden">
             <div 
@@ -1269,6 +1716,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
             <span className="truncate max-w-[260px] font-medium text-slate-300">📁 {currentQ.category}</span>
             <span>•</span>
             <span className="text-emerald-400 font-semibold">🟢 {currentQ.difficulty || 'Easy'}</span>
+            {isSimulation && <span className="ml-auto text-cyan-300">{Object.keys(answers).length} ANSWERED</span>}
           </div>
 
           {/* Question Text */}
@@ -1282,7 +1730,9 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
           <div className="space-y-3 mt-4">
             {currentQ.options?.map(opt => {
               let btnStyle = "luxury-glass-card text-slate-200";
-              if (isAnswered) {
+              if (isSimulation && selectedOption === opt.id) {
+                btnStyle = "border-cyan-400 bg-cyan-950/40 text-cyan-100";
+              } else if (isAnswered) {
                 if (opt.id === currentQ.correctAnswer) {
                   btnStyle = "bg-emerald-950/60 border-emerald-500 text-emerald-300";
                 } else if (selectedOption === opt.id) {
@@ -1320,6 +1770,38 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
                 </button>
               );
             })}
+          </div>
+
+          <div className="mt-3">
+            <button
+              type="button"
+              onClick={() => setReportOpen(value => !value)}
+              className="inline-flex items-center gap-1.5 py-1 text-[10px] font-semibold text-slate-500 transition hover:text-cyan-300"
+            >
+              <AlertCircle size={13} /> Report a question issue
+            </button>
+            {reportOpen && (
+              <form onSubmit={handleSubmitFeedback} className="mt-2 space-y-2 rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                <select value={reportType} onChange={event => setReportType(event.target.value)} className="w-full rounded-lg border border-white/10 bg-[#0D1322] px-3 py-2 text-xs text-white">
+                  <option>Incorrect answer</option>
+                  <option>Unclear wording</option>
+                  <option>Explanation issue</option>
+                  <option>Duplicate question</option>
+                  <option>Other</option>
+                </select>
+                <textarea
+                  value={reportDetails}
+                  onChange={event => setReportDetails(event.target.value)}
+                  required
+                  maxLength={1000}
+                  rows={3}
+                  placeholder="Describe what should be reviewed"
+                  className="w-full resize-y rounded-lg border border-white/10 bg-[#0D1322] px-3 py-2 text-xs text-white placeholder:text-slate-600"
+                />
+                <button type="submit" disabled={!reportDetails.trim() || reportStatus === 'Submitting…'} className="rounded-lg bg-cyan-400/10 px-3 py-2 text-[10px] font-bold text-cyan-200 disabled:opacity-50">Submit report</button>
+                {reportStatus && <p className="text-[10px] text-slate-400">{reportStatus}</p>}
+              </form>
+            )}
           </div>
 
           {/* Explanations */}
@@ -1411,7 +1893,7 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
             onClick={handleNext}
             className="col-span-2 gold-glow-btn text-slate-950 font-bold py-3.5 rounded-2xl text-xs flex items-center justify-center gap-1 shadow-lg cursor-pointer"
           >
-            {currentIndex === questions.length - 1 ? "FINISH DRILL" : "NEXT"} <ChevronRight size={16} />
+            {currentIndex === questions.length - 1 ? (isSimulation ? "SUBMIT SIMULATION" : "FINISH DRILL") : "NEXT"} <ChevronRight size={16} />
           </button>
         </div>
 
@@ -1556,7 +2038,7 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onAuthProcessing,
             <img src="/project-jill-logo.svg" alt="Project Jill" className="h-12 w-12 shrink-0 object-contain drop-shadow-[0_0_14px_rgba(6,182,212,0.25)]" />
             <div>
               <h2 className="font-mono font-bold text-sm tracking-wider text-white uppercase">Project Jill</h2>
-              <span className="text-[9px] text-cyan-300 font-semibold tracking-widest block uppercase">
+              <span className="text-[10px] tracking-wider text-cyan-400 font-mono block uppercase">
                 Engineered by C. Covelle
               </span>
             </div>

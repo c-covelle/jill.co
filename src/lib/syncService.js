@@ -239,3 +239,82 @@ export async function markMistakeMastered(mistakeId) {
     console.error('Error updating mistake status:', err.message);
   }
 }
+
+function mergeHistory(remoteHistory = [], localHistory = []) {
+  const merged = new Map();
+  [...remoteHistory, ...localHistory].forEach(session => {
+    const key = String(session.id ?? `${session.title}:${session.date}:${session.score}:${session.total}`);
+    const existing = merged.get(key);
+    merged.set(key, existing ? { ...existing, ...session } : session);
+  });
+  return [...merged.values()]
+    .sort((left, right) => Number(right.id || 0) - Number(left.id || 0))
+    .slice(0, 100);
+}
+
+function mergeVault(remoteVault = [], localVault = []) {
+  const merged = new Map();
+  [...remoteVault, ...localVault].forEach(item => {
+    const key = String(item.question || item.id || '').trim().toLowerCase();
+    const existing = merged.get(key);
+    if (!existing) {
+      merged.set(key, item);
+      return;
+    }
+    merged.set(key, {
+      ...existing,
+      ...item,
+      missCount: Math.max(existing.missCount || 1, item.missCount || 1),
+      status: existing.status === 'Mastered' || item.status === 'Mastered' ? 'Mastered' : item.status || existing.status
+    });
+  });
+  return [...merged.values()].slice(0, 500);
+}
+
+export async function syncCandidateProgress({ vault = [], history = [] }) {
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+  if (authError) throw authError;
+  if (!user) throw new Error('Sign in to sync study progress across devices.');
+
+  const progressOwner = localStorage.getItem('project_jill_progress_owner');
+  const canMergeLocalProgress = !progressOwner || progressOwner === user.id;
+
+  const { data: remote, error: fetchError } = await supabase
+    .from('candidate_progress')
+    .select('vault, history')
+    .eq('user_id', user.id)
+    .maybeSingle();
+  if (fetchError) throw fetchError;
+
+  const mergedVault = mergeVault(remote?.vault || [], canMergeLocalProgress ? vault : []);
+  const mergedHistory = mergeHistory(remote?.history || [], canMergeLocalProgress ? history : []);
+  const { error: saveError } = await supabase
+    .from('candidate_progress')
+    .upsert({
+      user_id: user.id,
+      vault: mergedVault,
+      history: mergedHistory,
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'user_id' });
+  if (saveError) throw saveError;
+
+    localStorage.setItem('project_jill_progress_owner', user.id);
+
+  return { vault: mergedVault, history: mergedHistory };
+}
+
+export async function submitQuestionFeedback({ questionId, question, category, issueType, details }) {
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+  if (authError) throw authError;
+  if (!user) throw new Error('Sign in to submit question feedback.');
+
+  const { error } = await supabase.from('question_feedback').insert({
+    user_id: user.id,
+    question_id: String(questionId || ''),
+    question,
+    category: category || 'Uncategorized',
+    issue_type: issueType,
+    details: details.trim()
+  });
+  if (error) throw error;
+}
