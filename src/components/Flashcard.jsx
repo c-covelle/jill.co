@@ -16,12 +16,12 @@ export default function Flashcard({ card, onHard, onGotIt }) {
           }`}
         >
           {/* FRONT FACE */}
-          <div className="absolute inset-0 w-full h-full bg-white rounded-3xl p-8 flex flex-col justify-between items-center text-slate-900 backface-hidden shadow-2xl">
-            <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase">
+          <div className="luxury-glass-card absolute inset-0 w-full h-full rounded-3xl p-8 flex flex-col justify-between items-center text-white backface-hidden shadow-2xl">
+            <span className="text-xs font-bold tracking-widest text-cyan-300 uppercase">
               {card.category || "GENERAL SCIENCE"}
             </span>
 
-            <p className="text-xl font-bold text-center leading-relaxed">
+            <p className="text-xl font-bold text-center leading-relaxed text-slate-100">
               {card.question}
             </p>
 
@@ -31,7 +31,7 @@ export default function Flashcard({ card, onHard, onGotIt }) {
           </div>
 
           {/* BACK FACE (Pre-rotated 180deg so it displays normal when flipped) */}
-          <div className="absolute inset-0 w-full h-full bg-[#162B68] rounded-3xl p-8 flex flex-col justify-between items-center text-white rotate-y-180 backface-hidden shadow-2xl">
+          <div className="luxury-glass-card absolute inset-0 w-full h-full rounded-3xl p-8 flex flex-col justify-between items-center text-white rotate-y-180 backface-hidden shadow-2xl">
             <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">
               CORRECT ANSWER
             </span>

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   BarChart3, BookOpen, Home, GraduationCap, User, Trophy, Bell, 
   Sparkles, Flame, Check, ChevronRight, ChevronLeft, ChevronDown, ChevronUp,
-  RotateCcw, Lock, Mail, ArrowRight, ShieldCheck, FileText, Search, Download,
+  RotateCcw, Lock, Mail, ArrowRight, FileText, Search, Download,
   X, Bookmark, Info, CheckCircle2, XCircle, Loader2, AlertCircle, UserPlus, Share2, Globe2
 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
@@ -289,7 +289,7 @@ export default function App() {
   }, []);
 
   if (authLoading) {
-    return <div className="min-h-screen bg-[#070A12] text-slate-300 flex items-center justify-center text-sm">Restoring your session...</div>;
+    return <div className="min-h-screen bg-[#090A0F] text-slate-300 flex items-center justify-center text-sm">Restoring your session...</div>;
   }
 
   if (!currentUser) {
@@ -346,8 +346,10 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#070A12] text-slate-100 flex justify-center selection:bg-[#E5B842]/30 selection:text-[#E5B842]">
-      <div className="w-full max-w-md min-h-screen flex flex-col justify-between pb-24 relative overflow-x-hidden border-x border-slate-800/40 bg-gradient-to-b from-[#0D1224] via-[#0A0E1A] to-[#070A12]">
+    <div className="min-h-screen bg-[#090A0F] text-slate-100 flex justify-center selection:bg-cyan-400/30 selection:text-cyan-100">
+      <div className="w-full max-w-md min-h-screen flex flex-col justify-between pb-24 relative overflow-x-hidden border-x border-white/5 bg-[#090A0F]/80">
+        <div className="ambient-glow-1" />
+        <div className="ambient-glow-2" />
         
         {/* VIEW BODY */}
         <main className="flex-1 p-5 overflow-y-auto">
@@ -411,7 +413,7 @@ export default function App() {
         </main>
 
         {/* BOTTOM NAVIGATION TABS */}
-        <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-[#0D1322]/95 backdrop-blur-md border-t border-slate-800/80 px-4 py-2.5 z-50">
+        <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-[#090A0F]/85 backdrop-blur-xl border-t border-white/10 px-4 py-2.5 z-50">
           <div className="flex justify-around items-center">
             
             <button 
@@ -837,12 +839,12 @@ function MasteryScreen({ vault, history }) {
               {/* FRONT FACE (QUESTION) */}
               <div 
                 style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
-                className="absolute inset-0 w-full h-full bg-white rounded-3xl p-6 flex flex-col justify-between items-center text-slate-900 shadow-2xl"
+                className="luxury-glass-card absolute inset-0 w-full h-full rounded-3xl p-6 flex flex-col justify-between items-center text-white shadow-2xl"
               >
-                <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase text-center">
+                <span className="text-xs font-bold tracking-widest text-cyan-300 uppercase text-center">
                   {currentCard.category}
                 </span>
-                <p className="text-base font-bold text-center leading-relaxed text-slate-900 px-2 font-sans">
+                <p className="text-base font-bold text-center leading-relaxed text-slate-100 px-2 font-sans">
                   {currentCard.question}
                 </p>
                 <span className="text-xs text-slate-400 font-medium">Tap card to reveal full answer ↺</span>
@@ -855,7 +857,7 @@ function MasteryScreen({ vault, history }) {
                   WebkitBackfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)'
                 }}
-                className="absolute inset-0 w-full h-full bg-[#162B68] rounded-3xl p-6 flex flex-col justify-between items-center text-white shadow-2xl"
+                className="luxury-glass-card absolute inset-0 w-full h-full rounded-3xl p-6 flex flex-col justify-between items-center text-white shadow-2xl"
               >
                 <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">
                   CORRECT ANSWER
@@ -1421,12 +1423,20 @@ function QuizScreen({ drillTitle, questions, onExit, onFinish }) {
 // ---------------- LANDING & SUPABASE AUTH GATEWAY ---------------- //
 function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onAuthProcessing, onSuccess }) {
   const [isSignUp, setIsSignUp] = useState(false);
+  const [selectedPreviewOption, setSelectedPreviewOption] = useState('Formal Operational');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+
+  const openAuth = (signUp) => {
+    setIsSignUp(signUp);
+    setErrorMsg('');
+    setSuccessMsg('');
+    onOpenAuth();
+  };
 
   const ensureCandidateProfile = async (authUser, profileName) => {
     const normalizedEmail = authUser.email?.trim().toLowerCase();
@@ -1536,103 +1546,191 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onAuthProcessing,
   };
 
   return (
-    <div className="min-h-screen bg-[#070A12] text-white flex justify-center items-center relative overflow-hidden px-4 py-8">
+    <div className="min-h-screen bg-[#090A0F] text-slate-100 flex justify-center relative overflow-hidden px-5 py-6 sm:px-8 sm:py-8">
       <div className="ambient-glow-1" />
       <div className="ambient-glow-2" />
 
-      <div className="w-full max-w-md min-h-screen flex flex-col justify-between relative z-10 space-y-6">
-        
-        {/* Header */}
-        <header className="flex items-center justify-between pt-2">
+      <div className="w-full max-w-6xl min-h-[calc(100vh-3rem)] flex flex-col relative z-10">
+        <header className="flex items-center justify-between py-2">
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#162038] to-[#0D1527] border border-[#E5B842]/40 flex items-center justify-center font-serif font-bold text-[#E5B842] shadow-lg text-base">
-              PJ
-            </div>
+            <img src="/project-jill-logo.svg" alt="Project Jill" className="h-12 w-12 shrink-0 object-contain drop-shadow-[0_0_14px_rgba(6,182,212,0.25)]" />
             <div>
-              <h2 className="font-serif font-bold text-sm tracking-wider text-white uppercase">Project Jill</h2>
-              <span className="text-[9px] text-[#E5B842] font-semibold tracking-widest block uppercase opacity-90">
+              <h2 className="font-mono font-bold text-sm tracking-wider text-white uppercase">Project Jill</h2>
+              <span className="text-[9px] text-cyan-300 font-semibold tracking-widest block uppercase">
                 Engineered by C. Covelle
               </span>
             </div>
           </div>
 
-          <button 
-            onClick={onOpenAuth}
-            className="border border-[#E5B842]/50 hover:border-[#E5B842] hover:bg-[#E5B842]/10 text-[#E5B842] text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase transition duration-200 cursor-pointer"
+          <button
+            onClick={() => openAuth(false)}
+            className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-200 backdrop-blur-md transition hover:border-cyan-300/50 hover:text-cyan-100 cursor-pointer"
           >
-            Exclusive Access
+            Sign In
           </button>
         </header>
 
-        {/* Feature Cards */}
-        <section className="space-y-3.5 pt-2">
-          <FeatureCard 
-            icon="📑" 
-            title="CURATED DRILLS SETS" 
-            desc="Over 750 targeted questions in GenEd, ProfEd, and Specialization." 
-          />
-          <FeatureCard 
-            icon="📖" 
-            title="ERROR NOTEBOOK & VAULT" 
-            desc="Sync and review missed questions across devices for mastery." 
-          />
-          <FeatureCard 
-            icon="📈" 
-            title="PERFORMANCE ANALYTICS" 
-            desc="Live accuracy tracking, streaks, and domain-specific insights." 
-          />
-          <FeatureCard 
-            icon="🔊" 
-            title="COMPLETE WITH MEMORY TIPS AND RATIONALIZATIONS" 
-            desc="Unlock mnemonics and detailed explanations for each question." 
-          />
-        </section>
-
-        {/* Hero Section */}
-        <section className="space-y-4 pt-4">
-          <div className="inline-flex items-center gap-2 bg-[#121B30] border border-[#E5B842]/30 text-[#E5B842] text-[10px] font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-            <Sparkles size={13} className="text-[#E5B842]" /> 
-            <span>Exclusive Access to members only</span>
+        <main className="flex flex-1 flex-col items-center justify-center py-14 text-center sm:py-20">
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-cyan-100 shadow-[0_0_24px_rgba(6,182,212,0.1)] backdrop-blur-md">
+            <Sparkles size={14} className="text-cyan-300" />
+            <span>🔥 Join future LPTs prepping for the March 2027 exam</span>
           </div>
 
-          <h1 className="font-serif text-3xl font-bold text-white leading-tight tracking-tight">
-            Master Your Path to LPT: <span className="text-[#E5B842] italic">Project Jill</span>
+          <h1 className="mt-7 max-w-4xl font-mono text-3xl font-semibold leading-tight text-white sm:text-5xl">
+            Master the Board. One High-Yield Question at a Time.
           </h1>
 
-          <p className="text-xs text-slate-400 leading-relaxed font-sans">
-            Your ultimate LET review companion
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
+            Master high-yield competencies with instant rationalizations and live leaderboard ranks. Your intelligent prep system for the March 2027 Licensure Examination for Teachers.
           </p>
 
-          <div className="luxury-glass-card rounded-2xl p-4.5 space-y-1.5 border border-white/5">
-            <h4 className="text-xs font-bold text-[#E5B842] tracking-wide">Our Mission:</h4>
-            <p className="text-xs text-slate-300 leading-relaxed font-sans">
-              Project Jill exists to make LET preparation more intelligent, personal, and purposeful—giving every learner the tools to practice, understand their mistakes, strengthen their weaknesses, and build the confidence to face the board examination. Because passing the LET isn't just about knowing more. It's about becoming ready.
-            </p>
+          <button
+            onClick={() => openAuth(true)}
+            className="gold-glow-btn mt-8 inline-flex items-center justify-center rounded-xl px-8 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-cyan-300/30 cursor-pointer"
+          >
+            Get Started — It's Free <ArrowRight size={17} className="ml-2" />
+          </button>
+
+          <button
+            onClick={() => openAuth(false)}
+            className="mt-4 text-sm font-medium text-slate-400 transition hover:text-cyan-100 cursor-pointer"
+          >
+            Already have an account? <span className="font-semibold text-cyan-300 underline decoration-cyan-400 underline-offset-4">Sign in</span>
+          </button>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-2.5">
+            {['🎯 Smart Drills', '⚡ Instant Scoring', '🏆 Live Leaderboard'].map((feature) => (
+              <span key={feature} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-200 backdrop-blur-md">
+                {feature}
+              </span>
+            ))}
           </div>
 
-          <button 
-            onClick={onOpenAuth}
-            className="w-full gold-glow-btn text-slate-950 font-bold py-4 rounded-2xl text-xs uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer mt-2"
-          >
-            Try Project Jill Now <ArrowRight size={16} />
-          </button>
-        </section>
+          <section className="relative mx-auto mt-12 w-full max-w-5xl px-4 text-left perspective-[1200px]" aria-label="Interactive candidate dashboard preview">
+            <div aria-hidden="true" className="absolute -z-10 -top-10 left-1/2 h-64 w-3/4 -translate-x-1/2 bg-gradient-to-r from-violet-600/30 via-cyan-500/30 to-blue-600/30 blur-3xl" />
+            <div className="relative rounded-3xl border border-cyan-500/20 bg-slate-900/60 p-4 shadow-[0_0_50px_rgba(6,182,212,0.15)] ring-1 ring-white/10 backdrop-blur-2xl before:absolute before:-inset-1 before:-z-10 before:rounded-3xl before:bg-gradient-to-r before:from-cyan-500/20 before:via-violet-500/20 before:to-fuchsia-500/20 before:blur-2xl before:content-[''] transform md:-rotate-x-2 md:rotate-1 hover:rotate-0 hover:-translate-y-1 hover:border-cyan-500/40 hover:shadow-[0_0_70px_rgba(6,182,212,0.25)] transition-all duration-700 ease-out sm:p-8">
+              <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
+                <div>
+                  <p className="font-mono text-[10px] font-semibold tracking-[0.18em] text-cyan-300">CANDIDATE WORKSPACE</p>
+                  <h2 className="mt-1 font-mono text-base font-semibold text-white sm:text-lg">Your next session, in focus</h2>
+                </div>
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[9px] tracking-wider text-slate-400">DASHBOARD PREVIEW</span>
+              </div>
 
-        {/* Footer */}
-        <footer className="text-center pt-6 pb-2 border-t border-slate-800/60 text-[10px] text-slate-500 space-y-1.5">
-          <p className="flex items-center justify-center gap-1.5 text-slate-400">
-            <ShieldCheck size={14} className="text-[#E5B842]" /> Verified Examinees Only • Exclusive Access
-          </p>
-          <p>Architected & Built by <span className="text-slate-300 font-semibold">C. Covelle</span> • © 2026 Project Jill</p>
+              <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+                <article className="min-w-0 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-4 backdrop-blur-xl sm:p-5">
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-300 opacity-60" />
+                      <span className="relative inline-flex h-2 w-2 animate-pulse rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(34,211,238,0.9)]" />
+                    </span>
+                    <h3 className="font-mono text-[10px] font-semibold tracking-widest text-cyan-200">LIVE DRILL SESSION</h3>
+                  </div>
+                  <p className="mt-2 text-[10px] text-slate-400">GenEd <span className="text-cyan-500">•</span> Professional Education</p>
+                  <p className="mt-5 text-sm font-semibold leading-relaxed text-slate-100">
+                    According to Piaget, at which stage does abstract hypothetical-deductive reasoning develop?
+                  </p>
+                  <div className="mt-4 space-y-2">
+                    {[
+                      { label: 'Sensorimotor', accuracy: '' },
+                      { label: 'Preoperational', accuracy: '' },
+                      { label: 'Concrete', accuracy: '' },
+                      { label: 'Formal Operational', accuracy: '94% accuracy' }
+                    ].map((option) => {
+                      const isSelected = selectedPreviewOption === option.label;
+                      return (
+                        <button
+                          key={option.label}
+                          type="button"
+                          aria-pressed={isSelected}
+                          onClick={() => setSelectedPreviewOption(option.label)}
+                          className={`flex w-full items-center justify-between gap-2 rounded-xl border px-3 py-2.5 text-left text-[11px] transition ${isSelected ? 'border-cyan-400 bg-cyan-500/15 text-cyan-200 shadow-[0_0_15px_rgba(6,182,212,0.25)]' : 'border-white/10 bg-white/[0.03] text-slate-300 hover:border-cyan-300/30 hover:bg-white/[0.06]'}`}
+                        >
+                          <span>{option.label}{option.accuracy ? ' ✨' : ''}</span>
+                          {option.accuracy && <span className="shrink-0 font-mono text-[9px] text-cyan-300">{option.accuracy}</span>}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-4 rounded-xl border border-violet-300/20 bg-violet-400/[0.06] px-3 py-2.5 text-[10px] leading-relaxed text-violet-100">
+                    💡 Instant Rationalization &amp; Memory Peg Available
+                  </div>
+                </article>
+
+                <article className="min-w-0 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-4 backdrop-blur-xl sm:p-5">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-mono text-[10px] font-semibold tracking-widest text-slate-200">COMPETENCY RADAR</h3>
+                    <span className="h-2 w-2 rounded-full bg-violet-400 shadow-[0_0_10px_rgba(167,139,250,0.8)]" />
+                  </div>
+                  <div className="my-5 flex justify-center">
+                    <div className="h-36 w-36 rounded-full p-[3px] shadow-[0_0_24px_rgba(6,182,212,0.18)]" style={{ background: 'conic-gradient(#22d3ee 0deg 318deg, rgba(255,255,255,0.08) 318deg 360deg)' }}>
+                      <div className="flex h-full w-full flex-col items-center justify-center rounded-full border border-cyan-300/10 bg-[#0B101A]">
+                        <span className="font-mono text-2xl font-semibold text-white">88.4%</span>
+                        <span className="mt-1 text-[9px] uppercase tracking-widest text-cyan-200">Accuracy</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      { label: 'GenEd', score: 92, color: 'bg-cyan-400' },
+                      { label: 'ProfEd', score: 86, color: 'bg-violet-400' },
+                      { label: 'Specialization', score: 87, color: 'bg-emerald-400' }
+                    ].map((item) => (
+                      <div key={item.label}>
+                        <div className="mb-1 flex justify-between text-[10px]">
+                          <span className="text-slate-300">{item.label}</span>
+                          <span className="font-mono text-slate-100">{item.score}%</span>
+                        </div>
+                        <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
+                          <div className={`h-full rounded-full ${item.color}`} style={{ width: `${item.score}%` }} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-5 grid grid-cols-2 gap-2">
+                    <span className="rounded-lg border border-cyan-300/20 bg-cyan-300/5 px-2 py-2 text-center text-[10px] text-cyan-100"><Flame size={12} className="mr-1 inline text-cyan-300" />14-Day Study Streak</span>
+                    <span className="rounded-lg border border-violet-300/20 bg-violet-300/5 px-2 py-2 text-center text-[10px] text-violet-100">Level 8 Mentor</span>
+                  </div>
+                </article>
+
+                <article className="min-w-0 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-4 backdrop-blur-xl sm:p-5">
+                  <div className="flex items-center gap-2">
+                    <Trophy size={15} className="text-cyan-300 drop-shadow-[0_0_7px_rgba(6,182,212,0.6)]" />
+                    <h3 className="font-mono text-[10px] font-semibold tracking-widest text-slate-200">TOP REVIEWERS TODAY</h3>
+                  </div>
+                  <div className="mt-5 space-y-3">
+                    {[
+                      { rank: '🥇 #1', name: 'Maria Santos', xp: '4,280 XP', color: 'dashboard-top-reviewer border-amber-500/30 bg-amber-500/5 shadow-[0_0_18px_rgba(245,158,11,0.08)]' },
+                      { rank: '🥈 #2', name: 'Kevin Cruz', xp: '3,950 XP', color: 'border-violet-300/25 bg-violet-300/[0.05]' },
+                      { rank: '🥉 #3', name: 'Jill C.', xp: '3,820 XP', color: 'border-emerald-300/20 bg-emerald-300/[0.04]' }
+                    ].map((reviewer) => (
+                      <div key={reviewer.rank} className={`flex items-center justify-between gap-2 rounded-xl border px-3 py-3 ${reviewer.color}`}>
+                        <div className="flex min-w-0 items-center gap-2.5">
+                          <span className="shrink-0 font-mono text-[10px] font-semibold text-cyan-200">{reviewer.rank}</span>
+                          <span className="truncate text-xs font-medium text-slate-100">{reviewer.name}</span>
+                        </div>
+                        <span className="shrink-0 rounded-md border border-cyan-300/20 bg-cyan-300/5 px-2 py-1 font-mono text-[9px] text-cyan-200">{reviewer.xp}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-5 border-t border-white/10 pt-3 text-center text-[9px] text-slate-500">Updated live via Supabase sync</p>
+                </article>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer className="pt-5 pb-2 text-center text-[10px] text-slate-500">
+          <p>Built by <span className="font-semibold text-slate-300">C. Covelle</span> · © 2026 Project Jill</p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 pt-2 text-[10px]">
-            <a href="mailto:projectjill.support@gmail.com" className="inline-flex items-center gap-1.5 transition hover:text-[#E5B842]">
-              <Mail size={12} className="text-[#E5B842]" /> projectjill.support@gmail.com
+            <a href="mailto:projectjill.support@gmail.com" className="inline-flex items-center gap-1.5 transition hover:text-cyan-200">
+              <Mail size={12} className="text-cyan-400" /> projectjill.support@gmail.com
             </a>
-            <a href="https://facebook.com/project.jill" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 transition hover:text-[#E5B842]">
-              <Share2 size={12} className="text-[#E5B842]" /> Facebook
+            <a href="https://facebook.com/project.jill" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 transition hover:text-cyan-200">
+              <Share2 size={12} className="text-cyan-400" /> Facebook
             </a>
-            <a href="https://project-jill-web.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 transition hover:text-[#E5B842]">
-              <Globe2 size={12} className="text-[#E5B842]" /> project-jill-web.vercel.app
+            <a href="https://project-jill-web.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 transition hover:text-cyan-200">
+              <Globe2 size={12} className="text-cyan-400" /> project-jill-web.vercel.app
             </a>
           </div>
         </footer>
@@ -1640,16 +1738,14 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onAuthProcessing,
         {/* MODAL */}
         {showAuthModal && (
           <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 z-50 transition-opacity">
-            <div className="luxury-glass-card border border-[#232F4D] w-full max-w-sm rounded-3xl p-6 shadow-2xl space-y-4 relative">
+            <div className="luxury-glass-card w-full max-w-sm rounded-3xl p-6 shadow-2xl space-y-4 relative">
               
               <div className="text-center space-y-1">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#1A2645] to-[#0F172B] border border-[#E5B842]/40 text-[#E5B842] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md">
-                  PJ
-                </div>
-                <span className="text-[10px] font-bold text-[#E5B842] tracking-widest uppercase block pt-1">
+                <img src="/project-jill-logo.svg" alt="Project Jill" className="mx-auto h-14 w-14 object-contain drop-shadow-[0_0_16px_rgba(6,182,212,0.25)]" />
+                <span className="text-[10px] font-bold text-cyan-300 tracking-widest uppercase block pt-1">
                   YOUR LET REVIEW COMPANION
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-white">Project Jill</h3>
+                <h3 className="font-mono text-xl font-semibold text-white">Project Jill</h3>
                 <p className="text-xs text-slate-400">
                   {isSignUp ? "Create your candidate account." : "Sign in to access your candidate drill sets."}
                 </p>
@@ -1768,16 +1864,3 @@ function LandingPage({ onOpenAuth, showAuthModal, onCloseAuth, onAuthProcessing,
   );
 }
 
-function FeatureCard({ icon, title, desc }) {
-  return (
-    <div className="luxury-glass-card rounded-2xl p-4 flex items-start gap-4 cursor-default">
-      <div className="w-11 h-11 rounded-xl bg-[#141C30] border border-white/5 flex items-center justify-center text-xl shrink-0 shadow-inner">
-        {icon}
-      </div>
-      <div>
-        <h4 className="text-xs font-bold text-[#E5B842] tracking-wider uppercase">{title}</h4>
-        <p className="text-[11px] text-slate-300 mt-1 leading-relaxed">{desc}</p>
-      </div>
-    </div>
-  );
-}

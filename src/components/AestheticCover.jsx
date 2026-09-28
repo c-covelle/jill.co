@@ -229,26 +229,7 @@ export default function AestheticCover({ onProceed }) {
       {/* Top Navbar */}
       <header className="cover-nav">
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{
-            width: '38px',
-            height: '38px',
-            borderRadius: '10px',
-            background: '#111625',
-            border: '1px solid rgba(229, 184, 66, 0.5)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.4)',
-            transform: 'rotate(45deg)'
-          }}>
-            <span style={{
-              transform: 'rotate(-45deg)',
-              fontFamily: 'Georgia, serif',
-              fontWeight: 900,
-              fontSize: '13px',
-              color: '#E5B842'
-            }}>PJ</span>
-          </div>
+          <img src="/project-jill-logo.svg" alt="Project Jill" style={{ width: '48px', height: '48px', objectFit: 'contain', filter: 'drop-shadow(0 0 12px rgba(6, 182, 212, 0.25))' }} />
           <div>
             <span style={{ fontFamily: 'Georgia, serif', fontWeight: 800, fontSize: '16px', letterSpacing: '0.18em', color: '#FFF' }}>
               PROJECT JILL

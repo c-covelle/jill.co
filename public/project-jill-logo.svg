@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768" fill="none">
+  <defs>
+    <linearGradient id="disc" x1="174" y1="95" x2="592" y2="663" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#123D9C"/>
+      <stop offset=".55" stop-color="#08276E"/>
+      <stop offset="1" stop-color="#061B4E"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="173" y1="108" x2="590" y2="653" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8DEBFF"/>
+      <stop offset=".48" stop-color="#3E9BEB"/>
+      <stop offset="1" stop-color="#164FBB"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="264" y1="145" x2="498" y2="216" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#84DBFF"/>
+      <stop offset="1" stop-color="#2777D4"/>
+    </linearGradient>
+    <linearGradient id="book" x1="222" y1="394" x2="548" y2="469" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6BBDFB"/>
+      <stop offset=".5" stop-color="#F5FCFF"/>
+      <stop offset="1" stop-color="#58A8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="190" y="128" width="390" height="442" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <circle cx="384" cy="384" r="282" fill="#050B19" opacity=".45" filter="url(#shadow)"/>
+  <circle cx="384" cy="376" r="278" fill="url(#disc)" stroke="url(#rim)" stroke-width="8"/>
+  <circle cx="384" cy="376" r="269" stroke="#7BE5FF" stroke-opacity=".32" stroke-width="2"/>
+
+  <path d="M247 194 351 146a12 12 0 0 1 10 0l160 48-111 48-163-48Z" fill="url(#cap)" stroke="#B5F0FF" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M294 205c45-22 120-26 173-1v17c-53-22-125-19-173 4v-20Z" fill="#0B2055" stroke="#81DFFF" stroke-opacity=".75" stroke-width="2"/>
+  <path d="M263 198v55" stroke="#A4E8FF" stroke-width="3"/>
+  <path d="M263 251c-9 13-11 31-10 50h20c1-19-1-37-10-50Z" fill="url(#cap)" stroke="#7AD8FF" stroke-width="2"/>
+  <circle cx="263" cy="250" r="8" fill="#84DFFF" stroke="#C5F5FF" stroke-width="2"/>
+
+  <text x="384" y="376" text-anchor="middle" fill="#F8FAFC" font-family="Georgia, 'Times New Roman', serif" font-size="218" font-weight="700" letter-spacing="-18" filter="url(#shadow)">PJ</text>
+  <text x="384" y="367" text-anchor="middle" fill="#F7FAFF" font-family="Georgia, 'Times New Roman', serif" font-size="218" font-weight="700" letter-spacing="-18">PJ</text>
+
+  <path d="M221 399c76 7 137 31 163 84 26-53 87-77 163-84l-8 19c-72 7-125 30-155 74-30-44-83-67-155-74l-8-19Z" fill="url(#book)" stroke="#D1F4FF" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M205 430c76-5 136 7 179 46-43-25-99-36-169-28l-10-18Z" fill="#1763C8" stroke="#65B9FF" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M563 430c-76-5-136 7-179 46 43-25 99-36 169-28l10-18Z" fill="#1763C8" stroke="#65B9FF" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M384 483v-28" stroke="#C8F0FF" stroke-opacity=".8" stroke-width="3"/>
+
+  <text x="384" y="536" text-anchor="middle" fill="#F4F7FB" font-family="Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="5">PROJECT JILL</text>
+  <path d="M220 559h57m214 0h57" stroke="#4C8ED9" stroke-width="2"/>
+  <text x="384" y="569" text-anchor="middle" fill="#73A9EB" font-family="Arial, sans-serif" font-size="21" font-weight="500" letter-spacing="10">LET REVIEWER</text>
+</svg>

@@ -86,9 +86,7 @@ export default function LoginScreen({ onLoginSuccess }) {
 
         {/* Top Header & Crest */}
         <div className="text-center space-y-2 relative z-10">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-500 border border-white/20 flex items-center justify-center font-serif font-bold text-white text-xl mx-auto shadow-lg shadow-indigo-950">
-            PJ
-          </div>
+          <img src="/project-jill-logo.svg" alt="Project Jill" className="mx-auto h-16 w-16 object-contain drop-shadow-[0_0_16px_rgba(6,182,212,0.25)]" />
           <div className="flex items-center justify-center gap-1 text-[#E5B842] text-[10px] font-bold tracking-widest uppercase pt-1">
             <Sparkles size={13} />
             <span>PRC Licensure Companion</span>

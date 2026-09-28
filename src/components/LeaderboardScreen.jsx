@@ -69,8 +69,8 @@ export default function LeaderboardScreen({ currentUser }) {
     <div className="space-y-5 animate-in fade-in duration-300 pb-8">
       {/* Title */}
       <div>
-        <h1 className="font-serif text-3xl font-bold text-white flex items-center gap-2">
-          Rankings <Trophy size={26} className="text-[#E5B842]" />
+        <h1 className="font-mono text-2xl font-semibold text-white flex items-center gap-2">
+          Rankings <Trophy size={24} className="text-cyan-300 drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]" />
         </h1>
         <p className="text-xs text-slate-400 mt-1">
           Top PRC licensure candidates striving for 1st rank.
@@ -78,12 +78,12 @@ export default function LeaderboardScreen({ currentUser }) {
       </div>
 
       {/* Filter Tabs */}
-      <div className="bg-[#121829] border border-[#1E263D] p-1 rounded-2xl flex justify-between gap-1 shadow-md">
+      <div className="luxury-glass-card p-1 rounded-2xl flex justify-between gap-1">
         <button
           onClick={() => setFilter('weekly')}
           className={`flex-1 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition ${
             filter === 'weekly'
-              ? 'bg-[#E5B842] text-slate-950 shadow-md'
+              ? 'bg-cyan-400/15 text-cyan-100 border border-cyan-300/30 shadow-[0_0_16px_rgba(6,182,212,0.15)]'
               : 'text-slate-400 hover:text-white'
           }`}
         >
@@ -93,7 +93,7 @@ export default function LeaderboardScreen({ currentUser }) {
           onClick={() => setFilter('all-time')}
           className={`flex-1 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition ${
             filter === 'all-time'
-              ? 'bg-[#E5B842] text-slate-950 shadow-md'
+              ? 'bg-cyan-400/15 text-cyan-100 border border-cyan-300/30 shadow-[0_0_16px_rgba(6,182,212,0.15)]'
               : 'text-slate-400 hover:text-white'
           }`}
         >
@@ -105,7 +105,7 @@ export default function LeaderboardScreen({ currentUser }) {
       {hasPodium && (
       <div className="grid grid-cols-3 gap-2 items-end pt-4 pb-2">
         {/* Rank 2 */}
-        <div className="bg-[#121829] border border-slate-700/60 rounded-3xl p-3 flex flex-col items-center text-center shadow-lg relative">
+        <div className="luxury-glass-card rounded-3xl p-3 flex flex-col items-center text-center relative">
           <div className="w-6 h-6 rounded-full bg-slate-300 text-slate-900 font-bold text-[10px] flex items-center justify-center absolute -top-3 shadow-md">
             2
           </div>
@@ -118,20 +118,20 @@ export default function LeaderboardScreen({ currentUser }) {
         </div>
 
         {/* Rank 1 (Tall & Highlighted) */}
-        <div className="bg-gradient-to-b from-[#1E2A4A] to-[#121829] border-2 border-[#E5B842] rounded-3xl p-3 flex flex-col items-center text-center shadow-2xl relative -mt-3 scale-105">
-          <div className="w-7 h-7 rounded-full bg-[#E5B842] text-slate-950 font-extrabold text-xs flex items-center justify-center absolute -top-3.5 shadow-lg">
+        <div className="luxury-glass-card border-cyan-300/40 rounded-3xl p-3 flex flex-col items-center text-center shadow-[0_0_24px_rgba(6,182,212,0.15)] relative -mt-3 scale-105">
+          <div className="w-7 h-7 rounded-full bg-cyan-300 text-slate-950 font-extrabold text-xs flex items-center justify-center absolute -top-3.5 shadow-[0_0_16px_rgba(6,182,212,0.6)]">
             👑
           </div>
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-600 to-[#E5B842] text-slate-950 font-bold flex items-center justify-center text-base shadow-lg mt-1 mb-2 border-2 border-[#E5B842]/40">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-violet-500 to-cyan-300 text-slate-950 font-bold flex items-center justify-center text-base shadow-[0_0_18px_rgba(6,182,212,0.25)] mt-1 mb-2 border border-cyan-100/40">
             {topThree[0].avatar}
           </div>
           <h4 className="font-bold text-white text-xs truncate max-w-[90px]">{topThree[0].name}</h4>
           <span className="text-[10px] text-emerald-400 font-semibold">{topThree[0].accuracy}% acc</span>
-          <span className="text-sm font-extrabold text-[#E5B842] mt-1">{topThree[0].xp} XP</span>
+          <span className="text-sm font-extrabold text-cyan-300 mt-1">{topThree[0].xp} XP</span>
         </div>
 
         {/* Rank 3 */}
-        <div className="bg-[#121829] border border-amber-900/40 rounded-3xl p-3 flex flex-col items-center text-center shadow-lg relative">
+        <div className="luxury-glass-card rounded-3xl p-3 flex flex-col items-center text-center relative">
           <div className="w-6 h-6 rounded-full bg-amber-700 text-white font-bold text-[10px] flex items-center justify-center absolute -top-3 shadow-md">
             3
           </div>
@@ -140,7 +140,7 @@ export default function LeaderboardScreen({ currentUser }) {
           </div>
           <h4 className="font-bold text-white text-xs truncate max-w-[80px]">{topThree[2].name}</h4>
           <span className="text-[10px] text-slate-400">{topThree[2].accuracy}% acc</span>
-          <span className="text-xs font-bold text-amber-500 mt-1">{topThree[2].xp} XP</span>
+          <span className="text-xs font-bold text-cyan-300 mt-1">{topThree[2].xp} XP</span>
         </div>
       </div>
       )}
@@ -154,9 +154,9 @@ export default function LeaderboardScreen({ currentUser }) {
         {remaining.map((user, idx) => (
           <div
             key={user.id}
-            className={`w-full bg-[#121829] border ${
-              user.isCurrentUser ? 'border-[#E5B842] bg-[#172138]' : 'border-[#1E263D]'
-            } rounded-2xl p-3.5 flex items-center justify-between shadow-md`}
+            className={`w-full luxury-glass-card border ${
+              user.isCurrentUser ? 'border-cyan-300/50 shadow-[0_0_18px_rgba(6,182,212,0.12)]' : 'border-white/10'
+            } rounded-2xl p-3.5 flex items-center justify-between`}
           >
             <div className="flex items-center gap-3">
               <span className="text-xs font-bold text-slate-500 w-4 text-center">
@@ -173,7 +173,7 @@ export default function LeaderboardScreen({ currentUser }) {
                   )}
                 </h4>
                 <div className="flex items-center gap-2 text-[10px] text-slate-400 mt-0.5">
-                  <span className="flex items-center gap-0.5 text-amber-400"><Flame size={10} /> {user.streak}d</span>
+                    <span className="inline-flex items-center gap-0.5 rounded-md border border-cyan-300/20 bg-cyan-300/5 px-1.5 py-0.5 text-cyan-300"><Flame size={10} /> {user.streak}d</span>
                   <span>•</span>
                   <span>{user.accuracy}% accuracy</span>
                 </div>
@@ -181,7 +181,7 @@ export default function LeaderboardScreen({ currentUser }) {
             </div>
 
             <div className="text-right">
-              <span className="text-xs font-extrabold text-[#E5B842] block">
+              <span className="text-xs font-extrabold text-cyan-300 drop-shadow-[0_0_7px_rgba(6,182,212,0.45)] block">
                 {user.xp.toLocaleString()} XP
               </span>
               <span className="text-[9px] text-slate-500 uppercase">Ranked</span>
